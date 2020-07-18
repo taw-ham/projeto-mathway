@@ -1,0 +1,35 @@
+{
+  "professores": [
+    {
+      "id": 1,
+      "nome": "Gustavo",
+      "senha": "1234",
+      "salas": [
+        {
+          "id": 1,
+          "nome": "sala 1",
+          "participantes": [
+            "reinaldo",
+            "tavares"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Lucas",
+      "senha": 5678
+    },
+    {
+      "nome": "jhonatha",
+      "senha": "123456",
+      "id": 3
+    }
+  ],
+  "Alunos":[
+    {
+
+  }
+
+  ]
+}
