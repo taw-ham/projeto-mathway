@@ -3,17 +3,7 @@
     {
       "id": 1,
       "nome": "Gustavo",
-      "senha": "1234",
-      "salas": [
-        {
-          "id": 1,
-          "nome": "sala 1",
-          "participantes": [
-            "reinaldo",
-            "tavares"
-          ]
-        }
-      ]
+      "senha": "1234"
     },
     {
       "id": 2,
@@ -26,10 +16,25 @@
       "id": 3
     }
   ],
-  "Alunos":[
+  "salas": [
+    {}
+  ],
+  "perguntas": [
     {
-
-  }
-
+      "pergunta": "dlljsdkdklmd",
+      "id": 0,
+      "id_criador": 0
+    },
+    {
+      "pergunta": " jdjdjjd",
+      "id_criador": 1,
+      "id": 1
+    }
+  ],
+  "listas": [
+    {}
+  ],
+  "Alunos": [
+    {}
   ]
 }

@@ -32,6 +32,31 @@ class ProfessorService {
         }).then(resposta => resposta.json());
     }
 }
+class Pergunta{
+    constructor(pergunta,id_criador){
+        this.pergunta = pergunta;
+        this.id_criador = id_criador;
+    }
+}
+class Perguntas_Service{
+    constructor(url){
+        this.url = url
+    }
+    inserir(pergunta,id_criador){
+        return fetch(this.url,{
+            method: "POST",
+            body: JSON.stringify(pergunta,id_criador),
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        }).then(results => results.json())
+    }
+    listar(){
+        return fetch(this.url,{
+            method: "GET",
+        }).then(resposta => resposta.json())
+    }
+}
 let professor_service = new ProfessorService("http://localhost:3000/professores");
 professor_service.listar().then(professores => {
     for (let professor of professores) {
@@ -65,18 +90,35 @@ function apagarProfessor() {
         event.target.parentNode.remove()
     );
 }
+
 document.getElementById("enviar").onclick = function () {
     let nome2 = document.getElementById("nome2").value;
     let senha2 = document.getElementById("senha2").value;
-    professor_service.listar().then(results => {
-        //let nome2 = document.getElementById("nome2").value;
-        //let senha2 = document.getElementById("senha2").value;
-        let txt = results;
-        for (let i = 0; i <= txt.length - 1; i++) {
-            if (txt[i].nome == nome2 && txt[i].senha == senha2) {
-                console.log("logou");
-                let id  = txt[i].id;
-            }else{console.log("errou")}
+    let loginservice = new ProfessorService(`http://localhost:3000/professores?nome=${nome2}&senha=${senha2}`);
+    loginservice.listar().then(results =>{
+        if(results.length === 0){
+            console.log("usuário ou login incorreto");
+        }else{
+            let id = results[0].id;
+            document.getElementById("enviar2").onclick = function(){
+                let pergunta = document.getElementById("perguntas").value;
+                let perguntas = new Pergunta(pergunta,id);
+                let perguntas_service = new Perguntas_Service("http://localhost:3000/perguntas");
+                perguntas_service.inserir(perguntas).then(results =>{
+                    console.log(results);
+                })
+            }
+            document.getElementById("salas").onclick = function(){
+                let perguntas_service = new Perguntas_Service(`http://localhost:3000/perguntas?id_criador=${id}`);
+                perguntas_service.listar().then(results =>{
+                    console.log(results);
+                })
+
+
+
+            }
+
+            
         }
     })
 }
