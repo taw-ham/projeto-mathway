@@ -3,38 +3,168 @@
     {
       "id": 1,
       "nome": "Gustavo",
-      "senha": "1234"
+      "senha": "1234",
+      "email": "gugaway@gmail.com"
     },
     {
       "id": 2,
       "nome": "Lucas",
-      "senha": 5678
-    },
-    {
-      "nome": "jhonatha",
-      "senha": "123456",
-      "id": 3
+      "senha": "456",
+      "email": "lucasway@gmail.com"
     }
   ],
   "salas": [
-    {}
+    {
+      "nome": "sala 0",
+      "id": 0,
+      "id_criador": 0,
+      "participantes": [
+        "taw-ham"
+      ]
+    },
+    {
+      "nome": "sala 4",
+      "id_criador": "1",
+      "participantes": [
+        "taw-ham"
+      ],
+      "id": 2
+    },
+    {
+      "nome": "sala 99",
+      "id_criador": "1",
+      "participantes": [
+        "taw-ham",
+        "jhon"
+      ],
+      "id": 3
+    },
+    {
+      "nome": "edfisica",
+      "id_criador": "1",
+      "participantes": [
+        "taw-ham"
+      ],
+      "id": 4
+    },
+    {
+      "nome": "física",
+      "id_criador": "1",
+      "participantes": [
+        "taw-ham"
+      ],
+      "id": 5
+    },
+    {
+      "nome": "math",
+      "id_criador": "1",
+      "participantes": [
+        "taw-ham"
+      ],
+      "id": 6
+    },
+    {
+      "nome": "ciencia",
+      "id_criador": "1",
+      "participantes": [
+        "taw-ham"
+      ],
+      "id": 7
+    },
+    {
+      "nome": "geo",
+      "id_criador": "1",
+      "participantes": [
+        "taw-ham"
+      ],
+      "id": 8
+    },
+    {
+      "nome": "lol",
+      "id_criador": "1",
+      "participantes": [
+        "taw-ham"
+      ],
+      "id": 9
+    },
+    {
+      "nome": "street",
+      "id_criador": "1",
+      "participantes": [
+        "taw-ham"
+      ],
+      "id": 10
+    },
+    {
+      "nome": "teste6",
+      "id_criador": "1",
+      "participantes": [
+        "taw-ham"
+      ],
+      "id": 11
+    }
+  ],
+  "lista_teoricas": [
+    {
+      "id": 0,
+      "nome": "jubi",
+      "perguntas": [],
+      "opcoes": [],
+      "opcoes_certas": [],
+      "id_criador": 0,
+      "id_sala": 0,
+      "nome_sala": "sala0"
+    }
   ],
   "perguntas": [
     {
       "pergunta": "dlljsdkdklmd",
+      "opcoes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "opcao_certa": 3,
       "id": 0,
-      "id_criador": 0
+      "id_criador": 0,
+      "tema": "matriz"
     },
     {
-      "pergunta": " jdjdjjd",
-      "id_criador": 1,
+      "pergunta": "jean rato",
+      "opcoes": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "opcao_certa": 9,
+      "id": 0,
+      "id_criador": 0,
+      "tema": "matriz"
+    }
+  ],
+  "Alunos": [
+    {
+      "email": "taw.ham.balbino@gmail.com",
+      "nome": "taw-ham",
+      "id": 0,
+      "id_sala": 1
+    },
+    {
+      "email": "jhon@gmail.com",
+      "nome": "jhon",
       "id": 1
     }
   ],
-  "listas": [
-    {}
-  ],
-  "Alunos": [
-    {}
+  "notas": [
+    {
+      "nome": "matriz",
+      "nota": 90,
+      "id": 0,
+      "id_aluno": 0
+    }
   ]
 }
