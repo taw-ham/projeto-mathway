@@ -23,127 +23,117 @@
       ]
     },
     {
-      "nome": "sala 4",
-      "id_criador": "1",
-      "participantes": [
-        "taw-ham"
-      ],
-      "id": 2
-    },
-    {
-      "nome": "sala 99",
-      "id_criador": "1",
-      "participantes": [
-        "taw-ham",
-        "jhon"
-      ],
-      "id": 3
-    },
-    {
-      "nome": "edfisica",
-      "id_criador": "1",
-      "participantes": [
-        "taw-ham"
-      ],
-      "id": 4
-    },
-    {
       "nome": "física",
       "id_criador": "1",
       "participantes": [
         "taw-ham"
       ],
       "id": 5
-    },
-    {
-      "nome": "math",
-      "id_criador": "1",
-      "participantes": [
-        "taw-ham"
-      ],
-      "id": 6
-    },
-    {
-      "nome": "ciencia",
-      "id_criador": "1",
-      "participantes": [
-        "taw-ham"
-      ],
-      "id": 7
-    },
-    {
-      "nome": "geo",
-      "id_criador": "1",
-      "participantes": [
-        "taw-ham"
-      ],
-      "id": 8
-    },
-    {
-      "nome": "lol",
-      "id_criador": "1",
-      "participantes": [
-        "taw-ham"
-      ],
-      "id": 9
-    },
-    {
-      "nome": "street",
-      "id_criador": "1",
-      "participantes": [
-        "taw-ham"
-      ],
-      "id": 10
-    },
-    {
-      "nome": "teste6",
-      "id_criador": "1",
-      "participantes": [
-        "taw-ham"
-      ],
-      "id": 11
     }
   ],
   "lista_teoricas": [
     {
-      "id": 0,
-      "nome": "jubi",
-      "perguntas": [],
-      "opcoes": [],
-      "opcoes_certas": [],
-      "id_criador": 0,
-      "id_sala": 0,
-      "nome_sala": "sala0"
-    }
-  ],
-  "perguntas": [
-    {
-      "pergunta": "dlljsdkdklmd",
+      "id": 2,
+      "nome": "lista_teste",
+      "perguntas": [
+        "quanto é 1 mais 1?",
+        "quanto é 2 + 1?",
+        "quanto é 3 + 1?",
+        "quanto é 4 + 1?",
+        "quanto é 5 + 1?",
+        "quanto é 6 + 1?",
+        "quanto é 7 + 1?",
+        "quanto é 8 + 1?",
+        "quanto é 9 + 1?",
+        "quanto é 10 + 1"
+      ],
       "opcoes": [
-        1,
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          5,
+          3,
+          10,
+          6,
+          0
+        ],
+        [
+          5,
+          8,
+          4,
+          9,
+          0
+        ],
+        [
+          8,
+          3,
+          6,
+          5,
+          2
+        ],
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        [
+          8,
+          7,
+          10,
+          90,
+          1
+        ],
+        [
+          9,
+          8,
+          10,
+          11,
+          12
+        ],
+        [
+          0,
+          5,
+          9,
+          10,
+          11
+        ],
+        [
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        [
+          10,
+          12,
+          14,
+          11,
+          18
+        ]
+      ],
+      "opcoes_certas": [
         2,
         3,
         4,
-        5
-      ],
-      "opcao_certa": 3,
-      "id": 0,
-      "id_criador": 0,
-      "tema": "matriz"
-    },
-    {
-      "pergunta": "jean rato",
-      "opcoes": [
         5,
         6,
         7,
         8,
-        9
+        9,
+        10,
+        11
       ],
-      "opcao_certa": 9,
-      "id": 0,
-      "id_criador": 0,
-      "tema": "matriz"
+      "id_criador": 1,
+      "id_sala": 5,
+      "nome_sala": "fisica"
     }
   ],
   "Alunos": [
@@ -164,7 +154,8 @@
       "nome": "matriz",
       "nota": 90,
       "id": 0,
-      "id_aluno": 0
+      "id_aluno": 0,
+      "id_lista_teorica": 0
     }
   ]
 }

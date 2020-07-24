@@ -7,44 +7,70 @@
 </head>
 
 <body>
-    <div id="area_salas">
-        <ul id="salas">
-            <li> <button id="criar_salas2"> Criar salas </button> </li>
+    <div id="area_das_salas">
+        <ul id="opcoes_salas">
+            <li><button id="criar_sala"> Criar sala </button></li>
         </ul>
-        <div id="criar_salas">
-            <h1> Criação de Salas e Adicionamento de alunos </h1>
-            <input id="sala_nome" placeholder="Digite o nome da sala"></br>
-            <input id="partici" placeholder="digite o nome do aluno"></br>
-            <button id="adicionar_alunos"> Adicionar Alunos </button>
-            <button id="criar_sala"> Criar Salas </button>
-        </div>
-        <div id="sala">
-            <button id="look_participantes"> Ver participantes </button>
-            <ul id="participantes"> 
+    </div>
+    <div id="area_de_criar_salas">
+        <h1> Criação de Salas e Adicionamento de alunos </h1>
+        <input id="sala_nome" placeholder="Digite o nome da sala"></br>
+        <input id="participante" placeholder="digite o nome do aluno"> </br>
+        <p id="situacao_usuario"> </p>
+        <button id="adicionar_aluno"> Adicionar Alunos </button>
+        <button id="criar_sala_especifica"> Criar Sala </button>
+    </div>
+    <div id="area_sala_especifica">
+        <button id="look_participantes"> Ver participantes </button>
+        <button id="criar_lista"> Criar Lista Teórica </button> 
+        <button id="look_listas_teoricas"> Ver a lista teórica dessa sala</button>
+        <div id="area_de_olhar_participantes">
+            <ul id="participantes">
             </ul>
             <button id="hide_participantes"> Não quero ver mais participantes </button>
-            <button id="criar_lista"> Criar Lista Teórica </button>
-            <ul id="temas">
-                <h1> Escolha um tema </h1>
-                <li> <button id="matriz"> matriz </button> </li>
-            </ul>
-
-            <input id="nome_lista_teorica">
-            <div id="lista">
-            <p id="cont_perguntas"> </p>
-            <ul id="perguntas_server">
-                <li> jjjjj</li>
-
-            </ul>
-            <button id="enviar_lista_teorica"> Enviar </button>
-            <textarea id="pergunta" placeholder="Adicione uma pergunta para incluir nas perguntas da lista teorica"></textarea><br>
-            <textarea id="opcoes" placeholder="digite as opcoes da pergunta"></textarea></br>
-            <input id="opcao_correta" placeholder="digite a opcão correta">
-            <button id="adici_perg"> Adicionar </button>
-            <button id="enviar_lista_teorica"> Enviar </button>
         </div>
+        <div id="area_de_listas_teoricas">
+            <div id = "listas_teoricas_especificas">
+            <h1> Lista teóricas </h1>
+            <ul id="lugar_lista_teorica">
+            </ul>
+            <button id="voltar_tela_inicial"> Voltar a tela inicial </button>
+        </div>
+            <div id="conteudo_da_lista_teorica">
+                <p id="pergunta"></p>
+                <ul id="opcoes">
+                    <li id="opcao"></li>
+                    <li id="opcao"></li>
+                    <li id="opcao"></li>
+                    <li id="opcao"></li>
+                    <li id="opcao"></li>
+                </ul>
+                <button id="proxima_pergunta"> ver proxima pergunta </button>
+                <button id="tela_inicial"> Voltar as suas lista teóricas</button>
+            </div>
+            <div id="area_de_criacao_de_listas_teoricas">
+                <ul id="temas">
+                    <h1> Escolha um tema </h1>
+                    <li> <button id="matriz"> matriz </button> </li>
+                </ul>
+                <input id="nome_lista_teorica" placeholder="diga o nome da lista teorica">
+                <div id="lista">
+                    <p id="cont_perguntas"> </p>
+                    <ul id="perguntas_server">
+                    </ul>
+                    <textarea id="pergunta"
+                        placeholder="Adicione uma pergunta para incluir nas perguntas da lista teorica"></textarea><br>
+                    <textarea id="opcoes" placeholder="digite as opcoes da pergunta"></textarea></br>
+                    <input id="opcao_correta" placeholder="digite a opcão correta">
+                    <button id="adicionar_pergunta"> Adicionar Pergunta </button>
+                    <button id="enviar_lista_teorica"> Enviar </button>
+                </div>
+
+            </div>
         </div>
     </div>
+
+
 
 
 
