@@ -22,20 +22,21 @@
     </div>
     <div id="area_sala_especifica">
         <button id="look_participantes"> Ver participantes </button>
-        <button id="criar_lista"> Criar Lista Teórica </button> 
-        <button id="look_listas_teoricas"> Ver a lista teórica dessa sala</button>
+        <button id="look_listas_teoricas"> Ver a lista teórica dessa sala </button>
+        <button id="criar_lista"> Criar lista teórica</button>
         <div id="area_de_olhar_participantes">
             <ul id="participantes">
             </ul>
             <button id="hide_participantes"> Não quero ver mais participantes </button>
+            
         </div>
         <div id="area_de_listas_teoricas">
-            <div id = "listas_teoricas_especificas">
-            <h1> Lista teóricas </h1>
-            <ul id="lugar_lista_teorica">
-            </ul>
-            <button id="voltar_tela_inicial"> Voltar a tela inicial </button>
-        </div>
+            <div id="listas_teoricas_especificas">
+                <h1> Lista teóricas </h1>
+                <ul id="lugar_lista_teorica">
+                </ul>
+                <button id="voltar_tela_inicial"> Voltar a tela inicial </button>
+            </div>
             <div id="conteudo_da_lista_teorica">
                 <p id="pergunta"></p>
                 <ul id="opcoes">
@@ -45,36 +46,40 @@
                     <li id="opcao"></li>
                     <li id="opcao"></li>
                 </ul>
-                <button id="proxima_pergunta"> ver proxima pergunta </button>
-                <button id="tela_inicial"> Voltar as suas lista teóricas</button>
+                <button id="proxima_pergunta"> ver proxima pergunta </button></br>
+                <ul id="place_notas"> 
+                </ul>   
             </div>
             <div id="area_de_criacao_de_listas_teoricas">
                 <ul id="temas">
                     <h1> Escolha um tema </h1>
-                    <li> <button id="matriz"> matriz </button> </li>
+                    <li> <button id="1" class="opcoes_temas"> matriz </button> </li>
+                    <li> <button id="2" class="opcoes_temas"> determinante </button> </li>
+                    <li> <button id="3" class="opcoes_temas"> fatoração </button> </li>
                 </ul>
-                <input id="nome_lista_teorica" placeholder="diga o nome da lista teorica">
                 <div id="lista">
-                    <p id="cont_perguntas"> </p>
-                    <ul id="perguntas_server">
-                    </ul>
-                    <textarea id="pergunta"
-                        placeholder="Adicione uma pergunta para incluir nas perguntas da lista teorica"></textarea><br>
-                    <textarea id="opcoes" placeholder="digite as opcoes da pergunta"></textarea></br>
-                    <input id="opcao_correta" placeholder="digite a opcão correta">
-                    <button id="adicionar_pergunta"> Adicionar Pergunta </button>
-                    <button id="enviar_lista_teorica"> Enviar </button>
+                    <input id="nome_lista_teorica" placeholder="diga o nome da lista teorica"><button id="nome_lista">
+                        Salvar o nome da lista </button>
+                    <div id="proxima_etapa">
+                        <p id="cont_perguntas"> </p>
+                        <ul id="perguntas_server">
+                        </ul>
+                        <textarea id="pergunta_user"
+                            placeholder="Adicione uma pergunta para incluir nas perguntas da lista teorica"></textarea><br>
+                        <textarea id="opcoes_user" placeholder="digite as opcoes da pergunta"></textarea></br>
+                        <input id="opcao_correta" placeholder="digite a opcão correta">
+                        <button id="adicionar_pergunta"> Adicionar Pergunta </button>
+                        <p id="situacao_lista"></p>
+                        
+                    </div>
                 </div>
-
+                <p id="situacao_sala"> </p>
+                <button id="voltar_opcoes"> Voltar a tela inicial </button>
             </div>
         </div>
     </div>
 
-
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <script src="index.js"></script>
 </body>
 

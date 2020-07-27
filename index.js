@@ -1,6 +1,8 @@
 $("#area_de_criar_salas").hide("fast");
 $("#area_sala_especifica").hide("fast");
 $("#area_de_criar_salas").hide("fast");
+$("#situacao_sala").hide("fast");
+$("#voltar_opcoes").hide("fast");
 class PROFESSOR {
     constructor(nome, senha, email) {
         this.nome = nome;
@@ -37,22 +39,23 @@ class ProfessorService {
     }
 }
 class Pergunta {
-    constructor(pergunta, opcoes, opcao_certa, id_criador, tema) {
+    constructor(pergunta, opcoes, opcao_certa, id_criador, tema, id_tema) {
         this.pergunta = pergunta;
         this.opcoes = opcoes,
             this.opcao_certa = opcao_certa,
             this.id_criador = id_criador;
-        this.tema = tema
+        this.tema = tema;
+        this.id_tema = id_tema;
     }
 }
 class Perguntas_Service {
     constructor(url) {
         this.url = url
     }
-    inserir(pergunta, opcoes, opcao_certa, id_criador, tema) {
+    inserir(pergunta, opcoes, opcao_certa, id_criador, tema, id_tema) {
         return fetch(this.url, {
             method: "POST",
-            body: JSON.stringify(pergunta, opcoes, opcao_certa, id_criador, tema),
+            body: JSON.stringify(pergunta, opcoes, opcao_certa, id_criador, tema, id_tema),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -150,6 +153,18 @@ class Lista_Teoria_Service {
         }).then(resposta => resposta.json())
     }
 }
+class Nota_Service{
+    constructor(url){
+        this.url = url;
+    }
+    listar(){
+        return fetch(this.url,{
+            method:"GET"
+
+        }).then(resposta => resposta.json())
+        
+    }
+}
 
 
 var id_login = localStorage.getItem('id');
@@ -175,13 +190,199 @@ sala_service.lista().then(resposta => {
             $("#area_de_criacao_de_listas_teoricas").hide("fast");
             $("#area_de_listas_teoricas").hide("fast");
             var id_sala = event.target.id; //pega o id do botão clicado
+            document.getElementById("criar_lista").onclick = function () {
+                let lista_perguntas = [];
+                let lista_opcoes = []
+                let opcoes_certas = [];
+                let contador_perguntas = document.getElementById("cont_perguntas");
+                var cont_perguntas = 0;
+                $("#look_participantes").hide("fast");
+                $("#look_listas_teoricas").hide("fast");
+                $("#criar_lista").hide("fast");
+                $("#temas").show("fast");
+                $("#area_de_listas_teoricas").show();
+                $("#listas_teoricas_especificas").hide()
+                $("#conteudo_da_lista_teorica").hide("fast");
+                $("#area_de_criacao_de_listas_teoricas").show("fast");
+                $("#conteudo_da_lista_teorica").hide("fast");
+                $("#lista").hide();
+                let button_temas = document.querySelectorAll(".opcoes_temas");
+                console.log(button_temas);
+                for (let i = 0; i <= button_temas.length - 1; i++) {
+                    button_temas[i].onclick = function () {
+                        $("#temas").hide("fast");
+                        var id_tema = event.target.id;
+                        button_temas = button_temas[i].textContent
+                        $("#lista").show();
+                        $("#proxima_etapa").hide();
+                        let nome_lista = document.getElementById("nome_lista");
+                        nome_lista.onclick = function () {
+                            let nome_da_lista = document.getElementById("nome_lista_teorica").value;
+
+                            if (nome_da_lista != "") {
+                                $("#proxima_etapa").show();
+                                $("#lista").show();
+                                console.log(button_temas)
+                                let pergunta_service = new Perguntas_Service(`http://localhost:3000/perguntas?id_tema=${id_tema}`);
+                                pergunta_service.listar().then(resposta => {
+                                    console.log(resposta);
+                                    let ul = document.getElementById("perguntas_server");
+                                    for (let i = 0; i <= resposta.length - 1; i++) {
+                                        let li = document.createElement("li");
+                                        let button = document.createElement("button");
+                                        button.innerHTML = resposta[i].pergunta;
+                                        button.setAttribute("id", resposta[i].id)
+                                        li.append(button);
+                                        ul.append(li);
+                                        button.onclick = function () {
+                                            lista_perguntas.push(button.textContent);
+                                            console.log(lista_perguntas);
+                                            lista_opcoes.push(resposta[i].opcoes);
+                                            console.log(lista_opcoes)
+                                            opcoes_certas.push(resposta[i].opcao_certa);
+                                            console.log(opcoes_certas);
+                                            cont_perguntas++;
+
+                                            contador_perguntas.innerHTML = cont_perguntas;
+                                            if (cont_perguntas == 10) {
+                                                $("#lista").hide("fast");
+                                                let lista_teorica = new Lista_Teoria(nome_da_lista, lista_perguntas, lista_opcoes, opcoes_certas, id_login, id_sala);
+                                                let lista_teorica_service = new Lista_Teoria_Service("http://localhost:3000/lista_teoricas");
+                                                lista_teorica_service.inserir(lista_teorica).then(resposta => {
+                                                    console.log(resposta);
+                                                    $("#situacao_sala").show("fast");
+                                                    $("#situacao_sala").text("sala criada com sucesso aperte em voltar a tela inicial")
+                                                    $("#voltar_opcoes").show("fast");
+                                                    document.getElementById("voltar_opcoes").onclick = function(){
+                                                        $("#look_participantes").show("fast");
+                                                        $("#look_listas_teoricas").show("fast");
+                                                        $("#criar_lista").show("fast");
+                                                        $("#voltar_opcoes").hide("fast");
+                                                        $("#situacao_sala").hide("fast");
+                                                        $("#area_sala_especifica").show("fast");
+                                                        $("#perguntas_server").empty();
+                                                        $("#cont_perguntas").text("0");
+
+                                                    }
+                                                
+                                                })
+                                            }
+
+                                        }
+                                    }
+                                })
+                                document.getElementById("adicionar_pergunta").onclick = function () {
+                                    let pergunta_user = document.getElementById("pergunta_user");
+                                    let opcoes_user = document.getElementById("opcoes_user");
+                                    let opcao_correta_user = document.getElementById("opcao_correta");
+                                    let opcoes_user2 = opcoes_user.value;
+                                    let especificacao = " ";
+                                    let especificacao2 = ",";
+                                    let opcoes_check;
+                                    let temp = opcoes_user2.split(especificacao);
+                                    let temp2 = opcoes_user2.split(especificacao2);
+                                    if (temp.length > 0) {
+                                        opcoes_check = temp
+                                    } else {
+                                        opcoes_check = temp2
+                                    }
+                                    console.log(opcoes_check)
+                                    if (pergunta_user.value == "" || opcoes_user.value == "" || opcao_correta_user.value == "" || opcoes_check.length > 5 || opcoes_check.length < 5) {
+                                        document.getElementById("situacao_lista").innerHTML = "uma das entradas está inválida";
+                                        console.log("uma das entradas está inválida")
+                                    } else {
+                                        document.getElementById("situacao_lista").innerHTML = "pergunta inserida com sucesso";
+                                        pergunta_user = pergunta_user.value;
+                                        opcoes_user = opcoes_user.value;
+                                        opcao_correta_user = opcao_correta_user.value;
+                                        lista_perguntas.push(pergunta_user);
+                                        console.log(lista_perguntas);
+                                        lista_opcoes.push(opcoes_check);
+                                        console.log(lista_opcoes);
+                                        opcoes_certas.push(opcao_correta_user)
+                                        console.log(opcoes_certas);
+                                        cont_perguntas++;
+                                        contador_perguntas.innerHTML = cont_perguntas;
+                                        let pergunta = new Pergunta(pergunta_user, opcoes_check, opcao_correta_user, id_login, button_temas, id_tema);
+                                        let pergunta_service = new Perguntas_Service("http://localhost:3000/perguntas");
+                                        pergunta_service.inserir(pergunta).then(resposta => {
+                                            console.log(resposta);
+                                        })
+                                        if (cont_perguntas == 10) {
+                                            $("#lista").hide("fast");
+                                            let lista_teorica = new Lista_Teoria(nome_da_lista, lista_perguntas, lista_opcoes, opcoes_certas, id_login, id_sala);
+                                            let lista_teorica_service = new Lista_Teoria_Service("http://localhost:3000/lista_teoricas");
+                                            lista_teorica_service.inserir(lista_teorica).then(resposta => {
+                                                console.log(resposta);
+                                                $("#situacao_sala").show("fast");
+                                                $("#situacao_sala").text("sala criada com sucesso aperte em voltar a tela inicial")
+                                                $("#voltar_opcoes").show("fast");
+                                                document.getElementById("voltar_opcoes").onclick = function(){
+                                                    $("#voltar_opcoes").hide("fast");
+                                                    $("#situacao_sala").hide("fast");
+                                                    $("#area_sala_especifica").show("fast");
+                                                    $("#look_participantes").show("fast");
+                                                    $("#look_listas_teoricas").show("fast");
+                                                    $("#criar_lista").show("fast");
+                                                    $("#perguntas_server").empty();
+                                                    $("#cont_perguntas").text("0");
+
+                                                }   
+                                            })
+                                        }
+                                    }
+
+
+
+                                }
+
+                                //let especificacao = " ";
+                                //let especificacao2 = ",";
+                                //let temp = opcoes_user.split(especificacao)
+
+
+                            }
+
+                        }
+
+
+
+
+
+                    }
+
+
+                }
+                /*document.getElementById("voltar_criacao_lista_teorica").onclick = function () {
+                    $("#area_de_listas_teoricas").hide();
+                    $("#listas_teoricas_especificas").show()
+                    $("#conteudo_da_lista_teorica").hide("fast");
+                    $("#area_de_criacao_de_listas_teoricas").hide("fast");
+                    $("#conteudo_da_lista_teorica").hide("fast");
+                    $("#lista").hide();
+                    $("#perguntas_server").empty();
+                    $("#cont_perguntas").text("0");
+
+                }
+                */
+
+
+            }
             let sala_service = new Salas_Service(`http://localhost:3000/salas?id=${id_sala}&id_criador=${id_login}`);
             sala_service.lista().then(resposta => {
-                let participantes_sala = resposta[0].participantes;
+                let participantes_sala;
+            
+                for(let i = 0; i <= resposta.length -1; i++){
+                    participantes_sala = resposta[i].participantes;
+                } 
                 document.getElementById("look_participantes").onclick = function () {
                     $("#area_de_olhar_participantes").show("fast");
                     $("#look_participantes").hide("fast");
+                    $("#look_listas_teoricas").hide("fast");
                     $("#criar_lista").hide("fast");
+                    $("#area_de_criacao_de_listas_teoricas").hide("fast");
+                    $("#participantes").show("fast");
+                    $("#hide_participantes").show();
                     for (let i = 0; i <= participantes_sala.length - 1; i++) {
                         let ul = document.getElementById("participantes");
                         let li = document.createElement("li");
@@ -190,11 +391,14 @@ sala_service.lista().then(resposta => {
                     }
                 }
                 document.getElementById("hide_participantes").onclick = function () {
-                    $("#area_de_olhar_participantes").hide("fast");
                     $("#look_participantes").show("fast");
+                    $("#look_listas_teoricas").show("fast");
+                    $("#participantes").hide("fast");
                     $("#criar_lista").show("fast");
-                    $("#participantes").empty() //apaga os filhos do elemento participantes eles morrem
+                    $("#hide_participantes").hide();
+                    $("#participantes").empty();   
                 }
+
             })
             document.getElementById("look_listas_teoricas").onclick = function () {
                 $("#look_participantes").hide("fast");
@@ -204,6 +408,7 @@ sala_service.lista().then(resposta => {
                 $("#listas_teoricas_especificas").show("fast");
                 $("#conteudo_da_lista_teorica").hide("fast");
                 $("#area_de_criacao_de_listas_teoricas").hide("fast");
+                $("#voltar_tela_inicial").show("fast");
                 let ul = document.getElementById("lugar_lista_teorica");
                 let lista_teorica_service = new Lista_Teoria_Service(`http://localhost:3000/lista_teoricas?id_sala=${id_sala}&id_criador=${id_login}`);
                 lista_teorica_service.lista().then(resposta => {
@@ -231,21 +436,31 @@ sala_service.lista().then(resposta => {
                         button_acessar_lista_teorica.onclick = function () {
                             let lista_perguntas;
                             let lista_opcoes;
-                            let opcoes_certas;
                             let perguntas = document.getElementById("pergunta");
                             let opcoes = document.querySelectorAll("#opcao");
                             let posicao_pergunta = 0;
                             let posicao_opcoes = 0;
-                            let posicao_opcoes_certas = 0
                             let id = event.target.id;
                             $("#conteudo_da_lista_teorica").show("fast");
+                            let nota_service = new Nota_Service(`http://localhost:3000/notas?id_lista_teorica=${id}`);
+                            nota_service.listar().then(resposta =>{
+                                let ul = document.getElementById("place_notas");
+                                for(let i = 0; i <= resposta.length -1; i++){
+                                    let li = document.createElement("li");
+                                    let span_nome = document.createElement("span");
+                                    let span_nota= document.createElement("span");
+                                    span_nome.innerHTML = "Nome do aluno: " + resposta[i].nome_aluno + "</br>";
+                                    span_nota.innerHTML = "Nota do aluno: " + resposta[i].nota;
+                                    li.append(span_nome);
+                                    li.append(span_nota);
+                                    ul.append(li);
+                                }
+                            })
                             let lista_teorica_service = new Lista_Teoria_Service(`http://localhost:3000/lista_teoricas?id=${id}`);
                             lista_teorica_service.lista().then(resposta => {
                                 lista_perguntas = resposta[0].perguntas;
                                 lista_opcoes = resposta[0].opcoes;
                                 opcoes_certas = resposta[0].opcoes_certas;
-
-
                                 perguntas.innerHTML = lista_perguntas[posicao_pergunta];
                                 for (let i = 0; i <= opcoes.length - 1; i++) {
                                     opcoes[i].innerHTML = lista_opcoes[posicao_opcoes][i];
@@ -261,13 +476,9 @@ sala_service.lista().then(resposta => {
                                             opcoes[i].innerHTML = lista_opcoes[posicao_opcoes][i];
 
                                         }
-
                                     }
                                 }
-                                document.getElementById("tela_inicial").onclick = function(){
-                                    $("#conteudo_da_lista_teorica").hide();
-                                    $("#area_de_listas_teoricas").show();
-                                }
+                                
                             })
                         }
                     }
@@ -277,6 +488,8 @@ sala_service.lista().then(resposta => {
                     $("#criar_lista").show("fast");
                     $("#look_listas_teoricas").show("fast");
                     $("#listas_teoricas_especificas").hide("fast");
+                    $("#voltar_tela_inicial").hide("fast")
+                    $("#conteudo_da_lista_teorica").hide("fast");
                     $("#lugar_lista_teorica").empty();
                 }
             }
@@ -324,6 +537,7 @@ criar_sala.onclick = function () {
         })
     }
 }
+
 /*
 let participantes_lista = [];
 
