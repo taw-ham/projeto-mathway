@@ -6,3 +6,16 @@
     border-bottom: 1px solid greenyellow;
     
 }
+#look_participantes{
+    width: 10%;
+    border-radius: 10px;
+}
+#look_listas_teoricas{
+    width: 30%;
+    border-radius: 10px;
+    height: 50px;
+}
+#criar_lista{
+    width: 10%;
+    border-radius: 10px;
+}

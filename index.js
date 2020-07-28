@@ -220,6 +220,10 @@ sala_service.lista().then(resposta => {
                             let nome_da_lista = document.getElementById("nome_lista_teorica").value;
 
                             if (nome_da_lista != "") {
+                                $("#nome_lista").hide("fast");
+                                $("#nome_lista_teorica").hide("fast");
+                                $("#situcao_nome_lista").hide("fast");
+
                                 $("#proxima_etapa").show();
                                 $("#lista").show();
                                 console.log(button_temas)
@@ -243,7 +247,7 @@ sala_service.lista().then(resposta => {
                                             console.log(opcoes_certas);
                                             cont_perguntas++;
 
-                                            contador_perguntas.innerHTML = cont_perguntas;
+                                            contador_perguntas.innerHTML = cont_perguntas + "/10 no máximo pode adicionar 10 perguntas e no minimo 10";
                                             if (cont_perguntas == 10) {
                                                 $("#lista").hide("fast");
                                                 let lista_teorica = new Lista_Teoria(nome_da_lista, lista_perguntas, lista_opcoes, opcoes_certas, id_login, id_sala);
@@ -302,7 +306,7 @@ sala_service.lista().then(resposta => {
                                         opcoes_certas.push(opcao_correta_user)
                                         console.log(opcoes_certas);
                                         cont_perguntas++;
-                                        contador_perguntas.innerHTML = cont_perguntas;
+                                        contador_perguntas.innerHTML = cont_perguntas + "/10 no máximo pode adicionar 10 perguntas e no minimo 10";
                                         let pergunta = new Pergunta(pergunta_user, opcoes_check, opcao_correta_user, id_login, button_temas, id_tema);
                                         let pergunta_service = new Perguntas_Service("http://localhost:3000/perguntas");
                                         pergunta_service.inserir(pergunta).then(resposta => {
@@ -341,6 +345,8 @@ sala_service.lista().then(resposta => {
                                 //let temp = opcoes_user.split(especificacao)
 
 
+                            }else{
+                                $("#situcao_nome_lista").text("nome da sala inválido ou digite o nome da sala")
                             }
 
                         }
@@ -528,13 +534,19 @@ criar_sala.onclick = function () {
     }
     document.getElementById("criar_sala_especifica").onclick = function () {
         let nome_sala = document.getElementById("sala_nome").value;
-        console.log(lista_participantes)
-        let sala = new Salas(nome_sala, id_login, lista_participantes);
-        let sala_service = new Salas_Service("http://localhost:3000/salas");
-        sala_service.inserir(sala).then(resposta => {
-            console.log(resposta);
-            location.reload(); //atualiza a página
-        })
+        console.log(lista_participantes);
+        if(nome_sala ==""){
+            situacao_usuario.innerHTML = "campo do nome da sala inválido ou digite o nome da sala"
+        }else{
+            let sala = new Salas(nome_sala, id_login, lista_participantes);
+            let sala_service = new Salas_Service("http://localhost:3000/salas");
+            sala_service.inserir(sala).then(resposta => {
+                console.log(resposta);
+                location.reload(); //atualiza a página
+            })
+
+        }
+        
     }
 }
 

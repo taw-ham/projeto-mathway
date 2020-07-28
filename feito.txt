@@ -1,0 +1,1 @@
+fiz algumas modificações no código por exemplo ele diz quantas perguntas falta para terminar de criar a lista teórica e um css pequeno no menu de escolha do que fazer na sala e uma pequena programação na parte de criarsalas só pode criar uma sala se tiver digitado o nome se não não cria a sala como também eu fiz isso em criar lista teórica

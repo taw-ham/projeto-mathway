@@ -26,9 +26,28 @@
       "nome": "física",
       "id_criador": "1",
       "participantes": [
-        "taw-ham","jhon","edcorno"
+        "taw-ham",
+        "jhon",
+        "edcorno"
       ],
       "id": 5
+    },
+    {
+      "nome": "sala teste",
+      "id_criador": "1",
+      "participantes": [
+        "taw-ham",
+        "jhon"
+      ],
+      "id": 6
+    },
+    {
+      "nome": "lol",
+      "id_criador": "1",
+      "participantes": [
+        "taw-ham"
+      ],
+      "id": 7
     }
   ],
   "lista_teoricas": [
