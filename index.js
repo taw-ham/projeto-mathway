@@ -165,8 +165,6 @@ class Nota_Service{
         
     }
 }
-
-
 var id_login = localStorage.getItem('id');
 let sala_service = new Salas_Service(`http://localhost:3000/salas?id_criador=${id_login}`);
 sala_service.lista().then(resposta => {
@@ -192,7 +190,7 @@ sala_service.lista().then(resposta => {
             var id_sala = event.target.id; //pega o id do botão clicado
             document.getElementById("criar_lista").onclick = function () {
                 let lista_perguntas = [];
-                let lista_opcoes = []
+                let lista_opcoes = [];
                 let opcoes_certas = [];
                 let contador_perguntas = document.getElementById("cont_perguntas");
                 var cont_perguntas = 0;
@@ -212,7 +210,7 @@ sala_service.lista().then(resposta => {
                     button_temas[i].onclick = function () {
                         $("#temas").hide("fast");
                         var id_tema = event.target.id;
-                        button_temas = button_temas[i].textContent
+                        button_temas = button_temas[i].textContent;
                         $("#lista").show();
                         $("#proxima_etapa").hide();
                         let nome_lista = document.getElementById("nome_lista");
@@ -482,6 +480,8 @@ sala_service.lista().then(resposta => {
                                             opcoes[i].innerHTML = lista_opcoes[posicao_opcoes][i];
 
                                         }
+                                    }else{
+                                        $("#situcao_posicao_lista_teorica").text("você chegou a última questão da sua lista teórica");
                                     }
                                 }
                                 
@@ -497,6 +497,7 @@ sala_service.lista().then(resposta => {
                     $("#voltar_tela_inicial").hide("fast")
                     $("#conteudo_da_lista_teorica").hide("fast");
                     $("#lugar_lista_teorica").empty();
+                    $("#place_notas").empty()
                 }
             }
         }

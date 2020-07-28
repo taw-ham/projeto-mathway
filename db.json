@@ -48,6 +48,15 @@
         "taw-ham"
       ],
       "id": 7
+    },
+    {
+      "nome": "edcorno",
+      "id_criador": "1",
+      "participantes": [
+        "jhon",
+        "taw-ham"
+      ],
+      "id": 8
     }
   ],
   "lista_teoricas": [
@@ -971,108 +980,6 @@
       "id": 10
     },
     {
-      "nome": "teste Lista teorica8",
-      "perguntas": [
-        "quanto é 1 mais 1?",
-        "quanto é 2 mais 2?",
-        "hkeheh",
-        "heehe",
-        "heehe",
-        "hkeheh",
-        "quanto é 2 mais 2?",
-        "quanto é 2 mais 2?",
-        "hkeheh",
-        "heehe"
-      ],
-      "opcoes": [
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ]
-      ],
-      "opcoes_certas": [
-        2,
-        4,
-        "2",
-        "2",
-        "2",
-        "2",
-        4,
-        4,
-        "2",
-        "2"
-      ],
-      "id_criador": "1",
-      "id_sala": "5",
-      "id": 11
-    },
-    {
       "nome": "teste Lista teorica9",
       "perguntas": [
         "quanto é 1 mais 1?",
@@ -1275,6 +1182,108 @@
       "id_criador": "1",
       "id_sala": "5",
       "id": 13
+    },
+    {
+      "nome": "lista de teste jhon",
+      "perguntas": [
+        "5 + 5?",
+        "quanto é 2 mais 2?",
+        "quanto é 2 mais 2?",
+        "quanto é 2 mais 2?",
+        "quanto é 2 mais 2?",
+        "quanto é 2 mais 2?",
+        "quanto é 2 mais 2?",
+        "quanto é 2 mais 2?",
+        "quanto é 2 mais 2?",
+        "quanto é 2 mais 2?"
+      ],
+      "opcoes": [
+        [
+          "10",
+          "12",
+          "45",
+          "34",
+          "76"
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "opcoes_certas": [
+        "10",
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "id_criador": "1",
+      "id_sala": "5",
+      "id": 14
     }
   ],
   "Alunos": [
@@ -1358,6 +1367,36 @@
       "tema": " matriz ",
       "id_tema": "1",
       "id": 4
+    },
+    {
+      "pergunta": "5 + 5?",
+      "opcoes": [
+        "10",
+        "12",
+        "45",
+        "34",
+        "76"
+      ],
+      "opcao_certa": "10",
+      "id_criador": "1",
+      "tema": " matriz ",
+      "id_tema": "1",
+      "id": 5
+    },
+    {
+      "pergunta": "uyuyfuyfuyfutf",
+      "opcoes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "opcao_certa": "5",
+      "id_criador": "1",
+      "tema": " matriz ",
+      "id_tema": "1",
+      "id": 6
     }
   ]
 }

@@ -2,7 +2,7 @@ class PROFESSOR {
     constructor(nome, senha,email) {
         this.nome = nome;
         this.senha = senha;
-        this.email = email
+        this.email = email;
     }
 }
 class ProfessorService {
@@ -105,8 +105,7 @@ document.getElementById("enviar").onclick = function () {
         }else{
             const id = results[0].id;
             localStorage.setItem('id',id);
-            window.location.assign("pagina_inicial.html")
-            
+            window.location.assign("pagina_inicial.html")   
         }
     })
 }
