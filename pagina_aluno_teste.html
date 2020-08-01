@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel="stylesheet" type="text/css" href="./aluno_teste.css">
+
+    </head>
+    <body>
+        <div id="area_de_escolhas">
+            <button id="salas_presentes"> Vê salas em que está partcipando </button>
+            <button id="exercicios"> exercicios </button>
+            <button id="notas"> Veja sua nota </button>
+        </div>
+        <div id="escolha_de_sala">
+            <ul id="salas_inseridas">
+            </ul>
+            <button id="voltar_da_area_de_escolha_de_salas"> Voltar a Tela Inicial </button>
+        </div>
+        <div id="area_escolha_lista_teorica">
+            <ul id="listas_teoricas">
+            </ul>
+            <button id="voltar_da_area_sala_especifica"> Voltar a área de escolher sala </button>
+        </div>
+        <div id="fazer_exercicio_lista_teorica">
+            <p id="place_perguntas"> </p>
+            <ul> 
+                <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+                <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+                <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+                <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+                <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+            </ul>
+            <button id="proxima_pergunta"> Proxima Pergunta</button>
+        </div>
+        <div id="termino_exercicio">
+            <p id="lugar_nota"> </p>
+            <ul id="reposta_certa">
+
+            </ul>
+            <ul id="pergunta_errada"> 
+                
+            </ul>
+            <button id="voltar_escolha_lista_teorica"> Voltar a área de escolha de Lista teórica</button>
+        </div>
+
+        <script src ="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+        <script src="./teste_da_pagina_aluno.js"></script>
+    </body>
+</html>

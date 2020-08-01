@@ -11,52 +11,73 @@
       "nome": "Lucas",
       "senha": "456",
       "email": "lucasway@gmail.com"
+    },
+    {
+      "nome": "",
+      "senha": "",
+      "id": 3
+    },
+    {
+      "nome": "",
+      "senha": "",
+      "email": "",
+      "id": 4
+    },
+    {
+      "nome": "",
+      "senha": "",
+      "email": "",
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "id": 16
+    },
+    {
+      "nome": "taw-ham",
+      "senha": "1234",
+      "email": "domotag211@mailer2.net",
+      "id": 17
     }
   ],
   "salas": [
-    {
-      "nome": "sala 0",
-      "id": 0,
-      "id_criador": 0,
-      "participantes": [
-        "taw-ham"
-      ]
-    },
     {
       "nome": "física",
       "id_criador": "1",
       "participantes": [
         "taw-ham",
-        "jhon",
-        "edcorno"
-      ],
-      "id": 5
-    },
-    {
-      "nome": "sala teste",
-      "id_criador": "1",
-      "participantes": [
-        "taw-ham",
         "jhon"
       ],
-      "id": 6
-    },
-    {
-      "nome": "lol",
-      "id_criador": "1",
-      "participantes": [
-        "taw-ham"
-      ],
-      "id": 7
-    },
-    {
-      "nome": "edcorno",
-      "id_criador": "1",
-      "participantes": [
-        "jhon",
-        "taw-ham"
-      ],
-      "id": 8
+      "id": 5
     }
   ],
   "lista_teoricas": [
@@ -164,18 +185,19 @@
       "nome_sala": "fisica"
     },
     {
-      "nome": "teste Lista teorica",
+      "id": 3,
+      "nome": "lista_teste_3",
       "perguntas": [
         "quanto é 1 mais 1?",
-        "quanto é 2 mais 2?",
-        "hkeheh",
-        "heehe",
-        "quanto é 1 mais 1?",
-        "quanto é 2 mais 2?",
-        "hkeheh",
-        "heehe",
-        "heehe",
-        "hkeheh"
+        "quanto é 2 + 1?",
+        "quanto é 3 + 1?",
+        "quanto é 4 + 1?",
+        "quanto é 5 + 1?",
+        "quanto é 6 + 1?",
+        "quanto é 7 + 1?",
+        "quanto é 8 + 1?",
+        "quanto é 9 + 1?",
+        "quanto é 10 + 1"
       ],
       "opcoes": [
         [
@@ -186,1104 +208,84 @@
           6
         ],
         [
-          2,
-          3,
-          4,
           5,
-          6
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          2,
           3,
-          4,
-          5,
-          6
+          10,
+          6,
+          0
         ],
         [
-          2,
+          5,
+          8,
+          4,
+          9,
+          0
+        ],
+        [
+          8,
           3,
-          4,
+          6,
           5,
-          6
+          2
         ],
         [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
+          6,
+          7,
+          8,
+          9,
+          10
         ],
         [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
+          8,
+          7,
+          10,
+          90,
+          1
         ],
         [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
+          9,
+          8,
+          10,
+          11,
+          12
         ],
         [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
+          0,
+          5,
+          9,
+          10,
+          11
+        ],
+        [
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        [
+          10,
+          12,
+          14,
+          11,
+          18
         ]
       ],
       "opcoes_certas": [
         2,
+        3,
         4,
-        "2",
-        "2",
-        2,
-        4,
-        "2",
-        "2",
-        "2",
-        "2"
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
       ],
-      "id_criador": "1",
-      "id_sala": "5",
-      "id": 3
-    },
-    {
-      "nome": "teste Lista teorica2",
-      "perguntas": [
-        "quanto é 1 mais 1?",
-        "quanto é 2 mais 2?",
-        "hkeheh",
-        "heehe",
-        "heehe",
-        "hkeheh",
-        "quanto é 2 mais 2?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 2 mais 2?"
-      ],
-      "opcoes": [
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ]
-      ],
-      "opcoes_certas": [
-        2,
-        4,
-        "2",
-        "2",
-        "2",
-        "2",
-        4,
-        2,
-        2,
-        4
-      ],
-      "id_criador": "1",
-      "id_sala": "5",
-      "id": 4
-    },
-    {
-      "nome": "teste Lista teorica3",
-      "perguntas": [
-        "quanto é 1 mais 1?",
-        "quanto é 2 mais 2?",
-        "hkeheh",
-        "heehe",
-        "heehe",
-        "heehe",
-        "hkeheh",
-        "quanto é 2 mais 2?",
-        "quanto é 1 mais 1?",
-        "quanto é 2 mais 2?"
-      ],
-      "opcoes": [
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ]
-      ],
-      "opcoes_certas": [
-        2,
-        4,
-        "2",
-        "2",
-        "2",
-        "2",
-        "2",
-        4,
-        2,
-        4
-      ],
-      "id_criador": "1",
-      "id_sala": "5",
-      "id": 5
-    },
-    {
-      "nome": "teste Lista teorica4",
-      "perguntas": [
-        "quanto é 1 mais 1?",
-        "quanto é 2 mais 2?",
-        "hkeheh",
-        "heehe",
-        "heehe",
-        "hkeheh",
-        "quanto é 2 mais 2?",
-        "quanto é 1 mais 1?",
-        "hkeheh",
-        "heehe"
-      ],
-      "opcoes": [
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ]
-      ],
-      "opcoes_certas": [
-        2,
-        4,
-        "2",
-        "2",
-        "2",
-        "2",
-        4,
-        2,
-        "2",
-        "2"
-      ],
-      "id_criador": "1",
-      "id_sala": "5",
-      "id": 6
-    },
-    {
-      "nome": "teste Lista teorica5",
-      "perguntas": [
-        "quanto é 1 mais 1?",
-        "quanto é 2 mais 2?",
-        "hkeheh",
-        "heehe",
-        "quanto é 1 mais 1?",
-        "quanto é 2 mais 2?",
-        "hkeheh",
-        "heehe",
-        "hkeheh",
-        "quanto é 1 mais 1?"
-      ],
-      "opcoes": [
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ]
-      ],
-      "opcoes_certas": [
-        2,
-        4,
-        "2",
-        "2",
-        2,
-        4,
-        "2",
-        "2",
-        "2",
-        2
-      ],
-      "id_criador": "1",
-      "id_sala": "5",
-      "id": 7
-    },
-    {
-      "nome": "teste Lista teorica6",
-      "perguntas": [
-        "quanto é 1 mais 1?",
-        "quanto é 2 mais 2?",
-        "hkeheh",
-        "heehe",
-        "heehe",
-        "hkeheh",
-        "quanto é 2 mais 2?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 2 mais 2?"
-      ],
-      "opcoes": [
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ]
-      ],
-      "opcoes_certas": [
-        2,
-        4,
-        "2",
-        "2",
-        "2",
-        "2",
-        4,
-        2,
-        2,
-        4
-      ],
-      "id_criador": "1",
-      "id_sala": "5",
-      "id": 8
-    },
-    {
-      "nome": "teste Lista teorica7",
-      "perguntas": [
-        "quanto é 2 mais 2?",
-        "hkeheh",
-        "hkeheh",
-        "quanto é 2 mais 2?",
-        "quanto é 2 mais 2?",
-        "quanto é 2 mais 2?",
-        "quanto é 2 mais 2?",
-        "quanto é 2 mais 2?",
-        "quanto é 2 mais 2?",
-        "quanto é 2 mais 2?"
-      ],
-      "opcoes": [
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ]
-      ],
-      "opcoes_certas": [
-        4,
-        "2",
-        "2",
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4
-      ],
-      "id_criador": "1",
-      "id_sala": "5",
-      "id": 9
-    },
-    {
-      "nome": "teste Lista teorica7",
-      "perguntas": [
-        "quanto é 1 mais 1?",
-        "quanto é 2 mais 2?",
-        "hkeheh",
-        "heehe",
-        "quanto é 2 mais 2?",
-        "quanto é 1 mais 1?",
-        "heehe",
-        "hkeheh",
-        "quanto é 1 mais 1?",
-        "quanto é 2 mais 2?"
-      ],
-      "opcoes": [
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ]
-      ],
-      "opcoes_certas": [
-        2,
-        4,
-        "2",
-        "2",
-        4,
-        2,
-        "2",
-        "2",
-        2,
-        4
-      ],
-      "id_criador": "1",
-      "id_sala": "5",
-      "id": 10
-    },
-    {
-      "nome": "teste Lista teorica9",
-      "perguntas": [
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?"
-      ],
-      "opcoes": [
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ]
-      ],
-      "opcoes_certas": [
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2
-      ],
-      "id_criador": "1",
-      "id_sala": "5",
-      "id": 12
-    },
-    {
-      "nome": "teste violentasso",
-      "perguntas": [
-        "quanto é 2 mais 2?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?",
-        "quanto é 1 mais 1?"
-      ],
-      "opcoes": [
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ]
-      ],
-      "opcoes_certas": [
-        4,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2
-      ],
-      "id_criador": "1",
-      "id_sala": "5",
-      "id": 13
-    },
-    {
-      "nome": "lista de teste jhon",
-      "perguntas": [
-        "5 + 5?",
-        "quanto é 2 mais 2?",
-        "quanto é 2 mais 2?",
-        "quanto é 2 mais 2?",
-        "quanto é 2 mais 2?",
-        "quanto é 2 mais 2?",
-        "quanto é 2 mais 2?",
-        "quanto é 2 mais 2?",
-        "quanto é 2 mais 2?",
-        "quanto é 2 mais 2?"
-      ],
-      "opcoes": [
-        [
-          "10",
-          "12",
-          "45",
-          "34",
-          "76"
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        [
-          2,
-          3,
-          4,
-          5,
-          6
-        ]
-      ],
-      "opcoes_certas": [
-        "10",
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4
-      ],
-      "id_criador": "1",
-      "id_sala": "5",
-      "id": 14
+      "id_criador": 1,
+      "id_sala": 5,
+      "nome_sala": "fisica"
     }
   ],
   "Alunos": [
@@ -1291,12 +293,20 @@
       "email": "taw.ham.balbino@gmail.com",
       "nome": "taw-ham",
       "id": 0,
-      "id_sala": 1
+      "id_sala": 1,
+      "senha": "1234"
     },
     {
       "email": "jhon@gmail.com",
       "nome": "jhon",
-      "id": 1
+      "id": 1,
+      "senha": "2468"
+    },
+    {
+      "email": "edsantos.001@gmail.com",
+      "nome": "edcorno",
+      "senha": "1234567890",
+      "id": 2
     }
   ],
   "notas": [
@@ -1304,9 +314,52 @@
       "nome_aluno": "taw-ham",
       "nota": 90,
       "id": 1,
-      "id_aluno": 1,
-      "id_lista_teorica": 4,
-      "tema": "matriz"
+      "id_aluno": 0,
+      "id_lista_teorica": 3,
+      "perguntas_erradas": [
+        "2+2",
+        "4+4"
+      ],
+      "perguntas_certas": [
+        "5+5",
+        "6+6"
+      ]
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 80,
+      "id": 2,
+      "id_aluno": 0,
+      "id_lista_teorica": 3,
+      "perguntas_erradas": [
+        "2+2",
+        "4+4"
+      ],
+      "perguntas_certas": [
+        "5+5",
+        "6+6"
+      ]
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 60,
+      "id_aluno": "0",
+      "id_lista_teorica": "2",
+      "perguntas_certas": [
+        "quanto é 1 mais 1?",
+        "quanto é 2 + 1?",
+        "quanto é 3 + 1?",
+        "quanto é 4 + 1?",
+        "quanto é 8 + 1?",
+        "quanto é 10 + 1"
+      ],
+      "perguntas_erradas": [
+        "quanto é 5 + 1?",
+        "quanto é 6 + 1?",
+        "quanto é 7 + 1?",
+        "quanto é 9 + 1?"
+      ],
+      "id": 3
     }
   ],
   "perguntas": [
@@ -1339,36 +392,6 @@
       "id_tema": 1
     },
     {
-      "pergunta": "hkeheh",
-      "opcoes": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5"
-      ],
-      "opcao_certa": "2",
-      "id_criador": "1",
-      "tema": " matriz ",
-      "id_tema": "1",
-      "id": 3
-    },
-    {
-      "pergunta": "heehe",
-      "opcoes": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5"
-      ],
-      "opcao_certa": "2",
-      "id_criador": "1",
-      "tema": " matriz ",
-      "id_tema": "1",
-      "id": 4
-    },
-    {
       "pergunta": "5 + 5?",
       "opcoes": [
         "10",
@@ -1382,21 +405,14 @@
       "tema": " matriz ",
       "id_tema": "1",
       "id": 5
-    },
+    }
+  ],
+  "comentário": [
     {
-      "pergunta": "uyuyfuyfuyfutf",
-      "opcoes": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5"
-      ],
-      "opcao_certa": "5",
-      "id_criador": "1",
-      "tema": " matriz ",
-      "id_tema": "1",
-      "id": 6
+      "id_aluno": 0,
+      "comentário": "azul é o céu logo todo corno é azul",
+      "nome_aluno": "taw-ham",
+      "id": "1"
     }
   ]
 }

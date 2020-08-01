@@ -1,0 +1,300 @@
+#cadastro {
+    margin-top: -1.2%;
+    margin-left: 0%;
+    margin-bottom: 0%;
+    padding-top: 5%;
+    padding-bottom: 6.2%;
+    background-image: url('./fotis/network.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#login {
+    margin-top: -1.2%;
+    margin-left: 0%;
+    margin-bottom: 0%;
+    padding-top: 7%;
+    padding-bottom: 11.8%;
+    background-image: url('./fotis/network.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#fundo {
+    width: 30%;
+    padding: 1%;
+    margin-left: 35%;
+    background-color: lightblue;
+}
+
+#fundo2 {
+    width: 30%;
+    padding: 1%;
+    margin-left: 35%;
+    background-color: lightgray;
+}
+
+#fundo header {
+    background-color: royalblue;
+    border-radius: 2%;
+}
+
+#fundo2 header {
+    background-color: royalblue;
+    border-radius: 2%;
+}
+
+#fundo header h2 {
+    font-family: calibri;
+    font-size: 160%;
+    text-indent: 2%;
+    text-align: center;
+    margin-left: -8%;
+    padding: 0.5%;
+    color: whitesmoke;
+    text-shadow: 1px 1px #000;
+    font-weight: bold;
+}
+
+#fundo2 header h2 {
+    font-family: calibri;
+    font-size: 160%;
+    text-indent: 2%;
+    text-align: center;
+    margin-left: -8%;
+    padding: 0.5%;
+    color: whitesmoke;
+    text-shadow: 1px 1px #000;
+    font-weight: bold;
+}
+
+#fundo div label {
+    font-family: arial;
+    font-size: 90%;
+    padding-top: 2%;
+}
+
+#fundo2 div label {
+    font-family: arial;
+    font-size: 90%;
+    padding-top: 2%;
+}
+
+#cadastrar {
+    font-family: calibri;
+}
+
+#enviar {
+    font-family: calibri;
+}
+
+#lembranca {
+    margin-top: -2%;
+    padding-bottom: 2%;
+}
+
+#check-b {
+    margin-left: 2%;
+}
+
+#estudo {
+    margin-top: -2%; 
+}
+
+#estudo2 {
+    margin-top: -2%;
+    margin-left: 8%;
+}
+
+#estudo3 {
+    padding-bottom: 2%;
+}
+
+#inte {
+    height: 1%;
+    width: 10%;
+    margin-top: -2%;
+    margin-left: 52%;
+    border-radius: 50%;
+}
+
+#inte2 {
+    font-family: arial;
+    font-size: 70%;
+    margin-top: 2%;
+    padding: 1%;
+    padding-left: 2%;
+    background-color: goldenrod;
+}
+
+#menu1 {
+    background-color: darkblue;
+    color: white;
+    padding-top: 0%;
+    padding-bottom: 0.5%;
+    margin-top: 0px;
+    border-bottom: 1.5px solid royalblue; 
+}
+
+#menu1 li {
+    list-style-type: none;
+    position: relative;
+    display: inline-block;
+    margin-top: 0.5%;
+    margin-left: 0%;
+    font-family: arial;
+}
+
+#menu1 #op01 {
+    position: relative;
+    color: white;
+    margin-left: -2.5%;
+    font-size: 75%;
+    padding: 1%;
+    padding-top: 0.4%;
+    padding-bottom: 0.4%;
+    background-color: green;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#menu1 #op02 {
+    position: relative;
+    color: white;
+    margin-left: 0.5%;
+    font-size: 75%;
+    padding: 1%;
+    padding-top: 0.4%;
+    padding-bottom: 0.4%;
+    background-color: blue;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#copy2 #tta {
+    margin-left: 0%;
+}
+
+#copy2 {
+    margin-bottom: 0%;
+    background-color: #000;
+    padding-top: 0%;
+    margin-top: 0%;
+    padding: 0.2%;
+    border-top: 1px solid gainsboro;
+}
+
+#copy2 li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 1%;
+    margin-top: -0.5%;
+    position: relative;
+    margin-left: 0%;
+    font-size: 85%;
+    padding-bottom: 0.1%;
+}
+
+#copy2 li img {
+    margin-left: 820px;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin-bottom: 0px;
+}
+
+#copy2 #rede a:hover img {
+    background-color: whitesmoke;
+}
+
+#copy2 #insta {
+    margin-left: 0%;
+}
+
+#right {
+    color: lightblue;
+}
+
+#copy2 #tta a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#copy2 #tta a:hover {
+    text-decoration: underline;
+}
+
+#face {
+    background-color: lightblue;
+}
+
+#insta {
+    background-color: lightsalmon;
+}
+
+#warn {
+    font-family: calibri;
+    font-size: 75%;
+    margin-top: 2%;
+}
+
+#copy3 #tta {
+    margin-left: 0%;
+}
+
+#copy3 {
+    margin-bottom: 0%;
+    background-color: #000;
+    padding-top: 0%;
+    margin-top: 0%;
+    padding: 0.2%;
+    border-top: 1px solid gainsboro;
+}
+
+#copy3 li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 1%;
+    margin-top: -0.5%;
+    position: relative;
+    margin-left: 0%;
+    font-size: 85%;
+    padding-bottom: 0.1%;
+}
+
+#copy3 li img {
+    margin-left: 820px;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin-bottom: 0px;
+}
+
+#copy3 #rede a:hover img {
+    background-color: whitesmoke;
+}
+
+#copy3 #insta {
+    margin-left: 0%;
+}
+
+#right {
+    color: lightblue;
+}
+
+#copy3 #tta a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#copy3 #tta a:hover {
+    text-decoration: underline;
+}
+
+#face {
+    background-color: lightblue;
+}
+
+#insta {
+    background-color: lightsalmon;
+}

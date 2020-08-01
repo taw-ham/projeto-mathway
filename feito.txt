@@ -1,2 +1,2 @@
 
-site terminado com jhon
+foi feito as correções que vc mandou nos arquivos tudo que fiz expliquei no watzap se vc vê os arquivos tá tudo de um jeito que vc possa entender mais qualquer coisa é só falar também acabei a parte do aluno fazer as listas teoricas das salas se vc vê la eu fiz o seguinte se o usuario já tenha feito a lista teórica ele não poderá fazer de novo vai aparecer sua nota questões certas e as questões erradas mais se ele não fez ele poderá fazer quando ele terminar aparecerar a sua nota como também questões certas como erradas isso é o que fiz amanhã estarei fazendo a parte do aluno fazer sua própria lista teórica
