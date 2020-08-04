@@ -327,44 +327,96 @@
     },
     {
       "nome_aluno": "taw-ham",
-      "nota": 80,
-      "id": 2,
-      "id_aluno": 0,
-      "id_lista_teorica": 3,
-      "perguntas_erradas": [
-        "2+2",
-        "4+4"
-      ],
-      "perguntas_certas": [
-        "5+5",
-        "6+6"
-      ]
-    },
-    {
-      "nome_aluno": "taw-ham",
-      "nota": 60,
+      "nota": 50,
       "id_aluno": "0",
       "id_lista_teorica": "2",
+      "nome_lista_teorica": "lista_teste",
       "perguntas_certas": [
-        "quanto é 1 mais 1?",
         "quanto é 2 + 1?",
         "quanto é 3 + 1?",
         "quanto é 4 + 1?",
-        "quanto é 8 + 1?",
-        "quanto é 10 + 1"
+        "quanto é 5 + 1?",
+        "quanto é 6 + 1?"
       ],
       "perguntas_erradas": [
-        "quanto é 5 + 1?",
-        "quanto é 6 + 1?",
+        "quanto é 1 mais 1?",
         "quanto é 7 + 1?",
-        "quanto é 9 + 1?"
+        "quanto é 8 + 1?",
+        "quanto é 9 + 1?",
+        "quanto é 10 + 1"
+      ],
+      "id": 2
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 0,
+      "id_aluno": "0",
+      "id_lista_teorica": 2,
+      "nome_lista_teorica": "lista teorica teste",
+      "perguntas_certas": [
+        "quanto é 1 + 1?",
+        "quanto é 2 + 2?",
+        "3 + 3?",
+        "quanto é 4 + 4?",
+        "quanto é 5 + 5?",
+        "quanto é 6 + 6?",
+        "quanto é 7 + 7?",
+        "quanto é 10 + 10?"
+      ],
+      "perguntas_erradas": [
+        "quanto é 8 + 8?",
+        "quanto é 9 + 9?"
       ],
       "id": 3
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 80,
+      "id_aluno": "0",
+      "id_lista_teorica": 4,
+      "nome_lista_teorica": "lista taw-ham",
+      "perguntas_certas": [
+        "3 + 3?",
+        "quanto é 1 + 1?",
+        "quanto é 10 + 10?",
+        "quanto é 2 + 2?",
+        "quanto é 4 + 4?",
+        "quanto é 5 + 5?",
+        "quanto é 6 + 6?",
+        "quanto é 7 + 7?"
+      ],
+      "perguntas_erradas": [
+        "quanto é 8 + 8?",
+        "quanto é 9 + 9?"
+      ],
+      "id": 4
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 50,
+      "id_aluno": "0",
+      "id_lista_teorica": "2",
+      "nome_lista_teorica": "a",
+      "perguntas_certas": [
+        "quanto é 2 + 1?",
+        "quanto é 3 + 1?",
+        "quanto é 4 + 1?",
+        "quanto é 5 + 1?",
+        "quanto é 6 + 1?"
+      ],
+      "perguntas_erradas": [
+        "quanto é 1 mais 1?",
+        "quanto é 7 + 1?",
+        "quanto é 8 + 1?",
+        "quanto é 9 + 1?",
+        "quanto é 10 + 1"
+      ],
+      "id": 5
     }
   ],
   "perguntas": [
     {
-      "pergunta": "quanto é 1 mais 1?",
+      "pergunta": "quanto é 1 + 1?",
       "opcoes": [
         2,
         3,
@@ -378,7 +430,7 @@
       "id_tema": 1
     },
     {
-      "pergunta": "quanto é 2 mais 2?",
+      "pergunta": "quanto é 2 + 2?",
       "opcoes": [
         2,
         3,
@@ -392,27 +444,807 @@
       "id_tema": 1
     },
     {
-      "pergunta": "5 + 5?",
+      "pergunta": "3 + 3?",
       "opcoes": [
-        "10",
+        "6",
         "12",
         "45",
         "34",
         "76"
       ],
-      "opcao_certa": "10",
+      "opcao_certa": "6",
       "id_criador": "1",
       "tema": " matriz ",
       "id_tema": "1",
       "id": 5
+    },
+    {
+      "pergunta": "quanto é 4 + 4?",
+      "opcoes": [
+        2,
+        3,
+        4,
+        5,
+        8
+      ],
+      "opcao_certa": 8,
+      "tema": "matriz",
+      "id": 6,
+      "id_tema": 1
+    },
+    {
+      "pergunta": "quanto é 5 + 5?",
+      "opcoes": [
+        2,
+        3,
+        10,
+        5,
+        6
+      ],
+      "opcao_certa": 10,
+      "tema": "matriz",
+      "id": 7,
+      "id_tema": 1
+    },
+    {
+      "pergunta": "quanto é 6 + 6?",
+      "opcoes": [
+        2,
+        12,
+        4,
+        5,
+        6
+      ],
+      "opcao_certa": 12,
+      "tema": "matriz",
+      "id": 8,
+      "id_tema": 1
+    },
+    {
+      "pergunta": "quanto é 7 + 7?",
+      "opcoes": [
+        2,
+        3,
+        14,
+        5,
+        6
+      ],
+      "opcao_certa": 14,
+      "tema": "matriz",
+      "id": 9,
+      "id_tema": 1
+    },
+    {
+      "pergunta": "quanto é 8 + 8?",
+      "opcoes": [
+        2,
+        3,
+        4,
+        5,
+        16
+      ],
+      "opcao_certa": 16,
+      "tema": "matriz",
+      "id": 10,
+      "id_tema": 1
+    },
+    {
+      "pergunta": "quanto é 9 + 9?",
+      "opcoes": [
+        2,
+        3,
+        18,
+        5,
+        6
+      ],
+      "opcao_certa": 18,
+      "tema": "matriz",
+      "id": 11,
+      "id_tema": 1
+    },
+    {
+      "pergunta": "quanto é 10 + 10?",
+      "opcoes": [
+        2,
+        20,
+        4,
+        5,
+        6
+      ],
+      "opcao_certa": 20,
+      "tema": "matriz",
+      "id": 12,
+      "id_tema": 1
     }
   ],
-  "comentário": [
+  "comentario": [
     {
       "id_aluno": 0,
-      "comentário": "azul é o céu logo todo corno é azul",
+      "comentario": "azul é o céu logo todo corno é azul",
       "nome_aluno": "taw-ham",
       "id": "1"
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "comentario": "eee",
+      "id_aluno": "0",
+      "id": "CfgIj35"
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "comentario": "rrrrrrrrr",
+      "id_aluno": "0",
+      "id": "ppAuUe7"
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "comentario": "rrrrrrrrr",
+      "id_aluno": "0",
+      "id": "fstc4xc"
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "comentario": "fffff",
+      "id_aluno": "0",
+      "id": "rr66Man"
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "comentario": "fffff",
+      "id_aluno": "0",
+      "id": "xRz5ZhO"
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "comentario": "g",
+      "id_aluno": "0",
+      "id": "JnLdXib"
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "comentario": "l",
+      "id_aluno": "0",
+      "id": "GaTCo4K"
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "comentario": "jhggggg",
+      "id_aluno": "0",
+      "id": "YmtehLr"
+    }
+  ],
+  "Lista_Teorica_aluno": [
+    {
+      "id": 0,
+      "nome": "lista_teste",
+      "id_criador": "0",
+      "id_tema": "1",
+      "perguntas": [],
+      "opcoes": [],
+      "opcoes_certas": []
+    },
+    {
+      "nome": "lista teórica teste",
+      "id_criador": "0",
+      "id_tema": "1",
+      "perguntas": [
+        "quanto é 1 + 1?",
+        "quanto é 2 + 2?",
+        "quanto é 2 + 2?",
+        "3 + 3?",
+        "quanto é 4 + 4?",
+        "quanto é 5 + 5?",
+        "quanto é 6 + 6?",
+        "quanto é 7 + 7?",
+        "quanto é 8 + 8?",
+        "quanto é 9 + 9?"
+      ],
+      "opcoes": [
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          "6",
+          "12",
+          "45",
+          "34",
+          "76"
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        [
+          2,
+          3,
+          10,
+          5,
+          6
+        ],
+        [
+          2,
+          12,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          14,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          16
+        ],
+        [
+          2,
+          3,
+          18,
+          5,
+          6
+        ]
+      ],
+      "opcoes_certas": [
+        2,
+        4,
+        4,
+        "6",
+        8,
+        10,
+        12,
+        14,
+        16,
+        18
+      ],
+      "id": 1
+    },
+    {
+      "nome": "lista teorica teste",
+      "id_criador": "0",
+      "id_tema": "1",
+      "perguntas": [
+        "quanto é 1 + 1?",
+        "quanto é 2 + 2?",
+        "3 + 3?",
+        "quanto é 4 + 4?",
+        "quanto é 5 + 5?",
+        "quanto é 6 + 6?",
+        "quanto é 7 + 7?",
+        "quanto é 8 + 8?",
+        "quanto é 9 + 9?",
+        "quanto é 10 + 10?"
+      ],
+      "opcoes": [
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          "6",
+          "12",
+          "45",
+          "34",
+          "76"
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        [
+          2,
+          3,
+          10,
+          5,
+          6
+        ],
+        [
+          2,
+          12,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          14,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          16
+        ],
+        [
+          2,
+          3,
+          18,
+          5,
+          6
+        ],
+        [
+          2,
+          20,
+          4,
+          5,
+          6
+        ]
+      ],
+      "opcoes_certas": [
+        2,
+        4,
+        "6",
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "id": 2
+    }
+  ],
+  "Lista_Teorica_Servidor": [
+    {
+      "id": 0,
+      "id_tema": 1,
+      "id_aluno": 0,
+      "perguntas": [],
+      "opcoes": [],
+      "opcoes_certas": [],
+      "nome": "nsns"
+    },
+    {
+      "nome": "teste Lista teorica",
+      "id_tema": "1",
+      "id_aluno": "0",
+      "perguntas": [
+        "3 + 3?",
+        "quanto é 1 + 1?",
+        "quanto é 10 + 10?",
+        "quanto é 2 + 2?",
+        "quanto é 4 + 4?",
+        "quanto é 5 + 5?",
+        "quanto é 6 + 6?",
+        "quanto é 7 + 7?",
+        "quanto é 8 + 8?",
+        "quanto é 9 + 9?"
+      ],
+      "opcoes": [
+        [
+          "6",
+          "12",
+          "45",
+          "34",
+          "76"
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          20,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        [
+          2,
+          3,
+          10,
+          5,
+          6
+        ],
+        [
+          2,
+          12,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          14,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          16
+        ],
+        [
+          2,
+          3,
+          18,
+          5,
+          6
+        ]
+      ],
+      "opcoes_certas": [
+        "6",
+        2,
+        20,
+        4,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18
+      ],
+      "id": 1
+    },
+    {
+      "nome": "teste Lista teorica",
+      "id_tema": "1",
+      "id_aluno": "0",
+      "perguntas": [
+        "3 + 3?",
+        "quanto é 1 + 1?",
+        "quanto é 10 + 10?",
+        "quanto é 2 + 2?",
+        "quanto é 4 + 4?",
+        "quanto é 5 + 5?",
+        "quanto é 6 + 6?",
+        "quanto é 7 + 7?",
+        "quanto é 8 + 8?",
+        "quanto é 9 + 9?"
+      ],
+      "opcoes": [
+        [
+          "6",
+          "12",
+          "45",
+          "34",
+          "76"
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          20,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        [
+          2,
+          3,
+          10,
+          5,
+          6
+        ],
+        [
+          2,
+          12,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          14,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          16
+        ],
+        [
+          2,
+          3,
+          18,
+          5,
+          6
+        ]
+      ],
+      "opcoes_certas": [
+        "6",
+        2,
+        20,
+        4,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18
+      ],
+      "id": 2
+    },
+    {
+      "nome": "edcorno",
+      "id_tema": "1",
+      "id_aluno": "0",
+      "perguntas": [
+        "3 + 3?",
+        "quanto é 1 + 1?",
+        "quanto é 10 + 10?",
+        "quanto é 2 + 2?",
+        "quanto é 4 + 4?",
+        "quanto é 5 + 5?",
+        "quanto é 6 + 6?",
+        "quanto é 7 + 7?",
+        "quanto é 8 + 8?",
+        "quanto é 9 + 9?"
+      ],
+      "opcoes": [
+        [
+          "6",
+          "12",
+          "45",
+          "34",
+          "76"
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          20,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        [
+          2,
+          3,
+          10,
+          5,
+          6
+        ],
+        [
+          2,
+          12,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          14,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          16
+        ],
+        [
+          2,
+          3,
+          18,
+          5,
+          6
+        ]
+      ],
+      "opcoes_certas": [
+        "6",
+        2,
+        20,
+        4,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18
+      ],
+      "id": 3
+    },
+    {
+      "nome": "lista taw-ham",
+      "id_tema": "1",
+      "id_aluno": "0",
+      "perguntas": [
+        "3 + 3?",
+        "quanto é 1 + 1?",
+        "quanto é 10 + 10?",
+        "quanto é 2 + 2?",
+        "quanto é 4 + 4?",
+        "quanto é 5 + 5?",
+        "quanto é 6 + 6?",
+        "quanto é 7 + 7?",
+        "quanto é 8 + 8?",
+        "quanto é 9 + 9?"
+      ],
+      "opcoes": [
+        [
+          "6",
+          "12",
+          "45",
+          "34",
+          "76"
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          20,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        [
+          2,
+          3,
+          10,
+          5,
+          6
+        ],
+        [
+          2,
+          12,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          14,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          16
+        ],
+        [
+          2,
+          3,
+          18,
+          5,
+          6
+        ]
+      ],
+      "opcoes_certas": [
+        "6",
+        2,
+        20,
+        4,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18
+      ],
+      "id": 4
     }
   ]
 }

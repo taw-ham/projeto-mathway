@@ -1,49 +1,107 @@
 <!DOCTYPE html>
 <html>
-    <head> 
-        <link rel="stylesheet" type="text/css" href="./aluno_teste.css">
 
-    </head>
-    <body>
-        <div id="area_de_escolhas">
-            <button id="salas_presentes"> Vê salas em que está partcipando </button>
-            <button id="exercicios"> exercicios </button>
-            <button id="notas"> Veja sua nota </button>
-        </div>
-        <div id="escolha_de_sala">
-            <ul id="salas_inseridas">
-            </ul>
-            <button id="voltar_da_area_de_escolha_de_salas"> Voltar a Tela Inicial </button>
-        </div>
-        <div id="area_escolha_lista_teorica">
-            <ul id="listas_teoricas">
-            </ul>
-            <button id="voltar_da_area_sala_especifica"> Voltar a área de escolher sala </button>
-        </div>
-        <div id="fazer_exercicio_lista_teorica">
-            <p id="place_perguntas"> </p>
-            <ul> 
-                <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
-                <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
-                <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
-                <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
-                <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
-            </ul>
-            <button id="proxima_pergunta"> Proxima Pergunta</button>
-        </div>
-        <div id="termino_exercicio">
-            <p id="lugar_nota"> </p>
-            <ul id="reposta_certa">
+<head>
+    <link rel="stylesheet" type="text/css" href="./aluno_teste.css">
 
-            </ul>
-            <ul id="pergunta_errada"> 
-                
-            </ul>
-            <button id="voltar_escolha_lista_teorica"> Voltar a área de escolha de Lista teórica</button>
-        </div>
+</head>
 
-        <script src ="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-        <script src="./teste_da_pagina_aluno.js"></script>
-    </body>
+<body>
+    <div id="area_de_escolhas">
+        <button id="salas_presentes"> Vê salas em que está partcipando </button>
+        <button id="exercicios"> exercicios </button>
+        <button id="notas"> Veja sua nota </button>
+    </div>
+    <div id="lugar_de_notas">
+        <table id="boletim" border="1">
+            
+
+        </table>
+        <button id="voltar_area_de_escolhas_inicial"> Voltar </button>
+    </div>
+    <div id="escolha_modo_exercicio">
+        <button id="criar_lista_teorica"> Crie sua própria lista teorica </button>
+        <button id="criar_lista_teorica_automatica"> Deixe que nós criamos sua própria lista teórica </button>
+        <button id="suas_listas_teoricas"> Fazer suas listas teóricas já criadas </button>
+        <button id="voltar_da_area_escolha_modo_exercicio"> Voltar a area de escolha de exercicio </button>
+    </div>
+    <div id="tema_lista_teorica">
+        <button class="opcoes_temas" id="1" class="matriz"> Matriz </button>
+        <button class="opcoes_temas" id="3"> Sistema Linear </button></li>
+        <button class="opcoes_temas" id="2"> Funções Trigonométricas </button>
+        <button class="opcoes_temas" id="4"> Determinante </button>
+        <button class="opcoes_temas" id="5"> Fração </button>
+        <button class="opcoes_temas" id="6"> Razões Trigonométricas </button>
+        <button class="opcoes_temas" id="7"> Relações Trigonométricas </button>
+        <button class="opcoes_temas" id="8"> Números Complexos </button>
+        <button class="opcoes_temas" id="9"> Fatoração </button>
+        <button class="opcoes_temas" id="10"> Polinômios </button>
+        <button class="opcoes_temas" id="11"> Função Afim </button>
+        <button class="opcoes_temas" id="12"> Função Quadrática </button>
+        <button class="opcoes_temas" id="13"> Função Modular </button>
+        <button class="opcoes_temas" id="14"> Função Exponencial </button>
+        <button class="opcoes_temas" id="15"> Função Logaritmica </button>
+        <button class="opcoes_temas" id="17"> Função Composta </button>
+        <button class="opcoes_temas" id="18"> Função Inversa </button>
+        <button class="opcoes_temas" id="19"> Equação do 1º </button>
+        <button class="opcoes_temas" id="20"> Equação do 2º </button>
+        <button class="opcoes_temas" id="21"> Bhaskara </button>
+    </div>
+    <div id="criacao_lista_teorica">
+        <div id="pegar_nome">
+            <input id="nome_lista_teorica" placeholder="nome da Lista teórica">
+            <button id="salvar_nome_lista_teorica"> Salvar o nome da lista teórica </button>
+        </div>
+        <div id="proximo_passo_criacao">
+            <p id="contador_perguntas"> </p>
+            <ul id="perguntasserver">
+            </ul>
+        </div>
+        <button id="fazer_lista_teorica"> Fazer a lista Teórica </button>
+    </div>
+    <div id="escolha_de_sala">
+        <ul id="salas_inseridas">
+        </ul>
+        <button id="voltar_da_area_de_escolha_de_salas"> Voltar a Tela Inicial </button>
+    </div>
+    <div id="area_escolha_lista_teorica">
+        <ul id="listas_teoricas">
+        </ul>
+        <button id="voltar_da_area_sala_especifica"> Voltar a área de escolher sala </button>
+    </div>
+    <div id="fazer_exercicio_lista_teorica">
+        <p id="place_perguntas"> </p>
+        <ul>
+            <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+            <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+            <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+            <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+            <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+        </ul>
+        <button id="proxima_pergunta"> Proxima Pergunta</button>
+    </div>
+    <div id="termino_exercicio">
+        <p id="lugar_nota"> </p>
+        <ul id="reposta_certa">
+
+        </ul>
+        <ul id="pergunta_errada">
+            
+        </ul>
+        <button id="fazer_perguntas_erradas"> Desejás fazeres ás perguntas erradas </button>
+
+        <button id="voltar_escolha_lista_teorica"> Voltar a área de escolha de Lista teórica</button>
+    </div>
+    <div id="comentario">
+        <textarea id="comentario_user" placeholder="digite seu comentario"></textarea>
+        <button id="enviar_comentario"> enviar seu comentário </button>
+        <ul id="lugar_comentario">
+
+        </ul>
+    </div>
+    <script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="./teste_da_pagina_aluno.js"></script>
+</body>
+
 </html>
