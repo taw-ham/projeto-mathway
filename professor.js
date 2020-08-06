@@ -1,8 +1,3 @@
-$("#area_de_criar_salas").hide("fast");
-$("#area_sala_especifica").hide("fast");
-$("#area_de_criar_salas").hide("fast");
-$("#situacao_sala").hide("fast");
-$("#voltar_opcoes").hide("fast");
 class PROFESSOR {
     constructor(nome, senha, email) {
         this.nome = nome;
@@ -115,23 +110,26 @@ class Aluno_Service {
     }
 }
 class Lista_Teoria {
-    constructor(nome, perguntas, opcoes, opcoes_certas, id_criador, id_sala) {
+    constructor(nome, perguntas, opcoes, opcoes_certas, id_criador, id_sala, Data_de_entrega, tempo_de_termino) {
         this.nome = nome,
             this.perguntas = perguntas,
             this.opcoes = opcoes,
             this.opcoes_certas = opcoes_certas,
             this.id_criador = id_criador,
-            this.id_sala = id_sala
+            this.id_sala = id_sala,
+            this.Data_de_entrega = Data_de_entrega,
+            this.tempo_de_termino = tempo_de_termino
+
     }
 }
 class Lista_Teoria_Service {
     constructor(url) {
         this.url = url;
     }
-    inserir(nome, perguntas, opcoes, opcoes_certas, id_criador, id_sala) {
+    inserir(nome, perguntas, opcoes, opcoes_certas, id_criador, id_sala, Data_de_entrega, tempo_de_termino) {
         return fetch(this.url, {
             method: "POST",
-            body: JSON.stringify(nome, perguntas, opcoes, opcoes_certas, id_criador, id_sala),
+            body: JSON.stringify(nome, perguntas, opcoes, opcoes_certas, id_criador, id_sala, Data_de_entrega, tempo_de_termino),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -153,19 +151,553 @@ class Lista_Teoria_Service {
         }).then(resposta => resposta.json())
     }
 }
-class Nota_Service{
-    constructor(url){
+class Nota_Service {
+    constructor(url) {
         this.url = url;
     }
-    listar(){
-        return fetch(this.url,{
-            method:"GET"
+    listar() {
+        return fetch(this.url, {
+            method: "GET"
 
         }).then(resposta => resposta.json())
-        
+
     }
 }
 var id_login = localStorage.getItem('id');
+
+$("#look_participantes").hide("fast");
+$("#area_de_criar_sala").hide("fast");
+$("#area_acessar_sala").hide("fast");
+$("#opcoes_da_sala").hide("fast");
+$("#area_criar_lista_teorica").hide("fast");
+$("#area_opcoes_temas").hide("fast");
+$("#look_lista_teorica").hide("fast");
+$("#lugar_ver_nota").hide("fast");
+
+document.getElementById("salas_criadas").onclick = function () {
+    $("#area_acessar_sala").show("fast");
+    $("#menu_escolhas").hide("fast");
+    let sala_service = new Salas_Service(`http://localhost:3000/salas?id_criador=${id_login}`);
+    sala_service.lista().then(resposta => {
+        let ul = document.getElementById("opcoes_salas");
+        for (let i = 0; i <= resposta.length - 1; i++) {
+            let button_acessar_sala = document.createElement("button");
+            let li = document.createElement("li");
+            button_acessar_sala.innerHTML = resposta[i].nome;
+            button_acessar_sala.setAttribute("id", resposta[i].id);
+            li.append(button_acessar_sala);
+            let button_apagar_sala = document.createElement("button");
+            button_apagar_sala.innerHTML = "apagar sala" + " " + resposta[i].nome;
+            button_apagar_sala.setAttribute("id", resposta[i].id) // atribuindo o identificador que tem no banco de dados ao id do elemento button
+            li.append(button_apagar_sala);
+            ul.append(li);
+            button_acessar_sala.onclick = function () {
+                var id_sala = event.target.id;
+                $("#area_acessar_sala").hide("fast");
+                $("#opcoes_da_sala").show("fast");
+                document.getElementById("ver_nota").onclick = function () {
+                    $("#opcoes_da_sala").hide("fast");
+                    $("#lugar_ver_nota").show("fast");
+                    $("#ver_nota_aluno").hide("fast");
+                    let ul = document.getElementById("lista_teorica_nota");
+
+                    let lista_teorica_service = new Lista_Teoria_Service(`http://localhost:3000/lista_teoricas?id_sala=${id_sala}&id_criador=${id_login}`);
+                    lista_teorica_service.lista().then(resposta => {
+                        for (let i = 0; i <= resposta.length - 1; i++) {
+                            let li = document.createElement("li");
+                            li.setAttribute("id", resposta[i].id);
+                            let button_ver_nota = document.createElement("button");
+                            button_ver_nota.innerHTML = resposta[i].nome;
+                            button_ver_nota.setAttribute("id", resposta[i].id);
+                            li.append(button_ver_nota);
+                            ul.append(li);
+                            button_ver_nota.onclick = function () {
+                                let id_lista_teorica = event.target.id;
+                                $("#selecionar_lista_nota").hide("fast");
+                                $("#ver_nota_aluno").show("fast");
+                                let nota_service = new Nota_Service(`http://localhost:3000/notas?id_lista_teorica=${id_lista_teorica}`);
+                                nota_service.listar().then(resposta => {
+                                    let ul = document.getElementById("place_nota");
+                                    for (let i = 0; i <= resposta.length - 1; i++) {
+                                        let li = document.createElement("li");
+                                        let span_nome = document.createElement("span");
+                                        let span_nota = document.createElement("span");
+                                        span_nome.innerHTML = "Nome do aluno: " + resposta[i].nome_aluno + "</br>";
+                                        span_nota.innerHTML = "Nota do aluno: " + resposta[i].nota;
+                                        li.append(span_nome);
+                                        li.append(span_nota);
+                                        ul.append(li);
+                                    }
+                                })
+                                document.getElementById("voltar_ver_nota").onclick = function () {
+                                    $("#place_nota").empty()
+                                    $("#ver_nota_aluno").hide("fast");
+                                    $("#selecionar_lista_nota").show("fast");
+                                }
+
+                            }
+                        }
+                    })
+                    document.getElementById("voltar_lugar_ver_nota").onclick = function () {
+                        $("#lugar_ver_nota").hide("fast");
+                        $("#lista_teorica_nota").empty()
+                        $("#opcoes_da_sala").show("fast");
+                    }
+                }
+
+                document.getElementById("ver_lista_teorica").onclick = function () {
+                    $("#opcoes_da_sala").hide("fast");
+                    $("#look_lista_teorica").show("fast");
+                    $("#proximo_passo3").hide("fast");
+                    $("#termino_exercicio").hide("fast");
+                    let ul = document.getElementById("listas_teoricas");
+                    let lista_teorica_service = new Lista_Teoria_Service(`http://localhost:3000/lista_teoricas?id_sala=${id_sala}&id_criador=${id_login}`);
+                    lista_teorica_service.lista().then(resposta => {
+                        for (let i = 0; i <= resposta.length - 1; i++) {
+                            let li = document.createElement("li");
+                            li.setAttribute("id", resposta[i].id);
+                            let button_acessar_lista_teorica = document.createElement("button");
+                            button_acessar_lista_teorica.innerHTML = resposta[i].nome;
+                            button_acessar_lista_teorica.setAttribute("id", resposta[i].id);
+                            let button_apagar_lista_teorica = document.createElement("button");
+                            button_apagar_lista_teorica.innerHTML = "apagar lista " + resposta[i].nome;
+                            button_apagar_lista_teorica.setAttribute("id", resposta[i].id);
+                            li.append(button_acessar_lista_teorica);
+                            li.append(button_apagar_lista_teorica);
+                            ul.append(li);
+                            button_apagar_lista_teorica.onclick = function () {
+                                let id = event.target.id;
+                                $("li,button").remove(`#${id}`)
+                                let lista_teorica_service = new Lista_Teoria_Service("http://localhost:3000/lista_teoricas");
+                                lista_teorica_service.deletar(id).then(resposta => {
+                                    console.log(resposta)
+
+                                })
+                            }
+                            button_acessar_lista_teorica.onclick = function () {
+                                let id = event.target.id
+                                $("#selecionar_lista").hide("fast");
+                                $("#proximo_passo3").show("fast");
+                                $("#termino_exercicio").hide("fast");
+                                let lista_teorica_service = new Lista_Teoria_Service(`http://localhost:3000/lista_teoricas?id=${id}`);
+                                lista_teorica_service.lista().then(resposta => {
+                                    let lista_perguntas = resposta[0].perguntas;
+                                    let lista_opcoes = resposta[0].opcoes;
+                                    let opcoes_certas = resposta[0].opcoes_certas;
+                                    let posicao_pergunta = 0;
+                                    let posicao_opcoes = 0;
+                                    let posicao_opcoes_certas = 0;
+                                    let t_number = 1;
+                                    let lista_perguntas_erradas_usuario = [];
+                                    let lista_perguntas_certas_user = [];
+                                    let nota = 0;
+                                    let lugar_opcoes_resposta = document.querySelectorAll("#escolha");
+                                    let input_radio = document.querySelectorAll("#valor");
+                                    let lugar_perguntas = document.getElementById("place_perguntas");
+                                    let opcoes2 = [1, 2, 3, 4, 5];
+                                    lista_opcoes.push(opcoes2)
+                                    lugar_perguntas.innerHTML = `${t_number}/10 ${lista_perguntas[posicao_pergunta]}`;
+                                    for (let i = 0; i <= lugar_opcoes_resposta.length - 1; i++) {
+                                        lugar_opcoes_resposta[i].innerHTML = lista_opcoes[posicao_opcoes][i];
+                                        input_radio[i].setAttribute('value', lista_opcoes[posicao_opcoes][i]);
+                                    }
+
+                                    document.getElementById("proxima_pergunta").onclick = function () {
+                                        let input_radio_situacao = $("input[name='opcoes']:checked").val();
+                                        console.log(input_radio_situacao)
+                                        if (typeof input_radio_situacao != "undefined") {
+                                            if (opcoes_certas[posicao_opcoes_certas] == input_radio_situacao) {
+                                                lista_perguntas_certas_user.push(lista_perguntas[posicao_pergunta]);
+                                                console.log(lista_perguntas_certas_user);
+                                                swal('Acertou!', 'parabéns', 'success');
+                                                nota += 10
+                                            } else {
+                                                lista_perguntas_erradas_usuario.push(lista_perguntas[posicao_pergunta])
+                                                swal('Oh no...', 'Você errou!', 'error')
+                                            }
+                                            t_number++;
+                                            posicao_pergunta++;
+                                            posicao_opcoes++;
+                                            posicao_opcoes_certas++;
+
+                                            let input_radio_checker = $("input[name='opcoes']")
+                                            for (let i = 0; i <= input_radio_checker.length - 1; i++) {
+                                                input_radio_checker[i].checked = false;
+                                            }
+                                            lugar_perguntas.innerHTML = `${t_number}/10)  ${lista_perguntas[posicao_pergunta]}`;
+                                            for (let i = 0; i <= lugar_opcoes_resposta.length - 1; i++) {
+                                                lugar_opcoes_resposta[i].innerHTML = lista_opcoes[posicao_opcoes][i];
+                                                input_radio[i].setAttribute('value', lista_opcoes[posicao_opcoes][i]);
+                                            }
+                                            if (posicao_pergunta == 10) {
+                                                console.log("termino da lista teórica");
+                                                $("#proximo_passo3").hide("fast");
+                                                $("#termino_exercicio").show("fast");
+                                                $("#lugar_nota").text(`Sua nota foi ${nota}`)
+                                                posicao_pergunta = 0;
+                                                posicao_opcoes = 0;
+                                                posicao_opcoes_certas = 0;
+                                                t_number = 1;
+                                                nota = 0;
+                                                let ul_resposta_certa = document.getElementById("reposta_certa");
+                                                let ul_resposta_errada = document.getElementById("pergunta_errada");
+                                                document.getElementById("voltar_look_lista_teorica").onclick = function () {
+                                                    $("#termino_exercicio").hide("fast");
+                                                    $("#selecionar_lista").show("fast");
+                                                    $("#reposta_certa").empty();
+                                                    $("#pergunta_errada").empty();
+                                                }
+                                                for (let i = 0; i <= lista_perguntas_certas_user.length - 1; i++) {
+                                                    let li = document.createElement("li");
+                                                    li.setAttribute('id', 'certas')
+                                                    let button = document.createElement("button");
+                                                    button.innerHTML = "V";
+                                                    button.setAttribute('id', 'perguntas_certas');
+                                                    li.innerHTML = lista_perguntas_certas_user[i];
+                                                    li.append(button);
+                                                    ul_resposta_certa.append(li);
+                                                }
+                                                for (let i = 0; i <= lista_perguntas_erradas_usuario.length - 1; i++) {
+                                                    let li = document.createElement("li");
+                                                    let button = document.createElement("button");
+                                                    button.innerHTML = "X";
+                                                    button.setAttribute('id', 'perguntas_erradas');
+                                                    li.innerHTML = lista_perguntas_erradas_usuario[i];
+                                                    li.append(button);
+                                                    ul_resposta_errada.append(li);
+                                                }
+                                            }
+                                        }
+                                    }
+                                })
+                            }
+                        }
+                    })
+                    /*let ul = document.getElementById("lugar_lista_teorica");
+                    let lista_teorica_service = new Lista_Teoria_Service(`http://localhost:3000/lista_teoricas?id_sala=${id_sala}&id_criador=${id_login}`);
+                    lista_teorica_service.lista().then(resposta => {
+                        for (let i = 0; i <= resposta.length - 1; i++) {
+                            let li = document.createElement("li");
+                            li.setAttribute("id", resposta[i].id);
+                            let button_acessar_lista_teorica = document.createElement("button");
+                            button_acessar_lista_teorica.innerHTML = resposta[i].nome;
+                            button_acessar_lista_teorica.setAttribute("id", resposta[i].id);
+                            let button_apagar_lista_teorica = document.createElement("button");
+                            button_apagar_lista_teorica.innerHTML = "apagar lista " + resposta[i].nome;
+                            button_apagar_lista_teorica.setAttribute("id", resposta[i].id);
+                            li.append(button_acessar_lista_teorica);
+                            li.append(button_apagar_lista_teorica);
+                            ul.append(li);
+                            button_apagar_lista_teorica.onclick = function () {
+                                let id = event.target.id;
+                                $("li,button").remove(`#${id}`)
+                                let lista_teorica_service = new Lista_Teoria_Service("http://localhost:3000/lista_teoricas");
+                                lista_teorica_service.deletar(id).then(resposta => {
+                                    console.log(resposta)
+
+                                })
+                            }
+                            button_acessar_lista_teorica.onclick = function () {
+                                let lista_perguntas;
+                                let lista_opcoes;
+                                let perguntas = document.getElementById("pergunta");
+                                let opcoes = document.querySelectorAll("#opcao");
+                                let posicao_pergunta = 0;
+                                let posicao_opcoes = 0;
+                                let id = event.target.id;
+                                $("#conteudo_da_lista_teorica").show("fast");
+                                let nota_service = new Nota_Service(`http://localhost:3000/notas?id_lista_teorica=${id}`);
+                                nota_service.listar().then(resposta => {
+                                    let ul = document.getElementById("place_notas");
+                                    for (let i = 0; i <= resposta.length - 1; i++) {
+                                        let li = document.createElement("li");
+                                        let span_nome = document.createElement("span");
+                                        let span_nota = document.createElement("span");
+                                        span_nome.innerHTML = "Nome do aluno: " + resposta[i].nome_aluno + "</br>";
+                                        span_nota.innerHTML = "Nota do aluno: " + resposta[i].nota;
+                                        li.append(span_nome);
+                                        li.append(span_nota);
+                                        ul.append(li);
+                                    }
+                                })
+                                let lista_teorica_service = new Lista_Teoria_Service(`http://localhost:3000/lista_teoricas?id=${id}`);
+                                lista_teorica_service.lista().then(resposta => {
+                                    lista_perguntas = resposta[0].perguntas;
+                                    lista_opcoes = resposta[0].opcoes;
+                                    opcoes_certas = resposta[0].opcoes_certas;
+                                    perguntas.innerHTML = lista_perguntas[posicao_pergunta];
+                                    for (let i = 0; i <= opcoes.length - 1; i++) {
+                                        opcoes[i].innerHTML = lista_opcoes[posicao_opcoes][i];
+
+                                    }
+                                    document.getElementById("proxima_pergunta").onclick = function () {
+                                        posicao_pergunta++;
+                                        if (posicao_pergunta < 10) {
+                                            posicao_opcoes++;
+                                            console.log(posicao_opcoes);
+                                            perguntas.innerHTML = lista_perguntas[posicao_pergunta];
+                                            for (let i = 0; i <= opcoes.length - 1; i++) {
+                                                opcoes[i].innerHTML = lista_opcoes[posicao_opcoes][i];
+
+                                            }
+                                        } else {
+                                            $("#situcao_posicao_lista_teorica").text("você chegou a última questão da sua lista teórica");
+                                        }
+                                    }
+
+                                })
+                            }
+                        }
+                    })
+                    document.getElementById("voltar_tela_inicial").onclick = function () {
+                        $("#look_participantes").show("fast");
+                        $("#criar_lista").show("fast");
+                        $("#look_listas_teoricas").show("fast");
+                        $("#listas_teoricas_especificas").hide("fast");
+                        $("#voltar_tela_inicial").hide("fast")
+                        $("#conteudo_da_lista_teorica").hide("fast");
+                        $("#lugar_lista_teorica").empty();
+                        $("#place_notas").empty()
+                    }
+                }
+            }
+            button_apagar_sala.onclick = function () {
+                let id = event.target.id; //pega o id do botão clicado
+                let sala_service = new Salas_Service("http://localhost:3000/salas");
+                sala_service.apagar(id).then(resposta => {
+                    console.log(resposta);
+                    location.reload();
+                })
+            }
+        }
+    })
+}
+
+*/
+                }
+                document.getElementById("nao_look_lista_teorica").onclick = function () {
+                    $("#listas_teoricas").empty();
+                    $("#look_lista_teorica").hide("fast");
+                    $("#opcoes_da_sala").show("fast");
+                }
+
+
+                document.getElementById("ver_participantes").onclick = function () {
+                    $("#opcoes_da_sala").hide("fast");
+                    $("#look_participantes").show("fast");
+                    let ul_participantes = document.getElementById("participantes")
+                    let sala_service = new Salas_Service(`http://localhost:3000/salas?id=${id_sala}&id_criador=${id_login}`);
+                    sala_service.lista().then(resposta => {
+                        let participantes;
+                        for (let i = 0; i <= resposta.length - 1; i++) {
+                            participantes = resposta[i].participantes
+                        }
+                        for (let i = 0; i <= participantes.length - 1; i++) {
+                            let li = document.createElement("li");
+                            li.innerHTML = participantes[i];
+                            ul_participantes.append(li);
+                        }
+                        document.getElementById("nao_ver_participantes").onclick = function () {
+                            $("#look_participantes").hide("fast");
+                            $("#opcoes_da_sala").show("fast");
+                            $("#participantes").empty();
+                        }
+                    })
+                }
+                document.getElementById("criar_lista_teorica").onclick = function () {
+                    $("#opcoes_da_sala").hide("fast");
+                    $("#area_opcoes_temas").show("fast");
+                    let opcoes_temas = document.querySelectorAll(".opcoes_temas");
+                    for (let i = 0; i <= opcoes_temas.length - 1; i++) {
+                        opcoes_temas[i].onclick = function () {
+                            opcoes_temas = opcoes_temas[i].textContent;
+                            $("#area_opcoes_temas").hide("fast");
+                            var id_tema = event.target.id;
+                            $("#area_criar_lista_teorica").show("fast");
+                            $("#nome_lista").show("fast");
+                            $("#proximo_passo2").hide("fast");
+                            document.getElementById("salva_nome_lista_teorica").onclick = function () {
+                                let nome_da_lista_teorica = $("#nome_lista_teorica").val();
+                                let tempo_de_fazer_lista = $("#tempo_fazer_lista").val();
+                                let data_entrega = $("#data_entrega").val();
+                                if (nome_da_lista_teorica == "") {
+                                    swal('DIGITE O NOME DA LISTA TEORICA', 'tente novamente', 'error')
+                                } else {
+                                    let lista_perguntas = [];
+                                    let lista_opcoes = [];
+                                    let opcoes_certas = [];
+                                    let cont_perguntas = 0;
+                                    let contador_perguntas = document.getElementById("contador")
+                                    $("#nome_lista").hide("fast");
+                                    $("#proximo_passo2").show("fast");
+                                    let pergunta_service = new Perguntas_Service(`http://localhost:3000/perguntas?id_tema=${id_tema}`);
+                                    pergunta_service.listar().then(resposta => {
+                                        console.log(resposta);
+                                        let ul = document.getElementById("perguntas_servidor");
+                                        for (let i = 0; i <= resposta.length - 1; i++) {
+                                            let li = document.createElement("li");
+                                            let button = document.createElement("button");
+                                            button.innerHTML = resposta[i].pergunta;
+                                            button.setAttribute("id", resposta[i].id)
+                                            li.append(button);
+                                            ul.append(li);
+                                            button.onclick = function () {
+                                                lista_perguntas.push(button.textContent);
+                                                console.log(lista_perguntas);
+                                                lista_opcoes.push(resposta[i].opcoes);
+                                                console.log(lista_opcoes)
+                                                opcoes_certas.push(resposta[i].opcao_certa);
+                                                console.log(opcoes_certas);
+                                                cont_perguntas++;
+                                                contador_perguntas.innerHTML = cont_perguntas + "/10 no máximo pode adicionar 10 perguntas e no minimo 10";
+                                                if (cont_perguntas == 10) {
+                                                    let lista_teorica = new Lista_Teoria(nome_da_lista_teorica, lista_perguntas, lista_opcoes, opcoes_certas, id_login, id_sala, data_entrega, tempo_de_fazer_lista);
+                                                    let lista_teorica_service = new Lista_Teoria_Service("http://localhost:3000/lista_teoricas");
+                                                    lista_teorica_service.inserir(lista_teorica).then(resposta => {
+                                                        swal('LISTA CRIADA COM SUCESSO', 'vamos voltar a área de escolhas de opcões de sala', 'success');
+                                                        $("#perguntas_servidor").empty();
+                                                        $("#area_criar_lista_teorica").hide("fast");
+                                                        $("#opcoes_da_sala").show("fast");
+
+                                                    })
+                                                }
+                                            }
+                                        }
+                                    })
+                                    document.getElementById("adicionar_pergunta").onclick = function () {
+                                        let pergunta_user = document.getElementById("pergunta_professor");
+                                        let opcoes_user = document.getElementById("opcoes_professor");
+                                        let opcao_correta_user = document.getElementById("opcao_correta");
+                                        let opcoes_user2 = opcoes_user.value;
+                                        let especificacao = " ";
+                                        let especificacao2 = ",";
+                                        let opcoes_check;
+                                        let temp = opcoes_user2.split(especificacao);
+                                        let temp2 = opcoes_user2.split(especificacao2);
+                                        if (temp.length > 0) {
+                                            opcoes_check = temp
+                                        } else {
+                                            opcoes_check = temp2
+                                        }
+                                        console.log(opcoes_check)
+                                        if (pergunta_user.value == "" || opcoes_user.value == "" || opcao_correta_user.value == "" || opcoes_check.length > 5 || opcoes_check.length < 5) {
+                                            swal('Uma das entradas está inválida', 'tente novamente', 'error');
+
+                                        } else {
+
+                                            pergunta_user = pergunta_user.value;
+                                            opcoes_user = opcoes_user.value;
+                                            opcao_correta_user = opcao_correta_user.value;
+                                            lista_perguntas.push(pergunta_user);
+                                            console.log(lista_perguntas);
+                                            lista_opcoes.push(opcoes_check);
+                                            console.log(lista_opcoes);
+                                            opcoes_certas.push(opcao_correta_user)
+                                            console.log(opcoes_certas);
+                                            cont_perguntas++;
+                                            document.getElementById("pergunta_professor").value = "";
+                                            document.getElementById("opcoes_professor").value = "";
+                                            document.getElementById("opcao_correta").value = "";
+                                            contador_perguntas.innerHTML = cont_perguntas + "/10 no máximo pode adicionar 10 perguntas e no minimo 10";
+                                            let pergunta = new Pergunta(pergunta_user, opcoes_check, opcao_correta_user, id_login, opcoes_temas, id_tema);
+                                            let pergunta_service = new Perguntas_Service("http://localhost:3000/perguntas");
+                                            pergunta_service.inserir(pergunta).then(resposta => {
+                                                console.log(resposta);
+                                            })
+                                            if (cont_perguntas == 10) {
+                                                $("#contador").text("0");
+                                                let lista_teorica = new Lista_Teoria(nome_da_lista_teorica, lista_perguntas, lista_opcoes, opcoes_certas, id_login, id_sala, data_entrega, tempo_de_fazer_lista);
+                                                let lista_teorica_service = new Lista_Teoria_Service("http://localhost:3000/lista_teoricas");
+                                                lista_teorica_service.inserir(lista_teorica).then(resposta => {
+                                                    swal('LISTA CRIADA COM SUCESSO', 'vamos voltar a área de escolhas de opcões de sala', 'success');
+                                                    $("#perguntas_servidor").empty();
+                                                    $("#area_criar_lista_teorica").hide("fast");
+                                                    $("#opcoes_da_sala").show("fast");
+
+                                                })
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    let click = 0
+                    document.getElementById("situacao_foto").onclick = function () {
+                        if (click == 0) {
+                            let img = document.createElement("img");
+                            let url = document.getElementById("foto").value;
+                            let tamanho = document.getElementById("tamanho").value;
+                            img.src = url;
+                            img.setAttribute('width', tamanho);
+                            img.setAttribute('id', 'fotos_teste')
+                            console.log(foto);
+                            let div = document.getElementById("place_foto");
+                            div.append(img);
+                        }else{
+                            let img_fotos = document.getElementById("fotos_teste");
+                            let url2 = document.getElementById("foto").value;
+                            let tamanho2 = document.getElementById("tamanho").value;
+                            img_fotos.src = url2;
+                            img_fotos.setAttribute('width',tamanho2);
+                        }
+                        click ++
+
+                    }
+                }
+            }
+        }
+    })
+    document.getElementById("voltar_da_area_acessar_sala").onclick = function () {
+        $("#area_acessar_sala").hide("fast");
+        $("#opcoes_salas").empty();
+        $("#menu_escolhas").show("fast");
+
+    }
+}
+document.getElementById("criar_sala").onclick = function () {
+    $("#menu_escolhas").hide("fast");
+    $("#area_de_criar_sala").show("fast");
+    $("#nome_sala").show("fast");
+    $("#proximo_passo").hide("fast");
+    document.getElementById("salva_nome_sala").onclick = function () {
+        let nome_sala = $("#sala_nome").val();
+        if (nome_sala == "") {
+            swal('digite o nome da sala', 'tente novamente', 'error');
+        } else {
+            $("#nome_sala").hide("fast");
+            $("#proximo_passo").show("fast");
+            let lista_participantes = []
+            document.getElementById("adicionar_aluno").onclick = function () {
+                let participante = $("#participante").val();
+                let situacao_usuario = document.getElementById("situacao_usuario");
+                document.getElementById("participante").value = "";
+                let aluno_service = new Aluno_Service(`http://localhost:3000/Alunos?nome=${participante}`);
+                aluno_service.lista().then(resposta => {
+                    if (resposta.length == 0) {
+                        situacao_usuario.innerHTML = "Usuário Inválido "
+                    } else {
+                        situacao_usuario.innerHTML = "Usuário Válido";
+                        console.log(resposta[0].nome)
+                        lista_participantes.push(resposta[0].nome);
+                    }
+                })
+            }
+            document.getElementById("criar_sala_especifica").onclick = function () {
+                let sala = new Salas(nome_sala, id_login, lista_participantes);
+                let sala_service = new Salas_Service("http://localhost:3000/salas");
+                sala_service.inserir(sala).then(resposta => {
+                    console.log(resposta);
+                    location.reload(); //atualiza a página
+                })
+            }
+        }
+    }
+}
+
+
+
+/*
 let sala_service = new Salas_Service(`http://localhost:3000/salas?id_criador=${id_login}`);
 sala_service.lista().then(resposta => {
     let ul = document.getElementById("opcoes_salas");
@@ -357,19 +889,7 @@ sala_service.lista().then(resposta => {
 
 
                 }
-                /*document.getElementById("voltar_criacao_lista_teorica").onclick = function () {
-                    $("#area_de_listas_teoricas").hide();
-                    $("#listas_teoricas_especificas").show()
-                    $("#conteudo_da_lista_teorica").hide("fast");
-                    $("#area_de_criacao_de_listas_teoricas").hide("fast");
-                    $("#conteudo_da_lista_teorica").hide("fast");
-                    $("#lista").hide();
-                    $("#perguntas_server").empty();
-                    $("#cont_perguntas").text("0");
-
-                }
-                */
-
+                
 
             }
             let sala_service = new Salas_Service(`http://localhost:3000/salas?id=${id_sala}&id_criador=${id_login}`);
@@ -549,272 +1069,5 @@ criar_sala.onclick = function () {
         }
         
     }
-}
-
-/*
-let participantes_lista = [];
-
-sala.lista().then(resposta => {
-    console.log(resposta);
-    let ul = document.getElementById("salas");
-    for (let i = 0; i <= resposta.length - 1; i++) {
-        document.getElementById("criar_salas2").onclick = function () {
-            $("#salas").hide();
-            $("#criar_salas").show("fast");
-            document.getElementById("adicionar_alunos").onclick = function () {
-                let participantes = document.getElementById("partici").value;
-                let aluno_service = new Aluno_Service(`http://localhost:3000/alunos?nome=${participantes}`);
-                aluno_service.lista().then(resposta => {
-                    if (resposta.length == 0) {
-                        console.log("usuario invalido")
-                    } else {
-                        participantes_lista.push(participantes);
-                        document.getElementById("criar_sala").onclick = function () {
-                            let sala_nome = document.getElementById("sala_nome").value;
-                            let sala = new Salas(sala_nome, id_login, participantes_lista);
-                            let sala_service = new Salas_Service("http://localhost:3000/salas");
-                            sala_service.inserir(sala).then(resposta => {
-                                console.log(resposta);
-                                location.reload();
-                            })
-                        }
-                    }
-                })
-            }
-        }
-        let li2 = document.createElement("li");
-        let button2 = document.createElement("button");
-        button2.innerHTML = "apagar" + resposta[i].nome;
-        button2.setAttribute('id', resposta[i].id);
-        li2.append(button2);
-        ul.append(li2);
-        button2.onclick = function () {
-            let id = event.target.id;
-            let sala = new Salas_Service("http://localhost:3000/salas");
-            sala.apagar(id).then(resposta => {
-                console.log(resposta);
-                location.reload();
-            })
-        }
-        let li = document.createElement("li");
-        let button = document.createElement("button");
-        button.innerHTML = resposta[i].nome;
-        button.setAttribute('id', resposta[i].nome);
-        li.append(button);
-        ul.append(li);
-        button.onclick = function () {
-            button = button.textContent;
-            $("#sala").show("fast");
-            $("#salas").hide();
-            $("#criar_salas").hide();
-            $("#listas_teoricas").show("fast");
-            let sala_service = new Salas_Service(`http://localhost:3000/salas?nome=${button}&id_criador=${id_login}`);
-            sala_service.lista().then(resposta => {
-                let participantes_sala = resposta[0].participantes;
-                var id_sala = resposta[0].id;
-                let lista_teorica_service = new Lista_Teoria_Service(`http://localhost:3000/lista_teoricas?id_sala=${id_sala}&id_criador=${id_login}`)
-                lista_teorica_service.lista().then(resposta => {
-                    console.log(resposta);
-                    let li = document.createElement("li");
-                    let button = document.createElement("button");
-                    let ul = document.getElementById("lugar_lista_teorica");
-                    button.innerHTML = resposta[i].nome;
-                    button.setAttribute("id", resposta[i].id);
-                    li.append(button);
-                    ul.append(li);
-                    button.onclick = function () {
-                        let posicao_pergunta = 0;
-                        let posicao_opcoes = 0;
-                        let lista_pergunta = [];
-                        let lista_opcoes = [];
-                        let opcoes_html = document.querySelectorAll("#opcao");
-                        let pergunta_html = document.getElementById("pergunta");
-                        button = button.textContent;
-                        let lista_teorica_service2 = new Lista_Teoria_Service(`http://localhost:3000/lista_teoricas?id_sala=${id_sala}&id_criador=${id_login}`)
-                        lista_teorica_service2.lista().then(resposta => {
-                            lista_opcoes.push(resposta[0].opcoes);
-                            lista_pergunta.push(resposta[0].perguntas)
-                            pergunta_html.innerHTML = lista_pergunta[posicao_pergunta];
-                            for (let i = 0; i <= 4; i++) {
-                                opcoes_html.innerHTML = lista_opcoes[posicao_opcoes][i]
-                            }
-
-                        })
-                        if (posicao_pergunta > 10) {
-                            document.getElementById("proxima_pergunta").onclick = function () {
-                                posicao_pergunta++;
-                                posicao_opcoes++;
-                                pergunta_html.innerHTML = lista_pergunta[posicao_pergunta];
-                                for (let i = 0; i <= 4; i++) {
-                                    opcoes_html.innerHTML = lista_opcoes[posicao_opcoes][i]
-                                }
-                            }
-
-                        }else{
-
-
-                        }
-
-                    }
-                })
-
-
-                document.getElementById("look_participantes").onclick = function () {
-                    $("#look_participantes").hide()
-                    $("#participantes").show("fast");
-                    $("#hide_participantes").show("fast")
-                    $("#criar_lista").hide("fast");
-                    for (let i = 0; i <= participantes_sala.length - 1; i++) {
-                        let li = document.createElement("li");
-                        let ul = document.getElementById("participantes");
-                        li.innerHTML = participantes_sala[i];
-                        ul.append(li);
-                    }
-                }
-                document.getElementById("hide_participantes").onclick = function () {
-                    $("#look_participantes").show("fast");
-                    $("#participantes").hide("fast");
-                    $("#criar_lista").show("fast");
-                    $("#hide_participantes").hide();
-                    $("#participantes").empty();
-                }
-                document.getElementById("criar_lista").onclick = function () {
-                    $("#temas").show("fast");
-                    document.getElementById("matriz").onclick = function () {
-                        $("#lista").show("fast");
-                        var cont = 0;
-                        let contador_perguntas = document.getElementById("cont_perguntas");
-                        let perguntas_service = new Perguntas_Service("http://localhost:3000/perguntas?tema=matriz");
-                        perguntas_service.listar().then(resposta => {
-                            console.log(resposta)
-                            let lista_perguntas = [];
-                            let opcao_pergunta = []
-                            let opcao_correta = []
-                            for (let i = 0; i <= resposta.length - 1; i++) {
-                                let li = document.createElement("li");
-                                let button = document.createElement("button");
-                                button.innerHTML = resposta[i].pergunta
-                                li.append(button);
-                                let ul = document.getElementById("perguntas_server");
-                                ul.append(li);
-                                button.onclick = function () {
-                                    button = button.textContent;
-                                    lista_perguntas.push(button);
-                                    opcao_pergunta.push(resposta[i].opcoes)
-                                    opcao_correta.push(resposta[i].opcao_certa)
-                                    console.log(opcao_pergunta);
-                                    cont++
-                                    contador_perguntas.innerHTML = cont;
-                                    if (cont == 10) {
-                                        console.log(cont)
-                                        $("#adici_perg").hide("fast");
-                                        $("#perguntas_server").hide("fast");
-                                        $("#enviar_lista_teorica").show("fast");
-                                        document.getElementById("enviar_lista_teorica").onclick = function () {
-                                            let nome_lista_teorica = document.getElementById("nome_lista_teorica").value
-                                            let lista_teorica = new Lista_Teoria(nome_lista_teorica, lista_perguntas, opcao_pergunta, opcao_correta, id_login, id_sala);
-                                            let lista_teorica_service = new Lista_Teoria_Service("http://localhost:3000/lista_teoricas");
-                                            lista_teorica_service.inserir(lista_teorica).then(resposta => {
-                                                console.log(resposta);
-                                            })
-
-                                        }
-                                    }
-
-                                }
-                                document.getElementById("adici_perg").onclick = function () {
-                                    let pergunta = document.getElementById("pergunta").value;
-                                    let opcoes = document.getElementById("opcoes").value;
-                                    let opcao_correta2 = document.getElementById("opcao_correta").value;
-                                    lista_perguntas.push(pergunta);
-                                    opcao_correta.push(opcao_correta2);
-                                    let especificacao = " ";
-                                    let especificacao2 = ",";
-                                    let temp = opcoes.split(especificacao);
-                                    let temp2 = opcoes.split(especificacao2);
-                                    let opcoes2;
-                                    console.log(lista_perguntas)
-                                    document.getElementById("pergunta").value = " ";
-                                    document.getElementById("opcoes").value = " ";
-                                    document.getElementById("opcao_correta").value = " ";
-                                    console.log(pergunta)
-                                    if (temp.length == 5) {
-                                        opcao_pergunta.push(temp);
-                                        opcoes2 = temp;
-
-                                    } else if (temp2.length == 5) {
-                                        opcao_pergunta.push(temp2);
-                                        console.log(opcao_pergunta)
-                                        opcoes2 = temp2
-
-                                    } else {
-                                        console.log("valores inválidos")
-                                    }
-                                    let pergunta2 = new Pergunta(pergunta, opcoes2, opcao_correta2, id_login, "matriz")
-                                    let pergunta_service = new Perguntas_Service("http://localhost:3000/perguntas");
-                                    pergunta_service.inserir(pergunta2).then(resposta => {
-                                        console.log(resposta);
-                                    })
-                                    cont++
-                                    contador_perguntas.innerHTML = cont;
-                                    console.log(cont)
-                                    if (cont == 10) {
-                                        console.log(cont)
-                                        $("#adici_perg").hide("fast");
-                                        $("#perguntas_server").hide("fast");
-                                        $("#enviar_lista_teorica").show("fast");
-                                        $("#criar_salas").hide("fast");
-                                        document.getElementById("enviar_lista_teorica").onclick = function () {
-                                            let nome_lista_teorica = document.getElementById("nome_lista_teorica").value
-                                            let lista_teorica = new Lista_Teoria(nome_lista_teorica, lista_perguntas, opcao_pergunta, opcao_correta, id_login, id_sala);
-                                            let lista_teorica_service = new Lista_Teoria_Service("http://localhost:3000/lista_teoricas");
-                                            lista_teorica_service.inserir(lista_teorica).then(resposta => {
-                                                console.log(resposta);
-                                                location.reload();
-                                            })
-                                        }
-                                    }
-                                }
-                            }
-                        })
-                    }
-
-                }
-            })
-        }
-    }
-
-})
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-/*document.getElementById("enviar2").onclick = function () {
-    let participantes = document.getElementById("partici").value;
-    let aluno_service = new Aluno_Service(`http://localhost:3000/alunos?nome=${participantes}`);
-    aluno_service.lista().then(resposta => {
-        if (resposta.length == 0) {
-            console.log("usuario invalido")
-        } else {
-            participantes_lista.push(participantes);
-            document.getElementById("enviar1").onclick = function(){
-                let sala_nome = document.getElementById("sala_nome").value;
-                let sala = new Salas(sala_nome,id_login,participantes_lista);
-                let sala_service = new Salas_Service("http://localhost:3000/salas");
-                sala_service.inserir(sala).then(resposta =>{
-                
-                })
-            }             
-        }
-    })
 }
 */

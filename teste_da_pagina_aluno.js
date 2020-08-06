@@ -279,6 +279,7 @@ document.getElementById("exercicios").onclick = function () {
                             opcoes_server.push(resposta[i].opcoes);
                             opcoes_corretas_server.push(resposta[i].opcao_certa)
                         }
+                        
                         let lista_teorica_servidor = new Lista_Teorica_Servidor(nome_lista_teorica_automatica, id_tema, id_login, lista_pergunta_server, opcoes_server, opcoes_corretas_server);
                         let lista_teorica_servidor_service = new Lista_Teorica_Servidor_Service("http://localhost:3000/Lista_Teorica_Servidor");
                         lista_teorica_servidor_service.inserir(lista_teorica_servidor).then(resposta => {
@@ -295,6 +296,7 @@ document.getElementById("exercicios").onclick = function () {
                                 lugar_opcoes_resposta[i].innerHTML = opcoes_server[posicao_opcoes][i];
                                 input_radio[i].setAttribute('value', opcoes_server[posicao_opcoes][i]);
                             }
+                            
                             document.getElementById("proxima_pergunta").onclick = function () {
                                 let input_radio_situacao = $("input[name='opcoes']:checked").val();
                                 console.log(input_radio_situacao)
@@ -470,6 +472,9 @@ document.getElementById("exercicios").onclick = function () {
                                     }
                                 }
                             }
+                            document.getElementById("teste").onclick = function(){
+                                console.log(posicao_pergunta);
+                            }
                         })
                     })
                 }
@@ -551,6 +556,7 @@ document.getElementById("exercicios").onclick = function () {
                                                     lugar_opcoes_resposta[i].innerHTML = opcoes_server[posicao_opcoes][i];
                                                     input_radio[i].setAttribute('value', opcoes_server[posicao_opcoes][i]);
                                                 }
+                                                
                                                 document.getElementById("proxima_pergunta").onclick = function () {
                                                     let input_radio_situacao = $("input[name='opcoes']:checked").val();
                                                     console.log(input_radio_situacao)
@@ -750,7 +756,6 @@ document.getElementById("exercicios").onclick = function () {
                                                             console.log(resposta)
                                                         })
                                                         */
-
                                                     }
                                                 }
                                             }

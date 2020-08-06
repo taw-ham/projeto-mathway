@@ -30,14 +30,15 @@ class ProfessorService {
 document.getElementById("enviar").onclick = function () {
     let nome2 = document.getElementById("nome2").value;
     let senha2 = document.getElementById("senha2").value;
+
     let loginservice = new ProfessorService(`http://localhost:3000/professores?nome=${nome2}&senha=${senha2}`);
     loginservice.listar().then(results =>{
         if(results.length === 0){
-            console.log("usuário ou login incorreto");
+            swal('Senha ou login incorreto', 'tente novamente!', 'error')
         }else{
             const id = results[0].id;
             localStorage.setItem('id',id);
-            window.location.assign("pagina_inicial.html")   
+            window.location.assign("./professor_pagina.html")   
         }
     })
 }

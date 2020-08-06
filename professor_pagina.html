@@ -2,11 +2,145 @@
 <html>
 
 <head>
-    <link rel=stylesheet type="text/css" href="./projeto.css">
+    <link rel=stylesheet type="text/css" href="./professor.css">
 
 </head>
 
 <body>
+    <div id="menu_escolhas">
+        <button id="criar_sala"> Crie sua sala </button>
+        <button id="salas_criadas"> Entre em uma das suas salas criadas </button>
+    </div>
+    <div id="area_de_criar_sala">
+        <h1> Criação de Salas e Adicionamento de alunos </h1>
+        <div id="nome_sala">
+            <input id="sala_nome" placeholder="Digite o nome da sala"></br>
+            <button id="salva_nome_sala"> Salvar o nome da sala </button>
+        </div>
+        <div id="proximo_passo">
+            <input id="participante" placeholder="digite o nome do aluno"> </br>
+            <p id="situacao_usuario"> </p>
+            <button id="adicionar_aluno"> Adicionar Alunos </button>
+            <button id="criar_sala_especifica"> Criar Sala </button>
+        </div>
+    </div>
+    <div id="area_acessar_sala">
+        <ul id="opcoes_salas">
+
+        </ul>
+        <button id="voltar_da_area_acessar_sala"> Voltar para as opções </button>
+    </div>
+    <div id="opcoes_da_sala">
+        <button id="ver_participantes"> Ver participantes </button>
+        <button id="criar_lista_teorica"> Crie sua Lista Teórica </button>
+        <button id="ver_nota"> Veja as notas dos alunos </button>
+        <button id="ver_lista_teorica"> Veja suas listas teóricas </button>
+        <button id="modificar_nota"> modificar nota do aluno entregou a lista teorica atrasada </button>
+    </div>
+    <div id="area_opcoes_temas">
+        <h3> Escolha um tema de lista teórica </h3>
+        <button id="1" class="opcoes_temas"> MATRIZ </button>
+        <button id="2" class="opcoes_temas"> FUNÇÃO TRIGONOMÉTRICA </button>
+        <button id="3" class="opcoes_temas"> SISTEMA LINEAR </button>
+        <button id="4" class="opcoes_temas"> DETERMINANTE </button>
+        <button id="5" class="opcoes_temas"> FRAÇÃO </button>
+        <button id="6" class="opcoes_temas"> Razões Trigonométricas</button>
+        <button id="7" class="opcoes_temas"> Relações Trigonométricas </button>
+        <button id="8" class="opcoes_temas"> Números Complexos </button>
+        <button id="9" class="opcoes_temas"> Fatoração </button>
+        <button id="10" class="opcoes_temas"> Polinômios </button>
+        <button id="11" class="opcoes_temas"> Função Afim </button>
+        <button id="12" class="opcoes_temas"> Função Quadrática </button>
+        <button id="13" class="opcoes_temas"> Função Modular </button>
+        <button id="14" class="opcoes_temas"> Função Exponencial </button>
+        <button id="15" class="opcoes_temas"> Função Logaritmica </button>
+        <button id="17" class="opcoes_temas"> Função Composta </button>
+        <button id="18" class="opcoes_temas"> Função Inversa </button>
+        <button id="19" class="opcoes_temas"> equacao do 1º </button>
+        <button id="20" class="opcoes_temas"> equacao do 2º </button>
+        <button id="21" class="opcoes_temas"> Bhaskara </button>
+    </div>
+    <div id="area_criar_lista_teorica">
+        <div id="nome_lista">
+            <input id="nome_lista_teorica" placeholder="digite o nome da lista">
+            <h4>dgite quanto temopo que o aluno poderá fazer a lista teorica obs: opcional</h4>
+            <input id="tempo_fazer_lista" placeholder="exemplo de entrada: 2:00:00">
+            <h4> Digite a data limite para entregar a lista teórica se por acaso o aluno não fazer até a data limite
+                você poderá modificar a nota dele caso ele entregar depois do prazo obs: opcional </h4>
+            <input id="data_entrega" placeholder="exemplo de entrada: Janeiro 28,2020">
+            <button id="salva_nome_lista_teorica"> Salvar os dados </button>
+        </div>
+        <div id="proximo_passo2">
+            <p id="contador"> </p>
+            <ul id="perguntas_servidor">
+            </ul>
+            <textarea id="pergunta_professor" placeholder="digite sua questão"></textarea><br>
+            <textarea id="opcoes_professor" placeholder="digite as opções"></textarea><br>
+            <input id="opcao_correta" placeholder="Digite a opção correta"><br>
+            <h4> DIGITE A URL  </h4>
+            <textarea id="foto" placeholder="digite a url"></textarea>
+            <input id="tamanho" placeholder="digite o tamanho em px exemplo: 400px"> 
+            <button id="situacao_foto"> Veja como fica a foto</button>
+            <button id="adicionar_pergunta"> adicionar pergunta</button>
+            <button id="enviar_lista_teorica"> enviar lista teorica</button>
+            <div id="place_foto">
+                
+            </div>
+        </div>
+    </div>
+    <div id="look_participantes">
+        <ul id="participantes">
+
+        </ul>
+        <button id="nao_ver_participantes"> Voltar </button>
+    </div>
+    <div id="look_lista_teorica">
+        <div id="selecionar_lista">
+            <h1> Aperte na lista para ver seu conteúdo e ao mesmo tempo fazer a lista </h1>
+            <ul id="listas_teoricas">
+
+            </ul>
+            <button id="nao_look_lista_teorica"> Voltar </button>
+        </div>
+        <div id="proximo_passo3">
+            <p id="place_perguntas"> </p>
+            <ul>
+                <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+                <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+                <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+                <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+                <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+            </ul>
+            <button id="proxima_pergunta"> Proxima Pergunta</button>
+        </div>
+        <div id="termino_exercicio">
+            <p id="lugar_nota"> </p>
+            <ul id="reposta_certa">
+
+            </ul>
+            <ul id="pergunta_errada">
+
+            </ul>
+            <button id="voltar_look_lista_teorica"> Voltar </button>;
+
+        </div>
+    </div>
+    <div id="lugar_ver_nota">
+        <div id="selecionar_lista_nota">
+            <ul id="lista_teorica_nota">
+            </ul>
+            <button id="voltar_lugar_ver_nota"> Voltar</button>
+        </div>
+        <div id="ver_nota_aluno">
+            <ul id="place_nota">
+
+            </ul>
+            <button id="voltar_ver_nota"> Voltar </button>
+        </div>
+
+    </div>
+
+    <!--
     <div id="area_das_salas">
         <ul id="opcoes_salas">
             <li><button id="criar_sala"> Criar sala </button></li>
@@ -80,7 +214,8 @@
             </div>
         </div>
     </div>
-
+-->
+    <script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <script src="professor.js"></script>
 </body>
