@@ -63,10 +63,11 @@ class Perguntas_Service {
     }
 }
 class Salas {
-    constructor(nome, id_criador, participantes) {
+    constructor(nome, id_criador, participantes,participantes_id) {
         this.nome = nome;
         this.id_criador = id_criador
         this.participantes = participantes
+        this.participantes_id = participantes_id
     }
 }
 
@@ -79,10 +80,10 @@ class Salas_Service {
             method: "GET"
         }).then(resposta => resposta.json())
     }
-    inserir(nome, id_criador, participantes) {
+    inserir(nome, id_criador, participantes,participantes_id) {
         return fetch(this.url, {
             method: "POST",
-            body: JSON.stringify(nome, id_criador, participantes),
+            body: JSON.stringify(nome, id_criador, participantes,participantes_id),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -151,6 +152,12 @@ class Lista_Teoria_Service {
         }).then(resposta => resposta.json())
     }
 }
+class Nota{
+    constructor(nota,situacao){
+        this.nota = nota;
+        this.situacao = situacao;
+    }
+}
 class Nota_Service {
     constructor(url) {
         this.url = url;
@@ -161,6 +168,34 @@ class Nota_Service {
 
         }).then(resposta => resposta.json())
 
+    }
+    atualizar(nota,situacao){
+        return fetch(this.url,{
+            method:"PATCH",
+            body: JSON.stringify(nota,situacao),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(resposta => resposta.json())
+    }
+}
+class NOTA{
+    constructor(situacao){
+        this.situacao = situacao
+    }
+}
+class NOTA_SERVICE{
+    constructor(url){
+        this.url = url
+    }
+    atualizar(situacao){
+        return fetch(this.url,{
+            method:"PATCH",
+            body: JSON.stringify(situacao),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(resposta => resposta.json())
     }
 }
 var id_login = localStorage.getItem('id');
@@ -173,6 +208,7 @@ $("#area_criar_lista_teorica").hide("fast");
 $("#area_opcoes_temas").hide("fast");
 $("#look_lista_teorica").hide("fast");
 $("#lugar_ver_nota").hide("fast");
+$("#nota_modificar").hide("fast");
 
 document.getElementById("salas_criadas").onclick = function () {
     $("#area_acessar_sala").show("fast");
@@ -183,6 +219,7 @@ document.getElementById("salas_criadas").onclick = function () {
         for (let i = 0; i <= resposta.length - 1; i++) {
             let button_acessar_sala = document.createElement("button");
             let li = document.createElement("li");
+            li.setAttribute('id',resposta[i].id)
             button_acessar_sala.innerHTML = resposta[i].nome;
             button_acessar_sala.setAttribute("id", resposta[i].id);
             li.append(button_acessar_sala);
@@ -191,18 +228,101 @@ document.getElementById("salas_criadas").onclick = function () {
             button_apagar_sala.setAttribute("id", resposta[i].id) // atribuindo o identificador que tem no banco de dados ao id do elemento button
             li.append(button_apagar_sala);
             ul.append(li);
+            button_apagar_sala.onclick = function(){
+                var id = event.target.id;
+                let sala_service = new Salas_Service("http://localhost:3000/salas");
+                sala_service.apagar(id).then(resposta => {
+                    console.log(resposta);
+                    $("#opcoes_salas > li").remove(`#${id}`);
+                })
+            }
             button_acessar_sala.onclick = function () {
                 var id_sala = event.target.id;
                 $("#area_acessar_sala").hide("fast");
                 $("#opcoes_da_sala").show("fast");
+                document.getElementById("modificar_nota").onclick = function(){
+                    $("#nota_modificar").show("fast");
+                    $("#opcoes_da_sala").hide("fast")
+                    let nota = new Nota_Service("http://localhost:3000/notas_professor?situacao=atrasado");
+                    nota.listar().then(resposta => {
+                        let table_notas = document.getElementById("modificar");
+                        let th_title = document.createElement("th");
+                        th_title.setAttribute('colspan',6);
+                        th_title.innerHTML = "tabela de alunos com entrega atrasado";
+                        table_notas.append(th_title);
+                        for(let i = 0; i <= resposta.length -1; i++){
+                            let tr = document.createElement("tr");
+                            tr.setAttribute('id',resposta[i].id)
+                            let td_nome = document.createElement("td");
+                            td_nome.innerHTML = resposta[i].nome_aluno;
+                            let td_lista_teorica = document.createElement("td");
+                            td_lista_teorica.innerHTML = resposta[i].nome_lista_teorica;
+                            let td_data_entrega = document.createElement("td");
+                            td_data_entrega.innerHTML = resposta[i].data_de_entrega;
+                            let td_nota = document.createElement("td");
+                            td_nota.innerHTML = resposta[i].nota
+                            let td_modificar = document.createElement("td");
+                            let input_modificar = document.createElement("input");
+                            input_modificar.setAttribute('placeholder','digite a nova nota');
+                            input_modificar.setAttribute('id',resposta[i].id);
+                            td_modificar.append(input_modificar);
+                            let td_opcoes = document.createElement("td");
+                            let button_modificar = document.createElement("button");
+                            let button_nao_modificar = document.createElement("button");
+                            button_modificar.setAttribute('id',resposta[i].id);
+                            button_modificar.innerHTML = "modificar nota"
+                            button_nao_modificar.setAttribute('id',resposta[i].id);
+                            button_nao_modificar.innerHTML = "não modificar"
+                            td_opcoes.append(button_modificar);
+                            td_opcoes.append(button_nao_modificar);
+                            tr.append(td_nome,td_lista_teorica,td_data_entrega,td_nota,td_modificar,td_opcoes);
+                            table_notas.append(tr);
+                            button_modificar.onclick = function(){
+                                let id = event.target.id;
+                                let nota_modificada = $(`input[id=${id}]`).val();
+                                if(nota_modificada != ""){
+                                    let situacao = "atualizada"
+                                    let nota_class = new Nota(nota_modificada,situacao);
+                                    let nota_service = new Nota_Service(`http://localhost:3000/notas_professor/${id}`);
+                                    nota_service.atualizar(nota_class).then(resposta => {
+                                        console.log(resposta)
+                                        $("tr").remove(`#${id}`);
+                                        swal('NOTA ATUALIZADA','NICE','success');
+                                    })
+                                }else{
+                                    swal('DIGITE A NOTA ','NICE','error');
+
+                                }
+                            }
+                            button_nao_modificar.onclick = function(){
+                                let id = event.target.id
+                                let situacao = "atualizada"
+                                $("tr").remove(`#${id}`);
+                                let nota = new NOTA(situacao);
+                                let nota_service = new NOTA_SERVICE(`http://localhost:3000/notas_professor/${id}`)
+                                nota_service.atualizar(nota).then(resposta => {
+                                    console.log(resposta);
+                                    swal('NÃO MODIFICADA','SUCCESSS','success');
+                                    
+                                })   
+                            }
+                        }
+                    })
+                    document.getElementById("fim_comeco").onclick = function(){
+                        $("#modificar").empty();
+                        $("#nota_modificar").hide("fast");
+                        $("#opcoes_da_sala").show("fast");
+                    }
+                }
                 document.getElementById("ver_nota").onclick = function () {
                     $("#opcoes_da_sala").hide("fast");
                     $("#lugar_ver_nota").show("fast");
+                    $("#selecionar_lista_nota").show("fast")
                     $("#ver_nota_aluno").hide("fast");
                     let ul = document.getElementById("lista_teorica_nota");
-
                     let lista_teorica_service = new Lista_Teoria_Service(`http://localhost:3000/lista_teoricas?id_sala=${id_sala}&id_criador=${id_login}`);
                     lista_teorica_service.lista().then(resposta => {
+                        console.log(resposta)
                         for (let i = 0; i <= resposta.length - 1; i++) {
                             let li = document.createElement("li");
                             li.setAttribute("id", resposta[i].id);
@@ -215,8 +335,9 @@ document.getElementById("salas_criadas").onclick = function () {
                                 let id_lista_teorica = event.target.id;
                                 $("#selecionar_lista_nota").hide("fast");
                                 $("#ver_nota_aluno").show("fast");
-                                let nota_service = new Nota_Service(`http://localhost:3000/notas?id_lista_teorica=${id_lista_teorica}`);
+                                let nota_service = new Nota_Service(`http://localhost:3000/notas_professor?id_lista_teorica=${id_lista_teorica}`);
                                 nota_service.listar().then(resposta => {
+                                    console.log(resposta)
                                     let ul = document.getElementById("place_nota");
                                     for (let i = 0; i <= resposta.length - 1; i++) {
                                         let li = document.createElement("li");
@@ -267,7 +388,7 @@ document.getElementById("salas_criadas").onclick = function () {
                             ul.append(li);
                             button_apagar_lista_teorica.onclick = function () {
                                 let id = event.target.id;
-                                $("li,button").remove(`#${id}`)
+                                $("#listas_teoricas > li").remove(`#${id}`)
                                 let lista_teorica_service = new Lista_Teoria_Service("http://localhost:3000/lista_teoricas");
                                 lista_teorica_service.deletar(id).then(resposta => {
                                     console.log(resposta)
@@ -373,107 +494,7 @@ document.getElementById("salas_criadas").onclick = function () {
                             }
                         }
                     })
-                    /*let ul = document.getElementById("lugar_lista_teorica");
-                    let lista_teorica_service = new Lista_Teoria_Service(`http://localhost:3000/lista_teoricas?id_sala=${id_sala}&id_criador=${id_login}`);
-                    lista_teorica_service.lista().then(resposta => {
-                        for (let i = 0; i <= resposta.length - 1; i++) {
-                            let li = document.createElement("li");
-                            li.setAttribute("id", resposta[i].id);
-                            let button_acessar_lista_teorica = document.createElement("button");
-                            button_acessar_lista_teorica.innerHTML = resposta[i].nome;
-                            button_acessar_lista_teorica.setAttribute("id", resposta[i].id);
-                            let button_apagar_lista_teorica = document.createElement("button");
-                            button_apagar_lista_teorica.innerHTML = "apagar lista " + resposta[i].nome;
-                            button_apagar_lista_teorica.setAttribute("id", resposta[i].id);
-                            li.append(button_acessar_lista_teorica);
-                            li.append(button_apagar_lista_teorica);
-                            ul.append(li);
-                            button_apagar_lista_teorica.onclick = function () {
-                                let id = event.target.id;
-                                $("li,button").remove(`#${id}`)
-                                let lista_teorica_service = new Lista_Teoria_Service("http://localhost:3000/lista_teoricas");
-                                lista_teorica_service.deletar(id).then(resposta => {
-                                    console.log(resposta)
-
-                                })
-                            }
-                            button_acessar_lista_teorica.onclick = function () {
-                                let lista_perguntas;
-                                let lista_opcoes;
-                                let perguntas = document.getElementById("pergunta");
-                                let opcoes = document.querySelectorAll("#opcao");
-                                let posicao_pergunta = 0;
-                                let posicao_opcoes = 0;
-                                let id = event.target.id;
-                                $("#conteudo_da_lista_teorica").show("fast");
-                                let nota_service = new Nota_Service(`http://localhost:3000/notas?id_lista_teorica=${id}`);
-                                nota_service.listar().then(resposta => {
-                                    let ul = document.getElementById("place_notas");
-                                    for (let i = 0; i <= resposta.length - 1; i++) {
-                                        let li = document.createElement("li");
-                                        let span_nome = document.createElement("span");
-                                        let span_nota = document.createElement("span");
-                                        span_nome.innerHTML = "Nome do aluno: " + resposta[i].nome_aluno + "</br>";
-                                        span_nota.innerHTML = "Nota do aluno: " + resposta[i].nota;
-                                        li.append(span_nome);
-                                        li.append(span_nota);
-                                        ul.append(li);
-                                    }
-                                })
-                                let lista_teorica_service = new Lista_Teoria_Service(`http://localhost:3000/lista_teoricas?id=${id}`);
-                                lista_teorica_service.lista().then(resposta => {
-                                    lista_perguntas = resposta[0].perguntas;
-                                    lista_opcoes = resposta[0].opcoes;
-                                    opcoes_certas = resposta[0].opcoes_certas;
-                                    perguntas.innerHTML = lista_perguntas[posicao_pergunta];
-                                    for (let i = 0; i <= opcoes.length - 1; i++) {
-                                        opcoes[i].innerHTML = lista_opcoes[posicao_opcoes][i];
-
-                                    }
-                                    document.getElementById("proxima_pergunta").onclick = function () {
-                                        posicao_pergunta++;
-                                        if (posicao_pergunta < 10) {
-                                            posicao_opcoes++;
-                                            console.log(posicao_opcoes);
-                                            perguntas.innerHTML = lista_perguntas[posicao_pergunta];
-                                            for (let i = 0; i <= opcoes.length - 1; i++) {
-                                                opcoes[i].innerHTML = lista_opcoes[posicao_opcoes][i];
-
-                                            }
-                                        } else {
-                                            $("#situcao_posicao_lista_teorica").text("você chegou a última questão da sua lista teórica");
-                                        }
-                                    }
-
-                                })
-                            }
-                        }
-                    })
-                    document.getElementById("voltar_tela_inicial").onclick = function () {
-                        $("#look_participantes").show("fast");
-                        $("#criar_lista").show("fast");
-                        $("#look_listas_teoricas").show("fast");
-                        $("#listas_teoricas_especificas").hide("fast");
-                        $("#voltar_tela_inicial").hide("fast")
-                        $("#conteudo_da_lista_teorica").hide("fast");
-                        $("#lugar_lista_teorica").empty();
-                        $("#place_notas").empty()
-                    }
-                }
-            }
-            button_apagar_sala.onclick = function () {
-                let id = event.target.id; //pega o id do botão clicado
-                let sala_service = new Salas_Service("http://localhost:3000/salas");
-                sala_service.apagar(id).then(resposta => {
-                    console.log(resposta);
-                    location.reload();
-                })
-            }
-        }
-    })
-}
-
-*/
+                   
                 }
                 document.getElementById("nao_look_lista_teorica").onclick = function () {
                     $("#listas_teoricas").empty();
@@ -542,7 +563,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                             li.append(button);
                                             ul.append(li);
                                             button.onclick = function () {
-                                                lista_perguntas.push(button.textContent);
+                                                lista_perguntas.push(resposta[i].pergunta);
                                                 console.log(lista_perguntas);
                                                 lista_opcoes.push(resposta[i].opcoes);
                                                 console.log(lista_opcoes)
@@ -558,33 +579,53 @@ document.getElementById("salas_criadas").onclick = function () {
                                                         $("#perguntas_servidor").empty();
                                                         $("#area_criar_lista_teorica").hide("fast");
                                                         $("#opcoes_da_sala").show("fast");
+                                                        contador_perguntas.innerHTML = 0;
 
                                                     })
                                                 }
                                             }
                                         }
                                     })
+                                    var opcoes_check = [];
+                                    let click = 0;
+                                    let opcoes = [];
+                                    document.getElementById("salvar_opcao").onclick = function(){
+                                        let opcoes_user = document.getElementById("opcoes_professor").value;
+                                        if(opcoes_user != ""){      
+                                            opcoes.push(opcoes_user);                                     
+                                            document.getElementById("opcoes_professor").value = "";
+                                            click++;
+                                            if(click == 5){
+                                            
+                                                for(let i = 0; i <= opcoes.length-1; i++){
+                                                    opcoes_check.push(opcoes[i]);
+                                                    console.log(opcoes_check)
+                                                    
+                                                }
+                                                for(let i = 0; i <= opcoes_check.length-1; i++){
+                                                    opcoes.shift();
+                                                    
+                                                    
+                                                }
+                                                console.log(opcoes)
+                                                click= 0;
+                                            }
+                                        
+                                        }else{
+                                            swal("DIGITE UMA ALTERNATIVA",'TENTE NOVAMENTE','error')
+                                        }
+
+                                    }
                                     document.getElementById("adicionar_pergunta").onclick = function () {
                                         let pergunta_user = document.getElementById("pergunta_professor");
                                         let opcoes_user = document.getElementById("opcoes_professor");
                                         let opcao_correta_user = document.getElementById("opcao_correta");
-                                        let opcoes_user2 = opcoes_user.value;
-                                        let especificacao = " ";
-                                        let especificacao2 = ",";
-                                        let opcoes_check;
-                                        let temp = opcoes_user2.split(especificacao);
-                                        let temp2 = opcoes_user2.split(especificacao2);
-                                        if (temp.length > 0) {
-                                            opcoes_check = temp
-                                        } else {
-                                            opcoes_check = temp2
-                                        }
-                                        console.log(opcoes_check)
-                                        if (pergunta_user.value == "" || opcoes_user.value == "" || opcao_correta_user.value == "" || opcoes_check.length > 5 || opcoes_check.length < 5) {
+                                        console.log(opcoes_check);
+                                        
+                                        if (pergunta_user.value == "" || opcao_correta_user.value == "" || opcoes_check.length > 5 || opcoes_check.length < 5) {
                                             swal('Uma das entradas está inválida', 'tente novamente', 'error');
 
                                         } else {
-
                                             pergunta_user = pergunta_user.value;
                                             opcoes_user = opcoes_user.value;
                                             opcao_correta_user = opcao_correta_user.value;
@@ -603,12 +644,15 @@ document.getElementById("salas_criadas").onclick = function () {
                                             let pergunta_service = new Perguntas_Service("http://localhost:3000/perguntas");
                                             pergunta_service.inserir(pergunta).then(resposta => {
                                                 console.log(resposta);
+                                                opcoes_check = [];
+                                                console.log(opcoes_check);
                                             })
                                             if (cont_perguntas == 10) {
                                                 $("#contador").text("0");
                                                 let lista_teorica = new Lista_Teoria(nome_da_lista_teorica, lista_perguntas, lista_opcoes, opcoes_certas, id_login, id_sala, data_entrega, tempo_de_fazer_lista);
                                                 let lista_teorica_service = new Lista_Teoria_Service("http://localhost:3000/lista_teoricas");
                                                 lista_teorica_service.inserir(lista_teorica).then(resposta => {
+                                                    console.log(resposta)
                                                     swal('LISTA CRIADA COM SUCESSO', 'vamos voltar a área de escolhas de opcões de sala', 'success');
                                                     $("#perguntas_servidor").empty();
                                                     $("#area_criar_lista_teorica").hide("fast");
@@ -667,7 +711,8 @@ document.getElementById("criar_sala").onclick = function () {
         } else {
             $("#nome_sala").hide("fast");
             $("#proximo_passo").show("fast");
-            let lista_participantes = []
+            let lista_participantes = [];
+            let lista_participantes_id = [];
             document.getElementById("adicionar_aluno").onclick = function () {
                 let participante = $("#participante").val();
                 let situacao_usuario = document.getElementById("situacao_usuario");
@@ -680,11 +725,12 @@ document.getElementById("criar_sala").onclick = function () {
                         situacao_usuario.innerHTML = "Usuário Válido";
                         console.log(resposta[0].nome)
                         lista_participantes.push(resposta[0].nome);
+                        lista_participantes_id.push(resposta[0].id);
                     }
                 })
             }
             document.getElementById("criar_sala_especifica").onclick = function () {
-                let sala = new Salas(nome_sala, id_login, lista_participantes);
+                let sala = new Salas(nome_sala, id_login, lista_participantes,lista_participantes_id);
                 let sala_service = new Salas_Service("http://localhost:3000/salas");
                 sala_service.inserir(sala).then(resposta => {
                     console.log(resposta);

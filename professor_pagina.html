@@ -37,6 +37,7 @@
         <button id="ver_lista_teorica"> Veja suas listas teóricas </button>
         <button id="modificar_nota"> modificar nota do aluno entregou a lista teorica atrasada </button>
     </div>
+    
     <div id="area_opcoes_temas">
         <h3> Escolha um tema de lista teórica </h3>
         <button id="1" class="opcoes_temas"> MATRIZ </button>
@@ -75,7 +76,8 @@
             <ul id="perguntas_servidor">
             </ul>
             <textarea id="pergunta_professor" placeholder="digite sua questão"></textarea><br>
-            <textarea id="opcoes_professor" placeholder="digite as opções"></textarea><br>
+            <h3> digite uma opcão por vez você pode digitar no maximo 5 opcões que vai até a letra "E" e no minimo 5 opcões</h3>
+            <input id="opcoes_professor" placeholder="digite as opções"></input><button id="salvar_opcao"> salvar opção</button><br>
             <input id="opcao_correta" placeholder="Digite a opção correta"><br>
             <h4> DIGITE A URL  </h4>
             <textarea id="foto" placeholder="digite a url"></textarea>
@@ -98,6 +100,7 @@
         <div id="selecionar_lista">
             <h1> Aperte na lista para ver seu conteúdo e ao mesmo tempo fazer a lista </h1>
             <ul id="listas_teoricas">
+                
 
             </ul>
             <button id="nao_look_lista_teorica"> Voltar </button>
@@ -139,82 +142,13 @@
         </div>
 
     </div>
-
-    <!--
-    <div id="area_das_salas">
-        <ul id="opcoes_salas">
-            <li><button id="criar_sala"> Criar sala </button></li>
-        </ul>
-    </div>
-    <div id="area_de_criar_salas">
-        <h1> Criação de Salas e Adicionamento de alunos </h1>
-        <input id="sala_nome" placeholder="Digite o nome da sala"></br>
-        <input id="participante" placeholder="digite o nome do aluno"> </br>
-        <p id="situacao_usuario"> </p>
-        <button id="adicionar_aluno"> Adicionar Alunos </button>
-        <button id="criar_sala_especifica"> Criar Sala </button>
-    </div>
-    <div id="area_sala_especifica">
-        <button id="look_participantes"> Ver participantes </button>
-        <button id="look_listas_teoricas"> Ver notas da lista teorica específica e vê as listas teoricas presentes nessa sala como vê o conteudo delas</button>
-        <button id="criar_lista"> Criar lista teórica</button>
-        <div id="area_de_olhar_participantes">
-            <ul id="participantes">
-            </ul>
-            <button id="hide_participantes"> Não quero ver mais participantes </button>
+    <div id="nota_modificar">
+        <table id="modificar" border="1"> 
             
-        </div>
-        <div id="area_de_listas_teoricas">
-            <div id="listas_teoricas_especificas">
-                <h1> Lista teóricas </h1>
-                <ul id="lugar_lista_teorica">
-                </ul>
-                <button id="voltar_tela_inicial"> Voltar a tela inicial </button>
-            </div>
-            <div id="conteudo_da_lista_teorica">
-                <p id="pergunta"></p>
-                <ul id="opcoes">
-                    <li id="opcao"></li>
-                    <li id="opcao"></li>
-                    <li id="opcao"></li>
-                    <li id="opcao"></li>
-                    <li id="opcao"></li>
-                </ul>
-                <button id="proxima_pergunta"> ver proxima pergunta </button></br>
-                <p id="situcao_posicao_lista_teorica"> </p>
-                <ul id="place_notas"> 
-                </ul>   
-            </div>
-            <div id="area_de_criacao_de_listas_teoricas">
-                <ul id="temas">
-                    <h1> Escolha um tema </h1>
-                    <li> <button id="1" class="opcoes_temas"> matriz </button> </li>
-                    <li> <button id="2" class="opcoes_temas"> determinante </button> </li>
-                    <li> <button id="3" class="opcoes_temas"> fatoração </button> </li>
-                </ul>
-                <div id="lista">
-                    <input id="nome_lista_teorica" placeholder="diga o nome da lista teorica"><button id="nome_lista">
-                        Salvar o nome da lista </button>
-                        <p id="situcao_nome_lista"></p>
-                    <div id="proxima_etapa">
-                        <p id="cont_perguntas"> </p>
-                        <ul id="perguntas_server">
-                        </ul>
-                        <textarea id="pergunta_user"
-                            placeholder="Adicione uma pergunta para incluir nas perguntas da lista teorica"></textarea><br>
-                        <textarea id="opcoes_user" placeholder="digite as opcoes da pergunta"></textarea></br>
-                        <input id="opcao_correta" placeholder="digite a opcão correta">
-                        <button id="adicionar_pergunta"> Adicionar Pergunta </button>
-                        <p id="situacao_lista"></p>
-                        
-                    </div>
-                </div>
-                <p id="situacao_sala"> </p>
-                <button id="voltar_opcoes"> Voltar a tela inicial </button>
-            </div>
-        </div>
+        </table>
+        <button id="fim_comeco"> Voltar </button>
     </div>
--->
+
     <script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <script src="professor.js"></script>

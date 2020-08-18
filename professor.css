@@ -36,3 +36,32 @@
     color: whitesmoke;
     margin-left: 1.2%;
 }
+#modificar{
+    border-collapse: collapse;
+}
+#modificar td{
+    width: 10%;
+}
+#participantes li {
+    list-style-type: none;
+    background-color: black;
+    color: blanchedalmond;
+
+}
+#participantes li:hover{
+    background-color: darkblue;
+    border-radius: 4px;
+    
+}
+#opcoes_professor{
+    width: 20%;
+    height: 60px;
+    font-size: 105%;
+}
+#opcao_correta{
+    width: 20%;
+    height: 60px;
+    font-size: 105%;
+
+}
+

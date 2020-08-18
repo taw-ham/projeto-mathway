@@ -16,3 +16,7 @@ table td{
     width: 10%;
     text-align: center;
 }
+#perguntas_nao_feitas button{
+    background-color: darkgray;
+    color: whitesmoke
+}
