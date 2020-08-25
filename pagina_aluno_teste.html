@@ -11,6 +11,11 @@
         <button id="salas_presentes"> Vê salas em que está partcipando </button>
         <button id="exercicios"> exercicios </button>
         <button id="notas"> Veja sua nota </button>
+        <button id="entrar_sala"> Entre na sala </button>
+    </div>
+    <div id="lugar_entrada_sala">
+        <h1> Digite o código da sala </h1>
+        <input id="codigo_sala"> <button id="salvar_codigo"> Entra na sala </button>
     </div>
     <div id="lugar_de_notas">
         <table id="boletim" border="1">
@@ -23,37 +28,47 @@
         <button id="criar_lista_teorica"> Crie sua própria lista teorica </button>
         <button id="criar_lista_teorica_automatica"> Deixe que nós criamos sua própria lista teórica </button>
         <button id="suas_listas_teoricas"> Fazer suas listas teóricas já criadas </button>
+        <button id="historico_listas_teoricas_user">Listas teóricas criadas por você </button>
+        <button id="historico_listas_teoricas_server"> Listas teóricas criadas pelo site </button>
         <button id="voltar_da_area_escolha_modo_exercicio"> Voltar a area de escolha de exercicio </button>
     </div>
+    <div id="place_lista_teoricas">
+        <ul id="escolha_lista_teorica">
+
+        </ul>
+        <button id="voltar_place_lista_teoricas"> Voltar </button>
+    </div>
     <div id="tema_lista_teorica">
-        <button class="opcoes_temas" id="1" class="matriz"> Matriz </button>
-        <button class="opcoes_temas" id="3"> Sistema Linear </button></li>
-        <button class="opcoes_temas" id="2"> Funções Trigonométricas </button>
-        <button class="opcoes_temas" id="4"> Determinante </button>
-        <button class="opcoes_temas" id="5"> Fração </button>
-        <button class="opcoes_temas" id="6"> Razões Trigonométricas </button>
-        <button class="opcoes_temas" id="7"> Relações Trigonométricas </button>
-        <button class="opcoes_temas" id="8"> Números Complexos </button>
-        <button class="opcoes_temas" id="9"> Fatoração </button>
-        <button class="opcoes_temas" id="10"> Polinômios </button>
-        <button class="opcoes_temas" id="11"> Função Afim </button>
-        <button class="opcoes_temas" id="12"> Função Quadrática </button>
-        <button class="opcoes_temas" id="13"> Função Modular </button>
-        <button class="opcoes_temas" id="14"> Função Exponencial </button>
-        <button class="opcoes_temas" id="15"> Função Logaritmica </button>
-        <button class="opcoes_temas" id="17"> Função Composta </button>
-        <button class="opcoes_temas" id="18"> Função Inversa </button>
-        <button class="opcoes_temas" id="19"> Equação do 1º </button>
-        <button class="opcoes_temas" id="20"> Equação do 2º </button>
-        <button class="opcoes_temas" id="21"> Bhaskara </button>
+        <h3> Escolha um tema de lista teórica </h3>
+        <input type="checkbox" value="1" id="matriz" name="opcoes_temas"> MATRIZ
+        <input type="checkbox" value="2" id="FUNÇÃO TRIGONOMÉTRICA" name="opcoes_temas"> FUNÇÃO TRIGONOMÉTRICA
+        <input type="checkbox" value="3" id="SISTEMA LINEAR" name="opcoes_temas"> SISTEMA LINEAR
+        <input type="checkbox" value="4" id="DETERMINANTE" name="opcoes_temas"> DETERMINANTE
+        <input type="checkbox" value="5" id="FRAÇÃO" name="opcoes_temas"> FRAÇÃO
+        <input type="checkbox" value="6" id="Razões Trigonométricas" name="opcoes_temas"> Razões Trigonométricas
+        <input type="checkbox" value="7" id="Relações Trigonométricas" name="opcoes_temas"> Relações Trigonométricas
+        <input type="checkbox" value="8" id="Números Complexos" name="opcoes_temas"> Números Complexos
+        <input type="checkbox" value="9" id="Fatoração" name="opcoes_temas"> Fatoração
+        <input type="checkbox" value="10" id="Polinômios " name="opcoes_temas"> Polinômios
+        <input type="checkbox" value="11" id="Função Afim" name="opcoes_temas"> Função Afim
+        <input type="checkbox" value="12" id="Função Quadrática" name="opcoes_temas"> Função Quadrática
+        <input type="checkbox" value="13" id="Função Modular" name="opcoes_temas"> Função Modular
+        <input type="checkbox" value="14" id="Função Exponencial" name="opcoes_temas"> Função Exponencial
+        <input type="checkbox" value="15" id="Função Logaritmica" name="opcoes_temas"> Função Logaritmica
+        <input type="checkbox" value="17" id="Função Composta" name="opcoes_temas"> Função Composta
+        <input type="checkbox" value="18" id="Função Inversa" name="opcoes_temas"> Função Inversa
+        <button id="salvar_temas"> Salvar Temas</button>
+
     </div>
     <div id="criacao_lista_teorica">
         <div id="pegar_nome">
             <input id="nome_lista_teorica" placeholder="nome da Lista teórica">
-            <button id="salvar_nome_lista_teorica"> Salvar o nome da lista teórica </button>
+            <input id="cont_perguntas" placeholder="digite a quantidade de questões" >
+            <button id="salvar_nome_lista_teorica"> Salvar </button>
         </div>
         <div id="proximo_passo_criacao">
             <p id="contador_perguntas"> </p>
+            <h2> escolha uma Pergunta do nosso servidor </h2>
             <ul id="perguntasserver">
             </ul>
         </div>
@@ -73,13 +88,13 @@
         <span id="hora"> </span><span id="minutos"> </span><span id="segundos"> </span>
         <p id="place_perguntas"> </p>
         <ul>
-            <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
-            <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
-            <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
-            <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
-            <li> <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+            <li>A)<input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+            <li>B) <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+            <li>C) <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+            <li>D) <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
+            <li>E) <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
         </ul>
-        <button id="proxima_pergunta"> Proxima Pergunta</button>
+        <button id="proxima_pergunta"> Próxima</button>
 
     </div>
     <div id="termino_exercicio">
@@ -91,11 +106,11 @@
 
         </ul>
         <ul id="perguntas_nao_feitas">
-            
-        </ul>
-        <button id="fazer_perguntas_erradas"> Desejás fazeres ás perguntas erradas </button>
 
-        <button id="voltar_escolha_lista_teorica"> Voltar a área de escolha de Lista teórica</button>
+        </ul>
+        <button id="fazer_perguntas_erradas"> Refazer </button>
+
+        <button id="voltar_escolha_lista_teorica"> Voltar</button>
     </div>
     <div id="comentario">
         <textarea id="comentario_user" placeholder="digite seu comentario"></textarea>

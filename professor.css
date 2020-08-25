@@ -64,4 +64,12 @@
     font-size: 105%;
 
 }
+#reposta_certa li{
+    margin-bottom: 5%;
+
+}
+#pergunta_errada li{
+    margin-bottom: 5%;
+
+}
 

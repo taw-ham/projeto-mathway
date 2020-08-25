@@ -40,7 +40,7 @@ $("#fazer_login").click(function(){
     console.log(usuario)
     let senha = $("#senha_login").val();
     console.log(senha);
-    let aluno_service = new Aluno_Service(`http://localhost:3000/Alunos?nome=${usuario}&senha=${senha}`);
+    let aluno_service = new Aluno_Service(`http://localhost:3000/Alunos?email=${usuario}&senha=${senha}`);
     aluno_service.listar().then(resposta =>{
         if(resposta.length == 0){
             $("#situacao_usuario").text("usuario ou senha incorreto ou usuário não existe");
@@ -49,10 +49,10 @@ $("#fazer_login").click(function(){
             let id_login = resposta[0].id;
             let nome_login = resposta[0].nome
             localStorage.setItem('id',id_login);
+            localStorage.setItem('e-mail',usuario);
             localStorage.setItem('nome',nome_login);
-            console.log(localStorage);
+            
             window.location.assign("./pagina_aluno_teste.html");
         }
     })
-
 })

@@ -20,3 +20,12 @@ table td{
     background-color: darkgray;
     color: whitesmoke
 }
+#reposta_certa li{
+    margin-bottom: 5%;
+}
+#pergunta_errada li{
+    margin-bottom: 5%;
+}
+#perguntas_nao_feitas li{
+    margin-bottom: 5%;
+}

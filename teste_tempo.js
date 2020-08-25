@@ -78,6 +78,17 @@ const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
 console.log(days)
 var posicao = 0
 */
+
+document.getElementById("teste").onclick = function () {
+    let teste = document.getElementsByClassName("teste");
+    for(let i = 0; i <= teste.length; i++){
+        if (teste[i].checked) {
+            console.log(teste[i].id)
+            
+        }
+    }
+}
+
 $("#campo_hora").hide("fast");
 document.getElementById("enviar").onclick = function () {
     let nota = document.getElementById("nota").value;
@@ -94,46 +105,47 @@ let listateorica = new LISTA_TEORICA("http://localhost:3000/lista_teoricas")
 listateorica.listar().then(resposta => {
     for (let i = 0; i <= resposta.length - 1; i++) {
         var data = resposta[i].Data_de_entrega;
-        if(data != ""){
-        console.log(data)
-        var target_date = new Date(data).getTime();
-        var dias, horas, minutos, segundos;
-        function DATA_ENTREGA() {
-            var current_date = new Date().getTime();
-            if (current_date > target_date) {
-                let atrasado = Math.abs((target_date - current_date) / 1000);
-                dias = parseInt(atrasado / 86400);
-                atrasado = atrasado % 86400;
+        if (data != "") {
+            console.log(data)
+            var target_date = new Date(data).getTime();
+            var dias, horas, minutos, segundos;
 
-                horas = parseInt(atrasado / 3600);
-                atrasado = atrasado % 3600;
+            function DATA_ENTREGA() {
+                var current_date = new Date().getTime();
+                if (current_date > target_date) {
+                    let atrasado = Math.abs((target_date - current_date) / 1000);
+                    dias = parseInt(atrasado / 86400);
+                    atrasado = atrasado % 86400;
 
-                minutos = parseInt(atrasado / 60);
-                segundos = parseInt(atrasado % 60);
-                document.getElementById('days').innerHTML = dias;
-                document.getElementById('hours').innerHTML = horas;
-                document.getElementById('minutes').innerHTML = minutos;
-                document.getElementById('seconds').innerHTML = segundos + " já FAZEM DA DATA DE ENTREGA";
+                    horas = parseInt(atrasado / 3600);
+                    atrasado = atrasado % 3600;
 
-            } else {
-                let prazo = (target_date - current_date) / 1000;
-                dias = parseInt(prazo / 86400);
-                prazo = prazo % 86400;
+                    minutos = parseInt(atrasado / 60);
+                    segundos = parseInt(atrasado % 60);
+                    document.getElementById('days').innerHTML = dias;
+                    document.getElementById('hours').innerHTML = horas;
+                    document.getElementById('minutes').innerHTML = minutos;
+                    document.getElementById('seconds').innerHTML = segundos + " já FAZEM DA DATA DE ENTREGA";
 
-                horas = parseInt(prazo / 3600);
-                prazo = prazo % 3600;
+                } else {
+                    let prazo = (target_date - current_date) / 1000;
+                    dias = parseInt(prazo / 86400);
+                    prazo = prazo % 86400;
 
-                minutos = parseInt(prazo / 60);
-                segundos = parseInt(prazo % 60);
-                document.getElementById('days').innerHTML = dias;
-                document.getElementById('hours').innerHTML = horas;
-                document.getElementById('minutes').innerHTML = minutos;
-                document.getElementById('seconds').innerHTML = segundos + "";
+                    horas = parseInt(prazo / 3600);
+                    prazo = prazo % 3600;
 
+                    minutos = parseInt(prazo / 60);
+                    segundos = parseInt(prazo % 60);
+                    document.getElementById('days').innerHTML = dias;
+                    document.getElementById('hours').innerHTML = horas;
+                    document.getElementById('minutes').innerHTML = minutos;
+                    document.getElementById('seconds').innerHTML = segundos + "";
+
+                }
             }
+            let data_entrega = setInterval(DATA_ENTREGA, 1000);
         }
-        let data_entrega = setInterval(DATA_ENTREGA, 1000);
-    }
     }
 })
 
@@ -185,18 +197,18 @@ var relogio = [];
 var t_hora = document.getElementById("hora");
 var t_minutos = document.getElementById("minutos");
 var t_segundos = document.getElementById("segundos");
-let resposta = "1:1:00"
+let resposta = "1:0:00"
 relogio.push(resposta.split(":"))
 console.log(relogio);
 t_hora.innerHTML = (relogio[0][0] > 9) ? ("" + relogio[0][0] + ":") : ("0" + relogio[0][0] + ":");
 t_minutos.innerHTML = (relogio[0][1] - 1 > 9) ? ("" + relogio[0][1] - 1 + ":") : ("0" + relogio[0][1] - 1 + ":");
 t_segundos.innerHTML = 59;
 var hora = relogio[0][0];
-var minutos = relogio[0][1] - 1;
+var minutos = relogio[0][1];
 var segundos = 59;
-var tempo = setInterval(contador, 1000);
-var tempo2 = setInterval(contador2, 1000);
-if (relogio[0][0] <= 0) {
+
+
+/*if (relogio[0][0] <= 0) {
     function contador() {
         console.log("ggg")
         t_minutos.innerHTML = (minutos > 9) ? ("" + minutos + ":") : ("0" + minutos + ":");
@@ -213,7 +225,8 @@ if (relogio[0][0] <= 0) {
     }
     var tempo = setInterval(contador, 1000);
 
-} else {
+} */
+
     function contador2() {
         t_minutos.innerHTML = (minutos > 9) ? ("" + minutos + ":") : ("0" + minutos + ":");
         t_segundos.innerHTML = (segundos > 9) ? ("" + segundos) : ("0" + segundos);
@@ -222,16 +235,17 @@ if (relogio[0][0] <= 0) {
         else if (segundos == 0 && minutos > 0) {
             segundos = 59;
             minutos -= 1;
-        } else if (minutos == 0 && hora > 0) {
+        }else if (minutos == 0 && hora > 0) {
             minutos = 60;
             hora -= 1;
-        } else {
+        }
+        else {
             clearInterval(tempo2);
         }
 
     }
-    var tempo2 = setInterval(contador2, 1000);
-}
+var tempo2 = setInterval(contador2, 1000);
+
 
 document.getElementById("voltar").onclick = function () {
     $("#campo_hora").hide("fast");

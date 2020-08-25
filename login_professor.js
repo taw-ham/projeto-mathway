@@ -28,10 +28,10 @@ class ProfessorService {
     }
 }
 document.getElementById("enviar").onclick = function () {
-    let nome2 = document.getElementById("nome2").value;
+    let email = document.getElementById("nome2").value;
     let senha2 = document.getElementById("senha2").value;
 
-    let loginservice = new ProfessorService(`http://localhost:3000/professores?nome=${nome2}&senha=${senha2}`);
+    let loginservice = new ProfessorService(`http://localhost:3000/professores?email=${email}&senha=${senha2}`);
     loginservice.listar().then(results =>{
         if(results.length === 0){
             swal('Senha ou login incorreto', 'tente novamente!', 'error')
