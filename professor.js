@@ -685,7 +685,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                             swal('Uma das entradas está inválida', 'tente novamente', 'error');
 
                                         } else {
-                                            contador_perguntas.innerHTML = cont_perguntas + " perguntas adicionadas";
+                                            
                                             if (click_salvar_tema > 0) {
                                                 pergunta_user = pergunta_user.value;
                                                 opcoes_user = opcoes_user.value;
@@ -697,6 +697,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                                 opcoes_certas.push(opcao_correta_user)
                                                 console.log(opcoes_certas);
                                                 cont_perguntas++;
+                                                contador_perguntas.innerHTML = cont_perguntas + "perguntas adicionadas";
                                                 let pergunta = new Pergunta(pergunta_user, opcoes_check, opcao_correta_user, id_login, nome_tema, id_tema);
                                                 let pergunta_service = new Perguntas_Service("http://localhost:3000/perguntas");
                                                 pergunta_service.inserir(pergunta).then(resposta => {

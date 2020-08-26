@@ -469,7 +469,7 @@ document.getElementById("exercicios").onclick = function () {
                                 posicao_certa.push(posicao_pergunta + 1)
                                 console.log(lista_perguntas_certas_user);
                                 swal('Acertou!', 'parabéns', 'success');
-                                nota += 10
+                                nota += 100
                             } else {
                                 lista_perguntas_erradas_usuario.push(lista_pergunta_server[posicao_pergunta])
                                 posicao_erradas_perguntas.push(posicao_pergunta + 1);
@@ -501,6 +501,11 @@ document.getElementById("exercicios").onclick = function () {
                                 console.log("termino da lista teórica");
                                 $("#fazer_exercicio_lista_teorica").hide("fast");
                                 $("#termino_exercicio").show("fast");
+                                nota = nota / lista_pergunta_server.length;
+                                nota = parseFloat(nota.toFixed(0));
+                                if(nota > 100){
+                                    nota = 100;
+                                }
                                 $("#lugar_nota").text(`Sua nota foi ${nota}`)
                                 nota_final = nota
                                 posicao_pergunta = 0;
@@ -580,7 +585,7 @@ document.getElementById("exercicios").onclick = function () {
                                                 pergunta_certa_final.push(lista_perguntas_erradas_usuario[posicao_pergunta]);
                                                 posicao_certa.push(posicao_pergunta + 1)
                                                 swal('Acertou!', 'parabéns', 'success');
-                                                nota += 10;
+                                                nota += 100;
 
                                             } else {
                                                 pergunta_final_errada.push(lista_perguntas_erradas_usuario[posicao_pergunta]);
@@ -608,6 +613,11 @@ document.getElementById("exercicios").onclick = function () {
                                                 $("#fazer_perguntas_erradas").hide("fast");
                                                 t_number = 1;
                                                 lugar_perguntas.innerHTML = `${t_number}/${lista_pergunta_server.length})`
+                                                nota = nota / lista_pergunta_server.length;
+                                                nota = parseFloat(nota.toFixed(0))
+                                                if(nota > 100){
+                                                    nota = 100;
+                                                }
                                                 console.log(encerrar + "lista teorica");
                                                 nota_final += nota;
                                                 $("#lugar_nota").text(`A sua nota foi: ${nota_final}`)
@@ -725,7 +735,7 @@ document.getElementById("exercicios").onclick = function () {
                                 posicao_certa.push(posicao_pergunta + 1)
                                 console.log(lista_perguntas_certas_user);
                                 swal('Acertou!', 'parabéns', 'success');
-                                nota += 10
+                                nota += 100
                             } else {
                                 lista_perguntas_erradas_usuario.push(lista_pergunta_server[posicao_pergunta])
                                 posicao_erradas_perguntas.push(posicao_pergunta + 1);
@@ -757,6 +767,11 @@ document.getElementById("exercicios").onclick = function () {
                                 console.log("termino da lista teórica");
                                 $("#fazer_exercicio_lista_teorica").hide("fast");
                                 $("#termino_exercicio").show("fast");
+                                nota = nota / lista_pergunta_server.length
+                                nota = parseFloat(nota.toFixed(0));
+                                if(nota > 100){
+                                    nota = 100;
+                                }
                                 $("#lugar_nota").text(`Sua nota foi ${nota}`)
                                 nota_final = nota
                                 posicao_pergunta = 0;
@@ -830,7 +845,7 @@ document.getElementById("exercicios").onclick = function () {
                                                 pergunta_certa_final.push(lista_perguntas_erradas_usuario[posicao_pergunta]);
                                                 posicao_certa.push(posicao_pergunta + 1)
                                                 swal('Acertou!', 'parabéns', 'success');
-                                                nota += 10;
+                                                nota += 100;
 
                                             } else {
                                                 pergunta_final_errada.push(lista_perguntas_erradas_usuario[posicao_pergunta]);
@@ -860,6 +875,11 @@ document.getElementById("exercicios").onclick = function () {
                                                 t_number = 1;
                                                 lugar_perguntas.innerHTML = `${t_number}/${lista_pergunta_server.length})`
                                                 console.log(encerrar + "lista teorica");
+                                                nota = nota / lista_pergunta_server.length
+                                                nota = parseFloat(nota.toFixed(0));
+                                                if(nota > 100){
+                                                    nota = 100;
+                                                }
                                                 nota_final += nota;
                                                 $("#lugar_nota").text(`A sua nota foi: ${nota_final}`)
                                                 nota = 0;
@@ -1009,7 +1029,7 @@ document.getElementById("exercicios").onclick = function () {
                                             posicao_certa.push(posicao_pergunta + 1)
                                             console.log(lista_perguntas_certas_user);
                                             swal('Acertou!', 'parabéns', 'success');
-                                            nota += 10
+                                            nota += 100
                                         } else {
                                             lista_perguntas_erradas_usuario.push(lista_pergunta_server[posicao_pergunta])
                                             posicao_erradas_perguntas.push(posicao_pergunta + 1);
@@ -1031,7 +1051,7 @@ document.getElementById("exercicios").onclick = function () {
                                         for (let i = 0; i <= input_radio_checker.length - 1; i++) {
                                             input_radio_checker[i].checked = false;
                                         }
-                                        lugar_perguntas.innerHTML = `${t_number}/10)  ${lista_pergunta_server[posicao_pergunta]}`;
+                                        lugar_perguntas.innerHTML = `${t_number}/${lista_pergunta_server.length})  ${lista_pergunta_server[posicao_pergunta]}`;
                                         for (let i = 0; i <= lugar_opcoes_resposta.length - 1; i++) {
                                             lugar_opcoes_resposta[i].innerHTML = opcoes_server[posicao_opcoes][i];
                                             input_radio[i].setAttribute('value', opcoes_server[posicao_opcoes][i]);
@@ -1042,6 +1062,11 @@ document.getElementById("exercicios").onclick = function () {
                                         console.log("termino da lista teórica");
                                         $("#fazer_exercicio_lista_teorica").hide("fast");
                                         $("#termino_exercicio").show("fast");
+                                        nota = nota / lista_pergunta_server.length
+                                        nota = parseFloat(nota.toFixed(0));
+                                        if(nota > 100){
+                                            nota = 100;
+                                        }
                                         $("#lugar_nota").text(`Sua nota foi ${nota}`)
                                         nota_final = nota
                                         posicao_pergunta = 0;
@@ -1108,7 +1133,7 @@ document.getElementById("exercicios").onclick = function () {
                                                         pergunta_certa_final.push(lista_perguntas_erradas_usuario[posicao_pergunta]);
                                                         posicao_certa.push(posicao_pergunta + 1)
                                                         swal('Acertou!', 'parabéns', 'success');
-                                                        nota += 10;
+                                                        nota += 100;
 
                                                     } else {
                                                         pergunta_final_errada.push(lista_perguntas_erradas_usuario[posicao_pergunta]);
@@ -1136,8 +1161,13 @@ document.getElementById("exercicios").onclick = function () {
                                                         $("#termino_exercicio").show("fast");
                                                         $("#fazer_perguntas_erradas").hide("fast");
                                                         t_number = 1;
-                                                        lugar_perguntas.innerHTML = `${t_number}/10)`
-
+                                                        lugar_perguntas.innerHTML = `${t_number}/${lista_pergunta_server.length})`
+                                                       
+                                                        nota = nota / lista_pergunta_server.length
+                                                        nota = parseFloat(nota.toFixed(0));
+                                                        if(nota > 100){
+                                                            nota = 100;
+                                                        }
                                                         console.log(encerrar + "lista teorica");
                                                         nota_final += nota;
                                                         $("#lugar_nota").text(`A sua nota foi: ${nota_final}`)
@@ -1302,7 +1332,7 @@ document.getElementById("exercicios").onclick = function () {
                                             posicao_certa_pergunta.push(posicao_pergunta + 1)
 
                                             swal('Acertou!', 'parabéns', 'success');
-                                            nota += 10;
+                                            nota += 100;
 
                                         } else {
                                             lista_perguntas_erradas_usuario.push(lista_pergunta_server[posicao_pergunta])
@@ -1336,6 +1366,12 @@ document.getElementById("exercicios").onclick = function () {
                                             $("#fazer_perguntas_erradas").show("fast");
                                             $("#fazer_exercicio_lista_teorica").hide("fast");
                                             $("#termino_exercicio").show("fast");
+                                            nota = nota / lista_pergunta_server.length
+                                            nota = parseFloat(nota.toFixed(0));
+                                            if(nota > 100){
+                                                nota = 100;
+                                            }
+                                            
                                             $("#lugar_nota").text(`Sua nota foi ${nota}`)
                                             nota_final = nota;
                                             nota = 0;
@@ -1406,7 +1442,7 @@ document.getElementById("exercicios").onclick = function () {
                                                             posicao_certa_pergunta.push(posicao_pergunta + 1);
 
                                                             swal('Acertou!', 'parabéns', 'success');
-                                                            nota += 10;
+                                                            nota += 100;
 
                                                         } else {
 
@@ -1435,6 +1471,11 @@ document.getElementById("exercicios").onclick = function () {
                                                             $("#termino_exercicio").show("fast");
                                                             $("#fazer_perguntas_erradas").hide("fast");
                                                             console.log(encerrar + "lista teorica");
+                                                            nota = nota / lista_pergunta_server.length
+                                                            nota = parseFloat(nota.toFixed(0));
+                                                            if(nota > 100){
+                                                                nota = 100;
+                                                            }
                                                             nota_final += nota;
                                                             $("#lugar_nota").text(`Sua nota foi: ${nota_final}`)
                                                             nota = 0;
@@ -1648,7 +1689,7 @@ document.getElementById("salas_presentes").onclick = function () {
                                         let input_radio = document.querySelectorAll("#valor");
                                         let label_escolhas = document.querySelectorAll("#escolha");
                                         let perguntas = document.getElementById("place_perguntas");
-                                        perguntas.innerHTML = "1) " + lista_pergunta[posicao_pergunta];
+                                        perguntas.innerHTML = `${t_number}/${lista_pergunta.length}) ${lista_pergunta[posicao_pergunta]}`;
                                         for (let i = 0; i <= label_escolhas.length - 1; i++) {
                                             label_escolhas[i].innerHTML = lista_opcoes[posicao_opcoes][i];
                                             input_radio[i].setAttribute('value', lista_opcoes[posicao_opcoes][i]);
@@ -1664,7 +1705,7 @@ document.getElementById("salas_presentes").onclick = function () {
                                                     posicao_certa_pergunta.push(posicao_pergunta + 1);
 
                                                     swal('Acertou!', 'parabéns', 'success');
-                                                    nota += 10;
+                                                    nota += 100;
 
                                                 } else {
                                                     lista_erradas_usuario.push(lista_pergunta[posicao_pergunta])
@@ -1694,6 +1735,11 @@ document.getElementById("salas_presentes").onclick = function () {
                                                     console.log("termino da lista teórica");
                                                     $("#fazer_exercicio_lista_teorica").hide("fast");
                                                     $("#termino_exercicio").show("fast");
+                                                    nota = nota / lista_pergunta_server.length
+                                                    nota = parseFloat(nota.toFixed(0));
+                                                    if(nota > 100){
+                                                        nota = 100;
+                                                    }
                                                     $("#lugar_nota").text(`Sua nota foi ${nota}`)
                                                     let ul_resposta_certa = document.getElementById("reposta_certa");
                                                     let ul_resposta_errada = document.getElementById("pergunta_errada");
@@ -1712,12 +1758,15 @@ document.getElementById("salas_presentes").onclick = function () {
                                                         } else {
                                                             situacao_envio = "prazo"
                                                         }
+                                                       
                                                         let nota_enviar = new Nota(nome_login, nota, id_login, id_lista_teorica, nome_lista_teorica, lista_certas_usuario, lista_erradas_usuario, lista_perguntas_nao_feitas, situacao_envio, current_date_enviar);
                                                         let nota_service = new Nota_Service("http://localhost:3000/notas_professor");
                                                         nota_service.inserir(nota_enviar).then(resposta => {
                                                             console.log(resposta);
                                                         })
                                                     } else {
+                                                    
+                                                       
                                                         let nota_enviar = new Nota(nome_login, nota, id_login, id_lista_teorica, nome_lista_teorica, lista_certas_usuario, lista_erradas_usuario, lista_perguntas_nao_feitas);
                                                         let nota_service = new Nota_Service("http://localhost:3000/notas_professor");
                                                         nota_service.inserir(nota_enviar).then(resposta => {
@@ -1809,6 +1858,11 @@ document.getElementById("salas_presentes").onclick = function () {
                                                         clearInterval(tempo);
                                                         $("#fazer_exercicio_lista_teorica").hide("fast");
                                                         $("#termino_exercicio").show("fast");
+                                                        nota = nota / lista_pergunta_server.length
+                                                        nota = parseFloat(nota.toFixed(0));
+                                                        if(nota > 100){
+                                                            nota = 100;
+                                                        }
                                                         $("#lugar_nota").text(`Sua nota foi ${nota}`)
                                                         let ul_resposta_certa = document.getElementById("reposta_certa");
                                                         let ul_resposta_errada = document.getElementById("pergunta_errada");
@@ -1933,6 +1987,11 @@ document.getElementById("salas_presentes").onclick = function () {
                                                         perguntas.innerHTML = `${t_number}/${lista_pergunta.length})`
                                                         $("#fazer_exercicio_lista_teorica").hide("fast");
                                                         $("#termino_exercicio").show("fast");
+                                                        nota = nota / lista_pergunta_server.length
+                                                        nota = parseFloat(nota.toFixed(0));
+                                                        if(nota > 100){
+                                                            nota = 100;
+                                                        }
                                                         $("#lugar_nota").text(`Sua nota foi ${nota}`)
                                                         let ul_resposta_certa = document.getElementById("reposta_certa");
                                                         let ul_resposta_errada = document.getElementById("pergunta_errada");

@@ -38,6 +38,18 @@
         "0"
       ],
       "id": 7
+    },
+    {
+      "nome": "sala_teste_5",
+      "id_criador": "1",
+      "codigo": "eu1b2",
+      "participantes": [
+        "taw.ham.balbino@gmail.com"
+      ],
+      "participantes_id": [
+        "0"
+      ],
+      "id": 8
     }
   ],
   "lista_teoricas": [
@@ -144,7 +156,7 @@
       "id_sala": 5,
       "nome_sala": "fisica",
       "Data_de_entrega": "",
-      "tempo_de_termino": "0:10:0"
+      "tempo_de_termino": "0:1:0"
     },
     {
       "id": 3,
@@ -274,10 +286,106 @@
     }
   ],
   "notas_professor": [
-
+    {
+      "nome_aluno": "taw-ham",
+      "nota": "0",
+      "id_aluno": "0",
+      "id_lista_teorica": "3",
+      "nome_lista_teorica": "lista_teste_3",
+      "perguntas_certas": [
+        "quanto é 1 mais 1?",
+        "quanto é 2 + 1?",
+        "quanto é 3 + 1?",
+        "quanto é 4 + 1?",
+        "quanto é 5 + 1?",
+        "quanto é 6 + 1?",
+        "quanto é 10 + 1"
+      ],
+      "perguntas_erradas": [
+        "quanto é 7 + 1?",
+        "quanto é 8 + 1?",
+        "quanto é 9 + 1?"
+      ],
+      "perguntas_nao_feitas": [],
+      "situacao": "atualizada",
+      "data_de_entrega": "26/8/2020",
+      "id": 1
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 50,
+      "id_aluno": "0",
+      "id_lista_teorica": "2",
+      "nome_lista_teorica": "lista_teste",
+      "perguntas_certas": [
+        "quanto é 1 mais 1?",
+        "quanto é 2 + 1?",
+        "quanto é 3 + 1?",
+        "quanto é 4 + 1?",
+        "quanto é 5 + 1?"
+      ],
+      "perguntas_erradas": [
+        "quanto é 6 + 1?",
+        "quanto é 7 + 1?",
+        "quanto é 8 + 1?"
+      ],
+      "perguntas_nao_feitas": [
+        "quanto é 9 + 1?",
+        "quanto é 10 + 1"
+      ],
+      "id": 2
+    }
   ],
-  "notas_servidor": [],
-  "notas_aluno": [],
+  "notas_servidor": [
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 66,
+      "id_aluno": "0",
+      "id_lista_teorica": 6,
+      "nome_lista_teorica": "teste erro 6",
+      "perguntas_certas": [
+        "quanto é 1 + 1",
+        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+        "Se A e B são matrizes 2 x 3, é verdade que a matriz A + B é:",
+        "quanto é 1 + 1?",
+        "Quanto é 1 + 1?",
+        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+        "Quanto é 3 + 3?",
+        "quanto é 1 + 1?"
+      ],
+      "perguntas_erradas": [
+        "Para que o sistema linear &ensp; <img id = 'fotos_sistema_lineares' width = '124px' src = './fotis/fotos-3 3.jpeg'> &ensp; seja possível e indeterminado, o valor de a+b é:",
+        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
+        "Em sua rua André observou que havia 20 veículos estacionados, dentre motos e carros.Ao abaixar -se ele conseguiu visualizar 54 rodas.Qual é a a quantidade de motos e de carros estacionados na rua de André?",
+        "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:"
+      ],
+      "id": 1
+    }
+  ],
+  "notas_aluno": [
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 40,
+      "id_aluno": "0",
+      "id_lista_teorica": 1,
+      "nome_lista_teorica": "teste criar lista",
+      "perguntas_certas": [
+        "(ENEM 2017)Raios de luz solar estão atingindo a superfície de um lago formando um ângulo x com a sua superfície, conforme indica a figura.Em determinadas condições, pode-se supor que a intensidade luminosa desses raios, na superfície do lago, seja dada aproximadamente por l(x) = k.sen(x) sendo k uma constante, e supondo-se que x está entre 0˚ e 90˚.</br><img src = 'https://d2q576s0wzfxtl.cloudfront.net/2017/11/08151533/quest%C3%A3o-138-enem-2017.png'></br>Quando x = 30˚, a intensidade luminosa se reduz a qual percentual de seu valor máximo?",
+        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+        "(UEL-PR) Uma das formas de se enviar uma mensagem secreta é por meio de códigos matemáticos, seguindo os passos: i) Tanto o destinatário quanto o remetente possuem uma matriz chave C; </br>ii) O destinatário recebe do remetente uma matriz P tal que MC = P, em que M é a matriz mensagem a ser decodificada; </br>iii) Cada número da matriz M corresponde a uma letra do alfabeto: 1 = a, 2 = b, 3 = c,...,23 = z;</br>iv) Consideramos o alfabeto com 23 letras, excluindo as letras k,w e y; </br>v) o número zero corresponde ao ponto de exclamação; vi) A mensagem é lida, encontrando a matriz M, fazendo a correspondência número/letra e ordenando as letras por linhas da matriz conforme segue: . Considere as matrizes:</br> </br><img id = 'fotos_matrizes' src = 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/am8.jpg'></br></br>Com base nos conhecimentos e nas informações descritas, assinale a alternativa que apresenta a mensagem que foi enviada por meio da matriz M.",
+        "Sobre as propriedades da matriz transposta, considere as sentenças abaixo:</br> I. (A + B)<sup>t</sup> = A<sup>t</sup> + B<sup>t</sup> </br> II.(kA)<sup>t</sup> = kA<sup>t</sup></br> III.(A . B)<sup>t</sup> = A<sup>t</sup> . B<sup>t</sup>:"
+      ],
+      "perguntas_erradas": [
+        "(PUC-RS 2013)A figura a seguir representa um esboço do gráfico de uma função y = A + B sen x/4 que é muito útil quando se estudam fenômenos periódicos, como, por exemplo, o movimento de uma mola vibrante. Então, o produto das constantes A e B é </br> </br><img src = 'https://d23vy2bv3rsfba.cloudfront.net/questoes_imagens/0_faf11aa1f163d8a42cfcb7a1c14433c5_960451.jpg.png'>",
+        "Espcex (Aman) 2012) A função real f(x) está representada no gráfico abaixo.</br><img src = 'https://static.stoodi.com.br/images/exercises/dce2b33bbcb6478b923f5a54cccde731/68d915a15275b02323a7fd239edc6cd11ccc6eeaff897d16a3b899f190f67607.png?versionId=k67QNEWg2KnfqTGp00ZpwfUN8sdFLATv'></br>A expressão algébrica de f(x) é:",
+        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+        "Sendo &ensp;<img width = 70px id = 'fotos_matrizes' src = './fotis/fotos-1.JPG'> &ensp; então os valores de x e y para que &ensp; <img width = 80px id = 'fotos_matrizes' src = './fotis/fotos-1.0.jpeg'> &ensp; são:",
+        "Sabendo que a inversa de uma matriz A é &ensp; <img width = 42px id = 'fotos_matrizes' src = './fotis/fotos-1 4.jpeg'>&ensp;  e que a matriz X é solução da equação matricial X . A = B, em que B = [8 3] podemos afirmar que a soma dos elementos da matriz X é:",
+        "UEMG)Se a inversa de &ensp; <img width = 45px id = 'fotos_matrizes' src ='./fotis/fotos-1 4.jpeg'> &ensp; é &ensp; <img width = 50px id = 'fotos_matrizes' src = './fotis/fotos-1 2.jpeg'> &ensp; o valor de x é:"
+      ],
+      "id": 1
+    }
+  ],
   "perguntas": [
     {
       "pergunta": "quanto é 1 + 1?",
@@ -2907,6 +3015,36 @@
       "tema": "FUNÇÃO TRIGONOMÉTRICA",
       "id_tema": "2",
       "id": 176
+    },
+    {
+      "pergunta": "Quanto é 1 + 1?",
+      "opcoes": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "opcao_certa": "2",
+      "id_criador": "1",
+      "tema": "matriz",
+      "id_tema": "1",
+      "id": 177
+    },
+    {
+      "pergunta": "quanto é 1 + 1",
+      "opcoes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "opcao_certa": "2",
+      "id_criador": "1",
+      "tema": "matriz",
+      "id_tema": "1",
+      "id": 178
     }
   ],
   "comentario": [
@@ -2921,6 +3059,12 @@
       "comentario": "teste_comentario",
       "id_aluno": "0",
       "id": "Fw03jgJ"
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "comentario": "arroz é doce",
+      "id_aluno": "0",
+      "id": "PI3fedQ"
     }
   ],
   "Lista_Teorica_aluno": [
@@ -2931,6 +3075,217 @@
       "perguntas": [],
       "opcoes": [],
       "opcoes_certas": []
+    },
+    {
+      "nome": "teste criar lista",
+      "id_criador": "0",
+      "perguntas": [
+        "(ENEM 2017)Raios de luz solar estão atingindo a superfície de um lago formando um ângulo x com a sua superfície, conforme indica a figura.Em determinadas condições, pode-se supor que a intensidade luminosa desses raios, na superfície do lago, seja dada aproximadamente por l(x) = k.sen(x) sendo k uma constante, e supondo-se que x está entre 0˚ e 90˚.</br><img src = 'https://d2q576s0wzfxtl.cloudfront.net/2017/11/08151533/quest%C3%A3o-138-enem-2017.png'></br>Quando x = 30˚, a intensidade luminosa se reduz a qual percentual de seu valor máximo?",
+        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+        "(PUC-RS 2013)A figura a seguir representa um esboço do gráfico de uma função y = A + B sen x/4 que é muito útil quando se estudam fenômenos periódicos, como, por exemplo, o movimento de uma mola vibrante. Então, o produto das constantes A e B é </br> </br><img src = 'https://d23vy2bv3rsfba.cloudfront.net/questoes_imagens/0_faf11aa1f163d8a42cfcb7a1c14433c5_960451.jpg.png'>",
+        "Espcex (Aman) 2012) A função real f(x) está representada no gráfico abaixo.</br><img src = 'https://static.stoodi.com.br/images/exercises/dce2b33bbcb6478b923f5a54cccde731/68d915a15275b02323a7fd239edc6cd11ccc6eeaff897d16a3b899f190f67607.png?versionId=k67QNEWg2KnfqTGp00ZpwfUN8sdFLATv'></br>A expressão algébrica de f(x) é:",
+        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+        "(UEL-PR) Uma das formas de se enviar uma mensagem secreta é por meio de códigos matemáticos, seguindo os passos: i) Tanto o destinatário quanto o remetente possuem uma matriz chave C; </br>ii) O destinatário recebe do remetente uma matriz P tal que MC = P, em que M é a matriz mensagem a ser decodificada; </br>iii) Cada número da matriz M corresponde a uma letra do alfabeto: 1 = a, 2 = b, 3 = c,...,23 = z;</br>iv) Consideramos o alfabeto com 23 letras, excluindo as letras k,w e y; </br>v) o número zero corresponde ao ponto de exclamação; vi) A mensagem é lida, encontrando a matriz M, fazendo a correspondência número/letra e ordenando as letras por linhas da matriz conforme segue: . Considere as matrizes:</br> </br><img id = 'fotos_matrizes' src = 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/am8.jpg'></br></br>Com base nos conhecimentos e nas informações descritas, assinale a alternativa que apresenta a mensagem que foi enviada por meio da matriz M.",
+        "Sendo &ensp;<img width = 70px id = 'fotos_matrizes' src = './fotis/fotos-1.JPG'> &ensp; então os valores de x e y para que &ensp; <img width = 80px id = 'fotos_matrizes' src = './fotis/fotos-1.0.jpeg'> &ensp; são:",
+        "Sabendo que a inversa de uma matriz A é &ensp; <img width = 42px id = 'fotos_matrizes' src = './fotis/fotos-1 4.jpeg'>&ensp;  e que a matriz X é solução da equação matricial X . A = B, em que B = [8 3] podemos afirmar que a soma dos elementos da matriz X é:",
+        "UEMG)Se a inversa de &ensp; <img width = 45px id = 'fotos_matrizes' src ='./fotis/fotos-1 4.jpeg'> &ensp; é &ensp; <img width = 50px id = 'fotos_matrizes' src = './fotis/fotos-1 2.jpeg'> &ensp; o valor de x é:",
+        "Sobre as propriedades da matriz transposta, considere as sentenças abaixo:</br> I. (A + B)<sup>t</sup> = A<sup>t</sup> + B<sup>t</sup> </br> II.(kA)<sup>t</sup> = kA<sup>t</sup></br> III.(A . B)<sup>t</sup> = A<sup>t</sup> . B<sup>t</sup>:"
+      ],
+      "opcoes": [
+        [
+          "33%",
+          "50%",
+          "57%",
+          "70%",
+          "86%"
+        ],
+        [
+          "2 cosx",
+          "2 sen(x/2)",
+          "2 senx",
+          "2 sen 2x",
+          "2 cos 2x"
+        ],
+        [
+          "6",
+          "10",
+          "12",
+          "18",
+          "50"
+        ],
+        [
+          "<img width = '200px' src = './fotis/fotos-4 3.jpeg'>",
+          "<img width = '200px' src = './fotis/fotos-4 4.jpeg'>",
+          "<img width = '200px' src = './fotis/fotos-4 5.jpeg'>",
+          "<img width = '200px' src = './fotis/fotos-4 6.jpeg'>",
+          "<img width = '200px' src = './fotis/fotos-4 7.jpeg'>"
+        ],
+        [
+          "2",
+          "3",
+          "5",
+          "6",
+          "4"
+        ],
+        [
+          "Boa sorte!",
+          "Boa prova",
+          "Boa tarde",
+          "Ajude-me ",
+          "Socorro"
+        ],
+        [
+          "x=y=2",
+          "x=0 e y = 1",
+          "x = 1 e y = 2",
+          "x = 1 e y = 0",
+          "x = 0 e y = 2"
+        ],
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          5,
+          6,
+          7,
+          9,
+          10
+        ],
+        [
+          "Apenas a sentença II é verdadeira",
+          "Apenas a sentença III é verdadeira",
+          "Apenas as sentenças I e II são verdadeiras.",
+          "Apenas as sentenças II e III são verdadeiras",
+          "Apenas as sentenças I e III são verdadeiras"
+        ]
+      ],
+      "opcoes_certas": [
+        "50%",
+        "2 cosx",
+        "6",
+        "<img width = '200px' src = './fotis/fotos-4 3.jpeg'>",
+        "6",
+        "Boa sorte!",
+        "x=0 e y = 1",
+        7,
+        5,
+        "Apenas as sentenças I e II são verdadeiras."
+      ],
+      "id": 1
+    },
+    {
+      "nome": "teste_erro",
+      "id_criador": "0",
+      "perguntas": [
+        "(UEL-PR) Uma das formas de se enviar uma mensagem secreta é por meio de códigos matemáticos, seguindo os passos: i) Tanto o destinatário quanto o remetente possuem uma matriz chave C; </br>ii) O destinatário recebe do remetente uma matriz P tal que MC = P, em que M é a matriz mensagem a ser decodificada; </br>iii) Cada número da matriz M corresponde a uma letra do alfabeto: 1 = a, 2 = b, 3 = c,...,23 = z;</br>iv) Consideramos o alfabeto com 23 letras, excluindo as letras k,w e y; </br>v) o número zero corresponde ao ponto de exclamação; vi) A mensagem é lida, encontrando a matriz M, fazendo a correspondência número/letra e ordenando as letras por linhas da matriz conforme segue: . Considere as matrizes:</br> </br><img id = 'fotos_matrizes' src = 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/am8.jpg'></br></br>Com base nos conhecimentos e nas informações descritas, assinale a alternativa que apresenta a mensagem que foi enviada por meio da matriz M.",
+        "Espcex (Aman) 2012) A função real f(x) está representada no gráfico abaixo.</br><img src = 'https://static.stoodi.com.br/images/exercises/dce2b33bbcb6478b923f5a54cccde731/68d915a15275b02323a7fd239edc6cd11ccc6eeaff897d16a3b899f190f67607.png?versionId=k67QNEWg2KnfqTGp00ZpwfUN8sdFLATv'></br>A expressão algébrica de f(x) é:",
+        "UEMG)Se a inversa de &ensp; <img width = 45px id = 'fotos_matrizes' src ='./fotis/fotos-1 4.jpeg'> &ensp; é &ensp; <img width = 50px id = 'fotos_matrizes' src = './fotis/fotos-1 2.jpeg'> &ensp; o valor de x é:",
+        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+        "Espcex (Aman) 2012) A função real f(x) está representada no gráfico abaixo.</br><img src = 'https://static.stoodi.com.br/images/exercises/dce2b33bbcb6478b923f5a54cccde731/68d915a15275b02323a7fd239edc6cd11ccc6eeaff897d16a3b899f190f67607.png?versionId=k67QNEWg2KnfqTGp00ZpwfUN8sdFLATv'></br>A expressão algébrica de f(x) é:",
+        "Sendo &ensp;<img width = 70px id = 'fotos_matrizes' src = './fotis/fotos-1.JPG'> &ensp; então os valores de x e y para que &ensp; <img width = 80px id = 'fotos_matrizes' src = './fotis/fotos-1.0.jpeg'> &ensp; são:",
+        "Sejam as matrizes A <sub>3x2</sub>, B <sub>2x3</sub> e C <sub>3x3</sub>. É verdade que:",
+        "(UEL-PR) Uma das formas de se enviar uma mensagem secreta é por meio de códigos matemáticos, seguindo os passos: i) Tanto o destinatário quanto o remetente possuem uma matriz chave C; </br>ii) O destinatário recebe do remetente uma matriz P tal que MC = P, em que M é a matriz mensagem a ser decodificada; </br>iii) Cada número da matriz M corresponde a uma letra do alfabeto: 1 = a, 2 = b, 3 = c,...,23 = z;</br>iv) Consideramos o alfabeto com 23 letras, excluindo as letras k,w e y; </br>v) o número zero corresponde ao ponto de exclamação; vi) A mensagem é lida, encontrando a matriz M, fazendo a correspondência número/letra e ordenando as letras por linhas da matriz conforme segue: . Considere as matrizes:</br> </br><img id = 'fotos_matrizes' src = 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/am8.jpg'></br></br>Com base nos conhecimentos e nas informações descritas, assinale a alternativa que apresenta a mensagem que foi enviada por meio da matriz M.",
+        "quanto é 1 + 1?",
+        "Sendo &ensp;<img width = 70px id = 'fotos_matrizes' src = './fotis/fotos-1.JPG'> &ensp; então os valores de x e y para que &ensp; <img width = 80px id = 'fotos_matrizes' src = './fotis/fotos-1.0.jpeg'> &ensp; são:",
+        "O número de alunos matriculados na Escola Municipal de Pirajuba permanece o mesmo desde 2011. Em 2012, foram construídas 5 novas salas de aula e, com isso, a média de alunos por sala foi reduzida em 6 alunos em relação à média de 2011. Em 2013, foram construídas mais 5 salas de aula e, com isso, a média de alunos por sala foi reduzida em 5 alunos em relação à média de 2012.Quantos alunos tem a Escola Municipal de Pirajuba?"
+      ],
+      "opcoes": [
+        [
+          "Boa sorte!",
+          "Boa prova",
+          "Boa tarde",
+          "Ajude-me ",
+          "Socorro"
+        ],
+        [
+          "<img width = '200px' src = './fotis/fotos-4 3.jpeg'>",
+          "<img width = '200px' src = './fotis/fotos-4 4.jpeg'>",
+          "<img width = '200px' src = './fotis/fotos-4 5.jpeg'>",
+          "<img width = '200px' src = './fotis/fotos-4 6.jpeg'>",
+          "<img width = '200px' src = './fotis/fotos-4 7.jpeg'>"
+        ],
+        [
+          5,
+          6,
+          7,
+          9,
+          10
+        ],
+        [
+          "2",
+          "3",
+          "5",
+          "6",
+          "4"
+        ],
+        [
+          "<img width = '200px' src = './fotis/fotos-4 3.jpeg'>",
+          "<img width = '200px' src = './fotis/fotos-4 4.jpeg'>",
+          "<img width = '200px' src = './fotis/fotos-4 5.jpeg'>",
+          "<img width = '200px' src = './fotis/fotos-4 6.jpeg'>",
+          "<img width = '200px' src = './fotis/fotos-4 7.jpeg'>"
+        ],
+        [
+          "x=y=2",
+          "x=0 e y = 1",
+          "x = 1 e y = 2",
+          "x = 1 e y = 0",
+          "x = 0 e y = 2"
+        ],
+        [
+          "A + Bt é uma matriz 2x3",
+          "A . B é uma matriz 3x3",
+          "A . B é uma matriz 2x2",
+          "B . C é uma matriz 3x3",
+          "C . A é uma matriz 3x3"
+        ],
+        [
+          "Boa sorte!",
+          "Boa prova",
+          "Boa tarde",
+          "Ajude-me ",
+          "Socorro"
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          "x=y=2",
+          "x=0 e y = 1",
+          "x = 1 e y = 2",
+          "x = 1 e y = 0",
+          "x = 0 e y = 2"
+        ],
+        [
+          3150,
+          3180,
+          3240,
+          3300,
+          3350
+        ]
+      ],
+      "opcoes_certas": [
+        "Boa sorte!",
+        "<img width = '200px' src = './fotis/fotos-4 3.jpeg'>",
+        5,
+        "6",
+        "<img width = '200px' src = './fotis/fotos-4 3.jpeg'>",
+        "x=0 e y = 1",
+        "A . B é uma matriz 3x3",
+        "Boa sorte!",
+        2,
+        "x=0 e y = 1",
+        3300
+      ],
+      "id": 2
     }
   ],
   "Lista_Teorica_Servidor": [
@@ -2941,6 +3296,801 @@
       "opcoes": [],
       "opcoes_certas": [],
       "nome": "nsns"
+    },
+    {
+      "nome": "lista teste server",
+      "id_aluno": "0",
+      "perguntas": [
+        "Para que o sistema linear &ensp; <img id = 'fotos_sistema_lineares' width = '124px' src = './fotis/fotos-3 3.jpeg'> &ensp; seja possível e indeterminado, o valor de a+b é:",
+        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
+        "quanto é 1 + 1?",
+        "Em sua rua André observou que havia 20 veículos estacionados, dentre motos e carros.Ao abaixar -se ele conseguiu visualizar 54 rodas.Qual é a a quantidade de motos e de carros estacionados na rua de André?",
+        "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:",
+        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+        "Se A e B são matrizes 2 x 3, é verdade que a matriz A + B é:",
+        "quanto é 1 + 1?",
+        "Quanto é 1 + 1?",
+        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+        "Quanto é 3 + 3?",
+        "(MACKENZIE 2012) O maior valor que o número real 10/2 - senx/3 pode assumir é:",
+        "O número de alunos matriculados na Escola Municipal de Pirajuba permanece o mesmo desde 2011. Em 2012, foram construídas 5 novas salas de aula e, com isso, a média de alunos por sala foi reduzida em 6 alunos em relação à média de 2011. Em 2013, foram construídas mais 5 salas de aula e, com isso, a média de alunos por sala foi reduzida em 5 alunos em relação à média de 2012.Quantos alunos tem a Escola Municipal de Pirajuba?",
+        "(ENEM 2017)Raios de luz solar estão atingindo a superfície de um lago formando um ângulo x com a sua superfície, conforme indica a figura.Em determinadas condições, pode-se supor que a intensidade luminosa desses raios, na superfície do lago, seja dada aproximadamente por l(x) = k.sen(x) sendo k uma constante, e supondo-se que x está entre 0˚ e 90˚.</br><img src = 'https://d2q576s0wzfxtl.cloudfront.net/2017/11/08151533/quest%C3%A3o-138-enem-2017.png'></br>Quando x = 30˚, a intensidade luminosa se reduz a qual percentual de seu valor máximo?",
+        "quanto é 2 + 2"
+      ],
+      "opcoes": [
+        [
+          "-1",
+          "4",
+          "9",
+          "14",
+          "19"
+        ],
+        [
+          0,
+          1,
+          3,
+          2,
+          10
+        ],
+        [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        [
+          "13 motos e 7 carros",
+          "14 motos e 8 carros",
+          "20 motos e 10 carros",
+          "15 motos e 7 carros",
+          "7 motos e 13 carros"
+        ],
+        [
+          "13",
+          "9",
+          "8",
+          "-4",
+          "10"
+        ],
+        [
+          "2 cosx",
+          "2 sen(x/2)",
+          "2 senx",
+          "2 sen 2x",
+          "2 cos 2x"
+        ],
+        [
+          "2 x 2",
+          "3 x 3",
+          "2 x 3",
+          "3 x 2",
+          "não é possível fazer A + B"
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        [
+          "2",
+          "3",
+          "5",
+          "6",
+          "4"
+        ],
+        [
+          "2",
+          "6",
+          "8",
+          "10",
+          "12"
+        ],
+        [
+          "20/3",
+          "7/3",
+          "10",
+          "6",
+          "20/7"
+        ],
+        [
+          3150,
+          3180,
+          3240,
+          3300,
+          3350
+        ],
+        [
+          "33%",
+          "50%",
+          "57%",
+          "70%",
+          "86%"
+        ],
+        [
+          "34",
+          "12",
+          "34",
+          "34",
+          "2"
+        ]
+      ],
+      "opcoes_certas": [
+        "14",
+        0,
+        "2",
+        "13 motos e 7 carros",
+        "13",
+        "2 cosx",
+        "2 x 3",
+        2,
+        "2",
+        "6",
+        "6",
+        "6",
+        3300,
+        "50%",
+        "23"
+      ],
+      "id": 1
+    },
+    {
+      "nome": "lista teste erros",
+      "id_aluno": "0",
+      "perguntas": [
+        "Para que o sistema linear &ensp; <img id = 'fotos_sistema_lineares' width = '124px' src = './fotis/fotos-3 3.jpeg'> &ensp; seja possível e indeterminado, o valor de a+b é:",
+        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
+        "quanto é 1 + 1?",
+        "Em sua rua André observou que havia 20 veículos estacionados, dentre motos e carros.Ao abaixar -se ele conseguiu visualizar 54 rodas.Qual é a a quantidade de motos e de carros estacionados na rua de André?",
+        "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:",
+        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+        "Se A e B são matrizes 2 x 3, é verdade que a matriz A + B é:",
+        "quanto é 1 + 1?",
+        "Quanto é 1 + 1?",
+        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+        "Quanto é 3 + 3?",
+        "(MACKENZIE 2012) O maior valor que o número real 10/2 - senx/3 pode assumir é:",
+        "O número de alunos matriculados na Escola Municipal de Pirajuba permanece o mesmo desde 2011. Em 2012, foram construídas 5 novas salas de aula e, com isso, a média de alunos por sala foi reduzida em 6 alunos em relação à média de 2011. Em 2013, foram construídas mais 5 salas de aula e, com isso, a média de alunos por sala foi reduzida em 5 alunos em relação à média de 2012.Quantos alunos tem a Escola Municipal de Pirajuba?",
+        "(ENEM 2017)Raios de luz solar estão atingindo a superfície de um lago formando um ângulo x com a sua superfície, conforme indica a figura.Em determinadas condições, pode-se supor que a intensidade luminosa desses raios, na superfície do lago, seja dada aproximadamente por l(x) = k.sen(x) sendo k uma constante, e supondo-se que x está entre 0˚ e 90˚.</br><img src = 'https://d2q576s0wzfxtl.cloudfront.net/2017/11/08151533/quest%C3%A3o-138-enem-2017.png'></br>Quando x = 30˚, a intensidade luminosa se reduz a qual percentual de seu valor máximo?",
+        "quanto é 2 + 2"
+      ],
+      "opcoes": [
+        [
+          "-1",
+          "4",
+          "9",
+          "14",
+          "19"
+        ],
+        [
+          0,
+          1,
+          3,
+          2,
+          10
+        ],
+        [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        [
+          "13 motos e 7 carros",
+          "14 motos e 8 carros",
+          "20 motos e 10 carros",
+          "15 motos e 7 carros",
+          "7 motos e 13 carros"
+        ],
+        [
+          "13",
+          "9",
+          "8",
+          "-4",
+          "10"
+        ],
+        [
+          "2 cosx",
+          "2 sen(x/2)",
+          "2 senx",
+          "2 sen 2x",
+          "2 cos 2x"
+        ],
+        [
+          "2 x 2",
+          "3 x 3",
+          "2 x 3",
+          "3 x 2",
+          "não é possível fazer A + B"
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        [
+          "2",
+          "3",
+          "5",
+          "6",
+          "4"
+        ],
+        [
+          "2",
+          "6",
+          "8",
+          "10",
+          "12"
+        ],
+        [
+          "20/3",
+          "7/3",
+          "10",
+          "6",
+          "20/7"
+        ],
+        [
+          3150,
+          3180,
+          3240,
+          3300,
+          3350
+        ],
+        [
+          "33%",
+          "50%",
+          "57%",
+          "70%",
+          "86%"
+        ],
+        [
+          "34",
+          "12",
+          "34",
+          "34",
+          "2"
+        ]
+      ],
+      "opcoes_certas": [
+        "14",
+        0,
+        "2",
+        "13 motos e 7 carros",
+        "13",
+        "2 cosx",
+        "2 x 3",
+        2,
+        "2",
+        "6",
+        "6",
+        "6",
+        3300,
+        "50%",
+        "23"
+      ],
+      "id": 2
+    },
+    {
+      "nome": "teste erri",
+      "id_aluno": "0",
+      "perguntas": [
+        "Para que o sistema linear &ensp; <img id = 'fotos_sistema_lineares' width = '124px' src = './fotis/fotos-3 3.jpeg'> &ensp; seja possível e indeterminado, o valor de a+b é:",
+        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
+        "quanto é 1 + 1?",
+        "Em sua rua André observou que havia 20 veículos estacionados, dentre motos e carros.Ao abaixar -se ele conseguiu visualizar 54 rodas.Qual é a a quantidade de motos e de carros estacionados na rua de André?",
+        "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:",
+        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+        "Se A e B são matrizes 2 x 3, é verdade que a matriz A + B é:",
+        "quanto é 1 + 1?",
+        "Quanto é 1 + 1?",
+        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+        "Quanto é 3 + 3?",
+        "(MACKENZIE 2012) O maior valor que o número real 10/2 - senx/3 pode assumir é:"
+      ],
+      "opcoes": [
+        [
+          "-1",
+          "4",
+          "9",
+          "14",
+          "19"
+        ],
+        [
+          0,
+          1,
+          3,
+          2,
+          10
+        ],
+        [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        [
+          "13 motos e 7 carros",
+          "14 motos e 8 carros",
+          "20 motos e 10 carros",
+          "15 motos e 7 carros",
+          "7 motos e 13 carros"
+        ],
+        [
+          "13",
+          "9",
+          "8",
+          "-4",
+          "10"
+        ],
+        [
+          "2 cosx",
+          "2 sen(x/2)",
+          "2 senx",
+          "2 sen 2x",
+          "2 cos 2x"
+        ],
+        [
+          "2 x 2",
+          "3 x 3",
+          "2 x 3",
+          "3 x 2",
+          "não é possível fazer A + B"
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        [
+          "2",
+          "3",
+          "5",
+          "6",
+          "4"
+        ],
+        [
+          "2",
+          "6",
+          "8",
+          "10",
+          "12"
+        ],
+        [
+          "20/3",
+          "7/3",
+          "10",
+          "6",
+          "20/7"
+        ]
+      ],
+      "opcoes_certas": [
+        "14",
+        0,
+        "2",
+        "13 motos e 7 carros",
+        "13",
+        "2 cosx",
+        "2 x 3",
+        2,
+        "2",
+        "6",
+        "6",
+        "6"
+      ],
+      "id": 3
+    },
+    {
+      "nome": "teste erro 3",
+      "id_aluno": "0",
+      "perguntas": [
+        "Para que o sistema linear &ensp; <img id = 'fotos_sistema_lineares' width = '124px' src = './fotis/fotos-3 3.jpeg'> &ensp; seja possível e indeterminado, o valor de a+b é:",
+        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
+        "quanto é 1 + 1?",
+        "Em sua rua André observou que havia 20 veículos estacionados, dentre motos e carros.Ao abaixar -se ele conseguiu visualizar 54 rodas.Qual é a a quantidade de motos e de carros estacionados na rua de André?",
+        "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:",
+        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+        "Se A e B são matrizes 2 x 3, é verdade que a matriz A + B é:",
+        "quanto é 1 + 1?",
+        "Quanto é 1 + 1?",
+        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+        "Quanto é 3 + 3?",
+        "(MACKENZIE 2012) O maior valor que o número real 10/2 - senx/3 pode assumir é:",
+        "O número de alunos matriculados na Escola Municipal de Pirajuba permanece o mesmo desde 2011. Em 2012, foram construídas 5 novas salas de aula e, com isso, a média de alunos por sala foi reduzida em 6 alunos em relação à média de 2011. Em 2013, foram construídas mais 5 salas de aula e, com isso, a média de alunos por sala foi reduzida em 5 alunos em relação à média de 2012.Quantos alunos tem a Escola Municipal de Pirajuba?",
+        "(ENEM 2017)Raios de luz solar estão atingindo a superfície de um lago formando um ângulo x com a sua superfície, conforme indica a figura.Em determinadas condições, pode-se supor que a intensidade luminosa desses raios, na superfície do lago, seja dada aproximadamente por l(x) = k.sen(x) sendo k uma constante, e supondo-se que x está entre 0˚ e 90˚.</br><img src = 'https://d2q576s0wzfxtl.cloudfront.net/2017/11/08151533/quest%C3%A3o-138-enem-2017.png'></br>Quando x = 30˚, a intensidade luminosa se reduz a qual percentual de seu valor máximo?",
+        "quanto é 2 + 2"
+      ],
+      "opcoes": [
+        [
+          "-1",
+          "4",
+          "9",
+          "14",
+          "19"
+        ],
+        [
+          0,
+          1,
+          3,
+          2,
+          10
+        ],
+        [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        [
+          "13 motos e 7 carros",
+          "14 motos e 8 carros",
+          "20 motos e 10 carros",
+          "15 motos e 7 carros",
+          "7 motos e 13 carros"
+        ],
+        [
+          "13",
+          "9",
+          "8",
+          "-4",
+          "10"
+        ],
+        [
+          "2 cosx",
+          "2 sen(x/2)",
+          "2 senx",
+          "2 sen 2x",
+          "2 cos 2x"
+        ],
+        [
+          "2 x 2",
+          "3 x 3",
+          "2 x 3",
+          "3 x 2",
+          "não é possível fazer A + B"
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        [
+          "2",
+          "3",
+          "5",
+          "6",
+          "4"
+        ],
+        [
+          "2",
+          "6",
+          "8",
+          "10",
+          "12"
+        ],
+        [
+          "20/3",
+          "7/3",
+          "10",
+          "6",
+          "20/7"
+        ],
+        [
+          3150,
+          3180,
+          3240,
+          3300,
+          3350
+        ],
+        [
+          "33%",
+          "50%",
+          "57%",
+          "70%",
+          "86%"
+        ],
+        [
+          "34",
+          "12",
+          "34",
+          "34",
+          "2"
+        ]
+      ],
+      "opcoes_certas": [
+        "14",
+        0,
+        "2",
+        "13 motos e 7 carros",
+        "13",
+        "2 cosx",
+        "2 x 3",
+        2,
+        "2",
+        "6",
+        "6",
+        "6",
+        3300,
+        "50%",
+        "23"
+      ],
+      "id": 4
+    },
+    {
+      "nome": "teste erro 4",
+      "id_aluno": "0",
+      "perguntas": [
+        "Para que o sistema linear &ensp; <img id = 'fotos_sistema_lineares' width = '124px' src = './fotis/fotos-3 3.jpeg'> &ensp; seja possível e indeterminado, o valor de a+b é:",
+        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
+        "quanto é 1 + 1?",
+        "quanto é 1 + 1",
+        "Em sua rua André observou que havia 20 veículos estacionados, dentre motos e carros.Ao abaixar -se ele conseguiu visualizar 54 rodas.Qual é a a quantidade de motos e de carros estacionados na rua de André?",
+        "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:",
+        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+        "Se A e B são matrizes 2 x 3, é verdade que a matriz A + B é:",
+        "quanto é 1 + 1?",
+        "Quanto é 1 + 1?",
+        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+        "Quanto é 3 + 3?"
+      ],
+      "opcoes": [
+        [
+          "-1",
+          "4",
+          "9",
+          "14",
+          "19"
+        ],
+        [
+          0,
+          1,
+          3,
+          2,
+          10
+        ],
+        [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        [
+          "13 motos e 7 carros",
+          "14 motos e 8 carros",
+          "20 motos e 10 carros",
+          "15 motos e 7 carros",
+          "7 motos e 13 carros"
+        ],
+        [
+          "13",
+          "9",
+          "8",
+          "-4",
+          "10"
+        ],
+        [
+          "2 cosx",
+          "2 sen(x/2)",
+          "2 senx",
+          "2 sen 2x",
+          "2 cos 2x"
+        ],
+        [
+          "2 x 2",
+          "3 x 3",
+          "2 x 3",
+          "3 x 2",
+          "não é possível fazer A + B"
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        [
+          "2",
+          "3",
+          "5",
+          "6",
+          "4"
+        ],
+        [
+          "2",
+          "6",
+          "8",
+          "10",
+          "12"
+        ]
+      ],
+      "opcoes_certas": [
+        "14",
+        0,
+        "2",
+        "2",
+        "13 motos e 7 carros",
+        "13",
+        "2 cosx",
+        "2 x 3",
+        2,
+        "2",
+        "6",
+        "6"
+      ],
+      "id": 5
+    },
+    {
+      "nome": "teste erro 6",
+      "id_aluno": "0",
+      "perguntas": [
+        "Para que o sistema linear &ensp; <img id = 'fotos_sistema_lineares' width = '124px' src = './fotis/fotos-3 3.jpeg'> &ensp; seja possível e indeterminado, o valor de a+b é:",
+        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
+        "quanto é 1 + 1?",
+        "quanto é 1 + 1",
+        "Em sua rua André observou que havia 20 veículos estacionados, dentre motos e carros.Ao abaixar -se ele conseguiu visualizar 54 rodas.Qual é a a quantidade de motos e de carros estacionados na rua de André?",
+        "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:",
+        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+        "Se A e B são matrizes 2 x 3, é verdade que a matriz A + B é:",
+        "quanto é 1 + 1?",
+        "Quanto é 1 + 1?",
+        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+        "Quanto é 3 + 3?"
+      ],
+      "opcoes": [
+        [
+          "-1",
+          "4",
+          "9",
+          "14",
+          "19"
+        ],
+        [
+          0,
+          1,
+          3,
+          2,
+          10
+        ],
+        [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        [
+          "13 motos e 7 carros",
+          "14 motos e 8 carros",
+          "20 motos e 10 carros",
+          "15 motos e 7 carros",
+          "7 motos e 13 carros"
+        ],
+        [
+          "13",
+          "9",
+          "8",
+          "-4",
+          "10"
+        ],
+        [
+          "2 cosx",
+          "2 sen(x/2)",
+          "2 senx",
+          "2 sen 2x",
+          "2 cos 2x"
+        ],
+        [
+          "2 x 2",
+          "3 x 3",
+          "2 x 3",
+          "3 x 2",
+          "não é possível fazer A + B"
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        [
+          "2",
+          "3",
+          "5",
+          "6",
+          "4"
+        ],
+        [
+          "2",
+          "6",
+          "8",
+          "10",
+          "12"
+        ]
+      ],
+      "opcoes_certas": [
+        "14",
+        0,
+        "2",
+        "2",
+        "13 motos e 7 carros",
+        "13",
+        "2 cosx",
+        "2 x 3",
+        2,
+        "2",
+        "6",
+        "6"
+      ],
+      "id": 6
     }
   ]
 }
