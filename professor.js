@@ -226,7 +226,7 @@ $("#area_opcoes_temas").hide("fast");
 $("#look_lista_teorica").hide("fast");
 $("#lugar_ver_nota").hide("fast");
 $("#nota_modificar").hide("fast");
-
+$("#area_de_ver_codigo").hide("fast");
 document.getElementById("salas_criadas").onclick = function () {
     $("#area_acessar_sala").show("fast");
     $("#menu_escolhas").hide("fast");
@@ -254,6 +254,7 @@ document.getElementById("salas_criadas").onclick = function () {
                 })
             }
             button_acessar_sala.onclick = function () {
+                var codigo_sala = resposta[i].codigo;
                 var id_sala = event.target.id;
                 $("#area_acessar_sala").hide("fast");
                 $("#opcoes_da_sala").show("fast");
@@ -262,6 +263,20 @@ document.getElementById("salas_criadas").onclick = function () {
                     $("#opcoes_da_sala").hide("fast");
 
                 }
+                document.getElementById("ver_codigo_sala").onclick = function(){
+                    $("#opcoes_da_sala").hide("fast");
+                    $("#area_de_ver_codigo").show("fast");
+                    document.getElementById("look_codigo_sala").innerHTML = codigo_sala;
+                    document.getElementById("voltar_area_de_ver_codigo").onclick = function(){
+                        $("#opcoes_da_sala").show("fast");
+                        $("#area_de_ver_codigo").hide("fast");
+                        $("#look_codigo_sala").empty();
+
+
+                    }
+
+                }
+
 
                 document.getElementById("modificar_nota").onclick = function () {
                     $("#nota_modificar").show("fast");
