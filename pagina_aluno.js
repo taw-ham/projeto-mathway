@@ -266,6 +266,16 @@ $("#lugar_de_notas").hide();
 $("#lugar_entrada_sala").hide();
 $("#comentario").show("fast");
 $("#place_lista_teoricas").hide("fast");
+$("#infalunx").hide("fast");
+$("#codeprofx").hide("fast");
+
+document.getElementById("voltar_area_de_escolhas_inicial2").onclick = function () {
+    $("#wallalunx").css('padding-bottom','32%');
+    $("#area_de_escolhas").show("fast");
+    $("#lugar_entrada_sala").hide("fast");
+    $("#comentario").show("fast");
+}
+
 let ul = document.getElementById("lugar_comentario");
 let comentario_service = new Comentario_Service("http://localhost:3000/comentario");
 comentario_service.listar().then(resposta => {
@@ -314,6 +324,7 @@ document.getElementById("enviar_comentario").onclick = function () {
     }
 }
 document.getElementById("entrar_sala").onclick = function () {
+    $("#wallalunx").css('padding-bottom','16%');
     $("#comentario").hide("fast");
     $("#area_de_escolhas").hide("fast");
     $("#lugar_entrada_sala").show("fast");
@@ -347,12 +358,13 @@ document.getElementById("entrar_sala").onclick = function () {
     }
 }
 document.getElementById("notas").onclick = function () {
+    $("#wallalunx").css('padding-bottom','30%');
     $("#comentario").hide("fast");
     $("#area_de_escolhas").hide("fast");
     $("#lugar_de_notas").show("fast");
     let boletim = document.getElementById("boletim");
     let titulo_table = document.createElement("th");
-    titulo_table.innerHTML = "Suas notas"
+    titulo_table.innerHTML = "Listas teóricas - Notas"
     titulo_table.setAttribute('colspan', 2);
     boletim.append(titulo_table);
     let nota_service = new Nota_Service(`http://localhost:3000/notas_professor?id_aluno=${id_login}`);
@@ -397,24 +409,33 @@ document.getElementById("notas").onclick = function () {
 
     })
     document.getElementById("voltar_area_de_escolhas_inicial").onclick = function () {
+        $("#wallalunx").css('padding-bottom','32%');
         $("#area_de_escolhas").show("fast");
         $("#lugar_de_notas").hide("fast");
         $("#boletim").empty();
         $("#comentario").show("fast");
-
-
     }
 }
 document.getElementById("exercicios").onclick = function () {
+    $("#muralxalun").hide("fast");
+    $("#wallalunx").css('padding-bottom','12%');
+    $("#infalunx").show("fast");
+    $("#codeprofx").show("fast");
     $("#area_de_escolhas").hide("fast");
     $("#escolha_modo_exercicio").show("fast");
     $("#comentario").hide("fast");
     document.getElementById("voltar_da_area_escolha_modo_exercicio").onclick = function () {
+        $("#muralxalun").show("fast");
+        $("#codeprofx").hide("fast");
+        $("#infalunx").hide("fast");
         $("#escolha_modo_exercicio").hide("fast");
         $("#area_de_escolhas").show("fast");
         $("#comentario").show("fast");
     }
     document.getElementById("historico_listas_teoricas_server").onclick = function(){
+        $("#codeprofx").hide("fast");
+        $("#infalunx").hide("fast");
+        $("#wallalunx").css('padding-bottom','30%');
         $("#escolha_modo_exercicio").hide("fast");
         $("#place_lista_teoricas").show("fast");
         let ul = document.getElementById("escolha_lista_teorica");
@@ -461,6 +482,7 @@ document.getElementById("exercicios").onclick = function () {
                         input_radio[i].setAttribute('value', opcoes_server[posicao_opcoes][i]);
                     }
                     document.getElementById("proxima_pergunta").onclick = function () {
+                        $("#wallalunx").css('padding-bottom','20%');
                         let input_radio_situacao = $("input[name='opcoes']:checked").val();
                         console.log(input_radio_situacao)
                         if (typeof input_radio_situacao != "undefined") {
@@ -535,6 +557,10 @@ document.getElementById("exercicios").onclick = function () {
                                     ul_resposta_errada.append(li);
                                 }
                                 document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
+                                    $("#wallalunx").css('background-image','none');
+                                    $("#wallalunx").css('padding-bottom','12%');
+                                    $("#infalunx").show("fast");
+                                    $("#codeprofx").show("fast");
                                     $("#termino_exercicio").hide("fast");
                                     $("#place_lista_teoricas").show("fast");
                                     
@@ -578,6 +604,7 @@ document.getElementById("exercicios").onclick = function () {
                                         posicao_opcoes++;
                                     }
                                     document.getElementById("proxima_pergunta").onclick = function () {
+                                        $("#wallalunx").css('padding-bottom','20%');
                                         let input_radio_situacao = $("input[name='opcoes']:checked").val();
                                         console.log(input_radio_situacao)
                                         if (typeof input_radio_situacao != "undefined") {
@@ -657,6 +684,10 @@ document.getElementById("exercicios").onclick = function () {
                                                     ul_resposta_errada.append(li)
                                                 }
                                                 document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
+                                                    $("#wallalunx").css('background-image','none');
+                                                    $("#wallalunx").css('padding-bottom','12%');
+                                                    $("#infalunx").show("fast");
+                                                    $("#codeprofx").show("fast");
                                                     $("#reposta_certa").empty();
                                                     $("#pergunta_errada").empty();
                                                     $("#termino_exercicio").hide("fast");
@@ -674,6 +705,8 @@ document.getElementById("exercicios").onclick = function () {
             }
         })
         document.getElementById("voltar_place_lista_teoricas").onclick = function () {
+            $("#wallalunx").css('padding-bottom','12%');
+            $("#codeprofx").show("fast");
             $("#escolha_modo_exercicio").show("fast");
             $("#escolha_lista_teorica").empty();
             $("#place_lista_teoricas").hide("fast");
@@ -681,6 +714,9 @@ document.getElementById("exercicios").onclick = function () {
         }
     }
     document.getElementById("historico_listas_teoricas_user").onclick = function () {
+        $("#codeprofx").hide("fast");
+        $("#infalunx").hide("fast");
+        $("#wallalunx").css('padding-bottom','30%');
         $("#escolha_modo_exercicio").hide("fast");
         $("#place_lista_teoricas").show("fast");
         let ul = document.getElementById("escolha_lista_teorica");
@@ -727,6 +763,7 @@ document.getElementById("exercicios").onclick = function () {
                         input_radio[i].setAttribute('value', opcoes_server[posicao_opcoes][i]);
                     }
                     document.getElementById("proxima_pergunta").onclick = function () {
+                        $("#wallalunx").css('padding-bottom','20%');
                         let input_radio_situacao = $("input[name='opcoes']:checked").val();
                         console.log(input_radio_situacao)
                         if (typeof input_radio_situacao != "undefined") {
@@ -801,6 +838,10 @@ document.getElementById("exercicios").onclick = function () {
                                     ul_resposta_errada.append(li);
                                 }
                                 document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
+                                    $("#wallalunx").css('background-image','none');
+                                    $("#wallalunx").css('padding-bottom','12%');
+                                    $("#infalunx").show("fast");
+                                    $("#codeprofx").show("fast");
                                     $("#termino_exercicio").hide("fast");
                                     $("#place_lista_teoricas").show("fast");
                                     $("#reposta_certa").empty();
@@ -838,6 +879,7 @@ document.getElementById("exercicios").onclick = function () {
                                         posicao_opcoes++;
                                     }
                                     document.getElementById("proxima_pergunta").onclick = function () {
+                                        $("#wallalunx").css('padding-bottom','20%');
                                         let input_radio_situacao = $("input[name='opcoes']:checked").val();
                                         console.log(input_radio_situacao)
                                         if (typeof input_radio_situacao != "undefined") {
@@ -919,6 +961,10 @@ document.getElementById("exercicios").onclick = function () {
                                                     ul_resposta_errada.append(li)
                                                 }
                                                 document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
+                                                    $("#wallalunx").css('background-image','none');
+                                                    $("#wallalunx").css('padding-bottom','12%');
+                                                    $("#infalunx").show("fast");
+                                                    $("#codeprofx").show("fast");
                                                     $("#reposta_certa").empty();
                                                     $("#pergunta_errada").empty();
                                                     $("#termino_exercicio").hide("fast");
@@ -935,6 +981,8 @@ document.getElementById("exercicios").onclick = function () {
             }
         })
         document.getElementById("voltar_place_lista_teoricas").onclick = function () {
+            $("#wallalunx").css('padding-bottom','12%');
+            $("#codeprofx").show("fast");
             $("#escolha_modo_exercicio").show("fast");
             $("#escolha_lista_teorica").empty();
             $("#place_lista_teoricas").hide("fast");
@@ -942,9 +990,11 @@ document.getElementById("exercicios").onclick = function () {
 
     }
     document.getElementById("criar_lista_teorica_automatica").onclick = function () {
+        $("#codeprofx").hide("fast");
         $("#escolha_modo_exercicio").hide("fast");
         $("#tema_lista_teorica").show("fast");
         document.getElementById("salvar_temas").onclick = function () {
+            $("#wallalunx").css('padding-bottom','36%');
             let temas_lista = [];
             let temas = $("input[name='opcoes_temas']");
             let temas_verificar = $("input[name='opcoes_temas']:checked").val();
@@ -970,6 +1020,10 @@ document.getElementById("exercicios").onclick = function () {
                     temas[i].checked = false;
                 }
                 document.getElementById("salvar_nome_lista_teorica").onclick = function () {
+                    $("#wallalunx").css('padding-bottom','12%');
+                    $("#wallalunx").css('background-image','url("./fotis/classroom.jpg")');
+                    $("#wallalunx").css('background-size','cover');
+                    $("#infalunx").hide("fast");
                     var nome_lista_teorica_automatica = $("#nome_lista_teorica").val();
                     let quantidade_perguntas = $("#cont_perguntas").val()
                     if (nome_lista_teorica_automatica != "" && quantidade_perguntas != "") {
@@ -1021,6 +1075,7 @@ document.getElementById("exercicios").onclick = function () {
                                     input_radio[i].setAttribute('value', opcoes_server[posicao_opcoes][i]);
                                 }
                                 document.getElementById("proxima_pergunta").onclick = function () {
+                                    $("#wallalunx").css('padding-bottom','20%');
                                     let input_radio_situacao = $("input[name='opcoes']:checked").val();
                                     console.log(input_radio_situacao)
                                     if (typeof input_radio_situacao != "undefined") {
@@ -1077,6 +1132,10 @@ document.getElementById("exercicios").onclick = function () {
                                         let ul_resposta_certa = document.getElementById("reposta_certa");
                                         let ul_resposta_errada = document.getElementById("pergunta_errada");
                                         document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
+                                            $("#wallalunx").css('background-image','none');
+                                            $("#wallalunx").css('padding-bottom','12%');
+                                            $("#infalunx").show("fast");
+                                            $("#codeprofx").show("fast");
                                             $("#termino_exercicio").hide("fast");
                                             $("#escolha_modo_exercicio").show("fast");
                                             $("#reposta_certa").empty();
@@ -1126,6 +1185,7 @@ document.getElementById("exercicios").onclick = function () {
                                                 posicao_opcoes++;
                                             }
                                             document.getElementById("proxima_pergunta").onclick = function () {
+                                                $("#wallalunx").css('padding-bottom','20%');
                                                 let input_radio_situacao = $("input[name='opcoes']:checked").val();
                                                 console.log(input_radio_situacao)
                                                 if (typeof input_radio_situacao != "undefined") {
@@ -1201,6 +1261,10 @@ document.getElementById("exercicios").onclick = function () {
                                                             ul_resposta_errada.append(li)
                                                         }
                                                         document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
+                                                            $("#wallalunx").css('background-image','none');
+                                                            $("#wallalunx").css('padding-bottom','12%');
+                                                            $("#infalunx").show("fast");
+                                                            $("#codeprofx").show("fast");
                                                             $("#reposta_certa").empty();
                                                             $("#pergunta_errada").empty();
                                                             $("#termino_exercicio").hide("fast");
@@ -1221,9 +1285,11 @@ document.getElementById("exercicios").onclick = function () {
         }
     }
     document.getElementById("criar_lista_teorica").onclick = function () {
+        $("#codeprofx").hide("fast");
         $("#escolha_modo_exercicio").hide("fast");
         $("#tema_lista_teorica").show();
         document.getElementById("salvar_temas").onclick = function () {
+            $("#wallalunx").css('padding-bottom','36%');
             let temas_lista = [];
             let temas = $("input[name='opcoes_temas']");
             let temas_verificar = $("input[name='opcoes_temas']:checked").val();
@@ -1249,6 +1315,7 @@ document.getElementById("exercicios").onclick = function () {
                     temas[i].checked = false;
                 }
                 document.getElementById("salvar_nome_lista_teorica").onclick = function () {
+                    $("#infalunx").hide("fast");
                     let input_nome = $("#nome_lista_teorica").val();
                     if (input_nome == "") {
                         swal('Oh no...', 'DIGITE O NOME DA LISTA TEÓRICA!', 'error')
@@ -1290,6 +1357,11 @@ document.getElementById("exercicios").onclick = function () {
                             })
                         }
                         document.getElementById("fazer_lista_teorica").onclick = function () {
+                            $("#criacao_lista_teorica").css('background','none');
+                            $("#wallalunx").css('background-image','url("./fotis/classroom.jpg")');
+                            $("#wallalunx").css('background-size','cover');
+                            $("#infalunx").hide("fast");
+                            $("#wallalunx").css('padding-bottom','20%');
                             let lista_teorica_aluno = new Lista_Teorica_Aluno(input_nome, id_login, lista_pergunta_server, opcoes_server, opcoes_certas_server);
                             let lista_teorica_aluno_service = new Lista_Teorica_Aluno_Service("http://localhost:3000/Lista_Teorica_aluno");
                             lista_teorica_aluno_service.inserir(lista_teorica_aluno).then(resposta => {
@@ -1323,6 +1395,8 @@ document.getElementById("exercicios").onclick = function () {
                                     input_radio[i].setAttribute('value', opcoes_server[posicao_opcoes][i]);
                                 }
                                 document.getElementById("proxima_pergunta").onclick = function () {
+                                    $("#wallalunx").css('padding-bottom','20%');
+                                    $("#wallalunx").css('padding-bottom','20%');
                                     let input_radio_situacao = $("input[name='opcoes']:checked").val();
                                     console.log(input_radio_situacao)
                                     if (typeof input_radio_situacao != "undefined") {
@@ -1401,6 +1475,10 @@ document.getElementById("exercicios").onclick = function () {
                                                 ul_resposta_errada.append(li);
                                             }
                                             document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
+                                                $("#wallalunx").css('background-image','none');
+                                                $("#wallalunx").css('padding-bottom','12%');
+                                                $("#infalunx").show("fast");
+                                                $("#codeprofx").show("fast");
                                                 $("#termino_exercicio").hide("fast");
                                                 $("#escolha_modo_exercicio").show("fast");
                                                 $("#reposta_certa").empty();
@@ -1434,6 +1512,7 @@ document.getElementById("exercicios").onclick = function () {
                                                     posicao_opcoes++;
                                                 }
                                                 document.getElementById("proxima_pergunta").onclick = function () {
+                                                    $("#wallalunx").css('padding-bottom','20%');
                                                     let input_radio_situacao = $("input[name='opcoes']:checked").val();
                                                     console.log(input_radio_situacao)
                                                     if (typeof input_radio_situacao != "undefined") {
@@ -1510,6 +1589,10 @@ document.getElementById("exercicios").onclick = function () {
                                                                 ul_resposta_errada.append(li)
                                                             }
                                                             document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
+                                                                $("#wallalunx").css('background-image','none');
+                                                                $("#wallalunx").css('padding-bottom','12%');
+                                                                $("#infalunx").show("fast");
+                                                                $("#codeprofx").show("fast");
                                                                 $("#reposta_certa").empty();
                                                                 $("#pergunta_errada").empty();
                                                                 $("#termino_exercicio").hide("fast");
@@ -1538,6 +1621,7 @@ document.getElementById("exercicios").onclick = function () {
 }
 
 document.getElementById("salas_presentes").onclick = function () {
+    $("#muralxalun").hide("fast");
     $("#comentario").hide("fast");
     $("#area_de_escolhas").hide("fast");
     $("#escolha_de_sala").show("fast");
@@ -1560,20 +1644,23 @@ document.getElementById("salas_presentes").onclick = function () {
                 let ul = document.getElementById("listas_teoricas");
                 lista_teorica_service.listar().then(resposta => {
                     for (let i = 0; i <= resposta.length - 1; i++) {
-                        var data_de_entrega = resposta[i].Data_de_entrega;
+                        let data_de_entrega = resposta[i].Data_de_entrega;
                         let li = document.createElement("li");
                         let button_acessar_lista = document.createElement("button");
                         button_acessar_lista.innerHTML = resposta[i].nome
                         button_acessar_lista.setAttribute('id', resposta[i].id);
+                        let target_date;
                         if (data_de_entrega != "") {
-                            var target_date = new Date(data_de_entrega).getTime();
-                            var days, hours, minutes, seconds;
-
+                            console.log(data_de_entrega);
+                            target_date = new Date(data_de_entrega).getTime();
                             function DATA_ENTREGA() {
+                                target_date = new Date(data_de_entrega).getTime();
+                                console.log(target_date)
                                 var current_date = new Date().getTime();
+                                console.log(current_date)
                                 if (current_date > target_date) {
-                                    var atrasado = Math.abs((target_date - current_date) / 1000);
-                                    days = ` já FAZEM DA DATA DE ENTREGA: ${parseInt(atrasado / 86400)} dias`
+                                    var atrasado = Math.abs((target_date - current_date) / 1000)
+                                    days = `já FAZEM DA DATA DE ENTREGA: ${parseInt(atrasado / 86400)} dias`
                                     atrasado = atrasado % 86400;
                                     hours = `${parseInt(atrasado / 3600)}:`;
                                     atrasado = atrasado % 3600;
@@ -1584,18 +1671,21 @@ document.getElementById("salas_presentes").onclick = function () {
                                     data.push(hours);
                                     data.push(minutes);
                                     data.push(seconds)
-
+                                    
                                     button_acessar_lista.innerHTML = resposta[i].nome + "   " + data
                                 } else {
-                                    let prazo = (target_date - current_date) / 1000;
+                                    let prazo = Math.abs((target_date - current_date) / 1000);
+                                    let data = [];
+                                    
                                     days = `Faltam: ${parseInt(prazo / 86400)} dias`;
                                     prazo = prazo % 86400;
                                     hours = `${parseInt(prazo / 3600)} horas:`;
                                     prazo = prazo % 3600;
                                     minutes = `${parseInt(prazo / 60)} minutos:`;
                                     seconds = `${parseInt(prazo % 60)} segundos`;
-                                    let data = [];
+                                    
                                     data.push(days, hours, minutes, seconds);
+                                    console.log(data)
                                     button_acessar_lista.innerHTML = resposta[i].nome + "   " + data
                                 }
                             }
@@ -1651,6 +1741,10 @@ document.getElementById("salas_presentes").onclick = function () {
                                         ul_perguntas_nao_feitas.append(li);
                                     }
                                     document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
+                                        $("#wallalunx").css('background-image','none');
+                                        $("#wallalunx").css('padding-bottom','12%');
+                                        $("#infalunx").show("fast");
+                                        $("#codeprofx").show("fast");
                                         $("#termino_exercicio").hide("fast");
                                         $("#area_escolha_lista_teorica").show("fast");
                                         $("#reposta_certa").empty();
@@ -1695,6 +1789,7 @@ document.getElementById("salas_presentes").onclick = function () {
                                             input_radio[i].setAttribute('value', lista_opcoes[posicao_opcoes][i]);
                                         }
                                         document.getElementById("proxima_pergunta").onclick = function () {
+                                            $("#wallalunx").css('padding-bottom','20%');
                                             let input_radio_situacao = $("input[name='opcoes']:checked").val();
                                             console.log(input_radio_situacao)
                                             if (typeof input_radio_situacao != "undefined") {
@@ -1735,7 +1830,7 @@ document.getElementById("salas_presentes").onclick = function () {
                                                     console.log("termino da lista teórica");
                                                     $("#fazer_exercicio_lista_teorica").hide("fast");
                                                     $("#termino_exercicio").show("fast");
-                                                    nota = nota / lista_pergunta_server.length
+                                                    nota = nota / lista_pergunta.length
                                                     nota = parseFloat(nota.toFixed(0));
                                                     if(nota > 100){
                                                         nota = 100;
@@ -1803,6 +1898,10 @@ document.getElementById("salas_presentes").onclick = function () {
                                                         ul_resposta_errada.append(li);
                                                     }
                                                     document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
+                                                        $("#wallalunx").css('background-image','none');
+                                                        $("#wallalunx").css('padding-bottom','12%');
+                                                        $("#infalunx").show("fast");
+                                                        $("#codeprofx").show("fast");
                                                         $("#termino_exercicio").hide("fast");
                                                         $("#area_escolha_lista_teorica").show("fast");
                                                         $("#reposta_certa").empty();
@@ -1932,6 +2031,10 @@ document.getElementById("salas_presentes").onclick = function () {
                                                         }
 
                                                         document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
+                                                            $("#wallalunx").css('background-image','none');
+                                                            $("#wallalunx").css('padding-bottom','12%');
+                                                            $("#infalunx").show("fast");
+                                                            $("#codeprofx").show("fast");
                                                             $("#termino_exercicio").hide("fast");
                                                             $("#area_escolha_lista_teorica").show("fast");
                                                             $("#reposta_certa").empty();
@@ -2058,6 +2161,10 @@ document.getElementById("salas_presentes").onclick = function () {
                                                             })
                                                         }
                                                         document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
+                                                            $("#wallalunx").css('background-image','none');
+                                                            $("#wallalunx").css('padding-bottom','12%');
+                                                            $("#infalunx").show("fast");
+                                                            $("#codeprofx").show("fast");
                                                             $("#termino_exercicio").hide("fast");
                                                             $("#area_escolha_lista_teorica").show("fast");
                                                             $("#reposta_certa").empty();

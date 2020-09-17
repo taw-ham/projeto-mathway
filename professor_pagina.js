@@ -227,7 +227,21 @@ $("#look_lista_teorica").hide("fast");
 $("#lugar_ver_nota").hide("fast");
 $("#nota_modificar").hide("fast");
 $("#area_de_ver_codigo").hide("fast");
+$("#infprofx").hide("fast");
+$("#codeprofx2").hide("fast");
+$("#codeprofx3").hide("fast");
+
+document.getElementById("voltar_area_de_escolhas_inicial3").onclick = function () {
+    $("#wallprofx").css('padding-bottom','19%');
+    $("#menu_escolhas").show("fast");
+    $("#area_de_criar_sala").hide("fast");
+}
+
 document.getElementById("salas_criadas").onclick = function () {
+    $("#wallprofx").css('padding-bottom','28%');
+    $("#codeprofx2").show("fast");
+    $("#muralxprof").hide("fast");
+    $("#infprofx").show("fast");
     $("#area_acessar_sala").show("fast");
     $("#menu_escolhas").hide("fast");
     let sala_service = new Salas_Service(`http://localhost:3000/salas?id_criador=${id_login}`);
@@ -264,10 +278,13 @@ document.getElementById("salas_criadas").onclick = function () {
 
                 }
                 document.getElementById("ver_codigo_sala").onclick = function(){
+                    $("#wallprofx").css('padding-bottom','30%');
                     $("#opcoes_da_sala").hide("fast");
                     $("#area_de_ver_codigo").show("fast");
                     document.getElementById("look_codigo_sala").innerHTML = codigo_sala;
                     document.getElementById("voltar_area_de_ver_codigo").onclick = function(){
+                        $("#infprofx").show("fast");
+                        $("#codeprofx2").show("fast");
                         $("#opcoes_da_sala").show("fast");
                         $("#area_de_ver_codigo").hide("fast");
                         $("#look_codigo_sala").empty();
@@ -279,12 +296,17 @@ document.getElementById("salas_criadas").onclick = function () {
 
 
                 document.getElementById("modificar_nota").onclick = function () {
+                    $("#wallprofx").css('background-image','url("./fotis/classroom.jpg")');
+                    $("#wallprofx").css('padding-bottom','30%');
+                    $("#infprofx").hide("fast");
+                    $("#codeprofx2").hide("fast");
+                    $("#codeprofx3").show("fast");
                     $("#nota_modificar").show("fast");
                     $("#opcoes_da_sala").hide("fast")
                     let table_notas = document.getElementById("modificar");
                     let th_title = document.createElement("th");
                     th_title.setAttribute('colspan', 6);
-                    th_title.innerHTML = "tabela de alunos com entrega atrasado";
+                    th_title.innerHTML = "tabela de alunos com entrega atrasada";
                     table_notas.append(th_title);
                     let lista_teorica = new Lista_Teoria_Service(`http://localhost:3000/lista_teoricas?id_sala=${id_sala}`);
                     lista_teorica.lista().then(resposta => {
@@ -352,12 +374,18 @@ document.getElementById("salas_criadas").onclick = function () {
                         }
                     })
                     document.getElementById("fim_comeco").onclick = function () {
+                        $("#wallprofx").css('background-image','none');
+                        $("#wallprofx").css('padding-bottom','28%');
+                        $("#infprofx").show("fast");
+                        $("#codeprofx2").show("fast");
+                        $("#codeprofx3").hide("fast");
                         $("#modificar").empty();
                         $("#nota_modificar").hide("fast");
                         $("#opcoes_da_sala").show("fast");
                     }
                 }
                 document.getElementById("ver_nota").onclick = function () {
+                    $("#wallprofx").css('padding-bottom','30%');
                     $("#opcoes_da_sala").hide("fast");
                     $("#lugar_ver_nota").show("fast");
                     $("#selecionar_lista_nota").show("fast")
@@ -403,6 +431,8 @@ document.getElementById("salas_criadas").onclick = function () {
                         }
                     })
                     document.getElementById("voltar_lugar_ver_nota").onclick = function () {
+                        $("#infprofx").show("fast");
+                        $("#codeprofx2").show("fast");
                         $("#lugar_ver_nota").hide("fast");
                         $("#lista_teorica_nota").empty()
                         $("#opcoes_da_sala").show("fast");
@@ -410,6 +440,11 @@ document.getElementById("salas_criadas").onclick = function () {
                 }
 
                 document.getElementById("ver_lista_teorica").onclick = function () {
+                    $("#wallprofx").css('background-image','url("./fotis/classroom.jpg")');
+                    $("#wallprofx").css('background-size','cover');
+                    $("#wallprofx").css('padding-bottom','18%');
+                    $("#infprofx").hide("fast");
+                    $("#codeprofx2").hide("fast");
                     $("#opcoes_da_sala").hide("fast");
                     $("#look_lista_teorica").show("fast");
                     $("#proximo_passo3").hide("fast");
@@ -544,11 +579,15 @@ document.getElementById("salas_criadas").onclick = function () {
                     })
                 }
                 document.getElementById("nao_look_lista_teorica").onclick = function () {
+                    $("#wallprofx").css('background-image','none');
+                    $("#infprofx").show("fast");
+                    $("#codeprofx2").show("fast");
                     $("#listas_teoricas").empty();
                     $("#look_lista_teorica").hide("fast");
                     $("#opcoes_da_sala").show("fast");
                 }
                 document.getElementById("ver_participantes").onclick = function () {
+                    $("#wallprofx").css('padding-bottom','30%');
                     $("#opcoes_da_sala").hide("fast");
                     $("#look_participantes").show("fast");
                     let ul_participantes = document.getElementById("participantes")
@@ -564,6 +603,8 @@ document.getElementById("salas_criadas").onclick = function () {
                             ul_participantes.append(li);
                         }
                         document.getElementById("nao_ver_participantes").onclick = function () {
+                            $("#infprofx").show("fast");
+                            $("#codeprofx2").show("fast");
                             $("#look_participantes").hide("fast");
                             $("#opcoes_da_sala").show("fast");
                             $("#participantes").empty();
@@ -571,9 +612,13 @@ document.getElementById("salas_criadas").onclick = function () {
                     })
                 }
                 document.getElementById("criar_lista_teorica").onclick = function () {
+                    $("#wallprofx").css("padding-bottom",'12%');
+                    $("#infprofx").hide("fast");
+                    $("#codeprofx2").hide("fast");
                     $("#opcoes_da_sala").hide("fast");
                     $("#area_opcoes_temas").show("fast");
                     document.getElementById("salvar_temas").onclick = function () {
+                        $("#wallprofx").css("padding-bottom",'28%');
                         let temas_lista = [];
                         let temas = $("input[name='opcoes_temas']");
                         let temas_verificar = $("input[name='opcoes_temas']:checked").val();
@@ -595,9 +640,47 @@ document.getElementById("salas_criadas").onclick = function () {
                             $("#nome_lista").show("fast");
                             $("#proximo_passo2").hide("fast");
                             document.getElementById("salva_nome_lista_teorica").onclick = function () {
+                                $("#wallprofx").css("padding-bottom",'12%');
                                 let nome_da_lista_teorica = $("#nome_lista_teorica").val();
                                 let tempo_de_fazer_lista = $("#tempo_fazer_lista").val();
-                                let data_entrega = $("#data_entrega").val();
+                                let data_entrega = document.getElementById("data_entrega").value;
+                                console.log(data_entrega);
+                                let mes;
+                               
+                               let data_de_entrega;
+                                if(data_entrega != " "){
+                                    mes = data_entrega.split(' ');
+                                    console.log(mes[0]);
+                                    if(mes[0] == 'Janeiro' || mes[0] == 'janeiro' ){
+                                        mes[0]= "January" + " ";
+                                    }else if(mes[0] == 'Fevereiro' ||mes[0] == 'fevereiro' ){
+                                        mes[0] = "February" + " ";
+                                    }else if(mes[0] == 'Março' ||mes[0] == 'março' ){
+                                        mes[0] = "March" + " ";
+                                    }else if(mes[0] == 'Abril' ||mes[0] == 'abril' ){
+                                        mes[0] = "April" + " ";
+                                    }else if(mes[0] == 'Maio' || mes[0] == 'maio'){
+                                        mes[0] = "May" + " ";
+                                    }else if(mes[0] == 'Junho' || mes[0] == 'junho'){
+                                        mes[0] = "June" + " ";
+                                    }else if(mes[0] == 'Julho' || mes[0] == 'julho'){
+                                        mes[0] = "July" + " ";
+                                    }else if(mes[0] == 'Agosto' || mes[0] == 'agosto'){
+                                        mes[0] = "August" + " ";
+                                    }else if(mes[0] == 'Setembro' || mes[0] == 'setembro'){
+                                        mes[0] = "September" + " ";
+                                    }else if(mes[0] == 'Outubro' || mes[0] == 'outubro'){
+                                        mes[0] = "October" + " ";
+                                    }else if(mes[0] == 'Novembro' || mes[0] == 'novembro'){
+                                        mes[0] = "November" + " ";
+                                    }else if(mes[0] == 'Dezembro' || mes[0] == 'dezembro'){
+                                        mes[0] = "December" + " ";
+                                    }
+                                    data_de_entrega = mes[0];
+                                    data_de_entrega +=mes[1];
+                                
+                                    console.log(data_de_entrega);
+                                }
                                 if (nome_da_lista_teorica == "") {
                                     swal('DIGITE O NOME DA LISTA TEORICA', 'tente novamente', 'error')
 
@@ -733,10 +816,10 @@ document.getElementById("salas_criadas").onclick = function () {
                                         }
                                     }
                                     document.getElementById("enviar_lista_teorica").onclick = function () {
-                                        let lista_teorica = new Lista_Teoria(nome_da_lista_teorica, lista_perguntas, lista_opcoes, opcoes_certas, id_login, id_sala, data_entrega, tempo_de_fazer_lista);
+                                        let lista_teorica = new Lista_Teoria(nome_da_lista_teorica, lista_perguntas, lista_opcoes, opcoes_certas, id_login, id_sala,data_de_entrega, tempo_de_fazer_lista);
                                         let lista_teorica_service = new Lista_Teoria_Service("http://localhost:3000/lista_teoricas");
                                         lista_teorica_service.inserir(lista_teorica).then(resposta => {
-                                            swal('LISTA CRIADA COM SUCESSO', 'vamos voltar a área de escolhas de opcões de sala', 'success');
+                                            swal('Lista Criada com Sucesso!', '- Volte à área de escolhas de recursos da sala -', 'success');
                                             $("#perguntas_servidor").empty();
                                             $("#area_criar_lista_teorica").hide("fast");
                                             $("#opcoes_da_sala").show("fast");
@@ -745,6 +828,9 @@ document.getElementById("salas_criadas").onclick = function () {
                                             for (let i = 0; i <= temas.length - 1; i++) {
                                                 temas[i].checked = false
                                             }
+                                            $("#wallprofx").css('padding-bottom','28%');
+                                            $("#infprox").show("fast");
+                                            $("#codeprofx2").show("fast");
                                         })
                                     }
                                 }
@@ -756,6 +842,10 @@ document.getElementById("salas_criadas").onclick = function () {
         }
     })
     document.getElementById("voltar_da_area_acessar_sala").onclick = function () {
+        $("#wallprofx").css('padding-bottom','19%');
+        $("#muralxprof").show("fast");
+        $("#infprofx").hide("fast");
+        $("#codeprofx2").hide("fast");
         $("#area_acessar_sala").hide("fast");
         $("#opcoes_salas").empty();
         $("#menu_escolhas").show("fast");
@@ -789,7 +879,7 @@ document.getElementById("criar_sala").onclick = function () {
                 let sala = new Salas(nome_sala, id_login, aleatorio, participantes, participantes_id);
                 let sala_service = new Salas_Service("http://localhost:3000/salas");
                 sala_service.inserir(sala).then(resposta => {
-                    $("#situacao_codigo").text(`codigo criado:${aleatorio}`)
+                    $("#situacao_codigo").text(`Código criado: ${aleatorio}`)
                     console.log(resposta)
                     document.getElementById("criar_sala_especifica").onclick = function () {
                         location.reload();

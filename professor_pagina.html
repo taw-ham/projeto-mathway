@@ -1,128 +1,255 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="pt-br">
 
 <head>
-    <link rel=stylesheet type="text/css" href="./professor.css">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Mathway - Professor </title>
+    <link rel="icon" type="imagem/png" href="./fotis/mario.png" />
+    <link rel=stylesheet type="text/css" href="./log.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 
 <body>
-    <div id="menu_escolhas">
-        <button id="criar_sala"> Crie sua sala </button>
-        <button id="salas_criadas"> Entre em uma das suas salas criadas </button>
+    <ul class="menu">
+        <li class="logo2"><a href="#"><img height="3%" width="3%" src="./fotis/mario.png" /> Mathway </a><u class="typeprof"> Professor </u></li>
+        <li class="op"><a href="#"> Contatos </a></li>
+        <li class="op"><a href="#"> Logout </a></li>
+    </ul>
+
+    <div class="wallprof" id="wallprofx">
+
+    <div id="muralxprof">
+
+    <img class="highx" height="20%" width="30%" src="./fotis/finish.jpg" />
+
+    <div class="articx">
+        <article>
+            <img height="30%" width="30%" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2F1RYKYnXmpUc%2Fmaxresdefault.jpg&f=1&nofb=1">
+            <h2 style="float: left"> Notícia 1 </h2></img>
+            <p style="float: right"> [ Descrição ] </p>
+        </article>
+
+        <article style="margin-top: 2%">
+            <img height="30%" width="30%" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.villagevoice.com%2Fwp-content%2Fuploads%2F2018%2F05%2FM1D9CJ.jpg&f=1&nofb=1">
+            <h2 style="float: left"> Notícia 2 </h2></img>
+            <p style="float: right"> [ Descrição ] </p>
+        </article>
+
+        <article style="margin-top: 2%">
+            <img height="30%" width="30%" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic01.nyt.com%2Fimages%2F2018%2F05%2F02%2Fnyregion%2F02DISTRICT10%2Fmerlin_137558535_77113ef7-7178-4630-ba5e-92b454f2a3c3-superJumbo.jpg&f=1&nofb=1">
+            <h2 style="float: left"> Notícia 3 </h2></img>
+            <p style="float: right"> [ Descrição ] </p>
+        </article>
     </div>
-    <div id="area_de_criar_sala">
-        <h1> Criação de Salas e Adicionamento de alunos </h1>
+
+    <div class="dadosx">
+        <ul>
+        <li><h2> Dados </h2></li>
+        <li><h1> Nome: </h1></li>
+        <li><h1> Usuário: <strong>Professor</strong></h1></li>
+        <li><h1> Email: example@gmail.com </h1></li>
+        <li><img height="25%" width="25%" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmaxcdn.icons8.com%2FShare%2Ficon%2Fwin10%2FCinema%2Fanonymous_mask1600.png&f=1&nofb=1" /></li>
+        </ul>
+    </div>
+
+    </div>
+
+    <div class="codex" id="menu_escolhas">
+        <button class="btn btn-primary" id="criar_sala"> Criar sala </button>
+        <button class="btn btn-primary" id="salas_criadas"> Entre em uma sala </button>
+    </div>
+
+    <div id="muralxprof">
+
+    <div class="codex2" id="area_de_criar_sala">
+        <h2> Criação de Sala </h2>
         <div id="nome_sala">
+            <h1> Nome da Sala </h2>
             <input id="sala_nome" placeholder="Digite o nome da sala"></br>
-            <button id="salva_nome_sala"> Salvar o nome da sala </button>
+            <button class="btn btn-primary" id="salva_nome_sala"> Salvar nome da sala </button>
+            <button class="btn btn-primary" id="voltar_area_de_escolhas_inicial3"> Voltar </button>
         </div>
         <div id="proximo_passo">
-            <h1> Veja o codigo da sala</h1>
-            <p id="situacao_codigo"></p>
-            <p id="codigo_sala"> </p>
-            <button id="criar_sala_especifica"> criar sala </button>
+            <h1> Geração de Código: </h2>
+            <p style="margin-top: -3%" id="situacao_codigo"></p>
+            <p style="margin-top: -6%" id="codigo_sala"> </p>
+            <button class="btn btn-primary" id="criar_sala_especifica"> Criar sala </button>
+            <button class="btn btn-primary" id="voltar_area_de_escolhas_inicial3"> Voltar </button>
         </div>
     </div>
-    <div id="area_acessar_sala">
-        <ul id="opcoes_salas">
 
-        </ul>
-        <button id="voltar_da_area_acessar_sala"> Voltar para as opções </button>
     </div>
-    <div id="opcoes_da_sala">
-        
-        <button id="ver_participantes"> Ver participantes </button>
-        <button id="criar_lista_teorica"> Crie sua Lista Teórica </button>
-        <button id="ver_nota"> Veja as notas dos alunos </button>
-        <button id="ver_lista_teorica"> Veja suas listas teóricas </button>
-        <button id="modificar_nota"> modificar nota do aluno entregou a lista teorica atrasada </button>
-        <button id="ver_codigo_sala"> Veja o código da sala </button>
-        <button id="voltar_escolha_de_sala"> voltar</button>
 
+    <div id="infprofx" class="infprof">
+
+    <div class="graficox">
+        <img src="./fotis/exercicios.jpg" height="20%" width="50%" >
     </div>
     
-    <div id="area_opcoes_temas">
-        <h3> Escolha um tema de lista teórica </h3>
-        <input type="checkbox" value = "1" id="matriz" name="opcoes_temas"> MATRIZ 
-        <input type="checkbox" value= "2" id="FUNÇÃO TRIGONOMÉTRICA" name="opcoes_temas"> FUNÇÃO TRIGONOMÉTRICA 
-        <input type= "checkbox" value= "3" id="SISTEMA LINEAR" name="opcoes_temas"> SISTEMA LINEAR 
-        <input type="checkbox" value = "4" id="DETERMINANTE" name="opcoes_temas"> DETERMINANTE 
-        <input type="checkbox"  value= "5" id="FRAÇÃO" name="opcoes_temas"> FRAÇÃO 
-        <input type="checkbox"   value = "6" id="Razões Trigonométricas" name="opcoes_temas"> Razões Trigonométricas
-        <input  type="checkbox"   value = "7" id="Relações Trigonométricas" name="opcoes_temas"> Relações Trigonométricas 
-        <input  type = "checkbox" value =  "8" id="Números Complexos" name="opcoes_temas"> Números Complexos 
-        <input  type="checkbox"  value = "9" id="Fatoração" name="opcoes_temas"> Fatoração 
-        <input type="checkbox"  value = "10" id="Polinômios "name="opcoes_temas"> Polinômios 
-        <input type="checkbox" value = "11" id="Função Afim" name="opcoes_temas"> Função Afim 
-        <input type="checkbox" value = "12" id="Função Quadrática" name="opcoes_temas"> Função Quadrática 
-        <input type="checkbox" value ="13" id = "Função Modular" name="opcoes_temas"> Função Modular 
-        <input type="checkbox" value = "14" id="Função Exponencial" name="opcoes_temas"> Função Exponencial 
-        <input type="checkbox" value = "15" id="Função Logaritmica" name="opcoes_temas"> Função Logaritmica 
-        <input type="checkbox" value = "17" id="Função Composta" name="opcoes_temas"> Função Composta 
-        <input type="checkbox" value = "18" id="Função Inversa" name="opcoes_temas"> Função Inversa
-        <button id="salvar_temas"> Salvar Temas</button>
+    <h2> Avalie seus alunos! </h2>
+    
+    <div class="bookx2">
+        <img src="fotis/study2.png" height="6%" width="6%"><h3><strong>Criação Livre de Salas:</strong> crie quantas salas quiser para o seu ensino </h3></img>
+        <img src="fotis/study2.png" height="6%" width="6%"><h3><strong>Criação de Listas Teóricas:</strong> crie suas listas com questões definidas do site </h3></img>
+        <img src="fotis/study2.png" height="6%" width="6%"><h3><strong>Questões Próprias:</strong> planeje e crie suas próprias questões nas listas </h3></img>
+        <img src="fotis/study2.png" height="6%" width="6%"><h3><strong>Controle de Notas:</strong> acesse e modifique notas baixas dos seus alunos </h3></img>
     </div>
-    <div id="area_de_ver_codigo">
+    
+    </div>
+
+    <div id="codeprofx2" class="codeprof2">
+        <img src="./fotis/code2.png" height="10%" width="10%"><a style="margin-left: 1%"><strong><u> Compartilhe o código da sala para o acesso de seus alunos! </u></strong></a></img>
+    </div>
+
+    <div style="margin-top: 1%" class="listasintx" id="area_acessar_sala">
+        <h2> Salas de Aula </h2>
+
+        <ul id="opcoes_salas">
+        </ul>
+
+        <button class="btn btn-primary" id="voltar_da_area_acessar_sala"> Voltar </button>
+    </div>
+
+    <div style="margin-top: 1%" class="listatemax" id="opcoes_da_sala">
+        <h2> Recursos da Sala </h2>
+
+        <ul>
+        <li><button class="btn btn-primary" id="ver_participantes"> Ver participantes </button></li>
+        <li><button class="btn btn-primary" id="criar_lista_teorica"> Criar lista teórica </button></li>
+        <li><button class="btn btn-primary" id="ver_nota"> Ver notas dos alunos </button></li>
+        <li><button class="btn btn-primary" id="ver_lista_teorica"> Ver suas listas teóricas </button></li>
+        <li><button class="btn btn-primary" id="modificar_nota"> Alterar nota de alunos com entrega atrasada </button></li>
+        <li><button class="btn btn-primary" id="ver_codigo_sala"> Ver código da sala </button></li>
+        <hr class="linhax2" />
+        <li><button class="btn btn-primary" id="voltar_escolha_de_sala"> Voltar </button></li>
+        </ul>
+    </div>
+
+    <div class="listatemax" id="area_opcoes_temas">
+        <h2> Escolha de Temas </h2>
+        <ul>
+        <li><input type="checkbox" value = "1" id="matriz" name="opcoes_temas"> Matrizes </li>
+        <li><input type="checkbox" value= "2" id="FUNÇÃO TRIGONOMÉTRICA" name="opcoes_temas"> Funções Trigonométricas </li>
+        <li><input type= "checkbox" value= "3" id="SISTEMA LINEAR" name="opcoes_temas"> Sistemas Lineares </li>
+        <li><input type="checkbox" value = "4" id="DETERMINANTE" name="opcoes_temas"> Determinantes </li>
+        <li><input type="checkbox"  value= "5" id="FRAÇÃO" name="opcoes_temas"> Frações </li>
+        <li><input type="checkbox"   value = "6" id="Razões Trigonométricas" name="opcoes_temas"> Razões Trigonométricas </li>
+        <li><input  type="checkbox"   value = "7" id="Relações Trigonométricas" name="opcoes_temas"> Relações Trigonométricas </li>
+        <li><input  type = "checkbox" value =  "8" id="Números Complexos" name="opcoes_temas"> Números Complexos </li>
+        <li><input  type="checkbox"  value = "9" id="Fatoração" name="opcoes_temas"> Fatorações </li>
+        <li><input type="checkbox"  value = "10" id="Polinômios "name="opcoes_temas"> Polinômios </li>
+        <li><input type="checkbox" value = "11" id="Função Afim" name="opcoes_temas"> Funções Afim </li>
+        <li><input type="checkbox" value = "12" id="Função Quadrática" name="opcoes_temas"> Funções Quadráticas </li>
+        <li><input type="checkbox" value ="13" id = "Função Modular" name="opcoes_temas"> Funções Modulares </li>
+        <li><input type="checkbox" value = "14" id="Função Exponencial" name="opcoes_temas"> Funções Exponenciais </li>
+        <li><input type="checkbox" value = "15" id="Função Logaritmica" name="opcoes_temas"> Funções Logarítmicas </li>
+        <li><input type="checkbox" value = "17" id="Função Composta" name="opcoes_temas"> Funções Compostas </li>
+        <li><input type="checkbox" value = "18" id="Função Inversa" name="opcoes_temas"> Funções Inversas </li>
+        </ul>
+        <button class="btn btn-primary" id="salvar_temas"> Salvar temas </button>
+    </div>
+
+    <div class="codesalax" id="area_de_ver_codigo">
+        <h2> Código da Sala </h2>
         <h1 id="look_codigo_sala"> </h1>
-        <button id="voltar_area_de_ver_codigo"> Voltar </button>
+        <button class="btn btn-primary" id="voltar_area_de_ver_codigo"> Voltar </button>
     </div>
-    <div id="area_criar_lista_teorica">
-        <div id="nome_lista">
-            <input id="nome_lista_teorica" placeholder="digite o nome da lista">
-            <h4>dgite quanto temopo que o aluno poderá fazer a lista teorica obs: opcional</h4>
-            <input id="tempo_fazer_lista" placeholder="exemplo de entrada: 2:0:0">
-            <h4> Digite a data limite para entregar a lista teórica se por acaso o aluno não fazer até a data limite
-                você poderá modificar a nota dele caso ele entregar depois do prazo obs: opcional </h4>
-            <input id="data_entrega" placeholder="exemplo de entrada: Janeiro 28,2020">
-            <button id="salva_nome_lista_teorica"> Salvar os dados </button>
+
+    <div class="listacreatex" id="area_criar_lista_teorica">
+        <div class="createnom" id="nome_lista">
+            <h2> Criação de Lista Teórica </h2>
+
+            <input id="nome_lista_teorica" placeholder="Digite o nome da lista">
+            <h1> Escolha o tempo de finalização da lista <strong>(opcional)</strong></h1>
+            <input id="tempo_fazer_lista" placeholder="Exemplo de entrada: 2:0:0">
+            <h1> Escolha o prazo de entrega da lista </h1>
+            <small class="form-text text-muted"> Existe a possibilidade de alterar a nota de alunos atrasados! </small>
+            <input id="data_entrega" placeholder="Exemplo de entrada: Janeiro 28,2020">
+            <button class="btn btn-primary" id="salva_nome_lista_teorica"> Salvar dados </button>
         </div>
-        <div id="proximo_passo2">
-            <p id="contador"> </p>
-            <h3> escolha uma pergunta no nosso servidor</h3>
-            <ul id="perguntas_servidor">
+
+        <div class="professortemasx" id="proximo_passo2">
+            <h2> Criação de Lista Teórica </h2>
+            <h1> Seleção de Questões </h1>
+
+            <p class="percontx" id="contador"> </p>
+
+            <ul style="background-color: lightgray" class="perserverx" id="perguntas_servidor">
+            <li><small class="form-text text-muted"> - Selecione as questões do site para adicioná-las à lista - </small></li>
             </ul>
-            <video width="400" controls>
+
+            </br>
+
+            <h1> Tutorial de inserção </h1>
+            <video width="430" controls>
                 <source src="./videos/Math.mp4" type="video/mp4">
             </video>
+            
+            </br>
+
+            <h1> Digite sua própria questão </h1>
+            <textarea id="pergunta_professor" oninput=pergunta() placeholder="Digite sua questão"></textarea>
+            
             <br>
-            <h3> digite a pergunta </h3>
-            <textarea id="pergunta_professor" oninput=pergunta() placeholder="digite sua questão"></textarea> <br>
-            <h3> veja sua pergunta </h3>
+
+            <h1> Visualização </h1>
             <p id="pergunta_digitada"> </p>
-            <h3> digite uma opcão por vez você pode digitar no maximo 5 opcões que vai até a letra "E" e no minimo 5 opcões</h3>
-            <input id="opcoes_professor" oninput="opcoes()" placeholder="digite as opções"><button id="salvar_opcao"> salvar opção</button><br>
-            <h3> veja sua opcão digitada </h3>
+
+            <h1> Digite as opcões da sua questão (uma opção por vez) </h1>
+            <small class="form-text text-muted"> O máximo são 5 opcões que vão da letra "A-E" e no mínimo 5 opcões </small>
+
+            <input id="opcoes_professor" oninput="opcoes()" placeholder="Digite as opções"><button style="margin-left: 1%" class="btn btn-primary" id="salvar_opcao"> salvar opção</button>
+            
+            <br>
+
+            <h1> Visualização </h1>
             <p id="opcoes"> </p>
-            <input id="opcao_correta" oninput="opcoes_correta()" placeholder="Digite a opção correta"><br>
-            <h3> Veja sua opção correta digitada </h3>
+
+            <h1> Digite sua opção correta das opções </h1>
+            <input id="opcao_correta" oninput="opcoes_correta()" placeholder="Digite a opção correta">
+            
+            <br>
+
+            <h1> Visualização </h1>
             <p id="opcao_certa"> </p>
-            <div id="area_temas_escolher"> 
-                
+
+            <div id="area_temas_escolher">     
             </div>
-            <button id="adicionar_pergunta"> adicionar pergunta</button>
-            <button id="enviar_lista_teorica"> enviar lista teorica</button>
-            <div id="place_foto">
-                
+
+            <button style="margin-top: 2%" class="btn btn-primary" id="adicionar_pergunta"> Adicionar sua pergunta</button>
+            <button style="margin-top: 2%" class="btn btn-primary" id="enviar_lista_teorica"> Enviar lista </button>
+
+            <div id="place_foto">    
             </div>
+
         </div>
     </div>
-    <div id="look_participantes">
+
+    <div class="usersalax" id="look_participantes">
+        <h2> Participantes </h2>
+
         <ul id="participantes">
-
         </ul>
-        <button id="nao_ver_participantes"> Voltar </button>
-    </div>
-    <div id="look_lista_teorica">
-        <div id="selecionar_lista">
-            <h1> Aperte na lista para ver seu conteúdo e ao mesmo tempo fazer a lista </h1>
-            <ul id="listas_teoricas">
-                
 
+        <button class="btn btn-primary" id="nao_ver_participantes"> Voltar </button>
+    </div>
+
+    <div id="look_lista_teorica">
+        <div class="listasintx2" id="selecionar_lista">
+            <h2> Listas Teóricas </h2>
+
+            <ul id="listas_teoricas">
             </ul>
-            <button id="nao_look_lista_teorica"> Voltar </button>
+
+            <small class="form-text text-muted"> Acesse suas próprias listas para testá-las! </small>
+            <button class="btn btn-primary" id="nao_look_lista_teorica"> Voltar </button>
         </div>
-        <div id="proximo_passo3">
+
+        <div class="exectx" id="proximo_passo3">
+            <h2><img height="25%" width="25" src="./fotis/question.png" /> Exercícios </h2>
             <p id="place_perguntas"> </p>
             <ul>
                 <li>A) <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
@@ -131,44 +258,77 @@
                 <li>D) <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
                 <li>E) <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
             </ul>
-            <button id="proxima_pergunta"> Próxima</button>
+            <button class="btn btn-primary" id="proxima_pergunta"> Próxima </button>
         </div>
-        <div id="termino_exercicio">
+
+        <div class="resultx" id="termino_exercicio">
+            <h2><img height="8%" width="8%" src="./fotis/answer.png" /> Resultados ! </h2>
             <p id="lugar_nota"> </p>
+
             <ul id="reposta_certa">
-
             </ul>
+
             <ul id="pergunta_errada">
-
             </ul>
-            <button id="voltar_look_lista_teorica"> Voltar </button>;
 
+            <button class="btn btn-primary" id="voltar_look_lista_teorica"> Voltar </button>
         </div>
     </div>
-    <div id="lugar_ver_nota">
+
+    <div style="margin-top: 1%" class="notafuncx" id="lugar_ver_nota">
         <div id="selecionar_lista_nota">
+            <h2> Notas dos Alunos </h2>
+            <h1> Escolha uma lista </h1> 
+
             <ul id="lista_teorica_nota">
             </ul>
-            <button id="voltar_lugar_ver_nota"> Voltar</button>
+
+            <button class="btn btn-primary" id="voltar_lugar_ver_nota"> Voltar </button>
         </div>
+
         <div id="ver_nota_aluno">
-            <ul id="place_nota">
+            <h2> Notas dos Alunos </h2>
+            <h1> Alunos </h1> 
 
+            <ul class="notalunx" id="place_nota">
             </ul>
-            <button id="voltar_ver_nota"> Voltar </button>
+
+            <button class="btn btn-primary" id="voltar_ver_nota"> Voltar </button>
         </div>
+    </div>
+
+    <div id="codeprofx3" class="codeprof2">
+        <img class="cautionx" src="./fotis/caution.png" height="8%" width="8%"><a style="margin-left: 1%"><strong><u> A alteração da nota é única para cada aluno! </u></strong></a></img>
+    </div>
+
+    <div style="margin-top: 1%" class="modnotax" id="nota_modificar">
+
+        <table id="modificar" border="1">     
+        </table>
+
+        <button class="btn btn-primary" id="fim_comeco"> Voltar </button>
+    </div>
 
     </div>
-    <div id="nota_modificar">
-        <table id="modificar" border="1"> 
-            
-        </table>
-        <button id="fim_comeco"> Voltar </button>
-    </div>
+
+    <ul class="copyx">
+        <li>
+        <footer> &copy; 2020 Mathway </footer>
+        </li>
+        <li><a href="#"> Termos de uso </a></li>
+        <li><a href="#"> Política de privacidade </a></li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="professor_pagina.js"></script>
 
     <script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-    <script src="professor.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script> 
 </body>
 
 </html>

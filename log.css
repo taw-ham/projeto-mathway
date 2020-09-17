@@ -1,300 +1,1640 @@
-#cadastro {
-    margin-top: -1.2%;
-    margin-left: 0%;
-    margin-bottom: 0%;
-    padding-top: 5%;
-    padding-bottom: 6.2%;
-    background-image: url('./fotis/network.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+body {
+    background-image: url('./fotis/water.jpg');
     background-size: cover;
+    margin: 0%;
 }
 
-#login {
-    margin-top: -1.2%;
-    margin-left: 0%;
-    margin-bottom: 0%;
-    padding-top: 7%;
-    padding-bottom: 11.8%;
-    background-image: url('./fotis/network.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+.menu {
+    margin: 0%;
+    list-style-type: none;
+    display: inline-block;
+    background-color: whitesmoke;
+    padding: 0.5%;
+    width: 100%;
+    border-bottom: 2px solid gainsboro;
+    position: static;
 }
 
-#fundo {
-    width: 30%;
-    padding: 1%;
-    margin-left: 35%;
-    background-color: lightblue;
+.menu li {
+    list-style-type: none;
+    display: inline-block;
 }
 
-#fundo2 {
-    width: 30%;
-    padding: 1%;
-    margin-left: 35%;
+.menu .logo {
+    text-align: center;
+}
+
+.menu .logo a {
+    font-family: magneto;
+    font-size: 150%;
+    text-decoration: none;
+}
+
+.menu .logo img {
+    margin-top: -0.5%;
+}
+
+.menu .op {
+    margin-left: -4%;
+    margin-right: -8%;
+    font-size: 110%;
+}
+
+.menu .op a {
+    font-family: calibri;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.typeprof {
+    font-weight: bold;
+    font-family: calibri;
+    margin-left: 0.5%;
+    font-size: 100%;
     background-color: lightgray;
-}
-
-#fundo header {
-    background-color: royalblue;
-    border-radius: 2%;
-}
-
-#fundo2 header {
-    background-color: royalblue;
-    border-radius: 2%;
-}
-
-#fundo header h2 {
-    font-family: calibri;
-    font-size: 160%;
-    text-indent: 2%;
-    text-align: center;
-    margin-left: -8%;
     padding: 0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 4px;
+}
+
+.wall {
+    background-color: darkgray;
+    width: 70%;
+    margin: 0%;
+    padding-bottom: 5%;
+    padding-top: 4%;
+    margin-left: 30%;
+    border-left: 1px solid gainsboro;
+    background-image: url('./fotis/wallpaperm.png');
+    opacity: 95%;
+    position: relative;
+}
+
+.opb {
+    background-color: whitesmoke;
+    padding: 1%;
+    width: 40%;
+    margin-left: 50%;
+    font-family: calibri;
+    border-radius: 2px;
+}
+
+#logx {
+    width: 40%;
+    background-color: whitesmoke;
+    padding: 1%;
+    margin-left: 50%;
+    border-radius: 2px;
+}
+
+#logx header {
+    background-color: royalblue;
+    color: white;
+    text-align: center;
+    padding: 0.2%;
+}
+
+#logx header h2 {
+    font-size: 135%;
+    text-shadow: 1px 1px #000;
+    margin-top: 1%;
+}
+
+#logx label {
+    padding-top: 1%;
+    font-family: calibri;
+}
+
+#logx p {
+    padding-top: 1%;
+    font-size: 80%;
+    font-family: calibri;
+}
+
+#logx button {
+    font-family: calibri;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+#infx {
+    background: linear-gradient(lightseagreen,lightseagreen,lightblue,lightblue,whitesmoke);
+    width: 40%;
+    margin-left: 5%;
+    float: left;
+    padding: 1%;
+    border-radius: 2px;
+}
+
+#infx h1 {
+    font-family: magneto;
+    color: white;
+    text-shadow: 1px 1px #000;
+    font-size: 160%;
+}
+
+#infx p {
+    font-family: calibri;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px #000;
+    font-size: 120%;
+}
+
+#logxalun {
+    background-color: lightgrey;
+    padding: 2%;
+}
+
+#logxprof {
+    background-color: lightgrey;
+    padding: 2%;
+}
+
+.warnx {
+    margin-top: 1%;
+}
+
+.copyx {
+    background-color: #000;
+    list-style-type: none;
+    display: inline-block;
+    margin: 0%;
+    width: 100%;
+    padding: 0.5%;
+    position: static;
+}
+
+.copyx li {
+    list-style-type: none;
+    display: inline-block;
+    color: white;
+    font-size: 80%;
+    padding-left: 1%;
+}
+
+.copyx li a {
+    color: white;
+}
+
+.wall2 {
+    background-color: lightsteelblue;
+    width: 100%;
+    margin: 0%;
+    opacity: 95%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    position: relative;
+}
+
+#logx2 {
+    width: 30%;
+    background-color: whitesmoke;
+    padding: 1%;
+    border-radius: 2px;
+    margin-left: 34%;
+}
+
+#logx2 header {
+    background-color: royalblue;
+    color: white;
+    text-align: center;
+    padding: 0.2%;
+}
+
+#logx2 header h2 {
+    font-size: 125%;
+    text-shadow: 1px 1px #000;
+    margin-top: 1%;
+}
+
+#logx2 label {
+    padding-top: 1%;
+    font-family: calibri;
+}
+
+#logx2 p {
+    padding-top: 1%;
+    font-size: 80%;
+    font-family: calibri;
+}
+
+#logx2 button {
+    font-family: calibri;
+}
+
+.escolhax {
+    background-color: whitesmoke;
+    padding: 0.5%;
+    width: 30%;
+    margin-left: 34%;
+}
+
+.escolhax header {
+    background-color: lightslategray;
+    padding: 1%;
+    border: 2px solid royalblue;
+}
+
+.escolhax .escolhax-a {
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.dfi.wa.gov%2Fsites%2Fdefault%2Ffiles%2Fhigh-school-classroom-fb.jpg&f=1&nofb=1');
+    background-size: cover;
+}
+
+.escolhax .escolhax-b {
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi.huffpost.com%2Fgen%2F1728627%2Fimages%2Fo-TEACHER-IN-CLASSROOM-facebook.jpg&f=1&nofb=1');
+    background-size: cover;
+}
+
+.escolhax .escolhax-a button{
+    font-family: calibri;
+    margin-left: 31%;
+}
+
+.escolhax .escolhax-b button{
+    font-family: calibri;
+    margin-left: 24.5%;
+}
+
+.escolhax-a {
+    float: left;
+    width: 47%;
+}
+
+.escolhax-b {
+    margin-left: 52%;
+}
+
+.menu .logo2 {
+    text-align: left;
+}
+
+.menu .logo2 a {
+    font-family: magneto;
+    font-size: 150%;
+    text-decoration: none;
+}
+
+.menu .logo2 img {
+    margin-top: -0.5%;
+}
+
+.wallprof {
+    background-color: lightsteelblue;
+    margin: 0%;
+    position: relative;
+    width: 90%;
+    opacity: 95%;
+    margin-left: 5%;
+    border-left: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+    padding-bottom: 19%;
+    padding-top: 1%;
+}
+
+.wallalun {
+    background-color: lightsteelblue;
+    margin: 0%;
+    position: relative;
+    width: 90%;
+    opacity: 95%;
+    margin-left: 5%;
+    border-left: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+    padding-bottom: 32%;
+    padding-top: 1%;
+}
+
+.highx {
+    margin-left: 46%;
+    margin-top: 1%;
+    border-radius: 2px;
+}
+
+.wayx {
+    background-color: lightskyblue;
+    padding: 0.5%;
+    margin: 0%;
+}
+
+.way3 {
+    text-decoration: none;
+    text-align: center;
+    font-family: calibri;
+    font-weight: bold;
     color: whitesmoke;
     text-shadow: 1px 1px #000;
+    font-size: 120%;
+    padding-left: 3%;
+    padding-right: 1%;
+}
+
+.way2 {
+    text-decoration: none;
+    text-align: center;
+    font-family: calibri;
+    font-weight: bold;
+    color: whitesmoke;
+    text-shadow: 1px 1px #000;
+    font-size: 120%;
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.way1 {
+    text-align: center;
+    font-family: calibri;
+    font-weight: bold;
+    color: whitesmoke;
+    text-shadow: 1px 1px #000;
+    text-decoration: none;
+    font-size: 120%;
+    margin-left: 32%;
+    padding-right: 3%;
+    padding-left: 1%;
+}
+
+.way1:hover {
+    background-color: darkgray;
+    color: whitesmoke;
+    text-shadow: 1px 1px #000;
+    border-radius: 1px;
+}
+
+.way2:hover {
+    background-color: darkgray;
+    color: whitesmoke;
+    text-shadow: 1px 1px #000;
+    border-radius: 1px;
+}
+
+.way3:hover {
+    background-color: darkgray;
+    color: whitesmoke;
+    text-shadow: 1px 1px #000;
+    border-radius: 1px;
+}
+
+.articx {
+    background-color: whitesmoke;
+    margin: 0%;
+    width: 30%;
+    margin-top: 1%;
+    margin-left: 46%;
+    padding: 1%;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.articx article h2 {
+    font-size: 100%;
+    font-family: calibri;
+    font-weight: bold;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 5%;
+    background-color: lightslategrey;
+    color: white;
+    text-shadow: 1px 1px #000;
+}
+
+.articx article p {
+    font-size: 80%;
+    font-family: calibri;
+    margin-top: 1%;
+}
+
+.articx article img {
+    border: 1px solid lightgray;
+}
+
+.dadosx {
+    float: left;
+    background-color: whitesmoke;
+    margin: 0%;
+    margin-top: -37.1%;
+    margin-left: 24%;
+    width: 20%;
+    padding: 1%;
+    border-radius: 2px;
+}
+
+.dadosx ul {
+    list-style-type: none;
+    margin: 0%;
+    margin-left: -18%;
+}
+
+.dadosx h2 {
+    background-color: royalblue;
+    color: white;
+    text-shadow: 1px 1px #000;
+    text-align: center;
+    font-size: 100%;
+    padding: 2%;
+    font-family: calibri;
     font-weight: bold;
 }
 
-#fundo2 header h2 {
-    font-family: calibri;
-    font-size: 160%;
+.dadosx h1 {
+    background-color: lightgray;
     text-indent: 2%;
-    text-align: center;
-    margin-left: -8%;
+    font-family: calibri;
+    font-size: 100%;
+    padding: 1%;
+}
+
+.codex {
+    margin: 0%;
+    background-color: whitesmoke;
     padding: 0.5%;
-    color: whitesmoke;
+    width: 20%;
+    margin-left: 24%;
+    border-radius: 2px;
+    margin-top: -19%;
+}
+
+.codex button {
+    margin-top: 2%;
+    font-family: calibri;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    width: 100%;
+}
+
+.codex2 {
+    margin: 0%;
+    background-color: whitesmoke;
+    padding: 1%;
+    width: 20%;
+    margin-top: -19%;
+    margin-left: 24%;
+    border-radius: 2px;
+}
+
+.codex2 p {
+    background-color: lightgray;
+    padding: 1%;
+    font-family: calibri;
+    font-size: 100%;
+    font-weight: bold;
+    text-indent: 2%;
+}
+
+.codex2 h2 {
+    font-size: 100%;
+    background-color: royalblue;
+    padding: 2%;
+    text-align: center;
+    color: white;
     text-shadow: 1px 1px #000;
+    font-weight: bold;
+    font-family: calibri;
+}
+
+.codex2 h1{
+    background-color: lightgray;
+    text-indent: 2%;
+    font-family: calibri;
+    font-size: 100%;
+    padding: 1%;
+}
+
+.codex2 button {
+    font-family: calibri;
+    margin-top: 6%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+}
+
+.codex2 input {
+    width: 100%;
+}
+
+.dadosxalun {
+    float: left;
+    background-color: whitesmoke;
+    margin: 0%;
+    margin-top: -40.2%;
+    margin-left: 24%;
+    width: 20%;
+    padding: 1%;
+    border-radius: 2px;
+}
+
+.dadosxalun ul {
+    list-style-type: none;
+    margin: 0%;
+    margin-left: -18%;
+}
+
+.dadosxalun h2 {
+    background-color: royalblue;
+    color: white;
+    text-shadow: 1px 1px #000;
+    text-align: center;
+    font-size: 100%;
+    padding: 2%;
+    font-family: calibri;
     font-weight: bold;
 }
 
-#fundo div label {
-    font-family: arial;
-    font-size: 90%;
-    padding-top: 2%;
-}
-
-#fundo2 div label {
-    font-family: arial;
-    font-size: 90%;
-    padding-top: 2%;
-}
-
-#cadastrar {
+.dadosxalun h1 {
+    background-color: lightgray;
+    text-indent: 2%;
     font-family: calibri;
+    font-size: 100%;
+    padding: 1%;
 }
 
-#enviar {
+.salasx {
+    margin: 0%;
+    background-color: whitesmoke;
+    padding: 0.5%;
+    border-radius: 2px;
+    width: 20%;
+    margin-top: -22%;
+    margin-left: 24%;   
+}
+
+.salasx button {
     font-family: calibri;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    margin-top: 2%;
+    width: 100%;
 }
 
-#lembranca {
-    margin-top: -2%;
-    padding-bottom: 2%;
+.salasx small {
+    text-align: center;
 }
 
-#check-b {
+.comentx {
+    margin: 0%;
+    background-color: whitesmoke;
+    padding: 1%;
+    border-radius: 2px;
+    width: 20%;
+    margin-top: -33.5%;
     margin-left: 2%;
 }
 
-#estudo {
-    margin-top: -2%; 
+.comentx textarea {
+    width: 100%;
 }
 
-#estudo2 {
-    margin-top: -2%;
-    margin-left: 8%;
-}
-
-#estudo3 {
-    padding-bottom: 2%;
-}
-
-#inte {
-    height: 1%;
-    width: 10%;
-    margin-top: -2%;
-    margin-left: 52%;
-    border-radius: 50%;
-}
-
-#inte2 {
-    font-family: arial;
-    font-size: 70%;
-    margin-top: 2%;
-    padding: 1%;
-    padding-left: 2%;
-    background-color: goldenrod;
-}
-
-#menu1 {
-    background-color: darkblue;
-    color: white;
-    padding-top: 0%;
-    padding-bottom: 0.5%;
-    margin-top: 0px;
-    border-bottom: 1.5px solid royalblue; 
-}
-
-#menu1 li {
-    list-style-type: none;
-    position: relative;
-    display: inline-block;
-    margin-top: 0.5%;
-    margin-left: 0%;
-    font-family: arial;
-}
-
-#menu1 #op01 {
-    position: relative;
-    color: white;
-    margin-left: -2.5%;
-    font-size: 75%;
-    padding: 1%;
-    padding-top: 0.4%;
-    padding-bottom: 0.4%;
-    background-color: green;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-#menu1 #op02 {
-    position: relative;
-    color: white;
-    margin-left: 0.5%;
-    font-size: 75%;
-    padding: 1%;
-    padding-top: 0.4%;
-    padding-bottom: 0.4%;
-    background-color: blue;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-#copy2 #tta {
-    margin-left: 0%;
-}
-
-#copy2 {
-    margin-bottom: 0%;
-    background-color: #000;
-    padding-top: 0%;
-    margin-top: 0%;
-    padding: 0.2%;
-    border-top: 1px solid gainsboro;
-}
-
-#copy2 li {
-    list-style-type: none;
-    display: inline-block;
-    padding-right: 1%;
-    margin-top: -0.5%;
-    position: relative;
-    margin-left: 0%;
-    font-size: 85%;
-    padding-bottom: 0.1%;
-}
-
-#copy2 li img {
-    margin-left: 820px;
-    border-radius: 10px;
-    border: 2px solid white;
-    margin-bottom: 0px;
-}
-
-#copy2 #rede a:hover img {
-    background-color: whitesmoke;
-}
-
-#copy2 #insta {
-    margin-left: 0%;
-}
-
-#right {
-    color: lightblue;
-}
-
-#copy2 #tta a {
-    color: whitesmoke;
-    text-decoration: none;
-}
-
-#copy2 #tta a:hover {
-    text-decoration: underline;
-}
-
-#face {
-    background-color: lightblue;
-}
-
-#insta {
-    background-color: lightsalmon;
-}
-
-#warn {
+.comentx button {
     font-family: calibri;
-    font-size: 75%;
-    margin-top: 2%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
 }
 
-#copy3 #tta {
-    margin-left: 0%;
+.comentx ul {
+    margin: 0%;
+    background-color: lightgray;
+    margin-top: 3%;
+    padding: 1%;
 }
 
-#copy3 {
-    margin-bottom: 0%;
-    background-color: #000;
-    padding-top: 0%;
-    margin-top: 0%;
-    padding: 0.2%;
-    border-top: 1px solid gainsboro;
+.comentx ul li {
+    font-family: calibri;
+    margin-left: 10%;
+    border-bottom: 1px solid darkgray;
 }
 
-#copy3 li {
-    list-style-type: none;
-    display: inline-block;
-    padding-right: 1%;
-    margin-top: -0.5%;
-    position: relative;
-    margin-left: 0%;
-    font-size: 85%;
+.salasx2 {
+    margin: 0%;
+    background-color: whitesmoke;
+    padding: 1%;
+    border-radius: 2px;
+    width: 20%;
+    margin-top: -19.2%;
+    margin-left: 24%;
+}
+
+.salasx2 h2 {
+    background-color: royalblue;
+    color: white;
+    text-shadow: 1px 1px #000;
+    text-align: center;
+    font-size: 100%;
+    padding: 2%;
+    font-family: calibri;
+    font-weight: bold;
+}
+
+.salasx2 button {
+    font-family: calibri;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: 6%;
+}
+
+.salax2 input {
+    width: 100%;
+}
+
+.notasx {
+    margin: 0%;
+    background-color: whitesmoke;
+    padding: 0.5%;
+    border-radius: 2px;
+    width: 20%;
+    margin-top: 1%;
+    margin-left: 24%;
+}
+
+.notasx button {
+    font-family: calibri;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-left: 22%;
+}
+
+.notasx2 button {
+    margin-left: 2%;
+    font-family: calibri;
+    margin-top: 0.5%;
+    padding-top: 0.1%;
     padding-bottom: 0.1%;
 }
 
-#copy3 li img {
-    margin-left: 820px;
-    border-radius: 10px;
-    border: 2px solid white;
-    margin-bottom: 0px;
-}
-
-#copy3 #rede a:hover img {
+.exercx {
+    margin: 0%;
     background-color: whitesmoke;
+    padding: 2%;
+    width: 40%; 
+    margin-left: 2%;
 }
 
-#copy3 #insta {
+.exercx button {
+    font-family: calibri;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    margin-top: 2%;
+    margin-left: -2%;
+}
+
+.exercx h1 {
+    background: linear-gradient(lightseagreen,lightseagreen,lightseagreen,lightblue);
+    text-align: center;
+    font-size: 120%;
+    font-family: calibri;
+    color: white;
+    text-shadow: 1px 1px #000;
+    padding: 1%;
+    font-weight: bold;
+    margin-left: -2%;
+}
+
+.exercx img {
+    margin-top: -1.5%;
+}
+
+.exercx2 {
+    margin: 0%;
+    background-color: whitesmoke;
+    padding: 2%;
+    width: 30%;
+    margin-top: -2.1%;
+    margin-left: -2%;
+}
+
+.exercx2 button {
+    font-family: calibri;
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+    margin-top: 2%;
+    margin-left: -4%;
+}
+
+.exercx2 h1 {
+    background-color: lightseagreen;
+    text-align: center;
+    font-size: 120%;
+    font-family: calibri;
+    color: white;
+    text-shadow: 1px 1px #000;
+    padding: 1%;
+    font-weight: bold;
+    margin-left: -4%;
+}
+
+.linhax {
+    width: 100%;
+    margin-left: 0%;
+    margin-left: -4%;
+}
+
+.linhax2 {
+    width: 100%;
     margin-left: 0%;
 }
 
-#right {
-    color: lightblue;
+.listaspastx {
+    margin: 0%;
+    background-color: whitesmoke;
+    padding: 1%;
+    width: 40%;
+    margin-left: 2%;
 }
 
-#copy3 #tta a {
-    color: whitesmoke;
-    text-decoration: none;
+.listaspastx ul {
+    list-style-type: none;
+    margin: 0%;
+    padding: 1%;
+    background-color: lightgray;
+    padding-right: 2%;
 }
 
-#copy3 #tta a:hover {
-    text-decoration: underline;
+.listaspastx li {
+    font-family: calibri;
+    list-style-type: none;
+    padding-bottom: 1%;
+    margin-top: 2%;
+    margin-left: 0.5%;
+    background: linear-gradient(darkgray,darkgray,darkgray,lightblue);
+    border: 1px solid darkslategrey;
+    width: 100%;
 }
 
-#face {
+.listaspastx li button {
+    background-color: lightseagreen;
+    border-radius: 2px;
+    color: white;
+    text-shadow: 1px 1px #000;
+    width: 50%;
+    font-weight: bold;
+}
+
+.listaspastx button{
+    font-family: calibri;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.listaspastx li button:hover {
+    background-color: darkblue;
+}
+
+.wallexerc {
+    background-color: whitesmoke;
+    padding: 2%;
+    margin: 0%;
+    opacity: 95%;
+    background-image: url('./fotis/classroom.jpg');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    padding-bottom: 20%;
+}
+
+.exercop {
+    margin: 0%;
+    background-color: whitesmoke;
+    padding: 0.5%;
+    width: 40%;
+    margin-top: 1%;
+    margin-left: 2%;
+    border-bottom: 1px solid gainsboro;
+}
+
+.exercop button {
+    font-family: calibri;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.listatemax {
+    margin: 0%;
+    background-color: whitesmoke;
+    padding: 2%;
+    width: 40%;
+    margin-left: 2%;
+}
+
+.listatemax h2 {
+    background: linear-gradient(lightseagreen,lightseagreen,lightseagreen,lightblue);
+    color: white;
+    text-shadow: 1px 1px #000;
+    text-align: center;
+    font-size: 120%;
+    padding: 1%;
+    font-family: calibri;
+    font-weight: bold;
+}
+
+.listatemax button {
+    font-family: calibri;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    margin-top: 2%;
+}
+
+.listatemax input {
+    font-family: calibri;
+}
+
+.listatemax ul {
+    list-style-type: none;
+    margin: 0%;
+    background-color: lightgray;
+    padding: 1%;
+}
+
+.listatemax li {
+    margin-left: 1%;
+    font-family: calibri;
+}
+
+.listatemax li button {
+    font-family: calibri;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.creatx {
+    margin: 0%;
+    padding: 1%;
+    width: 50%;
+    background-color: whitesmoke;
+    margin-left: 2%;
+}
+
+.creatx2 {
+    background-color: lightgray;
+    padding: 1%;
+}
+
+.creatx3 {
+    background-color: lightgray;
+    padding: 1%;
+}
+
+.creatx button {
+    font-family: calibri;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-left: 1%;
+    margin-top: -0.5%;
+}
+
+.creatx h2 {
+    background: linear-gradient(lightseagreen,lightseagreen,lightseagreen,lightblue);
+    color: white;
+    text-shadow: 1px 1px #000;
+    text-align: center;
+    font-size: 120%;
+    padding: 1%;
+    font-family: calibri;
+    font-weight: bold;  
+}
+
+.creatx h1 {
+    border-bottom: 1px solid #000;
+    text-align: center;
+    font-size: 100%;
+    padding: 1%;
+    font-family: calibri;
+    text-align: left;
+}
+
+.creatx input {
+    width: 50%;
+}
+
+.perserverx {
+    margin: 0%;
+    padding: 1%;
+    list-style-type: none;
+}
+
+.perserverx li {
+    font-family: calibri;
+    margin-top: 1%;
+}
+
+.perserverx li button {
+    background-color: whitesmoke;
+    margin-left: -0.5%;
+}
+
+.perserverx li button:hover {
     background-color: lightblue;
 }
 
-#insta {
-    background-color: lightsalmon;
+#fazer_lista_teorica {
+    margin-top: 2%;
+}
+
+.percontx {
+    font-family: calibri;
+    color: white;
+    text-shadow: 1px 1px #000;
+    font-weight: bold;
+    background-color: darkgray;
+    padding: 0.5%;
+    text-indent: 1%;
+}
+
+.exectx {
+    margin: 0%;
+    background-color: whitesmoke;
+    padding: 3%;
+    width: 50%;
+    margin-left: 23%;
+    margin-top: 1%;
+}
+
+.exectx p {
+    font-family: calibri;
+    background-color: lightblue;
+    border: 1px solid lightgray;
+    padding: 1%;
+    margin-top: 2%;
+}
+
+.exectx h2 {
+    background: linear-gradient(lightseagreen,lightseagreen,lightseagreen,lightblue);
+    color: white;
+    text-shadow: 1px 1px #000;
+    text-align: left;
+    font-size: 120%;
+    padding: 1%;
+    font-family: calibri;
+    font-weight: bold;
+}
+
+.exectx img {
+    margin-top: -0.5%;
+}
+
+.exectx span {
+   font-weight: bold;
+   padding: 0.5%;
+   margin-left: 2%;
+   margin-top: 4%;
+}
+
+.exectx ul {
+    margin: 0%;
+    padding-top: 2%;
+    background-color: lightgray;
+    list-style-type: none;
+}
+
+.exectx ul li {
+    font-family: calibri;
+    margin-left: -6%;
+} 
+
+.exectx button {
+    font-family: calibri;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: 2%;
+}
+
+.resultx {
+    margin: 0%;
+    background-color: whitesmoke;
+    padding: 2%;
+    width: 50%;
+    margin-left: 2%;
+}
+
+.resultx p {
+    background-color: darkgray;
+    padding: 0.5%;
+    font-family: calibri;
+    color: white;
+    text-shadow: 1px 1px #000;
+    font-size: 120%;
+    font-weight: bold;
+    text-indent: 1%;
+}
+
+.resultx button {
+    font-family: calibri;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: 2%;
+}
+
+.resultx ul {
+    margin: 0%;
+    background-color: lightblue;
+    padding: 1%;
+    list-style-type: none;
+}
+
+.resultx li {
+    font-family: calibri;
+}
+
+.resultx img {
+    margin-top: -0.5%;
+}
+
+.resultx h2 {
+    background: linear-gradient(lightseagreen,lightseagreen,lightseagreen,lightblue);
+    color: white;
+    text-shadow: 1px 1px #000;
+    text-align: left;
+    font-size: 120%;
+    padding: 1%;
+    font-family: magneto;
+    font-weight: bold;
+}
+
+.salasintx {
+    margin: 0%;
+    background-color: lightgray;
+    padding: 2%;
+    width: 30%;
+}
+
+.salasintx ul {
+    list-style-type: none;
+    margin: 0%;
+}
+
+.salasintx ul li {
+    margin-left: -12%;
+}
+
+.salasintx button {
+    background-color: lightseagreen;
+    border: 1px solid darkslategrey;
+    border-radius: 2px;
+    width: 50%;
+    margin-top: 2%;
+    color: white;
+    font-family: calibri;
+    text-shadow: 1px 1px #000;
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+}
+
+.salasintx button:hover {
+    background-color: royalblue;
+}
+
+.listasintx {
+    margin: 0%;
+    background-color: whitesmoke;
+    padding: 1%;
+    width: 40%;
+    margin-left: 2%;
+}
+
+.listasintx h2 {
+    background: linear-gradient(lightseagreen,lightseagreen,lightseagreen,lightblue);
+    color: white;
+    text-shadow: 1px 1px #000;
+    text-align: center;
+    font-size: 120%;
+    padding: 1%;
+    font-family: calibri;
+    font-weight: bold;
+    width: 100%;
+}
+
+.listasintx button {
+    font-family: calibri;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.listasintx ul {
+    list-style-type: none;
+    margin: 0%;
+    background-color: lightgray;
+    padding: 1%;
+    padding-right: 2%;
+}
+
+.listasintx li {
+    font-family: calibri;
+    list-style-type: none;
+    padding-bottom: 1%;
+    margin-top: 2%;
+    margin-left: 0.5%;
+    background: linear-gradient(darkgray,darkgray,darkgray,lightblue);
+    width: 100%;
+    border: 1px solid darkslategrey;
+}
+
+.listasintx li button {
+    background-color: royalblue;
+    border-radius: 2px;
+    color: white;
+    text-shadow: 1px 1px #000;
+    width: 50%;
+    font-weight: bold;
+}
+
+.listasintx li button:hover {
+    background-color: darkblue;
+}
+
+.listasintx2 {
+    margin: 0%;
+    background-color: whitesmoke;
+    padding: 1%;
+    width: 40%;
+    margin-left: 2%;
+}
+
+.listasintx2 h2 {
+    background: linear-gradient(lightseagreen,lightseagreen,lightseagreen,lightblue);
+    color: white;
+    text-shadow: 1px 1px #000;
+    text-align: center;
+    font-size: 120%;
+    padding: 1%;
+    font-family: calibri;
+    font-weight: bold;
+    width: 100%;
+}
+
+.listasintx2 button {
+    font-family: calibri;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.listasintx2 ul {
+    list-style-type: none;
+    margin: 0%;
+    background-color: lightgray;
+    padding: 1%;
+    padding-right: 2%;
+}
+
+.listasintx2 li {
+    font-family: calibri;
+    list-style-type: none;
+    padding-bottom: 1%;
+    margin-top: 2%;
+    margin-left: 0.5%;
+    background: linear-gradient(darkgray,darkgray,darkgray,lightblue);
+    width: 100%;
+    border: 1px solid darkslategrey;
+}
+
+.listasintx2 li button {
+    background-color: royalblue;
+    border-radius: 2px;
+    color: white;
+    text-shadow: 1px 1px #000;
+    width: 50%;
+    font-weight: bold;
+}
+
+.listasintx2 li button:hover {
+    background-color: darkblue;
+}
+
+.codesalax {
+    background-color: whitesmoke;
+    margin: 0%;
+    padding: 1%;
+    width: 20%;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+.codesalax h2 {
+    background: linear-gradient(lightseagreen,lightseagreen,lightseagreen,lightblue);
+    text-align: center;
+    font-size: 100%;
+    font-family: calibri;
+    color: white;
+    text-shadow: 1px 1px #000;
+    padding: 1%;
+    font-weight: bold;
+}
+
+.codesalax h1 {
+    background-color: lightgray;
+    text-indent: 2%;
+    font-family: calibri;
+    font-size: 100%;
+    padding: 1%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.codesalax button {
+    font-family: calibri;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.listacreatex {
+    margin: 0%;
+    background-color: whitesmoke;
+    padding: 2%;
+    width: 50%;
+    margin-left: 2%;
+}
+
+.listacreatex .createnom h2 {
+    background: linear-gradient(lightseagreen,lightseagreen,lightseagreen,lightblue);
+    color: white;
+    text-shadow: 1px 1px #000;
+    text-align: center;
+    font-size: 120%;
+    padding: 1%;
+    font-family: calibri;
+    font-weight: bold; 
+}
+
+.listacreatex .createnom h1 {
+    background-color: lightgray;
+    text-indent: 2%;
+    font-family: calibri;
+    font-size: 100%;
+    padding: 1%;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.listacreatex input {
+    width: 70%;
+}
+
+.listacreatex button {
+    font-family: calibri;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: -0.5%;
+}
+
+.professortemasx h2{
+    background: linear-gradient(lightseagreen,lightseagreen,lightseagreen,lightblue);
+    color: white;
+    text-shadow: 1px 1px #000;
+    text-align: center;
+    font-size: 120%;
+    padding: 1%;
+    font-family: calibri;
+    font-weight: bold; 
+}
+
+.professortemasx h1 {
+    border-bottom: 1px solid #000;
+    text-align: center;
+    font-size: 100%;
+    padding: 1%;
+    font-family: calibri;
+    text-align: left;
+}
+
+.professortemasx textarea {
+    width: 100%;
+}
+
+.usersalax {
+    margin: 0%;
+    background-color: whitesmoke;
+    padding: 1%;
+    width: 30%;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+.usersalax h2 {
+    background: linear-gradient(lightseagreen,lightseagreen,lightseagreen,lightblue);
+    color: white;
+    text-shadow: 1px 1px #000;
+    text-align: center;
+    font-size: 120%;
+    padding: 1%;
+    font-family: calibri;
+    font-weight: bold; 
+}
+
+.usersalax button {
+    font-family: calibri;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    margin-top: 2%;
+}
+
+.usersalax ul {
+    margin: 0%;
+    background-color: lightgray;
+    padding: 1%;
+}
+
+.usersalax li {
+    font-family: calibri;
+    border-bottom: 1px solid darkgray;
+    margin-left: 6%;
+}
+
+.notafuncx {
+    margin: 0%;
+    padding: 1%;
+    margin-left: 2%;
+    width: 30%;
+    background-color: whitesmoke;
+}
+
+.notafuncx h2 {
+    background: linear-gradient(lightseagreen,lightseagreen,lightseagreen,lightblue);
+    color: white;
+    text-shadow: 1px 1px #000;
+    text-align: center;
+    font-size: 120%;
+    padding: 1%;
+    font-family: calibri;
+    font-weight: bold;    
+}
+
+.notafuncx h1 {
+    border-bottom: 1px solid #000;
+    text-align: center;
+    font-size: 100%;
+    padding: 1%;
+    font-family: calibri;
+    text-align: left;
+}
+
+.notafuncx ul {
+    margin: 0%;
+    background-color: lightgray;
+    padding: 1%;
+}
+
+.notafuncx li {
+    font-family: calibri;
+    list-style-type: none;
+    padding-bottom: 1%;
+    margin-top: 2%;
+    margin-left: 0.5%;
+    background: linear-gradient(darkgray,darkgray,darkgray,lightblue);
+    border: 1px solid darkslategrey;
+    width: 100%;
+}
+
+.notafuncx li button {
+    background-color: lightseagreen;
+    border-radius: 2px;
+    color: white;
+    text-shadow: 1px 1px #000;
+    width: 50%;
+    font-weight: bold;
+}
+
+.notafuncx button{
+    font-family: calibri;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.notafuncx li button:hover {
+    background-color: darkblue;
+}
+
+.notalunx li {
+    color: white;
+    text-shadow: 1px 1px #000;
+    font-weight: bold;
+}
+
+.modnotax {
+    margin: 0%;
+    padding: 1%;
+    margin-left: 2%;
+    width: 40%;
+    background-color: whitesmoke;
+}
+
+.modnotax button {
+    font-family: calibri;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.obx0 {
+    color: darkred;
+}
+
+.infalun {
+    background-color: darkslategrey;
+    padding: 1%;
+    width: 40%;
+    margin: 0%;
+    padding-bottom: 2%;
+    float: right;
+}
+
+.infalun img {
+    border-radius: 2px;
+    margin-left: 48%;
+}
+
+.infalun h2 {
+    color: lightcoral;
+    text-shadow: 1px 1px #000;
+    font-family: magneto;
+    font-size: 150%;
+    background-color: lightgray;
+    margin-top: 4%;
+    text-indent: 2%;
+    margin-left: -2.5%;
+    width: 102.5%;
+    padding: 0.5%;
+}
+
+.infalun p {
+    font-size: 100;
+    color: white;
+    font-family: calibri;
+}
+
+.graficox {
+    background-image: url('./fotis/quadro.jpg');
+    background-size: cover;
+    margin: 0%;
+}
+
+.codeprof {
+    background-color: whitesmoke;
+    padding: 0.5%;
+    margin: 0%;
+    width: 40%;
+    font-size: 80%;
+    font-family: calibri;
+    margin-top: 2%;
+    margin-left: 2%;
+    border-radius: 2px;
+}
+
+.codeprof2 {
+    background-color: whitesmoke;
+    padding: 0.5%;
+    margin: 0%;
+    width: 40%;
+    font-size: 80%;
+    font-family: calibri;
+    margin-left: 2%;
+    border-radius: 2px;
+}
+
+.bookx {
+    background-color: whitesmoke;
+    margin: 0%;
+    padding: 1%;
+    margin-top: 4%;
+}
+
+.bookx h3 {
+    color: #000;
+    margin-top: 1%;
+    font-size: 80%;
+    font-family: calibri;
+    text-indent: 1%;
+    background-color: lightcoral;
+    padding: 1%;
+    border-radius: 2px;
+}
+
+.bookx img {
+    margin-left: 1%;
+}
+
+.infprof {
+    background-color: darkslategrey;
+    padding: 1%;
+    width: 40%;
+    margin: 0%;
+    padding-bottom: 2%;
+    float: right;
+}
+
+.infprof img {
+    border-radius: 2px;
+    margin-left: 48%;
+}
+
+.infprof h2 {
+    color: royalblue;
+    text-shadow: 1px 1px #000;
+    font-family: magneto;
+    font-size: 150%;
+    background-color: lightgray;
+    margin-top: 4%;
+    text-indent: 2%;
+    margin-left: -2.5%;
+    width: 102.5%;
+    padding: 0.5%;
+}
+
+.infprof p {
+    font-size: 100%;
+    color: white;
+    font-family: calibri;
+}
+
+.bookx2 {
+    background-color: whitesmoke;
+    margin: 0%;
+    padding: 1%;
+    margin-top: 4%;
+}
+
+.bookx2 h3 {
+    color: #000;
+    margin-top: 1%;
+    font-size: 80%;
+    font-family: calibri;
+    text-indent: 1%;
+    background-color: lightskyblue;
+    padding: 1%;
+    border-radius: 2px;
+}
+
+.bookx2 img {
+    margin-left: 1%;
+}
+
+#reposta_certa button{
+    background-color: limegreen;
+    color: whitesmoke;
+    margin-left: 1.2%;
+}
+
+#pergunta_errada button{
+    background-color: red;
+    color: whitesmoke;
+    margin-left: 1.2%;
+}
+
+#perguntas_nao_feitas button{
+    background-color: darkgray;
+    color: whitesmoke
+}
+
+#reposta_certa li{
+    margin-bottom: 5%;
+}
+
+#pergunta_errada li{
+    margin-bottom: 5%;
+}
+
+#perguntas_nao_feitas li{
+    margin-bottom: 5%;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 0%;
+    width: 80%;
+    background-color: whitesmoke;
+    border-radius: 2px;
+    padding: 1%;
+    margin-top: 1%;
+    margin-left: 2%;
+    border: 1px solid darkslategrey;
+}
+
+table td{
+    width: 12%;
+    text-align: center;
+    font-family: calibri;
+    background-image: url('./fotis/paper.jpg');
+    background-size: cover;
+}
+
+table th {
+    font-family: calibri;
+    text-align: center;
+    background: linear-gradient(lightseagreen,lightseagreen,lightblue);
+    color: white;
+    text-shadow: 1px 1px #000;
+    padding: 1%;
+}
+
+.cautionx {
+    background-color: lightgray;
+    border-radius: 30px;
+    padding: 0.5%;
 }
