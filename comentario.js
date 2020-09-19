@@ -2,7 +2,7 @@ let comentario = document.getElementById("enviar");
 let escrever = document.getElementById("comentario");
 let comentarios = [];
 let posicao_comen = 0
-comentario.onclick = function(){
+comentario.onclick = function () {
     if (escrever.value != " ") {
         comentarios.push(escrever.value);
         console.log(comentarios);

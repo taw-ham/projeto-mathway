@@ -38,6 +38,30 @@
         "0"
       ],
       "id": 6
+    },
+    {
+      "nome": "teste final",
+      "id_criador": "1",
+      "codigo": "mf2q7",
+      "participantes": [
+        "taw.ham.balbino@gmail.com"
+      ],
+      "participantes_id": [
+        "0"
+      ],
+      "id": 7
+    },
+    {
+      "nome": "class test finish",
+      "id_criador": "1",
+      "codigo": "o5hnt",
+      "participantes": [
+        "taw.ham.balbino@gmail.com"
+      ],
+      "participantes_id": [
+        "0"
+      ],
+      "id": 8
     }
   ],
   "lista_teoricas": [
@@ -472,6 +496,224 @@
       "Data_de_entrega": "NOVEMBRO26,2020",
       "tempo_de_termino": "0:5:0",
       "id": 6
+    },
+    {
+      "nome": "popo",
+      "perguntas": [
+        "O determinante da matriz &ensp;<img width = '90px id = 'fotos_determinantes' src = './fotis/fotos-1.jpeg'>&ensp; é:",
+        "Dadas as matrizes &ensp; <img id = 'fotos_determinantes' src = 'https://static.stoodi.com.br/images/exercises/3b4e3468d81945c698052d35d677dd1b/af96f26d50e9e492ac8151e91ab130daf1f5f3a116e82d8dc70fa3e9e5a41eb1.png?versionId=b1gAAuZeGrMHQLQ4n0ikLkIRGf4U7lGW'> &ensp;, o determinante da matriz A.B é:"
+      ],
+      "opcoes": [
+        [
+          "0",
+          "-320",
+          "-240",
+          "320",
+          "240"
+        ],
+        [
+          "-1",
+          "6",
+          "10",
+          "12",
+          "14"
+        ]
+      ],
+      "opcoes_certas": [
+        "0",
+        "14"
+      ],
+      "id_criador": "1",
+      "id_sala": "5",
+      "Data_de_entrega": "Fevereiro,30,",
+      "tempo_de_termino": "3:0:0",
+      "id": 7
+    },
+    {
+      "nome": "popo",
+      "perguntas": [
+        "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:"
+      ],
+      "opcoes": [
+        [
+          "13",
+          "9",
+          "8",
+          "-4",
+          "10"
+        ]
+      ],
+      "opcoes_certas": [
+        "13"
+      ],
+      "id_criador": "1",
+      "id_sala": "5",
+      "Data_de_entrega": "Janeiro,20,",
+      "tempo_de_termino": "3:0:0",
+      "id": 8
+    },
+    {
+      "nome": "lista final",
+      "perguntas": [
+        "(UEL-PR) Uma das formas de se enviar uma mensagem secreta é por meio de códigos matemáticos, seguindo os passos: i) Tanto o destinatário quanto o remetente possuem uma matriz chave C; </br>ii) O destinatário recebe do remetente uma matriz P tal que MC = P, em que M é a matriz mensagem a ser decodificada; </br>iii) Cada número da matriz M corresponde a uma letra do alfabeto: 1 = a, 2 = b, 3 = c,...,23 = z;</br>iv) Consideramos o alfabeto com 23 letras, excluindo as letras k,w e y; </br>v) o número zero corresponde ao ponto de exclamação; vi) A mensagem é lida, encontrando a matriz M, fazendo a correspondência número/letra e ordenando as letras por linhas da matriz conforme segue: . Considere as matrizes:</br> </br><img id = 'fotos_matrizes' src = 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/am8.jpg'></br></br>Com base nos conhecimentos e nas informações descritas, assinale a alternativa que apresenta a mensagem que foi enviada por meio da matriz M.",
+        "quanto é 1 + 1?"
+      ],
+      "opcoes": [
+        [
+          "Boa sorte!",
+          "Boa prova",
+          "Boa tarde",
+          "Ajude-me ",
+          "Socorro"
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "opcoes_certas": [
+        "Boa sorte!",
+        2
+      ],
+      "id_criador": "1",
+      "id_sala": "7",
+      "Data_de_entrega": "Setembro,18",
+      "tempo_de_termino": "0:1:0",
+      "id": 9
+    },
+    {
+      "nome": "test list theory finish",
+      "perguntas": [
+        "(UEL-PR) Uma das formas de se enviar uma mensagem secreta é por meio de códigos matemáticos, seguindo os passos: i) Tanto o destinatário quanto o remetente possuem uma matriz chave C; </br>ii) O destinatário recebe do remetente uma matriz P tal que MC = P, em que M é a matriz mensagem a ser decodificada; </br>iii) Cada número da matriz M corresponde a uma letra do alfabeto: 1 = a, 2 = b, 3 = c,...,23 = z;</br>iv) Consideramos o alfabeto com 23 letras, excluindo as letras k,w e y; </br>v) o número zero corresponde ao ponto de exclamação; vi) A mensagem é lida, encontrando a matriz M, fazendo a correspondência número/letra e ordenando as letras por linhas da matriz conforme segue: . Considere as matrizes:</br> </br><img id = 'fotos_matrizes' src = 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/am8.jpg'></br></br>Com base nos conhecimentos e nas informações descritas, assinale a alternativa que apresenta a mensagem que foi enviada por meio da matriz M.",
+        "UEMG)Se a inversa de &ensp; <img width = 45px id = 'fotos_matrizes' src ='./fotis/fotos-1 4.jpeg'> &ensp; é &ensp; <img width = 50px id = 'fotos_matrizes' src = './fotis/fotos-1 2.jpeg'> &ensp; o valor de x é:",
+        "Sendo &ensp;<img width = 70px id = 'fotos_matrizes' src = './fotis/fotos-1.JPG'> &ensp; então os valores de x e y para que &ensp; <img width = 80px id = 'fotos_matrizes' src = './fotis/fotos-1.0.jpeg'> &ensp; são:",
+        "Sabendo que a inversa de uma matriz A é &ensp; <img width = 42px id = 'fotos_matrizes' src = './fotis/fotos-1 4.jpeg'>&ensp;  e que a matriz X é solução da equação matricial X . A = B, em que B = [8 3] podemos afirmar que a soma dos elementos da matriz X é:",
+        "Sobre as propriedades da matriz transposta, considere as sentenças abaixo:</br> I. (A + B)<sup>t</sup> = A<sup>t</sup> + B<sup>t</sup> </br> II.(kA)<sup>t</sup> = kA<sup>t</sup></br> III.(A . B)<sup>t</sup> = A<sup>t</sup> . B<sup>t</sup>:",
+        "UEMG)Se a inversa de &ensp; <img width = 45px id = 'fotos_matrizes' src ='./fotis/fotos-1 4.jpeg'> &ensp; é &ensp; <img width = 50px id = 'fotos_matrizes' src = './fotis/fotos-1 2.jpeg'> &ensp; o valor de x é:",
+        "Sendo &ensp;<img width = 70px id = 'fotos_matrizes' src = './fotis/fotos-1.JPG'> &ensp; então os valores de x e y para que &ensp; <img width = 80px id = 'fotos_matrizes' src = './fotis/fotos-1.0.jpeg'> &ensp; são:",
+        "Sejam as matrizes A <sub>3x2</sub>, B <sub>2x3</sub> e C <sub>3x3</sub>. É verdade que:",
+        "(PUC-RS 2013)A figura a seguir representa um esboço do gráfico de uma função y = A + B sen x/4 que é muito útil quando se estudam fenômenos periódicos, como, por exemplo, o movimento de uma mola vibrante. Então, o produto das constantes A e B é </br> </br><img src = 'https://d23vy2bv3rsfba.cloudfront.net/questoes_imagens/0_faf11aa1f163d8a42cfcb7a1c14433c5_960451.jpg.png'>",
+        "Espcex (Aman) 2012) A função real f(x) está representada no gráfico abaixo.</br><img src = 'https://static.stoodi.com.br/images/exercises/dce2b33bbcb6478b923f5a54cccde731/68d915a15275b02323a7fd239edc6cd11ccc6eeaff897d16a3b899f190f67607.png?versionId=k67QNEWg2KnfqTGp00ZpwfUN8sdFLATv'></br>A expressão algébrica de f(x) é:",
+        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+        "(ENEM 2017)Raios de luz solar estão atingindo a superfície de um lago formando um ângulo x com a sua superfície, conforme indica a figura.Em determinadas condições, pode-se supor que a intensidade luminosa desses raios, na superfície do lago, seja dada aproximadamente por l(x) = k.sen(x) sendo k uma constante, e supondo-se que x está entre 0˚ e 90˚.</br><img src = 'https://d2q576s0wzfxtl.cloudfront.net/2017/11/08151533/quest%C3%A3o-138-enem-2017.png'></br>Quando x = 30˚, a intensidade luminosa se reduz a qual percentual de seu valor máximo?",
+        "Quanto é 50+50"
+      ],
+      "opcoes": [
+        [
+          "Boa sorte!",
+          "Boa prova",
+          "Boa tarde",
+          "Ajude-me ",
+          "Socorro"
+        ],
+        [
+          5,
+          6,
+          7,
+          9,
+          10
+        ],
+        [
+          "x=y=2",
+          "x=0 e y = 1",
+          "x = 1 e y = 2",
+          "x = 1 e y = 0",
+          "x = 0 e y = 2"
+        ],
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          "Apenas a sentença II é verdadeira",
+          "Apenas a sentença III é verdadeira",
+          "Apenas as sentenças I e II são verdadeiras.",
+          "Apenas as sentenças II e III são verdadeiras",
+          "Apenas as sentenças I e III são verdadeiras"
+        ],
+        [
+          5,
+          6,
+          7,
+          9,
+          10
+        ],
+        [
+          "x=y=2",
+          "x=0 e y = 1",
+          "x = 1 e y = 2",
+          "x = 1 e y = 0",
+          "x = 0 e y = 2"
+        ],
+        [
+          "A + Bt é uma matriz 2x3",
+          "A . B é uma matriz 3x3",
+          "A . B é uma matriz 2x2",
+          "B . C é uma matriz 3x3",
+          "C . A é uma matriz 3x3"
+        ],
+        [
+          "6",
+          "10",
+          "12",
+          "18",
+          "50"
+        ],
+        [
+          "<img width = '200px' src = './fotis/fotos-4 3.jpeg'>",
+          "<img width = '200px' src = './fotis/fotos-4 4.jpeg'>",
+          "<img width = '200px' src = './fotis/fotos-4 5.jpeg'>",
+          "<img width = '200px' src = './fotis/fotos-4 6.jpeg'>",
+          "<img width = '200px' src = './fotis/fotos-4 7.jpeg'>"
+        ],
+        [
+          "2 cosx",
+          "2 sen(x/2)",
+          "2 senx",
+          "2 sen 2x",
+          "2 cos 2x"
+        ],
+        [
+          "33%",
+          "50%",
+          "57%",
+          "70%",
+          "86%"
+        ],
+        [
+          "100",
+          "12",
+          "14",
+          "78",
+          "56"
+        ]
+      ],
+      "opcoes_certas": [
+        "Boa sorte!",
+        5,
+        "x=0 e y = 1",
+        7,
+        "Apenas as sentenças I e II são verdadeiras.",
+        5,
+        "x=0 e y = 1",
+        "A . B é uma matriz 3x3",
+        "6",
+        "<img width = '200px' src = './fotis/fotos-4 3.jpeg'>",
+        "2 cosx",
+        "50%",
+        "100"
+      ],
+      "id_criador": "1",
+      "id_sala": "5",
+      "Data_de_entrega": "September 18,2020",
+      "tempo_de_termino": "0:1:0",
+      "id": 10
     }
   ],
   "Alunos": [
@@ -552,6 +794,48 @@
       "situacao": "prazo",
       "data_de_entrega": "17/9/2020",
       "id": 3
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 10,
+      "id_aluno": "0",
+      "id_lista_teorica": "3",
+      "nome_lista_teorica": "lista_teste_3",
+      "perguntas_certas": [
+        "quanto é 4 + 1?"
+      ],
+      "perguntas_erradas": [
+        "quanto é 1 mais 1?",
+        "quanto é 2 + 1?",
+        "quanto é 3 + 1?",
+        "quanto é 5 + 1?",
+        "quanto é 6 + 1?",
+        "quanto é 7 + 1?",
+        "quanto é 8 + 1?",
+        "quanto é 9 + 1?",
+        "quanto é 10 + 1"
+      ],
+      "perguntas_nao_feitas": [],
+      "situacao": "atualizada",
+      "data_de_entrega": "18/9/2020",
+      "id": 4
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 50,
+      "id_aluno": "0",
+      "id_lista_teorica": "9",
+      "nome_lista_teorica": "lista final",
+      "perguntas_certas": [
+        "quanto é 1 + 1?"
+      ],
+      "perguntas_erradas": [
+        "(UEL-PR) Uma das formas de se enviar uma mensagem secreta é por meio de códigos matemáticos, seguindo os passos: i) Tanto o destinatário quanto o remetente possuem uma matriz chave C; </br>ii) O destinatário recebe do remetente uma matriz P tal que MC = P, em que M é a matriz mensagem a ser decodificada; </br>iii) Cada número da matriz M corresponde a uma letra do alfabeto: 1 = a, 2 = b, 3 = c,...,23 = z;</br>iv) Consideramos o alfabeto com 23 letras, excluindo as letras k,w e y; </br>v) o número zero corresponde ao ponto de exclamação; vi) A mensagem é lida, encontrando a matriz M, fazendo a correspondência número/letra e ordenando as letras por linhas da matriz conforme segue: . Considere as matrizes:</br> </br><img id = 'fotos_matrizes' src = 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/am8.jpg'></br></br>Com base nos conhecimentos e nas informações descritas, assinale a alternativa que apresenta a mensagem que foi enviada por meio da matriz M."
+      ],
+      "perguntas_nao_feitas": [],
+      "situacao": "prazo",
+      "data_de_entrega": "18/9/2020",
+      "id": 5
     }
   ],
   "notas_servidor": [
@@ -684,6 +968,67 @@
       ],
       "perguntas_erradas": [],
       "id": 8
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 0,
+      "id_aluno": "0",
+      "id_lista_teorica": 31,
+      "nome_lista_teorica": "popo",
+      "perguntas_certas": [],
+      "perguntas_erradas": [
+        "Qual o resultado mais simplificado da divisão da expressão 4ky – 6y + 2kz – 3z pela expressão 2k – 3?"
+      ],
+      "id": 9
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 0,
+      "id_aluno": "0",
+      "id_lista_teorica": 32,
+      "nome_lista_teorica": "popo",
+      "perguntas_certas": [],
+      "perguntas_erradas": [
+        "Para que o sistema linear &ensp; <img id = 'fotos_sistema_lineares' width = '124px' src = './fotis/fotos-3 3.jpeg'> &ensp; seja possível e indeterminado, o valor de a+b é:"
+      ],
+      "id": 10
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 0,
+      "id_aluno": "0",
+      "id_lista_teorica": 33,
+      "nome_lista_teorica": "popo",
+      "perguntas_certas": [],
+      "perguntas_erradas": [
+        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:"
+      ],
+      "id": 11
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 0,
+      "id_aluno": "0",
+      "id_lista_teorica": 34,
+      "nome_lista_teorica": "popo",
+      "perguntas_certas": [],
+      "perguntas_erradas": [
+        "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:"
+      ],
+      "id": 12
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 0,
+      "id_aluno": "0",
+      "id_lista_teorica": 35,
+      "nome_lista_teorica": "poo",
+      "perguntas_certas": [],
+      "perguntas_erradas": [
+        "Efetue a seguinte subtração de frações 5/5 - 5/5 e indique a alternativa correta:",
+        "Efetue a seguinte divisão de frações 1/4 ÷ 2/1 e indique a alternativa correta:"
+      ],
+      "id": 13
     }
   ],
   "notas_aluno": [
@@ -711,26 +1056,38 @@
     },
     {
       "nome_aluno": "taw-ham",
-      "nota": 82,
+      "nota": 100,
       "id_aluno": "0",
       "id_lista_teorica": 54,
       "nome_lista_teorica": "teste erro semana 2",
       "perguntas_certas": [
         "(UEL-PR) Uma das formas de se enviar uma mensagem secreta é por meio de códigos matemáticos, seguindo os passos: i) Tanto o destinatário quanto o remetente possuem uma matriz chave C; </br>ii) O destinatário recebe do remetente uma matriz P tal que MC = P, em que M é a matriz mensagem a ser decodificada; </br>iii) Cada número da matriz M corresponde a uma letra do alfabeto: 1 = a, 2 = b, 3 = c,...,23 = z;</br>iv) Consideramos o alfabeto com 23 letras, excluindo as letras k,w e y; </br>v) o número zero corresponde ao ponto de exclamação; vi) A mensagem é lida, encontrando a matriz M, fazendo a correspondência número/letra e ordenando as letras por linhas da matriz conforme segue: . Considere as matrizes:</br> </br><img id = 'fotos_matrizes' src = 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/am8.jpg'></br></br>Com base nos conhecimentos e nas informações descritas, assinale a alternativa que apresenta a mensagem que foi enviada por meio da matriz M.",
-        "Sobre as propriedades da matriz transposta, considere as sentenças abaixo:</br> I. (A + B)<sup>t</sup> = A<sup>t</sup> + B<sup>t</sup> </br> II.(kA)<sup>t</sup> = kA<sup>t</sup></br> III.(A . B)<sup>t</sup> = A<sup>t</sup> . B<sup>t</sup>:",
-        "(PUC-RS 2013)A figura a seguir representa um esboço do gráfico de uma função y = A + B sen x/4 que é muito útil quando se estudam fenômenos periódicos, como, por exemplo, o movimento de uma mola vibrante. Então, o produto das constantes A e B é </br> </br><img src = 'https://d23vy2bv3rsfba.cloudfront.net/questoes_imagens/0_faf11aa1f163d8a42cfcb7a1c14433c5_960451.jpg.png'>",
         "(UEL-PR) Uma das formas de se enviar uma mensagem secreta é por meio de códigos matemáticos, seguindo os passos: i) Tanto o destinatário quanto o remetente possuem uma matriz chave C; </br>ii) O destinatário recebe do remetente uma matriz P tal que MC = P, em que M é a matriz mensagem a ser decodificada; </br>iii) Cada número da matriz M corresponde a uma letra do alfabeto: 1 = a, 2 = b, 3 = c,...,23 = z;</br>iv) Consideramos o alfabeto com 23 letras, excluindo as letras k,w e y; </br>v) o número zero corresponde ao ponto de exclamação; vi) A mensagem é lida, encontrando a matriz M, fazendo a correspondência número/letra e ordenando as letras por linhas da matriz conforme segue: . Considere as matrizes:</br> </br><img id = 'fotos_matrizes' src = 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/am8.jpg'></br></br>Com base nos conhecimentos e nas informações descritas, assinale a alternativa que apresenta a mensagem que foi enviada por meio da matriz M.",
-        "Sendo &ensp;<img width = 70px id = 'fotos_matrizes' src = './fotis/fotos-1.JPG'> &ensp; então os valores de x e y para que &ensp; <img width = 80px id = 'fotos_matrizes' src = './fotis/fotos-1.0.jpeg'> &ensp; são:",
-        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
         "O número de alunos matriculados na Escola Municipal de Pirajuba permanece o mesmo desde 2011. Em 2012, foram construídas 5 novas salas de aula e, com isso, a média de alunos por sala foi reduzida em 6 alunos em relação à média de 2011. Em 2013, foram construídas mais 5 salas de aula e, com isso, a média de alunos por sala foi reduzida em 5 alunos em relação à média de 2012.Quantos alunos tem a Escola Municipal de Pirajuba?",
-        "(ENEM 2017)Raios de luz solar estão atingindo a superfície de um lago formando um ângulo x com a sua superfície, conforme indica a figura.Em determinadas condições, pode-se supor que a intensidade luminosa desses raios, na superfície do lago, seja dada aproximadamente por l(x) = k.sen(x) sendo k uma constante, e supondo-se que x está entre 0˚ e 90˚.</br><img src = 'https://d2q576s0wzfxtl.cloudfront.net/2017/11/08151533/quest%C3%A3o-138-enem-2017.png'></br>Quando x = 30˚, a intensidade luminosa se reduz a qual percentual de seu valor máximo?",
-        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>"
-      ],
-      "perguntas_erradas": [
         "Sabendo que a inversa de uma matriz A é &ensp; <img width = 42px id = 'fotos_matrizes' src = './fotis/fotos-1 4.jpeg'>&ensp;  e que a matriz X é solução da equação matricial X . A = B, em que B = [8 3] podemos afirmar que a soma dos elementos da matriz X é:",
-        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:"
+        "Sobre as propriedades da matriz transposta, considere as sentenças abaixo:</br> I. (A + B)<sup>t</sup> = A<sup>t</sup> + B<sup>t</sup> </br> II.(kA)<sup>t</sup> = kA<sup>t</sup></br> III.(A . B)<sup>t</sup> = A<sup>t</sup> . B<sup>t</sup>:",
+        "(ENEM 2017)Raios de luz solar estão atingindo a superfície de um lago formando um ângulo x com a sua superfície, conforme indica a figura.Em determinadas condições, pode-se supor que a intensidade luminosa desses raios, na superfície do lago, seja dada aproximadamente por l(x) = k.sen(x) sendo k uma constante, e supondo-se que x está entre 0˚ e 90˚.</br><img src = 'https://d2q576s0wzfxtl.cloudfront.net/2017/11/08151533/quest%C3%A3o-138-enem-2017.png'></br>Quando x = 30˚, a intensidade luminosa se reduz a qual percentual de seu valor máximo?",
+        "(PUC-RS 2013)A figura a seguir representa um esboço do gráfico de uma função y = A + B sen x/4 que é muito útil quando se estudam fenômenos periódicos, como, por exemplo, o movimento de uma mola vibrante. Então, o produto das constantes A e B é </br> </br><img src = 'https://d23vy2bv3rsfba.cloudfront.net/questoes_imagens/0_faf11aa1f163d8a42cfcb7a1c14433c5_960451.jpg.png'>",
+        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+        "Sendo &ensp;<img width = 70px id = 'fotos_matrizes' src = './fotis/fotos-1.JPG'> &ensp; então os valores de x e y para que &ensp; <img width = 80px id = 'fotos_matrizes' src = './fotis/fotos-1.0.jpeg'> &ensp; são:",
+        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:"
       ],
+      "perguntas_erradas": [],
       "id": 2
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 0,
+      "id_aluno": "0",
+      "id_lista_teorica": 56,
+      "nome_lista_teorica": "po2",
+      "perguntas_certas": [],
+      "perguntas_erradas": [
+        "Efetue a seguinte divisão de frações 1/4 ÷ 2/3 e indique a alternativa correta:",
+        "Efetue a seguinte multiplicação de frações 7/8 X 3/2 e indique a alternativa correta:"
+      ],
+      "id": 3
     }
   ],
   "perguntas": [
@@ -3407,37 +3764,29 @@
       "tema": "matriz",
       "id_tema": "1",
       "id": 179
+    },
+    {
+      "pergunta": "Quanto é 50+50",
+      "opcoes": [
+        "100",
+        "12",
+        "14",
+        "78",
+        "56"
+      ],
+      "opcao_certa": "100",
+      "id_criador": "1",
+      "tema": "matriz",
+      "id_tema": "1",
+      "id": 180
     }
   ],
   "comentario": [
     {
-      "id": 1,
       "nome_aluno": "taw-ham",
-      "comentario": "teste de verificação de comentario para fins de teste veremos se ele está bom "
-    },
-    {
-      "nome_aluno": "taw-ham",
-      "comentario": "teste",
+      "comentario": "test finish comment your favorite color is blue",
       "id_aluno": "0",
-      "id": 2
-    },
-    {
-      "nome_aluno": "taw-ham",
-      "comentario": "teste de verificação se o comentario de fato está pegando sem ultrapassar o campo dele",
-      "id_aluno": "0",
-      "id": 3
-    },
-    {
-      "nome_aluno": "taw-ham",
-      "comentario": "ehehhe\nehehhehehhehe",
-      "id_aluno": "0",
-      "id": 4
-    },
-    {
-      "nome_aluno": "taw-ham",
-      "comentario": "teste final do comentário demonstrando como está o comentário nisso ele verá que o problema nào é a digitação",
-      "id_aluno": "0",
-      "id": 5
+      "id": 1
     }
   ],
   "Lista_Teorica_aluno": [
@@ -5239,6 +5588,55 @@
         "6"
       ],
       "id": 54
+    },
+    {
+      "nome": "popo",
+      "id_criador": "0",
+      "perguntas": [
+        "Efetue a seguinte subtração de frações 5/5 - 5/5 e indique a alternativa correta:"
+      ],
+      "opcoes": [
+        [
+          "0/5",
+          "5/5",
+          "10/5",
+          "2",
+          "10/10"
+        ]
+      ],
+      "opcoes_certas": [
+        "0/5"
+      ],
+      "id": 55
+    },
+    {
+      "nome": "po2",
+      "id_criador": "0",
+      "perguntas": [
+        "Efetue a seguinte divisão de frações 1/4 ÷ 2/3 e indique a alternativa correta:",
+        "Efetue a seguinte multiplicação de frações 7/8 X 3/2 e indique a alternativa correta:"
+      ],
+      "opcoes": [
+        [
+          "8/4",
+          "3/8",
+          "3/9",
+          "2/8",
+          "2/10"
+        ],
+        [
+          "21/16",
+          "10/10",
+          "10/16",
+          "21/18",
+          "10/9"
+        ]
+      ],
+      "opcoes_certas": [
+        "3/8",
+        "21/16"
+      ],
+      "id": 56
     }
   ],
   "Lista_Teorica_Servidor": [
@@ -6839,6 +7237,115 @@
         3300
       ],
       "id": 30
+    },
+    {
+      "nome": "popo",
+      "id_aluno": "0",
+      "perguntas": [
+        "Qual o resultado mais simplificado da divisão da expressão 4ky – 6y + 2kz – 3z pela expressão 2k – 3?"
+      ],
+      "opcoes": [
+        [
+          "(2y + z)(2k + z)",
+          "2y + z",
+          "(2y + z)(2k + 3)",
+          "2k + 3\"",
+          "4k + 6"
+        ]
+      ],
+      "opcoes_certas": [
+        "2y + z"
+      ],
+      "id": 31
+    },
+    {
+      "nome": "popo",
+      "id_aluno": "0",
+      "perguntas": [
+        "Para que o sistema linear &ensp; <img id = 'fotos_sistema_lineares' width = '124px' src = './fotis/fotos-3 3.jpeg'> &ensp; seja possível e indeterminado, o valor de a+b é:"
+      ],
+      "opcoes": [
+        [
+          "-1",
+          "4",
+          "9",
+          "14",
+          "19"
+        ]
+      ],
+      "opcoes_certas": [
+        "14"
+      ],
+      "id": 32
+    },
+    {
+      "nome": "popo",
+      "id_aluno": "0",
+      "perguntas": [
+        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:"
+      ],
+      "opcoes": [
+        [
+          0,
+          1,
+          3,
+          2,
+          10
+        ]
+      ],
+      "opcoes_certas": [
+        0
+      ],
+      "id": 33
+    },
+    {
+      "nome": "popo",
+      "id_aluno": "0",
+      "perguntas": [
+        "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:"
+      ],
+      "opcoes": [
+        [
+          "13",
+          "9",
+          "8",
+          "-4",
+          "10"
+        ]
+      ],
+      "opcoes_certas": [
+        "13"
+      ],
+      "id": 34
+    },
+    {
+      "nome": "poo",
+      "id_aluno": "0",
+      "perguntas": [
+        "Efetue a seguinte subtração de frações 5/5 - 5/5 e indique a alternativa correta:",
+        "Efetue a seguinte divisão de frações 1/4 ÷ 2/1 e indique a alternativa correta:"
+      ],
+      "opcoes": [
+        [
+          "0/5",
+          "5/5",
+          "10/5",
+          "2",
+          "10/10"
+        ],
+        [
+          "1/6",
+          "1/3",
+          "1/2",
+          "1/3",
+          "1/0"
+        ]
+      ],
+      "opcoes_certas": [
+        "0/5",
+        "1/2"
+      ],
+      "id": 35
     }
   ]
 }

@@ -81,10 +81,10 @@ var posicao = 0
 
 document.getElementById("teste").onclick = function () {
     let teste = document.getElementsByClassName("teste");
-    for(let i = 0; i <= teste.length; i++){
+    for (let i = 0; i <= teste.length; i++) {
         if (teste[i].checked) {
             console.log(teste[i].id)
-            
+
         }
     }
 }
@@ -227,23 +227,22 @@ var segundos = 59;
 
 } */
 
-    function contador2() {
-        t_minutos.innerHTML = (minutos > 9) ? ("" + minutos + ":") : ("0" + minutos + ":");
-        t_segundos.innerHTML = (segundos > 9) ? ("" + segundos) : ("0" + segundos);
-        t_hora.innerHTML = (hora > 9) ? ("" + hora + ":") : ("0" + hora + ":");
-        if (segundos > 0) segundos--;
-        else if (segundos == 0 && minutos > 0) {
-            segundos = 59;
-            minutos -= 1;
-        }else if (minutos == 0 && hora > 0) {
-            minutos = 60;
-            hora -= 1;
-        }
-        else {
-            clearInterval(tempo2);
-        }
-
+function contador2() {
+    t_minutos.innerHTML = (minutos > 9) ? ("" + minutos + ":") : ("0" + minutos + ":");
+    t_segundos.innerHTML = (segundos > 9) ? ("" + segundos) : ("0" + segundos);
+    t_hora.innerHTML = (hora > 9) ? ("" + hora + ":") : ("0" + hora + ":");
+    if (segundos > 0) segundos--;
+    else if (segundos == 0 && minutos > 0) {
+        segundos = 59;
+        minutos -= 1;
+    } else if (minutos == 0 && hora > 0) {
+        minutos = 60;
+        hora -= 1;
+    } else {
+        clearInterval(tempo2);
     }
+
+}
 var tempo2 = setInterval(contador2, 1000);
 
 

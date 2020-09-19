@@ -232,13 +232,13 @@ $("#codeprofx2").hide("fast");
 $("#codeprofx3").hide("fast");
 
 document.getElementById("voltar_area_de_escolhas_inicial3").onclick = function () {
-    $("#wallprofx").css('padding-bottom','19%');
+    $("#wallprofx").css('padding-bottom', '19%');
     $("#menu_escolhas").show("fast");
     $("#area_de_criar_sala").hide("fast");
 }
 
 document.getElementById("salas_criadas").onclick = function () {
-    $("#wallprofx").css('padding-bottom','28%');
+    $("#wallprofx").css('padding-bottom', '28%');
     $("#codeprofx2").show("fast");
     $("#muralxprof").hide("fast");
     $("#infprofx").show("fast");
@@ -277,12 +277,12 @@ document.getElementById("salas_criadas").onclick = function () {
                     $("#opcoes_da_sala").hide("fast");
 
                 }
-                document.getElementById("ver_codigo_sala").onclick = function(){
-                    $("#wallprofx").css('padding-bottom','30%');
+                document.getElementById("ver_codigo_sala").onclick = function () {
+                    $("#wallprofx").css('padding-bottom', '30%');
                     $("#opcoes_da_sala").hide("fast");
                     $("#area_de_ver_codigo").show("fast");
                     document.getElementById("look_codigo_sala").innerHTML = codigo_sala;
-                    document.getElementById("voltar_area_de_ver_codigo").onclick = function(){
+                    document.getElementById("voltar_area_de_ver_codigo").onclick = function () {
                         $("#infprofx").show("fast");
                         $("#codeprofx2").show("fast");
                         $("#opcoes_da_sala").show("fast");
@@ -296,8 +296,8 @@ document.getElementById("salas_criadas").onclick = function () {
 
 
                 document.getElementById("modificar_nota").onclick = function () {
-                    $("#wallprofx").css('background-image','url("./fotis/classroom.jpg")');
-                    $("#wallprofx").css('padding-bottom','30%');
+                    $("#wallprofx").css('background-image', 'url("./fotis/classroom.jpg")');
+                    $("#wallprofx").css('padding-bottom', '30%');
                     $("#infprofx").hide("fast");
                     $("#codeprofx2").hide("fast");
                     $("#codeprofx3").show("fast");
@@ -326,16 +326,16 @@ document.getElementById("salas_criadas").onclick = function () {
                                     td_nota.innerHTML = resposta[i].nota
                                     let td_modificar = document.createElement("td");
                                     let input_modificar = document.createElement("input");
-                                    input_modificar.setAttribute('placeholder', 'digite a nova nota');
+                                    input_modificar.setAttribute('placeholder', 'Digite a nova nota');
                                     input_modificar.setAttribute('id', resposta[i].id);
                                     td_modificar.append(input_modificar);
                                     let td_opcoes = document.createElement("td");
                                     let button_modificar = document.createElement("button");
                                     let button_nao_modificar = document.createElement("button");
                                     button_modificar.setAttribute('id', resposta[i].id);
-                                    button_modificar.innerHTML = "modificar nota"
+                                    button_modificar.innerHTML = "Modificar nota"
                                     button_nao_modificar.setAttribute('id', resposta[i].id);
-                                    button_nao_modificar.innerHTML = "não modificar"
+                                    button_nao_modificar.innerHTML = "Não modificar"
                                     td_opcoes.append(button_modificar);
                                     td_opcoes.append(button_nao_modificar);
                                     tr.append(td_nome, td_lista_teorica, td_data_entrega, td_nota, td_modificar, td_opcoes);
@@ -350,10 +350,10 @@ document.getElementById("salas_criadas").onclick = function () {
                                             nota_service.atualizar(nota_class).then(resposta => {
                                                 console.log(resposta)
                                                 $("tr").remove(`#${id}`);
-                                                swal('NOTA ATUALIZADA', 'NICE', 'success');
+                                                swal('Nota Atualizada!', '- atualização com sucesso -', 'success');
                                             })
                                         } else {
-                                            swal('DIGITE A NOTA ', 'NICE', 'error');
+                                            swal('Atualização Inválida!', '- digite sua nova nota -', 'error');
 
                                         }
                                     }
@@ -365,7 +365,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                         let nota_service = new NOTA_SERVICE(`http://localhost:3000/notas_professor/${id}`)
                                         nota_service.atualizar(nota).then(resposta => {
                                             console.log(resposta);
-                                            swal('NÃO MODIFICADA', 'SUCCESSS', 'success');
+                                            swal('Não Atualizada!', '- sem alterações na nota -', 'success');
 
                                         })
                                     }
@@ -374,8 +374,10 @@ document.getElementById("salas_criadas").onclick = function () {
                         }
                     })
                     document.getElementById("fim_comeco").onclick = function () {
-                        $("#wallprofx").css('background-image','none');
-                        $("#wallprofx").css('padding-bottom','28%');
+                        $("#wallprofx").css('background-image', 'url("./fotis/wood.jpg")');
+                        $("#wallprofx").css('background-size', 'cover');
+                        $("#wallprofx").css('background-repeat', 'no-repeat');
+                        $("#wallprofx").css('padding-bottom', '28%');
                         $("#infprofx").show("fast");
                         $("#codeprofx2").show("fast");
                         $("#codeprofx3").hide("fast");
@@ -385,7 +387,7 @@ document.getElementById("salas_criadas").onclick = function () {
                     }
                 }
                 document.getElementById("ver_nota").onclick = function () {
-                    $("#wallprofx").css('padding-bottom','30%');
+                    $("#wallprofx").css('padding-bottom', '30%');
                     $("#opcoes_da_sala").hide("fast");
                     $("#lugar_ver_nota").show("fast");
                     $("#selecionar_lista_nota").show("fast")
@@ -440,9 +442,9 @@ document.getElementById("salas_criadas").onclick = function () {
                 }
 
                 document.getElementById("ver_lista_teorica").onclick = function () {
-                    $("#wallprofx").css('background-image','url("./fotis/classroom.jpg")');
-                    $("#wallprofx").css('background-size','cover');
-                    $("#wallprofx").css('padding-bottom','18%');
+                    $("#wallprofx").css('background-image', 'url("./fotis/classroom.jpg")');
+                    $("#wallprofx").css('background-size', 'cover');
+                    $("#wallprofx").css('padding-bottom', '18%');
                     $("#infprofx").hide("fast");
                     $("#codeprofx2").hide("fast");
                     $("#opcoes_da_sala").hide("fast");
@@ -512,12 +514,12 @@ document.getElementById("salas_criadas").onclick = function () {
                                                 lista_perguntas_certas_user.push(lista_perguntas[posicao_pergunta]);
                                                 console.log(lista_perguntas_certas_user);
                                                 posicao_pergunta_certa.push(posicao_pergunta + 1);
-                                                swal('Acertou!', 'parabéns', 'success');
-                                                nota += 10
+                                                swal('Certa Resposta!', '<img height="6%" width="6%" src="./fotis/smile.png" />  parabéns', 'success');
+                                                nota += 100
                                             } else {
                                                 lista_perguntas_erradas_usuario.push(lista_perguntas[posicao_pergunta])
                                                 posicao_pergunta_errada.push(posicao_pergunta + 1);
-                                                swal('Oh no...', 'Você errou!', 'error')
+                                                swal('Resposta Errada!', '<img height="6%" width="6%" src="./fotis/sad.png" />  estude mais um pouco', 'error');
                                             }
                                             t_number++;
                                             posicao_pergunta++;
@@ -536,7 +538,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                                 console.log("termino da lista teórica");
                                                 $("#proximo_passo3").hide("fast");
                                                 $("#termino_exercicio").show("fast");
-                                                $("#lugar_nota").text(`Sua nota foi ${nota}`)
+                                                $("#lugar_nota").text(`Sua nota foi ${(nota/posicao_pergunta).toFixed(0)}`)
                                                 posicao_pergunta = 0;
                                                 posicao_opcoes = 0;
                                                 posicao_opcoes_certas = 0;
@@ -579,7 +581,9 @@ document.getElementById("salas_criadas").onclick = function () {
                     })
                 }
                 document.getElementById("nao_look_lista_teorica").onclick = function () {
-                    $("#wallprofx").css('background-image','none');
+                    $("#wallprofx").css('background-image', 'url("./fotis/wood.jpg")');
+                    $("#wallprofx").css('background-size', 'cover');
+                    $("#wallprofx").css('background-repeat', 'no-repeat');
                     $("#infprofx").show("fast");
                     $("#codeprofx2").show("fast");
                     $("#listas_teoricas").empty();
@@ -587,7 +591,7 @@ document.getElementById("salas_criadas").onclick = function () {
                     $("#opcoes_da_sala").show("fast");
                 }
                 document.getElementById("ver_participantes").onclick = function () {
-                    $("#wallprofx").css('padding-bottom','30%');
+                    $("#wallprofx").css('padding-bottom', '30%');
                     $("#opcoes_da_sala").hide("fast");
                     $("#look_participantes").show("fast");
                     let ul_participantes = document.getElementById("participantes")
@@ -612,19 +616,19 @@ document.getElementById("salas_criadas").onclick = function () {
                     })
                 }
                 document.getElementById("criar_lista_teorica").onclick = function () {
-                    $("#wallprofx").css("padding-bottom",'12%');
+                    $("#wallprofx").css("padding-bottom", '12%');
                     $("#infprofx").hide("fast");
                     $("#codeprofx2").hide("fast");
                     $("#opcoes_da_sala").hide("fast");
                     $("#area_opcoes_temas").show("fast");
                     document.getElementById("salvar_temas").onclick = function () {
-                        $("#wallprofx").css("padding-bottom",'28%');
+                        $("#wallprofx").css("padding-bottom", '28%');
                         let temas_lista = [];
                         let temas = $("input[name='opcoes_temas']");
                         let temas_verificar = $("input[name='opcoes_temas']:checked").val();
                         let nome_temas = [];
                         if (typeof temas_verificar == "undefined") {
-                            swal('escolha uma opção', 'tente novamente', 'error');
+                            swal('Lista Inválida!', '- escolha algum tema -', 'error');
                         } else {
                             for (let i = 0; i <= temas.length - 1; i++) {
                                 if (temas[i].checked) {
@@ -640,49 +644,50 @@ document.getElementById("salas_criadas").onclick = function () {
                             $("#nome_lista").show("fast");
                             $("#proximo_passo2").hide("fast");
                             document.getElementById("salva_nome_lista_teorica").onclick = function () {
-                                $("#wallprofx").css("padding-bottom",'12%');
+                                $("#area_criar_lista_teorica").css('width', '80%');
+                                $("#wallprofx").css("padding-bottom", '12%');
                                 let nome_da_lista_teorica = $("#nome_lista_teorica").val();
                                 let tempo_de_fazer_lista = $("#tempo_fazer_lista").val();
                                 let data_entrega = document.getElementById("data_entrega").value;
                                 console.log(data_entrega);
                                 let mes;
-                               
-                               let data_de_entrega;
-                                if(data_entrega != " "){
+
+                                let data_de_entrega;
+                                if (data_entrega != " ") {
                                     mes = data_entrega.split(' ');
                                     console.log(mes[0]);
-                                    if(mes[0] == 'Janeiro' || mes[0] == 'janeiro' ){
-                                        mes[0]= "January" + " ";
-                                    }else if(mes[0] == 'Fevereiro' ||mes[0] == 'fevereiro' ){
+                                    if (mes[0] == 'Janeiro' || mes[0] == 'janeiro') {
+                                        mes[0] = "January" + " ";
+                                    } else if (mes[0] == 'Fevereiro' || mes[0] == 'fevereiro') {
                                         mes[0] = "February" + " ";
-                                    }else if(mes[0] == 'Março' ||mes[0] == 'março' ){
+                                    } else if (mes[0] == 'Março' || mes[0] == 'março') {
                                         mes[0] = "March" + " ";
-                                    }else if(mes[0] == 'Abril' ||mes[0] == 'abril' ){
+                                    } else if (mes[0] == 'Abril' || mes[0] == 'abril') {
                                         mes[0] = "April" + " ";
-                                    }else if(mes[0] == 'Maio' || mes[0] == 'maio'){
+                                    } else if (mes[0] == 'Maio' || mes[0] == 'maio') {
                                         mes[0] = "May" + " ";
-                                    }else if(mes[0] == 'Junho' || mes[0] == 'junho'){
+                                    } else if (mes[0] == 'Junho' || mes[0] == 'junho') {
                                         mes[0] = "June" + " ";
-                                    }else if(mes[0] == 'Julho' || mes[0] == 'julho'){
+                                    } else if (mes[0] == 'Julho' || mes[0] == 'julho') {
                                         mes[0] = "July" + " ";
-                                    }else if(mes[0] == 'Agosto' || mes[0] == 'agosto'){
+                                    } else if (mes[0] == 'Agosto' || mes[0] == 'agosto') {
                                         mes[0] = "August" + " ";
-                                    }else if(mes[0] == 'Setembro' || mes[0] == 'setembro'){
+                                    } else if (mes[0] == 'Setembro' || mes[0] == 'setembro') {
                                         mes[0] = "September" + " ";
-                                    }else if(mes[0] == 'Outubro' || mes[0] == 'outubro'){
+                                    } else if (mes[0] == 'Outubro' || mes[0] == 'outubro') {
                                         mes[0] = "October" + " ";
-                                    }else if(mes[0] == 'Novembro' || mes[0] == 'novembro'){
+                                    } else if (mes[0] == 'Novembro' || mes[0] == 'novembro') {
                                         mes[0] = "November" + " ";
-                                    }else if(mes[0] == 'Dezembro' || mes[0] == 'dezembro'){
+                                    } else if (mes[0] == 'Dezembro' || mes[0] == 'dezembro') {
                                         mes[0] = "December" + " ";
                                     }
                                     data_de_entrega = mes[0];
-                                    data_de_entrega +=mes[1];
-                                
+                                    data_de_entrega += mes[1];
+
                                     console.log(data_de_entrega);
                                 }
                                 if (nome_da_lista_teorica == "") {
-                                    swal('DIGITE O NOME DA LISTA TEORICA', 'tente novamente', 'error')
+                                    swal('Lista Inválida!', '- escolha algum nome -', 'error')
 
                                 } else {
                                     let lista_perguntas = [];
@@ -718,7 +723,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                                     opcoes_certas.push(resposta[i].opcao_certa);
                                                     console.log(opcoes_certas);
                                                     cont_perguntas++;
-                                                    contador_perguntas.innerHTML = cont_perguntas + " perguntas adicionadas com sucessos";
+                                                    contador_perguntas.innerHTML = cont_perguntas + " pergunta(s) adicionadas";
 
                                                 }
                                             }
@@ -750,7 +755,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                             }
 
                                         } else {
-                                            swal("DIGITE UMA ALTERNATIVA", 'TENTE NOVAMENTE', 'error')
+                                            swal("Resposta Inválida!", '- escolha sua opção -', 'error')
                                         }
 
                                     }
@@ -780,10 +785,10 @@ document.getElementById("salas_criadas").onclick = function () {
                                         console.log(opcoes_check);
 
                                         if (pergunta_user.value == "" || opcao_correta_user.value == "" || opcoes_check.length > 5 || opcoes_check.length < 5) {
-                                            swal('Uma das entradas está inválida', 'tente novamente', 'error');
+                                            swal('Entrada Inválida!', '- preencha todos os campos -', 'error');
 
                                         } else {
-                                            
+
                                             if (click_salvar_tema > 0) {
                                                 pergunta_user = pergunta_user.value;
                                                 opcoes_user = opcoes_user.value;
@@ -795,7 +800,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                                 opcoes_certas.push(opcao_correta_user)
                                                 console.log(opcoes_certas);
                                                 cont_perguntas++;
-                                                contador_perguntas.innerHTML = cont_perguntas + "perguntas adicionadas";
+                                                contador_perguntas.innerHTML = cont_perguntas + "pergunta(s) adicionadas";
                                                 let pergunta = new Pergunta(pergunta_user, opcoes_check, opcao_correta_user, id_login, nome_tema, id_tema);
                                                 let pergunta_service = new Perguntas_Service("http://localhost:3000/perguntas");
                                                 pergunta_service.inserir(pergunta).then(resposta => {
@@ -810,17 +815,19 @@ document.getElementById("salas_criadas").onclick = function () {
                                                 click_salvar_tema = 0;
 
                                             } else {
-                                                swal('escolha um tema para sua pergunta para adicionarmos no banco de dados', 'tente novamente', 'error');
+                                                swal('Questão Inválida!', '- escolha algum tema para sua questão -', 'error');
                                             }
 
                                         }
                                     }
                                     document.getElementById("enviar_lista_teorica").onclick = function () {
-                                        let lista_teorica = new Lista_Teoria(nome_da_lista_teorica, lista_perguntas, lista_opcoes, opcoes_certas, id_login, id_sala,data_de_entrega, tempo_de_fazer_lista);
+                                        let lista_teorica = new Lista_Teoria(nome_da_lista_teorica, lista_perguntas, lista_opcoes, opcoes_certas, id_login, id_sala, data_de_entrega, tempo_de_fazer_lista);
                                         let lista_teorica_service = new Lista_Teoria_Service("http://localhost:3000/lista_teoricas");
                                         lista_teorica_service.inserir(lista_teorica).then(resposta => {
-                                            swal('Lista Criada com Sucesso!', '- Volte à área de escolhas de recursos da sala -', 'success');
+                                            swal('Lista Criada com Sucesso!', '- volte à área de recursos da sala -', 'success');
                                             $("#perguntas_servidor").empty();
+                                            $("#infprofx").show("fast");
+                                            $("#wallalunx").css('padding-bottom', '28%');
                                             $("#area_criar_lista_teorica").hide("fast");
                                             $("#opcoes_da_sala").show("fast");
                                             contador_perguntas.innerHTML = 0;
@@ -828,7 +835,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                             for (let i = 0; i <= temas.length - 1; i++) {
                                                 temas[i].checked = false
                                             }
-                                            $("#wallprofx").css('padding-bottom','28%');
+                                            $("#wallprofx").css('padding-bottom', '28%');
                                             $("#infprox").show("fast");
                                             $("#codeprofx2").show("fast");
                                         })
@@ -842,7 +849,7 @@ document.getElementById("salas_criadas").onclick = function () {
         }
     })
     document.getElementById("voltar_da_area_acessar_sala").onclick = function () {
-        $("#wallprofx").css('padding-bottom','19%');
+        $("#wallprofx").css('padding-bottom', '19%');
         $("#muralxprof").show("fast");
         $("#infprofx").hide("fast");
         $("#codeprofx2").hide("fast");
@@ -860,7 +867,7 @@ document.getElementById("criar_sala").onclick = function () {
     document.getElementById("salva_nome_sala").onclick = function () {
         let nome_sala = $("#sala_nome").val();
         if (nome_sala == "") {
-            swal('digite o nome da sala', 'tente novamente', 'error');
+            swal('Sala Inválida!', '- escolha algum nome -', 'error');
         } else {
             $("#nome_sala").hide("fast");
             $("#proximo_passo").show("fast");
@@ -879,41 +886,13 @@ document.getElementById("criar_sala").onclick = function () {
                 let sala = new Salas(nome_sala, id_login, aleatorio, participantes, participantes_id);
                 let sala_service = new Salas_Service("http://localhost:3000/salas");
                 sala_service.inserir(sala).then(resposta => {
-                    $("#situacao_codigo").text(`Código criado: ${aleatorio}`)
+                    $("#situacao_codigo").text(`Código: ${aleatorio}`)
                     console.log(resposta)
                     document.getElementById("criar_sala_especifica").onclick = function () {
                         location.reload();
                     }
                 })
             })
-            /*
-            let lista_participantes = [];
-            let lista_participantes_id = [];
-            document.getElementById("adicionar_aluno").onclick = function () {
-                let participante = $("#participante").val();
-                let situacao_usuario = document.getElementById("situacao_usuario");
-                document.getElementById("participante").value = "";
-                let aluno_service = new Aluno_Service(`http://localhost:3000/Alunos?nome=${participante}`);
-                aluno_service.lista().then(resposta => {
-                    if (resposta.length == 0) {
-                        situacao_usuario.innerHTML = "Usuário Inválido "
-                    } else {
-                        situacao_usuario.innerHTML = "Usuário Válido";
-                        console.log(resposta[0].nome)
-                        lista_participantes.push(resposta[0].nome);
-                        lista_participantes_id.push(resposta[0].id);
-                    }
-                })
-            }
-            document.getElementById("criar_sala_especifica").onclick = function () {
-                
-                let sala_service = new Salas_Service("http://localhost:3000/salas");
-                sala_service.inserir(sala).then(resposta => {
-                    console.log(resposta);
-                    location.reload(); //atualiza a página
-                })
-            }
-            */
         }
     }
 }

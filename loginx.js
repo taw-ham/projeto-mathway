@@ -24,7 +24,6 @@ class Aluno_Service {
         }).then(resposta => resposta.json())
     }
 }
-
 class PROFESSOR {
     constructor(nome, senha, email) {
         this.nome = nome;
@@ -53,6 +52,7 @@ class ProfessorService {
 }
 
 let tipo_loginx;
+
 let tipo_userx = document.getElementsByTagName("button");
 for (let i = 0; i <= tipo_userx.length - 1; i++) {
     tipo_userx[i].onclick = function () {
@@ -62,7 +62,6 @@ for (let i = 0; i <= tipo_userx.length - 1; i++) {
             $("#obx").hide("fast");
             $("#tipologinx").css('background', 'lightblue');
             $("#wallx").css('padding-bottom', '6.8%');
-
         } else {
             $("#logx").css('background', 'linear-gradient(whitesmoke,lightgreen');
             $("#obx").hide("fast");
@@ -78,7 +77,7 @@ document.getElementById("fazer_login").onclick = function () {
         const aluno_service = new Aluno_Service(`http://localhost:3000/Alunos?email=${usuario}&senha=${senha}`);
         aluno_service.listar().then(resposta => {
             if (resposta.length === 0) {
-                swal('Senha ou Login Incorretos!', '- tente novamente -', 'error');
+                swal('Login Inválido!', '- email ou senha incorretos -', 'error');
             } else {
                 console.log(resposta);
                 const id_login = resposta[0].id;
@@ -93,7 +92,7 @@ document.getElementById("fazer_login").onclick = function () {
         let loginservice = new ProfessorService(`http://localhost:3000/professores?email=${usuario}&senha=${senha}`);
         loginservice.listar().then(results => {
             if (results.length === 0) {
-                swal('Senha ou Login Incorretos!', '- tente novamente -', 'error');
+                swal('Login Inválido!', '- email ou senha incorretos -', 'error');
             } else {
                 console.log(results);
                 const id = results[0].id;
@@ -101,68 +100,7 @@ document.getElementById("fazer_login").onclick = function () {
                 window.location.assign("./professor_pagina.html")
             }
         })
-    }else{
-        swal('Escolha um tipo de login','tente novamente','error');
+    } else {
+        swal('Login Inválido!', '- email ou senha incorretos -', 'error');
     }
 }
-/*
-for (let i = 0; i <= tipo_userx.length - 1; i++) {
-    tipo_userx[i].onclick = function () {
-        tipo_loginx = event.target.id;
-        if (tipo_loginx === "bbx") {
-            $("#logx").css('background', 'linear-gradient(whitesmoke,lightblue)');
-            $("#obx").hide("fast");
-            $("#tipologinx").css('background', 'lightblue');
-            $("#wallx").css('padding-bottom', '6.8%');
-
-            $("#fazer_login").click(function () {
-                let usuario = $("#nome_login").val();
-
-                let senha = $("#senha_login").val();
-
-
-                let aluno_service = new Aluno_Service(`http://localhost:3000/Alunos?email=${usuario}&senha=${senha}`);
-                aluno_service.listar().then(resposta => {
-                    if (resposta.length === 0) {
-                        swal('Senha ou Login Incorretos!', '- tente novamente -', 'error');
-                    } else {
-                        console.log(resposta);
-                        let id_login = resposta[0].id;
-                        let nome_login = resposta[0].nome;
-                        localStorage.setItem('id', id_login);
-                        localStorage.setItem('e-mail', usuario);
-                        localStorage.setItem('nome', nome_login);
-                        window.location.assign("./pagina_aluno.html");
-                    }
-                })
-            })
-
-        } else if (tipo_loginx === "ccx") {
-            $("#logx").css('background', 'linear-gradient(whitesmoke,lightgreen');
-            $("#obx").hide("fast");
-            $("#tipologinx").css('background', 'lightgreen');
-            $("#wallx").css('padding-bottom', '6.8%');
-
-            document.getElementById("fazer_login").onclick = function () {
-                let email = document.getElementById("nome_login").value;
-                console.log(email);
-                let senha2 = document.getElementById("senha_login").value;
-                console.log(senha2);
-
-                let loginservice = new ProfessorService(`http://localhost:3000/professores?email=${email}&senha=${senha2}`);
-                loginservice.listar().then(results => {
-                    if (results.length === 0) {
-                        swal('Senha ou Login Incorretos!', '- tente novamente -', 'error');
-                    } else {
-                        console.log(results);
-                        const id = results[0].id;
-                        localStorage.setItem('id', id);
-                        window.location.assign("./professor_pagina.html")
-                    }
-                })
-            }
-
-        }
-    }
-}
-*/

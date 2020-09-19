@@ -24,7 +24,6 @@ class Aluno_Service {
         }).then(resposta => resposta.json())
     }
 }
-
 class PROFESSOR {
     constructor(nome, senha, email) {
         this.nome = nome;
@@ -32,7 +31,6 @@ class PROFESSOR {
         this.email = email;
     }
 }
-
 class ProfessorService {
     constructor(url) {
         this.url = url
@@ -59,12 +57,15 @@ for (let i = 0; i <= tipo_userx.length - 1; i++) {
         tipo_loginx = event.target.id;
         console.log(tipo_loginx);
         if (tipo_loginx === "bbx2") {
-            $("#logx2").css('background', 'lightblue');
+            $("#logx2").css('background', 'linear-gradient(lightblue,whitesmoke,whitesmoke)');
             $("#escolhaxa").css('background', 'lightblue');
+            $("#obx02").hide("fast");
+            $("#wallx2").css('padding-bottom', '3.2%');
         } else if (tipo_loginx === "ccx2") {
-            $("#logx2").css('background', 'darkgray');
-            $("#escolhaxa").css('background', 'darkgray');
-
+            $("#logx2").css('background', 'linear-gradient(lightgreen,whitesmoke,whitesmoke)');
+            $("#escolhaxa").css('background', 'lightgreen');
+            $("#obx02").hide("fast");
+            $("#wallx2").css('padding-bottom', '3.2%');
         }
     }
 }
@@ -79,7 +80,6 @@ document.getElementById("fazer_cadastro").onclick = function () {
             aluno_service2.inserir(aluno).then(resposta => {
                 window.location.assign("./logx.html");
             })
-
         } else if (tipo_loginx === "ccx2") {
             const professor_service = new ProfessorService("http://localhost:3000/professores");
             const professor = new PROFESSOR(nome, senha, email);
@@ -87,71 +87,10 @@ document.getElementById("fazer_cadastro").onclick = function () {
                 window.location.assign("./logx.html");
             })
         }
-        if(tipo_loginx == ""){
-            swal('cadastro Inválido!','-ESCOLHA UM TIPO DE LOGIN','error');
-        }
-    }else{
-        swal('Cadastro Inválido!', '- UM DOS CAMPOS VAZIOS -', 'error');
-    }
-} 
-
-/*for(let i = 0; i <= tipo_userx2.length -1; i++){
-    tipo_userx2[i].onclick = function () {
-        tipo_loginx2 = event.target.id;
-        if(tipo_loginx2 === "bbx2"){
-            $("#logx2").css('background','lightblue');
-            $("#escolhaxa").css('background','lightblue');
-
-            $("#fazer_cadastro").click(function(){
-                let usuario = $("#nome_cadastro").val();
-                let email = $("#email_cadastro").val();
-                let senha = $("#senha_cadastro").val();
-                console.log(usuario,email,senha);
-                let aluno = new Aluno(email,usuario,senha);
-                let aluno_service2 = new Aluno_Service("http://localhost:3000/Alunos");
-                if (nome != "" || senha != "" || email != ""){
-                aluno_service2.inserir(aluno).then(resposta =>{
-                    console.log(resposta);
-                    window.location.assign("./logx.html");
-                    })
-
-                } else { $("#fazer_cadastro").click(function(){
-                    swal('Senha ou Login Incorretos!', '- tente novamente -', 'error');
-                })
-                }
-            })
-        
-        }
-        else if(tipo_loginx2 === "ccx2"){
-            $("#logx2").css('background','darkgray');
-            $("#escolhaxa").css('background','darkgray');
-
-            document.getElementById("fazer_cadastro").onclick = function (){
-                let nome = document.getElementById("nome_cadastro").value;
-                let senha = document.getElementById("senha_cadastro").value;
-                let email = document.getElementById("email_cadastro").value;
-                console.log(nome,senha,email);
-                let professor_service = new ProfessorService("http://localhost:3000/professores");
-                if (nome != "" || senha != "" || email != ""){
-                    let professor = new PROFESSOR(nome, senha, email);
-                    professor_service.inserir(professor).then(resposta =>{
-                        console.log(resposta);
-                        window.location.assign("./logx.html");
-                    })
-
-                } else { $("#fazer_cadastro").click(function(){
-                    swal('Senha ou Login Incorretos!', '- tente novamente -', 'error');
-                })
-                }
-            }
-
-        } else { 
-            document.getElementById("fazer_cadastro").onclick = function (){
+        if (tipo_loginx == "") {
             swal('Cadastro Inválido!', '- escolha um tipo de usuário -', 'error');
-            
-            } 
         }
-
-    } 
+    } else {
+        swal('Cadastro Inválido!', '- preencha todos os campos -', 'error');
+    }
 }
-*/
