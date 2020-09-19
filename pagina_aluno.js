@@ -451,8 +451,10 @@ document.getElementById("exercicios").onclick = function () {
                 ul.append(li);
                 button.onclick = function () {
                     const id_lista_teorica = event.target.id;
-                    const lista_teorica_servidor_service = new Lista_Teorica_Servidor_Service(`http://localhost:3000/Lista_Teorica_Servidor?id_aluno=${id_login}&id_lista_teorica=${id_lista_teorica}`);
+                    console.log(id_lista_teorica);
+                    const lista_teorica_servidor_service = new Lista_Teorica_Servidor_Service(`http://localhost:3000/Lista_Teorica_Servidor/${id_lista_teorica}`);
                     lista_teorica_servidor_service.listar().then(resposta =>{
+                    console.log(resposta);
                     let lista_pergunta_server;
                     let opcoes_server;
                     let opcoes_corretas_server;
@@ -472,6 +474,7 @@ document.getElementById("exercicios").onclick = function () {
                     lista_pergunta_server = resposta.perguntas
                     opcoes_server = resposta.opcoes
                     opcoes_corretas_server = resposta.opcoes_certas;
+                    console.log(lista_pergunta_server);
                     opcoes_server.push(lista_opcoes_falsas);
                     $("#place_lista_teoricas").hide("fast");
                     $("#fazer_exercicio_lista_teorica").show("fast");
@@ -1609,7 +1612,7 @@ document.getElementById("salas_presentes").onclick = function () {
     $("#comentario").hide("fast");
     $("#area_de_escolhas").hide("fast");
     $("#escolha_de_sala").show("fast");
-    let sala_service = new Sala_Service(`http://localhost:3000/salas?participantes%20=%20%${email_login}`);
+    let sala_service = new Sala_Service(`http://localhost:3000/salas?participantes_like=${email_login}`);
     sala_service.listar().then(resposta => {
         console.log(resposta);
         let ul = document.getElementById("salas_inseridas");
@@ -1638,7 +1641,6 @@ document.getElementById("salas_presentes").onclick = function () {
                         if (data_de_entrega != "") {
                             console.log(data_de_entrega);
                             target_date = new Date(data_de_entrega).getTime();
-
                             function DATA_ENTREGA() {
                                 target_date = new Date(data_de_entrega).getTime();
                                 console.log(target_date)

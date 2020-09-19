@@ -648,12 +648,12 @@ document.getElementById("salas_criadas").onclick = function () {
                                 $("#wallprofx").css("padding-bottom", '12%');
                                 let nome_da_lista_teorica = $("#nome_lista_teorica").val();
                                 let tempo_de_fazer_lista = $("#tempo_fazer_lista").val();
-                                let data_entrega = document.getElementById("data_entrega").value;
+                                let data_entrega = $("#data_entrega").val();
                                 console.log(data_entrega);
                                 let mes;
 
-                                let data_de_entrega;
-                                if (data_entrega != " ") {
+                                let data_de_entrega = "";
+                                if (data_entrega != "") {
                                     mes = data_entrega.split(' ');
                                     console.log(mes[0]);
                                     if (mes[0] == 'Janeiro' || mes[0] == 'janeiro') {
