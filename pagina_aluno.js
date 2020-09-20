@@ -450,6 +450,7 @@ document.getElementById("exercicios").onclick = function () {
                 li.append(button);
                 ul.append(li);
                 button.onclick = function () {
+                    $("#infalunx").hide("fast");
                     const id_lista_teorica = event.target.id;
                     console.log(id_lista_teorica);
                     const lista_teorica_servidor_service = new Lista_Teorica_Servidor_Service(`http://localhost:3000/Lista_Teorica_Servidor/${id_lista_teorica}`);
@@ -729,6 +730,7 @@ document.getElementById("exercicios").onclick = function () {
                 li.append(button);
                 ul.append(li);
                 button.onclick = function () {
+                    $("#infalunx").hide("fast");
                     const id_lista_teorica = event.target.id;
                     const lista_teorica_aluno = new Lista_Teorica_Aluno_Service(`http://localhost:3000/Lista_Teorica_aluno/${id_lista_teorica}`)
                     lista_teorica_aluno.listar().then(resposta =>{

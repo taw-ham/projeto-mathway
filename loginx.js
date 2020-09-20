@@ -101,6 +101,6 @@ document.getElementById("fazer_login").onclick = function () {
             }
         })
     } else {
-        swal('Login Inválido!', '- email ou senha incorretos -', 'error');
+        swal('Login Inválido!', '- escolha seu tipo de usuário -', 'error');
     }
 }
