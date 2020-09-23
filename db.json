@@ -15,15 +15,19 @@
   ],
   "salas": [
     {
-      "nome": "sala demonstração",
+      "nome": "sala_teste",
+      "codigo": "1234",
       "id_criador": "1",
-      "codigo": "r5ygr",
-      "participantes": [
-        "taw.ham.balbino@gmail.com"
-      ],
-      "participantes_id": [
-        "0"
-      ],
+      "participantes": [],
+      "participantes_id": [],
+      "id": 0
+    },
+    {
+      "nome": "teste",
+      "id_criador": "1",
+      "codigo": "uugqa",
+      "participantes": [],
+      "participantes_id": [],
       "id": 1
     }
   ],
@@ -140,6 +144,56 @@
       "Data_de_entrega": "January 29,2021",
       "tempo_de_termino": "0:20:0",
       "id": 1
+    },
+    {
+      "nome": "teste",
+      "perguntas": [
+        "(UFAM) O menor valor não negativo côngruo ao arco de 21 π/5 rad é igual a:",
+        "(ENEM 2017)Raios de luz solar estão atingindo a superfície de um lago formando um ângulo x com a sua superfície, conforme indica a figura.Em determinadas condições, pode-se supor que a intensidade luminosa desses raios, na superfície do lago, seja dada aproximadamente por l(x) = k.sen(x) sendo k uma constante, e supondo-se que x está entre 0˚ e 90˚.</br><img src = 'https://d2q576s0wzfxtl.cloudfront.net/2017/11/08151533/quest%C3%A3o-138-enem-2017.png'></br>Quando x = 30˚, a intensidade luminosa se reduz a qual percentual de seu valor máximo?",
+        "quanto é 1 + 1",
+        "quanto é 2 + 2?"
+      ],
+      "opcoes": [
+        [
+          "π/5 rad",
+          "7 π/5 rad",
+          "π rad",
+          "9 π/5 rad",
+          "2 π rad"
+        ],
+        [
+          "33%",
+          "50%",
+          "57%",
+          "70%",
+          "86%"
+        ],
+        [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        [
+          "4",
+          "6",
+          "8",
+          "10",
+          "12"
+        ]
+      ],
+      "opcoes_certas": [
+        "π/5 rad",
+        "50%",
+        "2",
+        "4"
+      ],
+      "id_criador": "1",
+      "id_sala": "2",
+      "Data_de_entrega": "",
+      "tempo_de_termino": "",
+      "id": 2
     }
   ],
   "Alunos": [
@@ -2712,6 +2766,156 @@
       "tema": " Função Inversa ",
       "id_tema": "18",
       "id": 171
+    },
+    {
+      "pergunta": "quanto é 1 + 1",
+      "opcoes": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "opcao_certa": "12",
+      "id_criador": "1",
+      "tema": "matriz",
+      "id_tema": "1",
+      "id": 172
+    },
+    {
+      "pergunta": "quanto é 1 + 1",
+      "opcoes": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "opcao_certa": "3",
+      "id_criador": "1",
+      "tema": "matriz",
+      "id_tema": "1",
+      "id": 173
+    },
+    {
+      "pergunta": "quanto é 1 +1?",
+      "opcoes": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "8"
+      ],
+      "opcao_certa": "13",
+      "id_criador": "1",
+      "tema": "matriz",
+      "id_tema": "1",
+      "id": 174
+    },
+    {
+      "pergunta": "e",
+      "opcoes": [
+        "e",
+        "f",
+        "f",
+        "r",
+        "e"
+      ],
+      "opcao_certa": "e",
+      "id_criador": "1",
+      "tema": "matriz",
+      "id_tema": "1",
+      "id": 175
+    },
+    {
+      "pergunta": "e",
+      "opcoes": [
+        "a",
+        "v",
+        "v",
+        "e",
+        "e"
+      ],
+      "opcao_certa": "e",
+      "id_criador": "1",
+      "tema": "matriz",
+      "id_tema": "1",
+      "id": 176
+    },
+    {
+      "pergunta": "1",
+      "opcoes": [
+        "2",
+        "3",
+        "5",
+        "4",
+        "3"
+      ],
+      "opcao_certa": "q",
+      "id_criador": "1",
+      "tema": "matriz",
+      "id_tema": "1",
+      "id": 177
+    },
+    {
+      "pergunta": "quanto é 1 + 1",
+      "opcoes": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "opcao_certa": "2",
+      "id_criador": "1",
+      "tema": "matriz",
+      "id_tema": "1",
+      "id": 178
+    },
+    {
+      "pergunta": "quanto é 2 + 2?",
+      "opcoes": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "opcao_certa": "4",
+      "id_criador": "1",
+      "tema": "matriz",
+      "id_tema": "1",
+      "id": 179
+    },
+    {
+      "pergunta": "quanto é 1 + 2?",
+      "opcoes": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "opcao_certa": "2",
+      "id_criador": "1",
+      "tema": "Função Afim",
+      "id_tema": "11",
+      "id": 180
+    },
+    {
+      "pergunta": "quanto é 4 +5",
+      "opcoes": [
+        "9",
+        "12",
+        "15",
+        "18",
+        "21"
+      ],
+      "opcao_certa": "9",
+      "id_criador": "1",
+      "tema": "Função Afim",
+      "id_tema": "11",
+      "id": 181
     }
   ],
   "comentario": [
@@ -2728,7 +2932,6 @@
       "id": 2
     }
   ],
-  "Lista_Teorica_aluno": [
-  ],
+  "Lista_Teorica_aluno": [],
   "Lista_Teorica_Servidor": []
 }

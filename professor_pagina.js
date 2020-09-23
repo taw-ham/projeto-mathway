@@ -200,7 +200,12 @@ class NOTA_SERVICE {
         }).then(resposta => resposta.json())
     }
 }
-var id_login = localStorage.getItem('id');
+const id_login = localStorage.getItem('id');
+const nome_user = localStorage.getItem('nome');
+const email_user = localStorage.getItem('email');
+document.getElementById("nome_user").innerText = `NOME: ${nome_user}`;
+document.getElementById("email_user").innerText = `E-MAIL: ${email_user}`;
+
 
 function pergunta() {
     let pergunta_professor = document.getElementById("pergunta_professor").value;
@@ -217,6 +222,7 @@ function opcoes_correta() {
     let opcao_correta = document.getElementById("opcao_correta").value;
     let opcoes = document.getElementById("opcao_certa").innerHTML = opcao_correta;
 }
+
 $("#look_participantes").hide("fast");
 $("#area_de_criar_sala").hide("fast");
 $("#area_acessar_sala").hide("fast");
@@ -231,11 +237,7 @@ $("#infprofx").hide("fast");
 $("#codeprofx2").hide("fast");
 $("#codeprofx3").hide("fast");
 
-document.getElementById("voltar_area_de_escolhas_inicial3").onclick = function () {
-    $("#wallprofx").css('padding-bottom', '19%');
-    $("#menu_escolhas").show("fast");
-    $("#area_de_criar_sala").hide("fast");
-}
+
 
 document.getElementById("salas_criadas").onclick = function () {
     $("#wallprofx").css('padding-bottom', '28%');
@@ -246,17 +248,21 @@ document.getElementById("salas_criadas").onclick = function () {
     $("#menu_escolhas").hide("fast");
     let sala_service = new Salas_Service(`http://localhost:3000/salas?id_criador=${id_login}`);
     sala_service.lista().then(resposta => {
+        console.log(resposta)
         let ul = document.getElementById("opcoes_salas");
         for (let i = 0; i <= resposta.length - 1; i++) {
             let button_acessar_sala = document.createElement("button");
+            let button_apagar_sala = document.createElement("button");
             let li = document.createElement("li");
+
             li.setAttribute('id', resposta[i].id)
             button_acessar_sala.innerHTML = resposta[i].nome;
+            button_apagar_sala.innerText = "apagar"
+            button_apagar_sala.setAttribute("id", resposta[i].id);
+
+            console.log(button_acessar_sala)
             button_acessar_sala.setAttribute("id", resposta[i].id);
             li.append(button_acessar_sala);
-            let button_apagar_sala = document.createElement("button");
-            button_apagar_sala.innerHTML = "apagar sala" + " " + resposta[i].nome;
-            button_apagar_sala.setAttribute("id", resposta[i].id) // atribuindo o identificador que tem no banco de dados ao id do elemento button
             li.append(button_apagar_sala);
             ul.append(li);
             button_apagar_sala.onclick = function () {
@@ -707,15 +713,18 @@ document.getElementById("salas_criadas").onclick = function () {
                                         let pergunta_service = new Perguntas_Service(`http://localhost:3000/perguntas?id_tema=${temas_lista[i]}`);
                                         pergunta_service.listar().then(resposta => {
                                             ul.append(li_nome);
-
                                             for (let i = 0; i <= resposta.length - 1; i++) {
                                                 let li = document.createElement("li");
+                                                li.setAttribute("id", resposta[i].id)
                                                 let button = document.createElement("button");
-                                                button.innerHTML = resposta[i].pergunta;
                                                 button.setAttribute("id", resposta[i].id)
+                                                button.innerHTML = resposta[i].pergunta;
                                                 li.append(button);
                                                 ul.append(li);
                                                 button.onclick = function () {
+                                                    let id_pergunta = resposta[i].id
+                                                    console.log(id_pergunta);
+                                                    $("#perguntas_servidor > li").remove(`#${id_pergunta}`)
                                                     lista_perguntas.push(resposta[i].pergunta);
                                                     console.log(lista_perguntas);
                                                     lista_opcoes.push(resposta[i].opcoes);
@@ -732,11 +741,26 @@ document.getElementById("salas_criadas").onclick = function () {
                                     var opcoes_check = [];
                                     let click = 0;
                                     let opcoes = [];
+                                    const opcoes_letras = ['a','b','c','d','e'];
+                                    
 
                                     document.getElementById("salvar_opcao").onclick = function () {
+                                        $("#lugar_opcoes").empty()
+
+                                                                                
                                         let opcoes_user = document.getElementById("opcoes_professor").value;
                                         if (opcoes_user != "") {
+                                            $("#lugar_opcoes").empty();
+                                            
                                             opcoes.push(opcoes_user);
+                                            let div_opcoes = document.getElementById("lugar_opcoes");
+                                            for (let i = 0; i <= opcoes.length - 1; i++) {
+                                                let p = document.createElement("p").innerText = opcoes_letras[i] + ") " + opcoes[i];
+                                                let br = document.createElement("br");
+                                                div_opcoes.append(p);
+                                                div_opcoes.append(br);
+                                       
+                                            }
                                             document.getElementById("opcoes_professor").value = "";
                                             click++;
                                             if (click == 5) {
@@ -745,13 +769,10 @@ document.getElementById("salas_criadas").onclick = function () {
                                                     console.log(opcoes_check)
 
                                                 }
-                                                for (let i = 0; i <= opcoes_check.length - 1; i++) {
-                                                    opcoes.shift();
-
-
-                                                }
+                           
                                                 console.log(opcoes)
                                                 click = 0;
+                            
                                             }
 
                                         } else {
@@ -778,7 +799,6 @@ document.getElementById("salas_criadas").onclick = function () {
                                     }
 
                                     document.getElementById("adicionar_pergunta").onclick = function () {
-
                                         let pergunta_user = document.getElementById("pergunta_professor");
                                         let opcoes_user = document.getElementById("opcoes_professor");
                                         let opcao_correta_user = document.getElementById("opcao_correta");
@@ -790,6 +810,8 @@ document.getElementById("salas_criadas").onclick = function () {
                                         } else {
 
                                             if (click_salvar_tema > 0) {
+                                
+
                                                 pergunta_user = pergunta_user.value;
                                                 opcoes_user = opcoes_user.value;
                                                 opcao_correta_user = opcao_correta_user.value;
@@ -800,7 +822,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                                 opcoes_certas.push(opcao_correta_user)
                                                 console.log(opcoes_certas);
                                                 cont_perguntas++;
-                                                contador_perguntas.innerHTML = cont_perguntas + "pergunta(s) adicionadas";
+                                                contador_perguntas.innerHTML = cont_perguntas + " pergunta(s) adicionadas";
                                                 let pergunta = new Pergunta(pergunta_user, opcoes_check, opcao_correta_user, id_login, nome_tema, id_tema);
                                                 let pergunta_service = new Perguntas_Service("http://localhost:3000/perguntas");
                                                 pergunta_service.inserir(pergunta).then(resposta => {
@@ -813,6 +835,9 @@ document.getElementById("salas_criadas").onclick = function () {
                                                 document.getElementById("opcoes_professor").value = "";
                                                 document.getElementById("opcao_correta").value = "";
                                                 click_salvar_tema = 0;
+                                                $("#lugar_opcoes,#pergunta_digitada,#opcoes,#opcao_certa").empty();
+                                                
+                                                opcoes = [];
 
                                             } else {
                                                 swal('Questão Inválida!', '- escolha algum tema para sua questão -', 'error');
@@ -860,6 +885,7 @@ document.getElementById("salas_criadas").onclick = function () {
     }
 }
 document.getElementById("criar_sala").onclick = function () {
+    
     $("#menu_escolhas").hide("fast");
     $("#area_de_criar_sala").show("fast");
     $("#nome_sala").show("fast");
@@ -869,30 +895,75 @@ document.getElementById("criar_sala").onclick = function () {
         if (nome_sala == "") {
             swal('Sala Inválida!', '- escolha algum nome -', 'error');
         } else {
-            $("#nome_sala").hide("fast");
-            $("#proximo_passo").show("fast");
-            let aleatorio = Math.random().toString(36).substr(2, 5);
-            let sala_service = new Salas_Service("http://localhost:3000/salas");
-            sala_service.lista().then(resposta => {
-                for (let i = 0; i <= resposta.length - 1; i++) {
-                    if (resposta[i].codigo == aleatorio) {
-                        aleatorio = Math.random().toString(36).substr(2, 5);
-                        $("#situacao_codigo").text("criando código")
-                        console.log(aleatorio)
-                    }
+            const sala_service = new Salas_Service(`http://localhost:3000/salas?id_criador=${id_login}&nome=${nome_sala}`);
+            sala_service.lista().then(response => {
+                if (response.length > 0) {
+                    swal('nome de sala existente', '-tente novamente-', 'error');
+                } else {
+                    $("#nome_sala").hide("fast");
+                    $("#proximo_passo").show("fast");
+                    let aleatorio = Math.random().toString(36).substr(2, 5);
+                    const sala_service = new Salas_Service("http://localhost:3000/salas");
+                    sala_service.lista().then(resposta => {
+                        for (let i = 0; i <= resposta.length - 1; i++) {
+                            if (resposta[i].codigo == aleatorio) {
+                                aleatorio = Math.random().toString(36).substr(2, 5);
+                                $("#situacao_codigo").text("criando código")
+                            } else {
+                                $("#situacao_codigo").text(`Código: ${aleatorio}`)
+                                document.getElementById("criar_sala_especifica").onclick = function () {
+                                    let participantes = [];
+                                    let participantes_id = []
+                                    let sala = new Salas(nome_sala, id_login, aleatorio, participantes, participantes_id);
+                                    let sala_service = new Salas_Service("http://localhost:3000/salas");
+                                    sala_service.inserir(sala).then(resposta => {
+                                        location.reload();
+                                    })
+                                }
+                            }
+                        }
+                    })
                 }
-                let participantes = [];
-                let participantes_id = []
-                let sala = new Salas(nome_sala, id_login, aleatorio, participantes, participantes_id);
-                let sala_service = new Salas_Service("http://localhost:3000/salas");
-                sala_service.inserir(sala).then(resposta => {
-                    $("#situacao_codigo").text(`Código: ${aleatorio}`)
-                    console.log(resposta)
-                    document.getElementById("criar_sala_especifica").onclick = function () {
-                        location.reload();
-                    }
-                })
             })
+            
+            /* $("#nome_sala").hide("fast");
+             $("#proximo_passo").show("fast");
+             let aleatorio = Math.random().toString(36).substr(2, 5);
+             const sala_service = new Salas_Service("http://localhost:3000/salas");
+             sala_service.lista().then(resposta => {
+                 for (let i = 0; i <= resposta.length - 1; i++) {
+                     if (resposta[i].codigo == aleatorio) {
+                         aleatorio = Math.random().toString(36).substr(2, 5);
+                         $("#situacao_codigo").text("criando código")
+                     }
+                 }
+                document.getElementById("voltar_area_de_escolhas_inicial3").onclick = function () {
+    $("#wallprofx").css('padding-bottom', '19%');
+    $("#menu_escolhas").show("fast");
+    $("#area_de_criar_sala").hide("fast");
+}
+
+                 let participantes = [];
+                 let participantes_id = []
+                 let sala = new Salas(nome_sala, id_login, aleatorio, participantes, participantes_id);
+                 let sala_service = new Salas_Service("http://localhost:3000/salas");
+                 sala_service.inserir(sala).then(resposta => {
+                     $("#situacao_codigo").text(`Código: ${aleatorio}`)
+                     console.log(resposta)
+                     document.getElementById("criar_sala_especifica").onclick = function () {
+                         location.reload();
+                     }
+                 })
+             })*/
         }
+    }
+    document.getElementById("voltar_area_de_escolhas_inicial3").onclick = function () {
+        $("#wallprofx").css('padding-bottom', '19%');
+        $("#menu_escolhas").show("fast");
+        $("#area_de_criar_sala").hide("fast");
+        document.getElementById("sala_nome").value = "";
+        $("#situacao_codigo").empty();
+        $("#codigo_sala").empty() 
+       
     }
 }

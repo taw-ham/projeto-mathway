@@ -949,7 +949,8 @@ body {
 }
 
 .perserverx li button {
-    background-color: whitesmoke;
+    
+   
     margin-left: -0.5%;
 }
 
@@ -1625,3 +1626,15 @@ body {
     border-radius: 30px;
     padding: 0.5%;
 }
+#lixeira{
+    background-color:#e74c3c;
+    width: 8%;
+    height: 20px;
+    text-align: center;
+    color: white;
+    padding: 0.5%;
+   
+    display: inline-block;
+   
+  }
+  

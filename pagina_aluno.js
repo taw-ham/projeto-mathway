@@ -250,10 +250,11 @@ class Lista_Teorica_Servidor_Service {
         }).then(resposta => resposta.json())
     }
 }
-
-var id_login = localStorage.getItem('id');
-var email_login = localStorage.getItem('e-mail');
-var nome_login = localStorage.getItem('nome')
+const id_login = localStorage.getItem('id');
+const email_login = localStorage.getItem('e-mail');
+const nome_login = localStorage.getItem('nome')
+document.getElementById("nome_user").innerText = `NOME: ${nome_login}`;
+document.getElementById("email_user").innerText = `E-MAIL: ${email_login}`
 $("#fazer_perguntas_erradas").hide()
 $("#escolha_de_sala").hide();
 $("#area_escolha_lista_teorica").hide();
@@ -1337,11 +1338,15 @@ document.getElementById("exercicios").onclick = function () {
                                 for (let i = 0; i <= resposta.length - 1; i++) {
                                     let li = document.createElement("li");
                                     let button = document.createElement("button");
+                                    li.setAttribute('id',resposta[i].id)
                                     button.innerHTML = resposta[i].pergunta;
                                     button.setAttribute('id', resposta[i].id);
                                     li.append(button);
                                     ul.append(li);
                                     button.onclick = function () {
+                                        let id_pergunta = resposta[i].id
+                                        console.log(id_pergunta)
+                                        $("#perguntasserver > li").remove(`#${id_pergunta}`)
                                         contador_perguntas_adicionadas++;
                                         $("#contador_perguntas").text(`${contador_perguntas_adicionadas} pergunta(s) adicionadas`);
                                         lista_pergunta_server.push(resposta[i].pergunta);

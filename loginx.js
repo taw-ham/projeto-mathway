@@ -96,7 +96,11 @@ document.getElementById("fazer_login").onclick = function () {
             } else {
                 console.log(results);
                 const id = results[0].id;
+                const email = results[0].email;
+                const nome_user = results[0].nome;
                 localStorage.setItem('id', id);
+                localStorage.setItem('email',email);
+                localStorage.setItem('nome',nome_user);
                 window.location.assign("./professor_pagina.html")
             }
         })

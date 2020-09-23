@@ -56,13 +56,13 @@
                         <h2> Dados </h2>
                     </li>
                     <li>
-                        <h1> Nome: </h1>
+                        <h1 id="nome_user"> Nome: </h1>
                     </li>
                     <li>
                         <h1> Usuário: <strong>Professor</strong></h1>
                     </li>
                     <li>
-                        <h1> Email: example@gmail.com </h1>
+                        <h1 id="email_user"> Email: example@gmail.com </h1>
                     </li>
                     <li><img height="25%" width="25%"
                             src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmaxcdn.icons8.com%2FShare%2Ficon%2Fwin10%2FCinema%2Fanonymous_mask1600.png&f=1&nofb=1" />
@@ -85,15 +85,18 @@
                     <h1> Nome da Sala </h2>
                         <input id="sala_nome" placeholder="Digite o nome da sala"></br>
                         <button class="btn btn-primary" id="salva_nome_sala"> Salvar nome da sala </button>
-                        <button class="btn btn-primary" id="voltar_area_de_escolhas_inicial3"> Voltar </button>
+
+
                 </div>
                 <div id="proximo_passo">
                     <h1> Geração de Código: </h2>
                         <p style="margin-top: -3%" id="situacao_codigo"></p>
                         <p style="margin-top: -6%" id="codigo_sala"> </p>
                         <button class="btn btn-primary" id="criar_sala_especifica"> Criar sala </button>
-                        <button class="btn btn-primary" id="voltar_area_de_escolhas_inicial3"> Voltar </button>
+
                 </div>
+                <button class="btn btn-primary" id="voltar_area_de_escolhas_inicial3"> Voltar </button>
+
             </div>
 
         </div>
@@ -130,6 +133,8 @@
 
             <ul id="opcoes_salas">
             </ul>
+            
+
 
             <button class="btn btn-primary" id="voltar_da_area_acessar_sala"> Voltar </button>
         </div>
@@ -225,7 +230,7 @@
 
                 <h1> Visualização </h1>
                 <p id="pergunta_digitada"> </p>
-
+            
                 <h1> Digite as opcões da sua questão (uma opção por vez) </h1>
                 <small class="form-text text-muted"> O máximo são 5 opcões que vão da letra "A-E" e no mínimo 5 opcões
                 </small>
@@ -237,6 +242,9 @@
 
                 <h1> Visualização </h1>
                 <p id="opcoes"> </p>
+                <div id="lugar_opcoes">
+                    
+                </div>
 
                 <h1> Digite sua opção correta das opções </h1>
                 <input id="opcao_correta" oninput="opcoes_correta()" placeholder="Digite a opção correta">
