@@ -21,14 +21,6 @@
       "participantes": [],
       "participantes_id": [],
       "id": 0
-    },
-    {
-      "nome": "teste",
-      "id_criador": "1",
-      "codigo": "uugqa",
-      "participantes": [],
-      "participantes_id": [],
-      "id": 1
     }
   ],
   "lista_teoricas": [
@@ -225,7 +217,20 @@
   ],
   "notas_professor": [],
   "notas_servidor": [],
-  "notas_aluno": [],
+  "notas_aluno": [
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 100,
+      "id_aluno": "0",
+      "id_lista_teorica": 1,
+      "nome_lista_teorica": "wwe",
+      "perguntas_certas": [
+        "(ENEM 2017)Raios de luz solar estão atingindo a superfície de um lago formando um ângulo x com a sua superfície, conforme indica a figura.Em determinadas condições, pode-se supor que a intensidade luminosa desses raios, na superfície do lago, seja dada aproximadamente por l(x) = k.sen(x) sendo k uma constante, e supondo-se que x está entre 0˚ e 90˚.</br><img src = 'https://d2q576s0wzfxtl.cloudfront.net/2017/11/08151533/quest%C3%A3o-138-enem-2017.png'></br>Quando x = 30˚, a intensidade luminosa se reduz a qual percentual de seu valor máximo?"
+      ],
+      "perguntas_erradas": [],
+      "id": 1
+    }
+  ],
   "perguntas": [
     {
       "id": 2,
@@ -2932,6 +2937,27 @@
       "id": 2
     }
   ],
-  "Lista_Teorica_aluno": [],
+  "Lista_Teorica_aluno": [
+    {
+      "nome": "wwe",
+      "id_criador": "0",
+      "perguntas": [
+        "(ENEM 2017)Raios de luz solar estão atingindo a superfície de um lago formando um ângulo x com a sua superfície, conforme indica a figura.Em determinadas condições, pode-se supor que a intensidade luminosa desses raios, na superfície do lago, seja dada aproximadamente por l(x) = k.sen(x) sendo k uma constante, e supondo-se que x está entre 0˚ e 90˚.</br><img src = 'https://d2q576s0wzfxtl.cloudfront.net/2017/11/08151533/quest%C3%A3o-138-enem-2017.png'></br>Quando x = 30˚, a intensidade luminosa se reduz a qual percentual de seu valor máximo?"
+      ],
+      "opcoes": [
+        [
+          "33%",
+          "50%",
+          "57%",
+          "70%",
+          "86%"
+        ]
+      ],
+      "opcoes_certas": [
+        "50%"
+      ],
+      "id": 1
+    }
+  ],
   "Lista_Teorica_Servidor": []
 }

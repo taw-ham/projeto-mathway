@@ -203,8 +203,14 @@ class NOTA_SERVICE {
 const id_login = localStorage.getItem('id');
 const nome_user = localStorage.getItem('nome');
 const email_user = localStorage.getItem('email');
-document.getElementById("nome_user").innerText = `NOME: ${nome_user}`;
-document.getElementById("email_user").innerText = `E-MAIL: ${email_user}`;
+document.getElementById("nome_user").innerText = `Nome: ${nome_user}`;
+document.getElementById("email_user").innerText = `E-mail: ${email_user}`;
+const logout = document.getElementById("logout");
+logout.onclick = function(){
+    localStorage.removeItem('id');
+    localStorage.removeItem('nome');
+    localStorage.removeItem('email');
+}
 
 
 function pergunta() {
@@ -257,7 +263,7 @@ document.getElementById("salas_criadas").onclick = function () {
 
             li.setAttribute('id', resposta[i].id)
             button_acessar_sala.innerHTML = resposta[i].nome;
-            button_apagar_sala.innerText = "apagar"
+            button_apagar_sala.innerHTML = "<img height='10%' width='10%' src='./fotis/error.png'>"
             button_apagar_sala.setAttribute("id", resposta[i].id);
 
             console.log(button_acessar_sala)
@@ -450,7 +456,7 @@ document.getElementById("salas_criadas").onclick = function () {
                 document.getElementById("ver_lista_teorica").onclick = function () {
                     $("#wallprofx").css('background-image', 'url("./fotis/classroom.jpg")');
                     $("#wallprofx").css('background-size', 'cover');
-                    $("#wallprofx").css('padding-bottom', '18%');
+                    $("#wallprofx").css('padding-bottom', '30%');
                     $("#infprofx").hide("fast");
                     $("#codeprofx2").hide("fast");
                     $("#opcoes_da_sala").hide("fast");
@@ -467,7 +473,7 @@ document.getElementById("salas_criadas").onclick = function () {
                             button_acessar_lista_teorica.innerHTML = resposta[i].nome;
                             button_acessar_lista_teorica.setAttribute("id", resposta[i].id);
                             let button_apagar_lista_teorica = document.createElement("button");
-                            button_apagar_lista_teorica.innerHTML = "apagar lista " + resposta[i].nome;
+                            button_apagar_lista_teorica.innerHTML = "<img height='10%' width='10%' src='./fotis/error.png'>"
                             button_apagar_lista_teorica.setAttribute("id", resposta[i].id);
                             li.append(button_acessar_lista_teorica);
                             li.append(button_apagar_lista_teorica);
@@ -741,17 +747,17 @@ document.getElementById("salas_criadas").onclick = function () {
                                     var opcoes_check = [];
                                     let click = 0;
                                     let opcoes = [];
-                                    const opcoes_letras = ['a','b','c','d','e'];
-                                    
+                                    const opcoes_letras = ['a', 'b', 'c', 'd', 'e'];
+
 
                                     document.getElementById("salvar_opcao").onclick = function () {
                                         $("#lugar_opcoes").empty()
 
-                                                                                
+
                                         let opcoes_user = document.getElementById("opcoes_professor").value;
                                         if (opcoes_user != "") {
                                             $("#lugar_opcoes").empty();
-                                            
+
                                             opcoes.push(opcoes_user);
                                             let div_opcoes = document.getElementById("lugar_opcoes");
                                             for (let i = 0; i <= opcoes.length - 1; i++) {
@@ -759,7 +765,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                                 let br = document.createElement("br");
                                                 div_opcoes.append(p);
                                                 div_opcoes.append(br);
-                                       
+
                                             }
                                             document.getElementById("opcoes_professor").value = "";
                                             click++;
@@ -769,10 +775,10 @@ document.getElementById("salas_criadas").onclick = function () {
                                                     console.log(opcoes_check)
 
                                                 }
-                           
+
                                                 console.log(opcoes)
                                                 click = 0;
-                            
+
                                             }
 
                                         } else {
@@ -810,7 +816,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                         } else {
 
                                             if (click_salvar_tema > 0) {
-                                
+
 
                                                 pergunta_user = pergunta_user.value;
                                                 opcoes_user = opcoes_user.value;
@@ -836,7 +842,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                                 document.getElementById("opcao_correta").value = "";
                                                 click_salvar_tema = 0;
                                                 $("#lugar_opcoes,#pergunta_digitada,#opcoes,#opcao_certa").empty();
-                                                
+
                                                 opcoes = [];
 
                                             } else {
@@ -885,7 +891,7 @@ document.getElementById("salas_criadas").onclick = function () {
     }
 }
 document.getElementById("criar_sala").onclick = function () {
-    
+
     $("#menu_escolhas").hide("fast");
     $("#area_de_criar_sala").show("fast");
     $("#nome_sala").show("fast");
@@ -925,7 +931,7 @@ document.getElementById("criar_sala").onclick = function () {
                     })
                 }
             })
-            
+
             /* $("#nome_sala").hide("fast");
              $("#proximo_passo").show("fast");
              let aleatorio = Math.random().toString(36).substr(2, 5);
@@ -963,7 +969,7 @@ document.getElementById("criar_sala").onclick = function () {
         $("#area_de_criar_sala").hide("fast");
         document.getElementById("sala_nome").value = "";
         $("#situacao_codigo").empty();
-        $("#codigo_sala").empty() 
-       
+        $("#codigo_sala").empty()
+
     }
 }

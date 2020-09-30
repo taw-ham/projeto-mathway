@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title> Mathway </title>
-    <link rel="icon" type="imagem/png" href="./fotis/mario.png" />
+    <link rel="icon" type="imagem/png" href="./fotis/logo.png" />
     <link rel="stylesheet" type="text/css" href="./log.css">
     <link rel="stylesheet" type="text/css" href="./aluno.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -15,9 +15,10 @@
 
 <body>
     <ul class="menu">
-        <li class="logo2"><a href="#"><img height="3%" width="3%" src="./fotis/mario.png" /> Mathway </a></li>
+        <li class="logo2"><a href="#"><img height="12%" width="12%" src="./fotis/logo.png" /> Mathway </a></li>
+        <hr style="margin: 0%; margin-top: 0.4%">
         <li class="op"><a href="#"> Contatos </a></li>
-        <li class="op"><a href="#"> Logout </a></li>
+        <li class="op"><a id = "logout" href="./logx.html"> Logout </a></li>
     </ul>
 
     <div class="wallalun" id="wallalunx">
@@ -63,18 +64,18 @@
                     <li>
                         <h1 id="email_user"> Email: example@gmail.com </h1>
                     </li>
-                    <li><img height="25%" width="25%"
-                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmaxcdn.icons8.com%2FShare%2Ficon%2Fwin10%2FCinema%2Fanonymous_mask1600.png&f=1&nofb=1" />
+                    <li class="imgalunx"><img height="25%" width="25%"
+                            src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.myiconfinder.com%2Fuploads%2Ficonsets%2F256-256-5d8cab7b01ffef290b73909d06d92705.png&f=1&nofb=1" />
                     </li>
                 </ul>
             </div>
 
         </div>
 
-        <div id="area_de_escolhas">
+        <div style="margin-top: 2%" id="area_de_escolhas">
             <div class="salasx">
                 <button class="btn btn-primary" id="entrar_sala"> Entrar em uma sala </button>
-                <button class="btn btn-primary" id="notas"> Veja suas notas </button>
+                <button class="btn btn-primary" id="notas"> Ver notas </button>
                 <small class="form-text text-muted"> - Insira o código da sua sala aqui! - </small>
             </div>
 
@@ -87,7 +88,7 @@
         <div class="salasx2" id="lugar_entrada_sala">
             <h2> Código da Sala </h2>
             <input placeholder="Digite o código da sala" id="codigo_sala">
-            <button class="btn btn-primary" id="salvar_codigo"> Entrar na sala </button>
+            <button class="btn btn-primary" id="salvar_codigo"> Entrar </button>
             <button class="btn btn-primary" id="voltar_area_de_escolhas_inicial2"> Voltar </button>
         </div>
 

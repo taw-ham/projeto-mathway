@@ -21,7 +21,7 @@ body {
 }
 
 .menu .logo {
-    text-align: center;
+    text-align: left;
 }
 
 .menu .logo a {
@@ -31,13 +31,14 @@ body {
 }
 
 .menu .logo img {
-    margin-top: -0.5%;
+    margin-top: -0.2%;
 }
 
 .menu .op {
-    margin-left: -4%;
-    margin-right: -8%;
-    font-size: 110%;
+    margin-left: 10%;
+    margin-right: -22%;
+    font-size: 100%;
+    margin-top: 0.2%;
 }
 
 .menu .op a {
@@ -52,9 +53,9 @@ body {
     margin-left: 0.5%;
     font-size: 100%;
     background-color: lightgray;
-    padding: 0.5%;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
     border-radius: 4px;
 }
 
@@ -62,7 +63,7 @@ body {
     background-color: lightslategrey;
     width: 70%;
     margin: 0%;
-    padding-bottom: 5%;
+    padding-bottom: 5.6%;
     padding-top: 4%;
     margin-left: 30%;
     border-left: 1px solid gainsboro;
@@ -277,7 +278,7 @@ body {
 }
 
 .menu .logo2 img {
-    margin-top: -0.5%;
+    margin-top: -0.2%;
 }
 
 .wallprof {
@@ -463,7 +464,7 @@ body {
     width: 20%;
     margin-left: 24%;
     border-radius: 2px;
-    margin-top: -19%;
+    margin-top: -18%;
     border: 1px solid lightslategrey;
 }
 
@@ -529,7 +530,7 @@ body {
     float: left;
     background-color: whitesmoke;
     margin: 0%;
-    margin-top: -40.2%;
+    margin-top: -40.3%;
     margin-left: 24%;
     width: 20%;
     padding: 1%;
@@ -591,7 +592,7 @@ body {
     padding: 1%;
     border-radius: 2px;
     width: 20%;
-    margin-top: -33.7%;
+    margin-top: -35.9%;
     margin-left: 2%;
     border: 1px solid lightslategrey;
 }
@@ -602,8 +603,9 @@ body {
 
 .comentx button {
     font-family: calibri;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    font-size: 80%;
 }
 
 .comentx ul {
@@ -625,7 +627,7 @@ body {
     padding: 1%;
     border-radius: 2px;
     width: 20%;
-    margin-top: -22%;
+    margin-top: -19%;
     margin-left: 24%;
     border: 1px solid lightslategrey;
 }
@@ -643,8 +645,8 @@ body {
 
 .salasx2 button {
     font-family: calibri;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
     margin-top: 6%;
 }
 
@@ -665,8 +667,8 @@ body {
 
 .notasx button {
     font-family: calibri;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
     margin-left: 22%;
 }
 
@@ -674,8 +676,8 @@ body {
     margin-left: 2%;
     font-family: calibri;
     margin-top: 0.5%;
-    padding-top: 0.1%;
-    padding-bottom: 0.1%;
+    padding-top: 0.02%;
+    padding-bottom: 0.02%;
 }
 
 .exercx {
@@ -696,15 +698,16 @@ body {
 }
 
 .exercx h1 {
-    background: linear-gradient(lightseagreen, lightseagreen, lightseagreen, lightblue);
+    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
     text-align: center;
     font-size: 120%;
     font-family: calibri;
     color: white;
     text-shadow: 1px 1px #000;
-    padding: 1%;
+    padding: 0.8%;
     font-weight: bold;
     margin-left: -2%;
+    border-radius: 2px;
 }
 
 .exercx img {
@@ -729,7 +732,7 @@ body {
 }
 
 .exercx2 h1 {
-    background-color: lightseagreen;
+    background-color: lightsteelblue;
     text-align: center;
     font-size: 120%;
     font-family: calibri;
@@ -761,14 +764,15 @@ body {
 }
 
 .listaspastx h2 {
-    background: linear-gradient(lightseagreen, lightseagreen, lightseagreen, lightblue);
+    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
     font-size: 120%;
-    padding: 1%;
+    padding: 0.8%;
     font-family: calibri;
     font-weight: bold;
+    border-radius: 2px;
 }
 
 .listaspastx ul {
@@ -791,7 +795,7 @@ body {
 }
 
 .listaspastx li button {
-    background-color: lightseagreen;
+    background-color: lightsteelblue;
     border-radius: 2px;
     color: white;
     text-shadow: 1px 1px #000;
@@ -801,8 +805,8 @@ body {
 
 .listaspastx button {
     font-family: calibri;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
     margin-top: 2%;
     margin-left: 1%;
 }
@@ -834,8 +838,8 @@ body {
 
 .exercop button {
     font-family: calibri;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
 }
 
 .listatemax {
@@ -848,14 +852,15 @@ body {
 }
 
 .listatemax h2 {
-    background: linear-gradient(lightseagreen, lightseagreen, lightseagreen, lightblue);
+    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
     font-size: 120%;
-    padding: 1%;
+    padding: 0.8%;
     font-family: calibri;
     font-weight: bold;
+    border-radius: 2px;
 }
 
 .listatemax button {
@@ -883,8 +888,8 @@ body {
 
 .listatemax li button {
     font-family: calibri;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
 }
 
 .creatx {
@@ -897,7 +902,7 @@ body {
 
 .creatx2 {
     background-color: lightgray;
-    padding: 1%;
+    padding: 2%;
 }
 
 .creatx3 {
@@ -907,21 +912,22 @@ body {
 
 .creatx button {
     font-family: calibri;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
     margin-left: 1%;
     margin-top: -0.5%;
 }
 
 .creatx h2 {
-    background: linear-gradient(lightseagreen, lightseagreen, lightseagreen, lightblue);
+    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
     font-size: 120%;
-    padding: 1%;
+    padding: 0.8%;
     font-family: calibri;
     font-weight: bold;
+    border-radius: 2px;
 }
 
 .creatx h1 {
@@ -949,8 +955,8 @@ body {
 }
 
 .perserverx li button {
-    
-   
+
+
     margin-left: -0.5%;
 }
 
@@ -991,14 +997,15 @@ body {
 }
 
 .exectx h2 {
-    background: linear-gradient(lightseagreen, lightseagreen, lightseagreen, lightblue);
+    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: left;
     font-size: 120%;
-    padding: 1%;
+    padding: 0.8%;
     font-family: calibri;
     font-weight: bold;
+    border-radius: 2px;
 }
 
 .exectx img {
@@ -1026,8 +1033,8 @@ body {
 
 .exectx button {
     font-family: calibri;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
     margin-top: 2%;
 }
 
@@ -1053,8 +1060,8 @@ body {
 
 .resultx button {
     font-family: calibri;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
     margin-top: 2%;
 }
 
@@ -1074,14 +1081,15 @@ body {
 }
 
 .resultx h2 {
-    background: linear-gradient(lightseagreen, lightseagreen, lightseagreen, lightblue);
+    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: left;
     font-size: 120%;
-    padding: 1%;
+    padding: 0.8%;
     font-family: magneto;
     font-weight: bold;
+    border-radius: 2px;
 }
 
 .salasintx {
@@ -1101,7 +1109,7 @@ body {
 }
 
 .salasintx button {
-    background-color: lightseagreen;
+    background-color: lightsteelblue;
     border-radius: 2px;
     width: 50%;
     margin-top: 2%;
@@ -1126,15 +1134,16 @@ body {
 }
 
 .listasintx h2 {
-    background: linear-gradient(lightseagreen, lightseagreen, lightseagreen, lightblue);
+    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
     font-size: 120%;
-    padding: 1%;
+    padding: 0.8%;
     font-family: calibri;
     font-weight: bold;
     width: 100%;
+    border-radius: 2px;
 }
 
 .listasintx button {
@@ -1165,7 +1174,7 @@ body {
 }
 
 .listasintx li button {
-    background-color: lightseagreen;
+    background-color: lightsteelblue;
     border-radius: 2px;
     color: white;
     text-shadow: 1px 1px #000;
@@ -1187,15 +1196,16 @@ body {
 }
 
 .listasintx2 h2 {
-    background: linear-gradient(lightseagreen, lightseagreen, lightseagreen, lightblue);
+    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
     font-size: 120%;
-    padding: 1%;
+    padding: 0.8%;
     font-family: calibri;
     font-weight: bold;
     width: 100%;
+    border-radius: 2px;
 }
 
 .listasintx2 button {
@@ -1226,7 +1236,7 @@ body {
 }
 
 .listasintx2 li button {
-    background-color: lightseagreen;
+    background-color: lightsteelblue;
     border-radius: 2px;
     color: white;
     text-shadow: 1px 1px #000;
@@ -1249,14 +1259,15 @@ body {
 }
 
 .codesalax h2 {
-    background: linear-gradient(lightseagreen, lightseagreen, lightseagreen, lightblue);
+    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
     text-align: center;
     font-size: 100%;
     font-family: calibri;
     color: white;
     text-shadow: 1px 1px #000;
-    padding: 1%;
+    padding: 0.8%;
     font-weight: bold;
+    border-radius: 2px;
 }
 
 .codesalax h1 {
@@ -1271,8 +1282,8 @@ body {
 
 .codesalax button {
     font-family: calibri;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
 }
 
 .listacreatex {
@@ -1285,14 +1296,15 @@ body {
 }
 
 .listacreatex .createnom h2 {
-    background: linear-gradient(lightseagreen, lightseagreen, lightseagreen, lightblue);
+    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
     font-size: 120%;
-    padding: 1%;
+    padding: 0.8%;
     font-family: calibri;
     font-weight: bold;
+    border-radius: 2px;
 }
 
 .listacreatex .createnom h1 {
@@ -1311,20 +1323,21 @@ body {
 
 .listacreatex button {
     font-family: calibri;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
     margin-top: -0.5%;
 }
 
 .professortemasx h2 {
-    background: linear-gradient(lightseagreen, lightseagreen, lightseagreen, lightblue);
+    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
     font-size: 120%;
-    padding: 1%;
+    padding: 0.8%;
     font-family: calibri;
     font-weight: bold;
+    border-radius: 2px;
 }
 
 .professortemasx h1 {
@@ -1351,14 +1364,15 @@ body {
 }
 
 .usersalax h2 {
-    background: linear-gradient(lightseagreen, lightseagreen, lightseagreen, lightblue);
+    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
     font-size: 120%;
-    padding: 1%;
+    padding: 0.8%;
     font-family: calibri;
     font-weight: bold;
+    border-radius: 2px;
 }
 
 .usersalax button {
@@ -1390,14 +1404,15 @@ body {
 }
 
 .notafuncx h2 {
-    background: linear-gradient(lightseagreen, lightseagreen, lightseagreen, lightblue);
+    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
     font-size: 120%;
-    padding: 1%;
+    padding: 0.8%;
     font-family: calibri;
     font-weight: bold;
+    border-radius: 2px;
 }
 
 .notafuncx h1 {
@@ -1427,7 +1442,7 @@ body {
 }
 
 .notafuncx li button {
-    background-color: lightseagreen;
+    background-color: lightsteelblue;
     border-radius: 2px;
     color: white;
     text-shadow: 1px 1px #000;
@@ -1437,8 +1452,8 @@ body {
 
 .notafuncx button {
     font-family: calibri;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
     margin-top: 2%;
     margin-left: 1%;
 }
@@ -1472,6 +1487,7 @@ body {
 
 .obx0 {
     color: darkred;
+    font-family: calibri;
 }
 
 .infalun {
@@ -1526,7 +1542,7 @@ body {
     width: 40%;
     font-size: 80%;
     font-family: calibri;
-    margin-top: 2%;
+    margin-top: 1%;
     margin-left: 2%;
     border-radius: 2px;
     border: 1px solid lightslategrey;
@@ -1626,15 +1642,63 @@ body {
     border-radius: 30px;
     padding: 0.5%;
 }
-#lixeira{
-    background-color:#e74c3c;
+
+#lixeira {
+    background-color: #e74c3c;
     width: 8%;
     height: 20px;
     text-align: center;
     color: white;
     padding: 0.5%;
-   
     display: inline-block;
-   
-  }
-  
+}
+
+.imgprofx {
+    padding: 2%;
+    border: 2px solid lightblue;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi.huffpost.com%2Fgen%2F1728627%2Fimages%2Fo-TEACHER-IN-CLASSROOM-facebook.jpg&f=1&nofb=1');
+    background-size: cover;
+}
+
+.imgalunx {
+    padding: 2%;
+    border: 2px solid lightblue;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.dfi.wa.gov%2Fsites%2Fdefault%2Ffiles%2Fhigh-school-classroom-fb.jpg&f=1&nofb=1');
+    background-size: cover;
+}
+
+#bbx:hover {
+    background-color: blue;
+}
+
+#ccx:hover {
+    background-color: darkgreen;
+}
+
+#bbx2:hover {
+    background-color: blue;
+}
+
+#ccx2:hover {
+    background-color: darkgreen;
+}
+
+#area_temas_escolher {
+    padding: 1%;
+    margin: 0%;
+}
+
+#area_temas_escolher button {
+    background-color: lightsteelblue;
+    color: white;
+    text-shadow: 1px 1px #000;
+    font-family: calibri;
+    padding: 0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-weight: bold;
+}
+
+#area_temas_escolher button:hover {
+    background-color: royalblue;
+}

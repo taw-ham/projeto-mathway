@@ -61,12 +61,12 @@ for (let i = 0; i <= tipo_userx.length - 1; i++) {
             $("#logx").css('background', 'linear-gradient(whitesmoke,lightblue)');
             $("#obx").hide("fast");
             $("#tipologinx").css('background', 'lightblue');
-            $("#wallx").css('padding-bottom', '6.8%');
+            $("#wallx").css('padding-bottom', '7.4%');
         } else {
             $("#logx").css('background', 'linear-gradient(whitesmoke,lightgreen');
             $("#obx").hide("fast");
             $("#tipologinx").css('background', 'lightgreen');
-            $("#wallx").css('padding-bottom', '6.8%');
+            $("#wallx").css('padding-bottom', '7.4%');
         }
     }
 }
@@ -99,8 +99,8 @@ document.getElementById("fazer_login").onclick = function () {
                 const email = results[0].email;
                 const nome_user = results[0].nome;
                 localStorage.setItem('id', id);
-                localStorage.setItem('email',email);
-                localStorage.setItem('nome',nome_user);
+                localStorage.setItem('email', email);
+                localStorage.setItem('nome', nome_user);
                 window.location.assign("./professor_pagina.html")
             }
         })

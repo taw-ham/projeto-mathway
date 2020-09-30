@@ -53,19 +53,18 @@ let tipo_loginx;
 const tipo_userx = document.getElementsByTagName("button");
 for (let i = 0; i <= tipo_userx.length - 1; i++) {
     tipo_userx[i].onclick = function () {
-        console.log("sjjs")
         tipo_loginx = event.target.id;
         console.log(tipo_loginx);
         if (tipo_loginx === "bbx2") {
             $("#logx2").css('background', 'linear-gradient(lightblue,whitesmoke,whitesmoke)');
             $("#escolhaxa").css('background', 'lightblue');
             $("#obx02").hide("fast");
-            $("#wallx2").css('padding-bottom', '3.2%');
+            $("#wallx2").css('padding-bottom', '3%');
         } else if (tipo_loginx === "ccx2") {
             $("#logx2").css('background', 'linear-gradient(lightgreen,whitesmoke,whitesmoke)');
             $("#escolhaxa").css('background', 'lightgreen');
             $("#obx02").hide("fast");
-            $("#wallx2").css('padding-bottom', '3.2%');
+            $("#wallx2").css('padding-bottom', '3%');
         }
     }
 }
