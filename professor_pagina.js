@@ -272,11 +272,21 @@ document.getElementById("salas_criadas").onclick = function () {
             li.append(button_apagar_sala);
             ul.append(li);
             button_apagar_sala.onclick = function () {
-                var id = event.target.id;
-                let sala_service = new Salas_Service("http://localhost:3000/salas");
-                sala_service.apagar(id).then(resposta => {
+                const id_sala = event.target.id;
+                const sala_service = new Salas_Service("http://localhost:3000/salas");
+                sala_service.apagar(id_sala).then(resposta => {
                     console.log(resposta);
-                    $("#opcoes_salas > li").remove(`#${id}`);
+                    $("#opcoes_salas > li").remove(`#${id_sala}`);
+                    const lista_teorica_service = new Lista_Teoria_Service(`http://localhost:3000/lista_teoricas?id_sala=${id_sala}`)
+                    lista_teorica_service.lista().then(response =>{
+                        console.log(response);
+                        for(let i = 0; i <= response.length -1; i++){
+                            const lista_teorica_service = new Lista_Teoria_Service("http://localhost:3000/lista_teoricas");
+                            lista_teorica_service.deletar(response[i].id).then(response =>{
+                                console.log(response);
+                            })
+                        }
+                    })
                 })
             }
             button_acessar_sala.onclick = function () {

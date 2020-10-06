@@ -15,29 +15,25 @@
   ],
   "salas": [
     {
-      "nome": "sala_teste",
-      "codigo": "1234",
+      "nome": "sala-teste",
       "id_criador": "1",
+      "codigo": "97ha9",
       "participantes": [],
       "participantes_id": [],
-      "id": 0
+      "id": 1
     }
   ],
   "lista_teoricas": [
     {
-      "nome": "lista demonstração de tempo de finalização em minutos e data de entrega",
+      "nome": "teste_funcionalidade",
       "perguntas": [
         "(UEL-PR) Uma das formas de se enviar uma mensagem secreta é por meio de códigos matemáticos, seguindo os passos: i) Tanto o destinatário quanto o remetente possuem uma matriz chave C; </br>ii) O destinatário recebe do remetente uma matriz P tal que MC = P, em que M é a matriz mensagem a ser decodificada; </br>iii) Cada número da matriz M corresponde a uma letra do alfabeto: 1 = a, 2 = b, 3 = c,...,23 = z;</br>iv) Consideramos o alfabeto com 23 letras, excluindo as letras k,w e y; </br>v) o número zero corresponde ao ponto de exclamação; vi) A mensagem é lida, encontrando a matriz M, fazendo a correspondência número/letra e ordenando as letras por linhas da matriz conforme segue: . Considere as matrizes:</br> </br><img id = 'fotos_matrizes' src = 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/am8.jpg'></br></br>Com base nos conhecimentos e nas informações descritas, assinale a alternativa que apresenta a mensagem que foi enviada por meio da matriz M.",
+        "Sabendo que a inversa de uma matriz A é &ensp; <img width = 42px id = 'fotos_matrizes' src = './fotis/fotos-1 4.jpeg'>&ensp;  e que a matriz X é solução da equação matricial X . A = B, em que B = [8 3] podemos afirmar que a soma dos elementos da matriz X é:",
+        "(ENEM 2017)Raios de luz solar estão atingindo a superfície de um lago formando um ângulo x com a sua superfície, conforme indica a figura.Em determinadas condições, pode-se supor que a intensidade luminosa desses raios, na superfície do lago, seja dada aproximadamente por l(x) = k.sen(x) sendo k uma constante, e supondo-se que x está entre 0˚ e 90˚.</br><img src = 'https://d2q576s0wzfxtl.cloudfront.net/2017/11/08151533/quest%C3%A3o-138-enem-2017.png'></br>Quando x = 30˚, a intensidade luminosa se reduz a qual percentual de seu valor máximo?",
+        "(PUC-RS 2013)A figura a seguir representa um esboço do gráfico de uma função y = A + B sen x/4 que é muito útil quando se estudam fenômenos periódicos, como, por exemplo, o movimento de uma mola vibrante. Então, o produto das constantes A e B é </br> </br><img src = 'https://d23vy2bv3rsfba.cloudfront.net/questoes_imagens/0_faf11aa1f163d8a42cfcb7a1c14433c5_960451.jpg.png'>",
         "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
-        "Espcex (Aman) 2012) A função real f(x) está representada no gráfico abaixo.</br><img src = 'https://static.stoodi.com.br/images/exercises/dce2b33bbcb6478b923f5a54cccde731/68d915a15275b02323a7fd239edc6cd11ccc6eeaff897d16a3b899f190f67607.png?versionId=k67QNEWg2KnfqTGp00ZpwfUN8sdFLATv'></br>A expressão algébrica de f(x) é:",
-        "UEMG)Se a inversa de &ensp; <img width = 45px id = 'fotos_matrizes' src ='./fotis/fotos-1 4.jpeg'> &ensp; é &ensp; <img width = 50px id = 'fotos_matrizes' src = './fotis/fotos-1 2.jpeg'> &ensp; o valor de x é:",
-        "Sendo &ensp;<img width = 70px id = 'fotos_matrizes' src = './fotis/fotos-1.JPG'> &ensp; então os valores de x e y para que &ensp; <img width = 80px id = 'fotos_matrizes' src = './fotis/fotos-1.0.jpeg'> &ensp; são:",
-        "Sobre as propriedades das matrizes, indique a alternativa falsa:",
-        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
-        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
-        "(MACKENZIE 2012) O maior valor que o número real 10/2 - senx/3 pode assumir é:",
-        "(Stoodi)O domínio da função f(x) = tg 2x, é:",
-        "Sejam as matrizes A <sub>3x2</sub>, B <sub>2x3</sub> e C <sub>3x3</sub>. É verdade que:"
+        "teste 1 + 1?",
+        "1+ 2"
       ],
       "opcoes": [
         [
@@ -48,110 +44,11 @@
           "Socorro"
         ],
         [
-          "2",
-          "3",
-          "5",
-          "6",
-          "4"
-        ],
-        [
-          "<img width = '200px' src = './fotis/fotos-4 3.jpeg'>",
-          "<img width = '200px' src = './fotis/fotos-4 4.jpeg'>",
-          "<img width = '200px' src = './fotis/fotos-4 5.jpeg'>",
-          "<img width = '200px' src = './fotis/fotos-4 6.jpeg'>",
-          "<img width = '200px' src = './fotis/fotos-4 7.jpeg'>"
-        ],
-        [
-          5,
-          6,
           7,
+          8,
           9,
-          10
-        ],
-        [
-          "x=y=2",
-          "x=0 e y = 1",
-          "x = 1 e y = 2",
-          "x = 1 e y = 0",
-          "x = 0 e y = 2"
-        ],
-        [
-          "A.B = B.A",
-          "(A.B)<sup>t</sup> = B<sup>t</sup>.A<sup> t </sup>",
-          "(A.B).C = A.(B.C)",
-          "A.(B + C) = A.B + A.C",
-          "A.I = A"
-        ],
-        [
-          "2 cosx",
-          "2 sen(x/2)",
-          "2 senx",
-          "2 sen 2x",
-          "2 cos 2x"
-        ],
-        [
-          "2",
-          "3",
-          "5",
-          "6",
-          "4"
-        ],
-        [
-          "20/3",
-          "7/3",
-          "10",
-          "6",
-          "20/7"
-        ],
-        [
-          "<img width = '200px' src = './fotis/fotos-4 8.jpeg'>",
-          "<img width = '200px' src = './fotis/fotos-4 9.jpeg'>",
-          "<img width = '200px' src = './fotis/fotos-5.jpeg'>",
-          "<img width = '200px' src = './fotis/fotos-5 2.jpeg'>",
-          "<img width = '200px' src = './fotis/fotos-5 3.jpeg'>"
-        ],
-        [
-          "A + Bt é uma matriz 2x3",
-          "A . B é uma matriz 3x3",
-          "A . B é uma matriz 2x2",
-          "B . C é uma matriz 3x3",
-          "C . A é uma matriz 3x3"
-        ]
-      ],
-      "opcoes_certas": [
-        "Boa sorte!",
-        "6",
-        "<img width = '200px' src = './fotis/fotos-4 3.jpeg'>",
-        5,
-        "x=0 e y = 1",
-        "A.B = B.A",
-        "2 cosx",
-        "6",
-        "6",
-        "<img width = '200px' src = './fotis/fotos-4 9.jpeg'>",
-        "A . B é uma matriz 3x3"
-      ],
-      "id_criador": "1",
-      "id_sala": "1",
-      "Data_de_entrega": "January 29,2021",
-      "tempo_de_termino": "0:20:0",
-      "id": 1
-    },
-    {
-      "nome": "teste",
-      "perguntas": [
-        "(UFAM) O menor valor não negativo côngruo ao arco de 21 π/5 rad é igual a:",
-        "(ENEM 2017)Raios de luz solar estão atingindo a superfície de um lago formando um ângulo x com a sua superfície, conforme indica a figura.Em determinadas condições, pode-se supor que a intensidade luminosa desses raios, na superfície do lago, seja dada aproximadamente por l(x) = k.sen(x) sendo k uma constante, e supondo-se que x está entre 0˚ e 90˚.</br><img src = 'https://d2q576s0wzfxtl.cloudfront.net/2017/11/08151533/quest%C3%A3o-138-enem-2017.png'></br>Quando x = 30˚, a intensidade luminosa se reduz a qual percentual de seu valor máximo?",
-        "quanto é 1 + 1",
-        "quanto é 2 + 2?"
-      ],
-      "opcoes": [
-        [
-          "π/5 rad",
-          "7 π/5 rad",
-          "π rad",
-          "9 π/5 rad",
-          "2 π rad"
+          10,
+          11
         ],
         [
           "33%",
@@ -161,31 +58,48 @@
           "86%"
         ],
         [
+          "6",
+          "10",
+          "12",
+          "18",
+          "50"
+        ],
+        [
+          "2",
+          "3",
+          "5",
+          "6",
+          "4"
+        ],
+        [
+          "1",
           "2",
           "3",
           "4",
-          "5",
-          "6"
+          "5"
         ],
         [
+          "3",
           "4",
           "6",
           "8",
-          "10",
-          "12"
+          "10"
         ]
       ],
       "opcoes_certas": [
-        "π/5 rad",
+        "Boa sorte!",
+        7,
         "50%",
+        "6",
+        "6",
         "2",
-        "4"
+        "3"
       ],
       "id_criador": "1",
-      "id_sala": "2",
+      "id_sala": "1",
       "Data_de_entrega": "",
       "tempo_de_termino": "",
-      "id": 2
+      "id": 1
     }
   ],
   "Alunos": [
@@ -2921,6 +2835,36 @@
       "tema": "Função Afim",
       "id_tema": "11",
       "id": 181
+    },
+    {
+      "pergunta": "teste 1 + 1?",
+      "opcoes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "opcao_certa": "2",
+      "id_criador": "1",
+      "tema": "matriz",
+      "id_tema": "1",
+      "id": 182
+    },
+    {
+      "pergunta": "1+ 2",
+      "opcoes": [
+        "3",
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "opcao_certa": "3",
+      "id_criador": "1",
+      "tema": "matriz",
+      "id_tema": "1",
+      "id": 183
     }
   ],
   "comentario": [
