@@ -442,7 +442,7 @@ document.getElementById("exercicios").onclick = function () {
     }
     document.getElementById("historico_listas_teoricas_server").onclick = function () {
         $("#codeprofx").hide("fast");
-        $("#infalunx").hide("fast");
+        $("#infalunx").show("fast");
         $("#wallalunx").css('padding-bottom', '30%');
         $("#escolha_modo_exercicio").hide("fast");
         $("#place_lista_teoricas").show("fast");
@@ -564,6 +564,10 @@ document.getElementById("exercicios").onclick = function () {
                                         li.innerHTML = `${posicao_erradas_perguntas[i]}) ${lista_perguntas_erradas_usuario[i]}`;
                                         li.append(button);
                                         ul_resposta_errada.append(li);
+
+                                    }
+                                    if(lista_perguntas_erradas_usuario.length > 0){
+                                        $("#fazer_perguntas_erradas").show("fast");
                                     }
                                     document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
                                         $("#wallalunx").css('background-image', 'url("./fotis/wood.png")');
@@ -595,7 +599,7 @@ document.getElementById("exercicios").onclick = function () {
                                         })
 
                                     }
-                                    $("#fazer_perguntas_erradas").show("fast");
+                                    
                                     document.getElementById("fazer_perguntas_erradas").onclick = function () {
                                         $("#reposta_certa").empty();
                                         $("#pergunta_errada").empty();
@@ -722,7 +726,7 @@ document.getElementById("exercicios").onclick = function () {
     }
     document.getElementById("historico_listas_teoricas_user").onclick = function () {
         $("#codeprofx").hide("fast");
-        $("#infalunx").hide("fast");
+        $("#infalunx").show("fast");
         $("#wallalunx").css('padding-bottom', '30%');
         $("#escolha_modo_exercicio").hide("fast");
         $("#place_lista_teoricas").show("fast");
@@ -843,6 +847,11 @@ document.getElementById("exercicios").onclick = function () {
                                         li.innerHTML = `${posicao_erradas_perguntas[i]}) ${lista_perguntas_erradas_usuario[i]}`;
                                         li.append(button);
                                         ul_resposta_errada.append(li);
+                                        
+                                    }
+                                    if(lista_perguntas_erradas_usuario.length > 0){
+                                        $("#fazer_perguntas_erradas").show("fast");
+
                                     }
                                     document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
                                         $("#wallalunx").css('background-image', 'url("./fotis/wood.jpg")');
@@ -867,7 +876,6 @@ document.getElementById("exercicios").onclick = function () {
                                         })
 
                                     }
-                                    $("#fazer_perguntas_erradas").show("fast");
                                     document.getElementById("fazer_perguntas_erradas").onclick = function () {
                                         $("#reposta_certa").empty();
                                         $("#pergunta_errada").empty();
@@ -1168,7 +1176,9 @@ document.getElementById("exercicios").onclick = function () {
                                             li.append(button);
                                             ul_resposta_errada.append(li);
                                         }
-                                        $("#fazer_perguntas_erradas").show("fast");
+                                        if(lista_perguntas_erradas_usuario.length > 0){
+                                            $("#fazer_perguntas_erradas").show("fast");
+                                        }
                                         document.getElementById("fazer_perguntas_erradas").onclick = function () {
                                             $("#reposta_certa").empty();
                                             $("#pergunta_errada").empty();
@@ -1442,7 +1452,7 @@ document.getElementById("exercicios").onclick = function () {
                                             input_radio[i].setAttribute('value', opcoes_server[posicao_opcoes][i]);
                                         }
                                         if (posicao_pergunta == lista_pergunta_server.length) {
-                                            $("#fazer_perguntas_erradas").show("fast");
+                                        
                                             $("#fazer_exercicio_lista_teorica").hide("fast");
                                             $("#termino_exercicio").show("fast");
                                             nota = parseInt((nota / lista_pergunta_server.length).toFixed(0));
@@ -1473,6 +1483,10 @@ document.getElementById("exercicios").onclick = function () {
                                                 li.innerHTML = `${posicao_errada_pergunta[i]}) ${lista_perguntas_erradas_usuario[i]}`;
                                                 li.append(button);
                                                 ul_resposta_errada.append(li);
+                                            }
+                                            if(lista_perguntas_erradas_usuario.length > 0){
+                                                $("#fazer_perguntas_erradas").show("fast");
+        
                                             }
                                             document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
                                                 $("#wallalunx").css('background-image', 'url("./fotis/wood.jpg")');

@@ -901,11 +901,13 @@ document.getElementById("salas_criadas").onclick = function () {
     }
 }
 document.getElementById("criar_sala").onclick = function () {
+    
 
     $("#menu_escolhas").hide("fast");
     $("#area_de_criar_sala").show("fast");
     $("#nome_sala").show("fast");
     $("#proximo_passo").hide("fast");
+    
     document.getElementById("salva_nome_sala").onclick = function () {
         let nome_sala = $("#sala_nome").val();
         if (nome_sala == "") {
@@ -927,6 +929,7 @@ document.getElementById("criar_sala").onclick = function () {
                                 $("#situacao_codigo").text("criando código")
                             } else {
                                 $("#situacao_codigo").text(`Código: ${aleatorio}`)
+                                
                                 document.getElementById("criar_sala_especifica").onclick = function () {
                                     let participantes = [];
                                     let participantes_id = []
@@ -941,36 +944,6 @@ document.getElementById("criar_sala").onclick = function () {
                     })
                 }
             })
-
-            /* $("#nome_sala").hide("fast");
-             $("#proximo_passo").show("fast");
-             let aleatorio = Math.random().toString(36).substr(2, 5);
-             const sala_service = new Salas_Service("http://localhost:3000/salas");
-             sala_service.lista().then(resposta => {
-                 for (let i = 0; i <= resposta.length - 1; i++) {
-                     if (resposta[i].codigo == aleatorio) {
-                         aleatorio = Math.random().toString(36).substr(2, 5);
-                         $("#situacao_codigo").text("criando código")
-                     }
-                 }
-                document.getElementById("voltar_area_de_escolhas_inicial3").onclick = function () {
-    $("#wallprofx").css('padding-bottom', '19%');
-    $("#menu_escolhas").show("fast");
-    $("#area_de_criar_sala").hide("fast");
-}
-
-                 let participantes = [];
-                 let participantes_id = []
-                 let sala = new Salas(nome_sala, id_login, aleatorio, participantes, participantes_id);
-                 let sala_service = new Salas_Service("http://localhost:3000/salas");
-                 sala_service.inserir(sala).then(resposta => {
-                     $("#situacao_codigo").text(`Código: ${aleatorio}`)
-                     console.log(resposta)
-                     document.getElementById("criar_sala_especifica").onclick = function () {
-                         location.reload();
-                     }
-                 })
-             })*/
         }
     }
     document.getElementById("voltar_area_de_escolhas_inicial3").onclick = function () {
@@ -982,4 +955,5 @@ document.getElementById("criar_sala").onclick = function () {
         $("#codigo_sala").empty()
 
     }
+    
 }

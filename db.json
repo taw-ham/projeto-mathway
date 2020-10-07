@@ -18,8 +18,12 @@
       "nome": "sala-teste",
       "id_criador": "1",
       "codigo": "97ha9",
-      "participantes": [],
-      "participantes_id": [],
+      "participantes": [
+        "taw.ham.balbino@gmail.com"
+      ],
+      "participantes_id": [
+        "0"
+      ],
       "id": 1
     }
   ],
@@ -100,6 +104,110 @@
       "Data_de_entrega": "",
       "tempo_de_termino": "",
       "id": 1
+    },
+    {
+      "nome": "Lista teste final",
+      "perguntas": [
+        "(ENEM 2017)Raios de luz solar estão atingindo a superfície de um lago formando um ângulo x com a sua superfície, conforme indica a figura.Em determinadas condições, pode-se supor que a intensidade luminosa desses raios, na superfície do lago, seja dada aproximadamente por l(x) = k.sen(x) sendo k uma constante, e supondo-se que x está entre 0˚ e 90˚.</br><img src = 'https://d2q576s0wzfxtl.cloudfront.net/2017/11/08151533/quest%C3%A3o-138-enem-2017.png'></br>Quando x = 30˚, a intensidade luminosa se reduz a qual percentual de seu valor máximo?",
+        "(PUC-RS 2013)A figura a seguir representa um esboço do gráfico de uma função y = A + B sen x/4 que é muito útil quando se estudam fenômenos periódicos, como, por exemplo, o movimento de uma mola vibrante. Então, o produto das constantes A e B é </br> </br><img src = 'https://d23vy2bv3rsfba.cloudfront.net/questoes_imagens/0_faf11aa1f163d8a42cfcb7a1c14433c5_960451.jpg.png'>",
+        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+        "(UEL-PR) Uma das formas de se enviar uma mensagem secreta é por meio de códigos matemáticos, seguindo os passos: i) Tanto o destinatário quanto o remetente possuem uma matriz chave C; </br>ii) O destinatário recebe do remetente uma matriz P tal que MC = P, em que M é a matriz mensagem a ser decodificada; </br>iii) Cada número da matriz M corresponde a uma letra do alfabeto: 1 = a, 2 = b, 3 = c,...,23 = z;</br>iv) Consideramos o alfabeto com 23 letras, excluindo as letras k,w e y; </br>v) o número zero corresponde ao ponto de exclamação; vi) A mensagem é lida, encontrando a matriz M, fazendo a correspondência número/letra e ordenando as letras por linhas da matriz conforme segue: . Considere as matrizes:</br> </br><img id = 'fotos_matrizes' src = 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/am8.jpg'></br></br>Com base nos conhecimentos e nas informações descritas, assinale a alternativa que apresenta a mensagem que foi enviada por meio da matriz M.",
+        "Sabendo que a inversa de uma matriz A é &ensp; <img width = 42px id = 'fotos_matrizes' src = './fotis/fotos-1 4.jpeg'>&ensp;  e que a matriz X é solução da equação matricial X . A = B, em que B = [8 3] podemos afirmar que a soma dos elementos da matriz X é:",
+        "Sendo &ensp;<img width = 70px id = 'fotos_matrizes' src = './fotis/fotos-1.JPG'> &ensp; então os valores de x e y para que &ensp; <img width = 80px id = 'fotos_matrizes' src = './fotis/fotos-1.0.jpeg'> &ensp; são:",
+        "Sobre as propriedades da matriz transposta, considere as sentenças abaixo:</br> I. (A + B)<sup>t</sup> = A<sup>t</sup> + B<sup>t</sup> </br> II.(kA)<sup>t</sup> = kA<sup>t</sup></br> III.(A . B)<sup>t</sup> = A<sup>t</sup> . B<sup>t</sup>:",
+        "quanto é 1 + 1?",
+        "Quanto é 2 + 2?"
+      ],
+      "opcoes": [
+        [
+          "33%",
+          "50%",
+          "57%",
+          "70%",
+          "86%"
+        ],
+        [
+          "6",
+          "10",
+          "12",
+          "18",
+          "50"
+        ],
+        [
+          "2",
+          "3",
+          "5",
+          "6",
+          "4"
+        ],
+        [
+          "2 cosx",
+          "2 sen(x/2)",
+          "2 senx",
+          "2 sen 2x",
+          "2 cos 2x"
+        ],
+        [
+          "Boa sorte!",
+          "Boa prova",
+          "Boa tarde",
+          "Ajude-me ",
+          "Socorro"
+        ],
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          "x=y=2",
+          "x=0 e y = 1",
+          "x = 1 e y = 2",
+          "x = 1 e y = 0",
+          "x = 0 e y = 2"
+        ],
+        [
+          "Apenas a sentença II é verdadeira",
+          "Apenas a sentença III é verdadeira",
+          "Apenas as sentenças I e II são verdadeiras.",
+          "Apenas as sentenças II e III são verdadeiras",
+          "Apenas as sentenças I e III são verdadeiras"
+        ],
+        [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        [
+          "4",
+          "6",
+          "8",
+          "10",
+          "12"
+        ]
+      ],
+      "opcoes_certas": [
+        "50%",
+        "6",
+        "6",
+        "2 cosx",
+        "Boa sorte!",
+        7,
+        "x=0 e y = 1",
+        "Apenas as sentenças I e II são verdadeiras.",
+        "2",
+        "4"
+      ],
+      "id_criador": "1",
+      "id_sala": "1",
+      "Data_de_entrega": "January 20,2021",
+      "tempo_de_termino": "",
+      "id": 2
     }
   ],
   "Alunos": [
@@ -130,7 +238,32 @@
     }
   ],
   "notas_professor": [],
-  "notas_servidor": [],
+  "notas_servidor": [
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 83,
+      "id_aluno": "0",
+      "id_lista_teorica": 1,
+      "nome_lista_teorica": "teste2",
+      "perguntas_certas": [
+        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
+        "teste 1 + 1?",
+        "quanto é 1 + 1?",
+        "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:",
+        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+        "quanto é 1 + 1",
+        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+        "(MACKENZIE 2012) O maior valor que o número real 10/2 - senx/3 pode assumir é:",
+        "1+ 2",
+        "Se A e B são matrizes 2 x 3, é verdade que a matriz A + B é:"
+      ],
+      "perguntas_erradas": [
+        "quanto é 1 +1?",
+        "1"
+      ],
+      "id": 1
+    }
+  ],
   "notas_aluno": [
     {
       "nome_aluno": "taw-ham",
@@ -143,6 +276,27 @@
       ],
       "perguntas_erradas": [],
       "id": 1
+    },
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 100,
+      "id_aluno": "0",
+      "id_lista_teorica": 2,
+      "nome_lista_teorica": "teste",
+      "perguntas_certas": [
+        "(UEL-PR) Uma das formas de se enviar uma mensagem secreta é por meio de códigos matemáticos, seguindo os passos: i) Tanto o destinatário quanto o remetente possuem uma matriz chave C; </br>ii) O destinatário recebe do remetente uma matriz P tal que MC = P, em que M é a matriz mensagem a ser decodificada; </br>iii) Cada número da matriz M corresponde a uma letra do alfabeto: 1 = a, 2 = b, 3 = c,...,23 = z;</br>iv) Consideramos o alfabeto com 23 letras, excluindo as letras k,w e y; </br>v) o número zero corresponde ao ponto de exclamação; vi) A mensagem é lida, encontrando a matriz M, fazendo a correspondência número/letra e ordenando as letras por linhas da matriz conforme segue: . Considere as matrizes:</br> </br><img id = 'fotos_matrizes' src = 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/am8.jpg'></br></br>Com base nos conhecimentos e nas informações descritas, assinale a alternativa que apresenta a mensagem que foi enviada por meio da matriz M.",
+        "Sejam as matrizes A <sub>3x2</sub>, B <sub>2x3</sub> e C <sub>3x3</sub>. É verdade que:",
+        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
+        "O número de alunos matriculados na Escola Municipal de Pirajuba permanece o mesmo desde 2011. Em 2012, foram construídas 5 novas salas de aula e, com isso, a média de alunos por sala foi reduzida em 6 alunos em relação à média de 2011. Em 2013, foram construídas mais 5 salas de aula e, com isso, a média de alunos por sala foi reduzida em 5 alunos em relação à média de 2012.Quantos alunos tem a Escola Municipal de Pirajuba?",
+        "Sobre as propriedades da matriz transposta, considere as sentenças abaixo:</br> I. (A + B)<sup>t</sup> = A<sup>t</sup> + B<sup>t</sup> </br> II.(kA)<sup>t</sup> = kA<sup>t</sup></br> III.(A . B)<sup>t</sup> = A<sup>t</sup> . B<sup>t</sup>:",
+        "Sendo &ensp;<img width = 70px id = 'fotos_matrizes' src = './fotis/fotos-1.JPG'> &ensp; então os valores de x e y para que &ensp; <img width = 80px id = 'fotos_matrizes' src = './fotis/fotos-1.0.jpeg'> &ensp; são:",
+        "Se A e B são matrizes 2 x 3, é verdade que a matriz A + B é:",
+        "Sabendo que a inversa de uma matriz A é &ensp; <img width = 42px id = 'fotos_matrizes' src = './fotis/fotos-1 4.jpeg'>&ensp;  e que a matriz X é solução da equação matricial X . A = B, em que B = [8 3] podemos afirmar que a soma dos elementos da matriz X é:",
+        "(ENEM 2017)Raios de luz solar estão atingindo a superfície de um lago formando um ângulo x com a sua superfície, conforme indica a figura.Em determinadas condições, pode-se supor que a intensidade luminosa desses raios, na superfície do lago, seja dada aproximadamente por l(x) = k.sen(x) sendo k uma constante, e supondo-se que x está entre 0˚ e 90˚.</br><img src = 'https://d2q576s0wzfxtl.cloudfront.net/2017/11/08151533/quest%C3%A3o-138-enem-2017.png'></br>Quando x = 30˚, a intensidade luminosa se reduz a qual percentual de seu valor máximo?",
+        "(PUC-RS 2013)A figura a seguir representa um esboço do gráfico de uma função y = A + B sen x/4 que é muito útil quando se estudam fenômenos periódicos, como, por exemplo, o movimento de uma mola vibrante. Então, o produto das constantes A e B é </br> </br><img src = 'https://d23vy2bv3rsfba.cloudfront.net/questoes_imagens/0_faf11aa1f163d8a42cfcb7a1c14433c5_960451.jpg.png'>"
+      ],
+      "perguntas_erradas": [],
+      "id": 2
     }
   ],
   "perguntas": [
@@ -2865,6 +3019,36 @@
       "tema": "matriz",
       "id_tema": "1",
       "id": 183
+    },
+    {
+      "pergunta": "quanto é 1 + 1?",
+      "opcoes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "opcao_certa": "2",
+      "id_criador": "1",
+      "tema": "matriz",
+      "id_tema": "1",
+      "id": 184
+    },
+    {
+      "pergunta": "Quanto é 2 + 2?",
+      "opcoes": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "opcao_certa": "4",
+      "id_criador": "1",
+      "tema": "matriz",
+      "id_tema": "1",
+      "id": 185
     }
   ],
   "comentario": [
@@ -2901,7 +3085,228 @@
         "50%"
       ],
       "id": 1
+    },
+    {
+      "nome": "teste",
+      "id_criador": "0",
+      "perguntas": [
+        "(UEL-PR) Uma das formas de se enviar uma mensagem secreta é por meio de códigos matemáticos, seguindo os passos: i) Tanto o destinatário quanto o remetente possuem uma matriz chave C; </br>ii) O destinatário recebe do remetente uma matriz P tal que MC = P, em que M é a matriz mensagem a ser decodificada; </br>iii) Cada número da matriz M corresponde a uma letra do alfabeto: 1 = a, 2 = b, 3 = c,...,23 = z;</br>iv) Consideramos o alfabeto com 23 letras, excluindo as letras k,w e y; </br>v) o número zero corresponde ao ponto de exclamação; vi) A mensagem é lida, encontrando a matriz M, fazendo a correspondência número/letra e ordenando as letras por linhas da matriz conforme segue: . Considere as matrizes:</br> </br><img id = 'fotos_matrizes' src = 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/am8.jpg'></br></br>Com base nos conhecimentos e nas informações descritas, assinale a alternativa que apresenta a mensagem que foi enviada por meio da matriz M.",
+        "Sejam as matrizes A <sub>3x2</sub>, B <sub>2x3</sub> e C <sub>3x3</sub>. É verdade que:",
+        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
+        "O número de alunos matriculados na Escola Municipal de Pirajuba permanece o mesmo desde 2011. Em 2012, foram construídas 5 novas salas de aula e, com isso, a média de alunos por sala foi reduzida em 6 alunos em relação à média de 2011. Em 2013, foram construídas mais 5 salas de aula e, com isso, a média de alunos por sala foi reduzida em 5 alunos em relação à média de 2012.Quantos alunos tem a Escola Municipal de Pirajuba?",
+        "Sobre as propriedades da matriz transposta, considere as sentenças abaixo:</br> I. (A + B)<sup>t</sup> = A<sup>t</sup> + B<sup>t</sup> </br> II.(kA)<sup>t</sup> = kA<sup>t</sup></br> III.(A . B)<sup>t</sup> = A<sup>t</sup> . B<sup>t</sup>:",
+        "Sendo &ensp;<img width = 70px id = 'fotos_matrizes' src = './fotis/fotos-1.JPG'> &ensp; então os valores de x e y para que &ensp; <img width = 80px id = 'fotos_matrizes' src = './fotis/fotos-1.0.jpeg'> &ensp; são:",
+        "Se A e B são matrizes 2 x 3, é verdade que a matriz A + B é:",
+        "Sabendo que a inversa de uma matriz A é &ensp; <img width = 42px id = 'fotos_matrizes' src = './fotis/fotos-1 4.jpeg'>&ensp;  e que a matriz X é solução da equação matricial X . A = B, em que B = [8 3] podemos afirmar que a soma dos elementos da matriz X é:",
+        "(ENEM 2017)Raios de luz solar estão atingindo a superfície de um lago formando um ângulo x com a sua superfície, conforme indica a figura.Em determinadas condições, pode-se supor que a intensidade luminosa desses raios, na superfície do lago, seja dada aproximadamente por l(x) = k.sen(x) sendo k uma constante, e supondo-se que x está entre 0˚ e 90˚.</br><img src = 'https://d2q576s0wzfxtl.cloudfront.net/2017/11/08151533/quest%C3%A3o-138-enem-2017.png'></br>Quando x = 30˚, a intensidade luminosa se reduz a qual percentual de seu valor máximo?",
+        "(PUC-RS 2013)A figura a seguir representa um esboço do gráfico de uma função y = A + B sen x/4 que é muito útil quando se estudam fenômenos periódicos, como, por exemplo, o movimento de uma mola vibrante. Então, o produto das constantes A e B é </br> </br><img src = 'https://d23vy2bv3rsfba.cloudfront.net/questoes_imagens/0_faf11aa1f163d8a42cfcb7a1c14433c5_960451.jpg.png'>"
+      ],
+      "opcoes": [
+        [
+          "Boa sorte!",
+          "Boa prova",
+          "Boa tarde",
+          "Ajude-me ",
+          "Socorro"
+        ],
+        [
+          "A + Bt é uma matriz 2x3",
+          "A . B é uma matriz 3x3",
+          "A . B é uma matriz 2x2",
+          "B . C é uma matriz 3x3",
+          "C . A é uma matriz 3x3"
+        ],
+        [
+          0,
+          1,
+          3,
+          2,
+          10
+        ],
+        [
+          3150,
+          3180,
+          3240,
+          3300,
+          3350
+        ],
+        [
+          "Apenas a sentença II é verdadeira",
+          "Apenas a sentença III é verdadeira",
+          "Apenas as sentenças I e II são verdadeiras.",
+          "Apenas as sentenças II e III são verdadeiras",
+          "Apenas as sentenças I e III são verdadeiras"
+        ],
+        [
+          "x=y=2",
+          "x=0 e y = 1",
+          "x = 1 e y = 2",
+          "x = 1 e y = 0",
+          "x = 0 e y = 2"
+        ],
+        [
+          "2 x 2",
+          "3 x 3",
+          "2 x 3",
+          "3 x 2",
+          "não é possível fazer A + B"
+        ],
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          "33%",
+          "50%",
+          "57%",
+          "70%",
+          "86%"
+        ],
+        [
+          "6",
+          "10",
+          "12",
+          "18",
+          "50"
+        ]
+      ],
+      "opcoes_certas": [
+        "Boa sorte!",
+        "A . B é uma matriz 3x3",
+        0,
+        3300,
+        "Apenas as sentenças I e II são verdadeiras.",
+        "x=0 e y = 1",
+        "2 x 3",
+        7,
+        "50%",
+        "6"
+      ],
+      "id": 2
     }
   ],
-  "Lista_Teorica_Servidor": []
+  "Lista_Teorica_Servidor": [
+    {
+      "nome": "teste2",
+      "id_aluno": "0",
+      "perguntas": [
+        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
+        "teste 1 + 1?",
+        "quanto é 1 + 1?",
+        "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:",
+        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+        "Se A e B são matrizes 2 x 3, é verdade que a matriz A + B é:",
+        "quanto é 1 + 1",
+        "quanto é 1 +1?",
+        "1",
+        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+        "(MACKENZIE 2012) O maior valor que o número real 10/2 - senx/3 pode assumir é:",
+        "1+ 2"
+      ],
+      "opcoes": [
+        [
+          0,
+          1,
+          3,
+          2,
+          10
+        ],
+        [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        [
+          "13",
+          "9",
+          "8",
+          "-4",
+          "10"
+        ],
+        [
+          "2 cosx",
+          "2 sen(x/2)",
+          "2 senx",
+          "2 sen 2x",
+          "2 cos 2x"
+        ],
+        [
+          "2 x 2",
+          "3 x 3",
+          "2 x 3",
+          "3 x 2",
+          "não é possível fazer A + B"
+        ],
+        [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        [
+          "2",
+          "3",
+          "4",
+          "5",
+          "8"
+        ],
+        [
+          "2",
+          "3",
+          "5",
+          "4",
+          "3"
+        ],
+        [
+          "2",
+          "3",
+          "5",
+          "6",
+          "4"
+        ],
+        [
+          "20/3",
+          "7/3",
+          "10",
+          "6",
+          "20/7"
+        ],
+        [
+          "3",
+          "4",
+          "6",
+          "8",
+          "10"
+        ]
+      ],
+      "opcoes_certas": [
+        0,
+        "2",
+        "2",
+        "13",
+        "2 cosx",
+        "2 x 3",
+        "2",
+        "13",
+        "q",
+        "6",
+        "6",
+        "3"
+      ],
+      "id": 1
+    }
+  ]
 }
