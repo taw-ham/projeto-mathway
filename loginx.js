@@ -63,14 +63,14 @@ for (let i = 0; i <= tipo_userx.length - 1; i++) {
             $("#tipologinx").css('background', 'lightblue');
             $("#bbx").css('background-color','blue');
             $("#ccx").css('background-color','lightslategray');
-            $("#wallx").css('padding-bottom', '7.5%');
+            $("#wallx").css('padding-bottom', '7.2%');
         } else {
             $("#logx").css('background', 'linear-gradient(whitesmoke,lightgreen');
             $("#obx").hide("fast");
             $("#tipologinx").css('background', 'lightgreen');
             $("#ccx").css('background-color','green');
             $("#bbx").css('background-color','lightslategray');
-            $("#wallx").css('padding-bottom', '7.5%');
+            $("#wallx").css('padding-bottom', '7.2%');
         }
     }
 }

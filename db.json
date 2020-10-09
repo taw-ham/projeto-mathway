@@ -19,22 +19,19 @@
       "id": 3
     }
   ],
-  "salas": [
-    {
-      "nome": "sala-teste",
-      "id_criador": "1",
-      "codigo": "97ha9",
-      "participantes": [
-        "taw.ham.balbino@gmail.com"
-      ],
-      "participantes_id": [
-        "0"
-      ],
-      "id": 1
-    }
-  ],
-  "lista_teoricas": [
-    {
+  "salas": [{
+    "nome": "sala-teste",
+    "id_criador": "1",
+    "codigo": "97ha9",
+    "participantes": [
+      "taw.ham.balbino@gmail.com"
+    ],
+    "participantes_id": [
+      "0"
+    ],
+    "id": 1
+  }],
+  "lista_teoricas": [{
       "nome": "teste_funcionalidade",
       "perguntas": [
         "(UEL-PR) Uma das formas de se enviar uma mensagem secreta é por meio de códigos matemáticos, seguindo os passos: i) Tanto o destinatário quanto o remetente possuem uma matriz chave C; </br>ii) O destinatário recebe do remetente uma matriz P tal que MC = P, em que M é a matriz mensagem a ser decodificada; </br>iii) Cada número da matriz M corresponde a uma letra do alfabeto: 1 = a, 2 = b, 3 = c,...,23 = z;</br>iv) Consideramos o alfabeto com 23 letras, excluindo as letras k,w e y; </br>v) o número zero corresponde ao ponto de exclamação; vi) A mensagem é lida, encontrando a matriz M, fazendo a correspondência número/letra e ordenando as letras por linhas da matriz conforme segue: . Considere as matrizes:</br> </br><img id = 'fotos_matrizes' src = 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/am8.jpg'></br></br>Com base nos conhecimentos e nas informações descritas, assinale a alternativa que apresenta a mensagem que foi enviada por meio da matriz M.",
@@ -216,8 +213,7 @@
       "id": 2
     }
   ],
-  "Alunos": [
-    {
+  "Alunos": [{
       "email": "taw.ham.balbino@gmail.com",
       "nome": "taw-ham",
       "id": 0,
@@ -243,8 +239,7 @@
       "id": 3
     }
   ],
-  "notas_professor": [
-    {
+  "notas_professor": [{
       "nome_aluno": "taw-ham",
       "nota": 83,
       "id_aluno": "0",
@@ -270,34 +265,31 @@
     }
 
   ],
-  "notas_servidor": [
-    {
-      "nome_aluno": "taw-ham",
-      "nota": 83,
-      "id_aluno": "0",
-      "id_lista_teorica": 1,
-      "nome_lista_teorica": "teste2",
-      "perguntas_certas": [
-        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
-        "teste 1 + 1?",
-        "quanto é 1 + 1?",
-        "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:",
-        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
-        "quanto é 1 + 1",
-        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
-        "(MACKENZIE 2012) O maior valor que o número real 10/2 - senx/3 pode assumir é:",
-        "1+ 2",
-        "Se A e B são matrizes 2 x 3, é verdade que a matriz A + B é:"
-      ],
-      "perguntas_erradas": [
-        "quanto é 1 +1?",
-        "1"
-      ],
-      "id": 1
-    }
-  ],
-  "notas_aluno": [
-    {
+  "notas_servidor": [{
+    "nome_aluno": "taw-ham",
+    "nota": 83,
+    "id_aluno": "0",
+    "id_lista_teorica": 1,
+    "nome_lista_teorica": "teste2",
+    "perguntas_certas": [
+      "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
+      "teste 1 + 1?",
+      "quanto é 1 + 1?",
+      "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:",
+      "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+      "quanto é 1 + 1",
+      "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+      "(MACKENZIE 2012) O maior valor que o número real 10/2 - senx/3 pode assumir é:",
+      "1+ 2",
+      "Se A e B são matrizes 2 x 3, é verdade que a matriz A + B é:"
+    ],
+    "perguntas_erradas": [
+      "quanto é 1 +1?",
+      "1"
+    ],
+    "id": 1
+  }],
+  "notas_aluno": [{
       "nome_aluno": "taw-ham",
       "nota": 100,
       "id_aluno": "0",
@@ -331,8 +323,7 @@
       "id": 2
     }
   ],
-  "perguntas": [
-    {
+  "perguntas": [{
       "id": 2,
       "pergunta": "(UEL-PR) Uma das formas de se enviar uma mensagem secreta é por meio de códigos matemáticos, seguindo os passos: i) Tanto o destinatário quanto o remetente possuem uma matriz chave C; </br>ii) O destinatário recebe do remetente uma matriz P tal que MC = P, em que M é a matriz mensagem a ser decodificada; </br>iii) Cada número da matriz M corresponde a uma letra do alfabeto: 1 = a, 2 = b, 3 = c,...,23 = z;</br>iv) Consideramos o alfabeto com 23 letras, excluindo as letras k,w e y; </br>v) o número zero corresponde ao ponto de exclamação; vi) A mensagem é lida, encontrando a matriz M, fazendo a correspondência número/letra e ordenando as letras por linhas da matriz conforme segue: . Considere as matrizes:</br> </br><img id = 'fotos_matrizes' src = 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/am8.jpg'></br></br>Com base nos conhecimentos e nas informações descritas, assinale a alternativa que apresenta a mensagem que foi enviada por meio da matriz M.",
       "opcoes": [
@@ -3083,22 +3074,8 @@
       "id": 185
     }
   ],
-  "comentario": [
-    {
-      "nome_aluno": "taw-ham",
-      "comentario": "test finish comment your favorite color is blue",
-      "id_aluno": "0",
-      "id": 1
-    },
-    {
-      "nome_aluno": "taw-ham",
-      "comentario": "teste comentário último antes da avaliação",
-      "id_aluno": "0",
-      "id": 2
-    }
-  ],
-  "Lista_Teorica_aluno": [
-    {
+  "comentario": [],
+  "Lista_Teorica_aluno": [{
       "nome": "wwe",
       "id_criador": "0",
       "perguntas": [
@@ -3220,125 +3197,123 @@
       "id": 2
     }
   ],
-  "Lista_Teorica_Servidor": [
-    {
-      "nome": "teste2",
-      "id_aluno": "0",
-      "perguntas": [
-        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
-        "teste 1 + 1?",
-        "quanto é 1 + 1?",
-        "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:",
-        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
-        "Se A e B são matrizes 2 x 3, é verdade que a matriz A + B é:",
-        "quanto é 1 + 1",
-        "quanto é 1 +1?",
-        "1",
-        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
-        "(MACKENZIE 2012) O maior valor que o número real 10/2 - senx/3 pode assumir é:",
-        "1+ 2"
-      ],
-      "opcoes": [
-        [
-          0,
-          1,
-          3,
-          2,
-          10
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        [
-          "13",
-          "9",
-          "8",
-          "-4",
-          "10"
-        ],
-        [
-          "2 cosx",
-          "2 sen(x/2)",
-          "2 senx",
-          "2 sen 2x",
-          "2 cos 2x"
-        ],
-        [
-          "2 x 2",
-          "3 x 3",
-          "2 x 3",
-          "3 x 2",
-          "não é possível fazer A + B"
-        ],
-        [
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ],
-        [
-          "2",
-          "3",
-          "4",
-          "5",
-          "8"
-        ],
-        [
-          "2",
-          "3",
-          "5",
-          "4",
-          "3"
-        ],
-        [
-          "2",
-          "3",
-          "5",
-          "6",
-          "4"
-        ],
-        [
-          "20/3",
-          "7/3",
-          "10",
-          "6",
-          "20/7"
-        ],
-        [
-          "3",
-          "4",
-          "6",
-          "8",
-          "10"
-        ]
-      ],
-      "opcoes_certas": [
+  "Lista_Teorica_Servidor": [{
+    "nome": "teste2",
+    "id_aluno": "0",
+    "perguntas": [
+      "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
+      "teste 1 + 1?",
+      "quanto é 1 + 1?",
+      "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:",
+      "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+      "Se A e B são matrizes 2 x 3, é verdade que a matriz A + B é:",
+      "quanto é 1 + 1",
+      "quanto é 1 +1?",
+      "1",
+      "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+      "(MACKENZIE 2012) O maior valor que o número real 10/2 - senx/3 pode assumir é:",
+      "1+ 2"
+    ],
+    "opcoes": [
+      [
         0,
+        1,
+        3,
+        2,
+        10
+      ],
+      [
+        "1",
         "2",
+        "3",
+        "4",
+        "5"
+      ],
+      [
+        "1",
         "2",
+        "3",
+        "4",
+        "5"
+      ],
+      [
         "13",
+        "9",
+        "8",
+        "-4",
+        "10"
+      ],
+      [
         "2 cosx",
+        "2 sen(x/2)",
+        "2 senx",
+        "2 sen 2x",
+        "2 cos 2x"
+      ],
+      [
+        "2 x 2",
+        "3 x 3",
         "2 x 3",
+        "3 x 2",
+        "não é possível fazer A + B"
+      ],
+      [
         "2",
-        "13",
-        "q",
-        "6",
-        "6",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      [
+        "2",
+        "3",
+        "4",
+        "5",
+        "8"
+      ],
+      [
+        "2",
+        "3",
+        "5",
+        "4",
         "3"
       ],
-      "id": 1
-    }
-  ]
+      [
+        "2",
+        "3",
+        "5",
+        "6",
+        "4"
+      ],
+      [
+        "20/3",
+        "7/3",
+        "10",
+        "6",
+        "20/7"
+      ],
+      [
+        "3",
+        "4",
+        "6",
+        "8",
+        "10"
+      ]
+    ],
+    "opcoes_certas": [
+      0,
+      "2",
+      "2",
+      "13",
+      "2 cosx",
+      "2 x 3",
+      "2",
+      "13",
+      "q",
+      "6",
+      "6",
+      "3"
+    ],
+    "id": 1
+  }]
 }

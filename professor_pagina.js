@@ -264,8 +264,12 @@ document.getElementById("salas_criadas").onclick = function () {
 
             li.setAttribute('id', resposta[i].id)
             button_acessar_sala.innerHTML = resposta[i].nome;
-            button_apagar_sala.innerHTML = "<img height='2.5%' width='5%' src='./fotis/error.png'>"
+            button_apagar_sala.innerHTML = "<img height='6%' width='6%' src='./fotis/trash.png'>"
             button_apagar_sala.setAttribute("id", resposta[i].id);
+
+            button_apagar_sala.setAttribute("class", "trashx");
+            $(".trashx").css('background-color','red');
+
             console.log(button_acessar_sala)
             button_acessar_sala.setAttribute("id", resposta[i].id);
             li.append(button_acessar_sala);
@@ -274,7 +278,7 @@ document.getElementById("salas_criadas").onclick = function () {
                 const span = document.createElement("span");
                 span.setAttribute('id',resposta[i].id)
                 span.innerHTML = "apagar sala";
-                $(`#${resposta[i].id} > span`).css({'backgound-color':'black','opacity':'106%','color':'white'})
+                $(`#${resposta[i].id} > span`).css({'background-color':'black','opacity':'106%','color':'white'})
                 li.append(span)
 
             }
@@ -587,7 +591,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                                 console.log("termino da lista teórica");
                                                 $("#proximo_passo3").hide("fast");
                                                 $("#termino_exercicio").show("fast");
-                                                $("#lugar_nota").text(`Sua nota foi ${(nota/posicao_pergunta).toFixed(0)}`)
+                                                $("#lugar_nota").text(`Sua nota foi ${(nota/posicao_pergunta).toFixed(0)}, acertos: ${lista_perguntas_certas_user.length}, erros: ${lista_perguntas_erradas_usuario.length}`)
                                                 posicao_pergunta = 0;
                                                 posicao_opcoes = 0;
                                                 posicao_opcoes_certas = 0;
@@ -698,6 +702,105 @@ document.getElementById("salas_criadas").onclick = function () {
                                 let nome_da_lista_teorica = $("#nome_lista_teorica").val();
                                 let tempo_de_fazer_lista = $("#tempo_fazer_lista").val();
                                 let data_entrega = $("#data_entrega").val();
+                                let tempo_de_termino_final;
+                                let tempo_de_termino = [];
+                                if(tempo_de_fazer_lista != ""){
+                                    let lista = tempo_de_fazer_lista.split(':');
+                                    if(lista[0] == "01"){
+                                        lista[0] = 1;
+
+                                    }else if(lista[0] == "02"){
+                                        lista[0] = 2;
+                                    }else if(lista[0] == "03"){
+                                        lista[0] == 3
+                                    }
+                                    else if(lista[0] == "04"){
+                                        lista[0] = 4
+                                    }
+                                    else if(lista[0] == "05"){
+                                        lista[0] = 5;
+                                    }
+                                    else if(lista[0] == "06"){
+                                        lista[0] == 6
+                                    }
+                                    else if(lista[0] == "07"){
+                                        lista[0] == 7
+                                    }
+                                    else if(lista[0] == "08"){
+                                        lista[0] == 8
+                                    }
+                                    else if(lista[0] == "09"){
+                                        lista[0] == 9
+                                    }else if(lista[0] == "00"){
+                                        lista[0] = 0
+                                    }
+                                    else{
+                                        console.log("nice");
+                                    }
+                                    if(lista[1] == "01"){
+                                        lista[1] = 1;
+                                    }else if(lista[1] == "02"){
+                                        lista[1] = 2;
+                                    }else if(lista[1] == "03"){
+                                        lista[1] = 3;
+                                    }else if(lista[1] == "04"){
+                                        lista[1] = 4
+                                    }else if(lista[1] == "05"){
+                                        lista[1] = 5
+                                    }else if(lista[1] == "06"){
+                                        lista[1] = 6
+                                    }else if(lista[1] == "07"){
+                                        lista[1] = 7
+                                    }else if(lista[1] == "08"){
+                                        lista[1] = 8;
+                                    }else if(lista[1] == "09"){
+                                        lista[1] = 9;
+
+                                    }else if(lista[1] == "00"){
+                                        lista[1] = 0
+                                    }else{
+                                        console.log("nice")
+                                    }
+                                    if(lista[2] == "01"){
+                                        lista[2] = 1;
+                                    }else if(lista[2] == "02"){
+                                        lista[2] = 2;
+                                    }else if(lista[2] == "03"){
+                                        lista[2] = 3;
+                                    }else if(lista[2] == "04"){
+                                        lista[2] = 4
+                                    }else if(lista[2] == "05"){
+                                        lista[2] = 5
+                                    }else if(lista[2] == "06"){
+                                        lista[2] = 6
+                                    }else if(lista[2] == "07"){
+                                        lista[2] = 7
+                                    }else if(lista[2] == "08"){
+                                        lista[2] = 8;
+                                    }else if(lista[2] == "09"){
+                                        lista[2] = 9;
+
+                                    }else if(lista[2] == "00"){
+                                        lista[2] = 0
+                                    }else{
+                                        console.log("nice")
+                                    }
+                                    for(let i = 0; i <= lista.length -1; i++){
+                                        tempo_de_termino.push(lista[i])
+                                        tempo_de_termino.push(":")
+                                        
+                                    }
+                                    tempo_de_termino.splice(5,1)
+                                    console.log(tempo_de_termino)
+                                    tempo_de_termino_final = tempo_de_termino[0];
+                                    tempo_de_termino_final = tempo_de_termino_final + tempo_de_termino[1];
+                                    tempo_de_termino_final = tempo_de_termino_final + tempo_de_termino[2];
+                                    tempo_de_termino_final = tempo_de_termino_final + tempo_de_termino[3];
+                                    tempo_de_termino_final = tempo_de_termino_final + tempo_de_termino[4];
+                                   console.log(tempo_de_termino_final);
+                                }else{
+                                    tempo_de_termino_final = "";
+                                }
                                 console.log(data_entrega);
                                 let mes;
 
@@ -935,7 +1038,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                         }
                                     }
                                     document.getElementById("enviar_lista_teorica").onclick = function () {
-                                        let lista_teorica = new Lista_Teoria(nome_da_lista_teorica, lista_perguntas, lista_opcoes, opcoes_certas, id_login, id_sala, data_de_entrega, tempo_de_fazer_lista);
+                                        let lista_teorica = new Lista_Teoria(nome_da_lista_teorica, lista_perguntas, lista_opcoes, opcoes_certas, id_login, id_sala, data_de_entrega, tempo_de_termino_final);
                                         let lista_teorica_service = new Lista_Teoria_Service("http://localhost:3000/lista_teoricas");
                                         lista_teorica_service.inserir(lista_teorica).then(resposta => {
                                             swal('Lista Criada com Sucesso!', '- volte à área de recursos da sala -', 'success');
@@ -963,7 +1066,7 @@ document.getElementById("salas_criadas").onclick = function () {
         }
     })
     document.getElementById("voltar_da_area_acessar_sala").onclick = function () {
-        $("#wallprofx").css('padding-bottom', '19%');
+        $("#wallprofx").css('padding-bottom', '35%');
         $("#muralxprof").show("fast");
         $("#infprofx").hide("fast");
         $("#codeprofx2").hide("fast");
@@ -975,7 +1078,7 @@ document.getElementById("salas_criadas").onclick = function () {
 }
 document.getElementById("criar_sala").onclick = function () {
 
-
+    $("#dadosxx").hide("fast");
     $("#menu_escolhas").hide("fast");
     $("#area_de_criar_sala").show("fast");
     $("#nome_sala").show("fast");
@@ -1020,7 +1123,8 @@ document.getElementById("criar_sala").onclick = function () {
         }
     }
     document.getElementById("voltar_area_de_escolhas_inicial3").onclick = function () {
-        $("#wallprofx").css('padding-bottom', '19%');
+        $("#wallprofx").css('padding-bottom', '35%');
+        $("#dadosxx").show("fast");
         $("#menu_escolhas").show("fast");
         $("#area_de_criar_sala").hide("fast");
         document.getElementById("sala_nome").value = "";
