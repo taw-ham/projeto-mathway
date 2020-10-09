@@ -28,42 +28,19 @@
 
             <img class="highx" height="20%" width="30%" src="./fotis/finish.jpg" />
 
-            <div class="articx">
-                <article>
-                    <img height="30%" width="30%"
-                        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2F1RYKYnXmpUc%2Fmaxresdefault.jpg&f=1&nofb=1">
-                    <h2 style="float: left"> Notícia 1 </h2></img>
-                    <p style="float: right"> [ Descrição ] </p>
-                </article>
-
-                <article style="margin-top: 2%">
-                    <img height="30%" width="30%"
-                        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.villagevoice.com%2Fwp-content%2Fuploads%2F2018%2F05%2FM1D9CJ.jpg&f=1&nofb=1">
-                    <h2 style="float: left"> Notícia 2 </h2></img>
-                    <p style="float: right"> [ Descrição ] </p>
-                </article>
-
-                <article style="margin-top: 2%">
-                    <img height="30%" width="30%"
-                        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic01.nyt.com%2Fimages%2F2018%2F05%2F02%2Fnyregion%2F02DISTRICT10%2Fmerlin_137558535_77113ef7-7178-4630-ba5e-92b454f2a3c3-superJumbo.jpg&f=1&nofb=1">
-                    <h2 style="float: left"> Notícia 3 </h2></img>
-                    <p style="float: right"> [ Descrição ] </p>
-                </article>
-            </div>
-
-            <div class="dadosx">
+            <div id="dadosxx" class="dadosx">
                 <ul>
                     <li>
-                        <h2> Dados </h2>
+                        <h2> Perfil </h2>
                     </li>
                     <li>
-                        <h1 id="nome_user"> Nome: </h1>
+                        <h1 id="nome_user"> Nome: null </h1>
                     </li>
                     <li>
-                        <h1> Usuário: <strong>Professor</strong></h1>
+                        <h1> Usuário: Professor </h1>
                     </li>
                     <li>
-                        <h1 id="email_user"> Email: example@gmail.com </h1>
+                        <h1 id="email_user"> Email: null@gmail.com </h1>
                     </li>
                     <li class="imgprofx"><img height="25%" width="25%"
                             src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.myiconfinder.com%2Fuploads%2Ficonsets%2F256-256-5d8cab7b01ffef290b73909d06d92705.png&f=1&nofb=1" />
@@ -84,24 +61,24 @@
                 <h2> Criação de Sala </h2>
                 <div id="nome_sala">
                     <h1> Nome da Sala </h2>
-                        <input id="sala_nome" placeholder="Digite o nome da sala"></br>
+                        <input maxlength="15" id="sala_nome" placeholder="Digite o nome da sala"></br>
                         <button class="btn btn-primary" id="salva_nome_sala"> Salvar </button>
-                        
                 </div>
                 <div id="proximo_passo">
                     <h1> Geração de Código: </h2>
                         <p style="margin-top: -3%" id="situacao_codigo"></p>
                         <p style="margin-top: -6%" id="codigo_sala"> </p>
                         <button class="btn btn-primary" id="criar_sala_especifica"> Criar </button>
-                        
                 </div>
-                <button class="btn btn-primary" id="voltar_area_de_escolhas_inicial3"> Cancelar </button>
+
+                <hr style="margin: 0%; margin-top: 3%; margin-bottom: 4%" />
+                <button style="margin-top: -2%" class="btn btn-primary" id="voltar_area_de_escolhas_inicial3"> Cancelar
+                </button>
             </div>
 
         </div>
 
         <div id="infprofx" class="infprof">
-
             <div class="graficox">
                 <img src="./fotis/exercicios.jpg" height="20%" width="50%">
             </div>
@@ -119,7 +96,6 @@
                 <img src="fotis/study2.png" height="6%" width="6%">
                 <h3><strong>Controle de Notas:</strong> acesse e modifique notas baixas dos seus alunos </h3></img>
             </div>
-
         </div>
 
         <div id="codeprofx2" class="codeprof2">
@@ -132,8 +108,6 @@
 
             <ul id="opcoes_salas">
             </ul>
-
-
 
             <button class="btn btn-primary" id="voltar_da_area_acessar_sala"> Voltar </button>
         </div>
@@ -152,10 +126,12 @@
                 <hr class="linhax2" />
                 <li><button class="btn btn-primary" id="voltar_escolha_de_sala"> Voltar </button></li>
             </ul>
+
         </div>
 
         <div class="listatemax" id="area_opcoes_temas">
             <h2> Escolha de Temas </h2>
+
             <ul>
                 <li><input type="checkbox" value="1" id="matriz" name="opcoes_temas"> Matrizes </li>
                 <li><input type="checkbox" value="2" id="FUNÇÃO TRIGONOMÉTRICA" name="opcoes_temas"> Funções
@@ -181,6 +157,7 @@
                 <li><input type="checkbox" value="17" id="Função Composta" name="opcoes_temas"> Funções Compostas </li>
                 <li><input type="checkbox" value="18" id="Função Inversa" name="opcoes_temas"> Funções Inversas </li>
             </ul>
+
             <button class="btn btn-primary" id="salvar_temas"> Salvar temas </button>
         </div>
 
@@ -193,7 +170,6 @@
         <div class="listacreatex" id="area_criar_lista_teorica">
             <div class="createnom" id="nome_lista">
                 <h2> Criação de Lista Teórica </h2>
-
                 <input id="nome_lista_teorica" placeholder="Digite o nome da lista">
                 <h1> Escolha o tempo de finalização da lista <strong>(opcional)</strong></h1>
                 <input id="tempo_fazer_lista" placeholder="Exemplo de entrada: 2:0:0">
@@ -207,7 +183,6 @@
             <div class="professortemasx" id="proximo_passo2">
                 <h2> Criação de Lista Teórica </h2>
                 <h1> Seleção de Questões </h1>
-
                 <p class="percontx" id="contador"> </p>
 
                 <ul style="background-color: lightgray" class="perserverx" id="perguntas_servidor">
@@ -216,12 +191,11 @@
                 </ul>
 
                 </br>
+
                 <h1> Tutorial de Inserção de Questões </h1>
                 <video controls width="560" height="315">
                     <source src="./video/tutorialx.mp4" type="video/mp4">
-
                 </video>
-
                 <h1> Digite sua própria questão </h1>
                 <textarea id="pergunta_professor" oninput=pergunta() placeholder="Digite sua questão"></textarea>
 
@@ -229,11 +203,9 @@
 
                 <h1> Visualização </h1>
                 <p id="pergunta_digitada"> </p>
-
                 <h1> Digite as opcões da sua questão <strong>(uma opção por vez)</strong></h1>
                 <small class="form-text text-muted"> O máximo são 5 opcões que vão da letra "A-E" e no mínimo 5 opcões
                 </small>
-
                 <input id="opcoes_professor" oninput="opcoes()" placeholder="Digite as opções"><button
                     style="margin-left: 1%" class="btn btn-primary" id="salvar_opcao"> Salvar </button>
 
@@ -253,7 +225,6 @@
                 <h1> Visualização </h1>
                 <p id="opcao_certa"> </p>
                 <h1> Escolha o tema da sua questão <small class="obx0"> * </small></h1>
-
 
                 <div id="area_temas_escolher">
                 </div>
@@ -291,6 +262,7 @@
             <div class="exectx" id="proximo_passo3">
                 <h2><img height="25%" width="25" src="./fotis/question.png" /> Exercícios </h2>
                 <p id="place_perguntas"> </p>
+
                 <ul>
                     <li>A) <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
                     <li>B) <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
@@ -298,6 +270,7 @@
                     <li>D) <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
                     <li>E) <input type="radio" id="valor" name="opcoes"> <label id="escolha"> </label> </li>
                 </ul>
+
                 <button class="btn btn-primary" id="proxima_pergunta"> Próxima </button>
             </div>
 

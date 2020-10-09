@@ -64,7 +64,7 @@ body {
     width: 70%;
     margin: 0%;
     padding-bottom: 5.6%;
-    padding-top: 4%;
+    padding-top: 5%;
     margin-left: 30%;
     border-left: 1px solid gainsboro;
     background-image: url('./fotis/wallpaperm.png');
@@ -184,8 +184,8 @@ body {
     width: 100%;
     margin: 0%;
     opacity: 95%;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     position: relative;
 }
 
@@ -236,6 +236,7 @@ body {
     background-color: lightslategray;
     padding: 1%;
     border: 2px solid royalblue;
+    margin-top: 2%;
 }
 
 .escolhax .escolhax-a {
@@ -293,7 +294,7 @@ body {
     margin-left: 5%;
     border-left: 1px solid darkgray;
     border-right: 1px solid darkgray;
-    padding-bottom: 19%;
+    padding-bottom: 34%;
     padding-top: 1%;
 }
 
@@ -309,12 +310,18 @@ body {
     margin-left: 5%;
     border-left: 1px solid darkgray;
     border-right: 1px solid darkgray;
-    padding-bottom: 32%;
+    padding-bottom: 20%;
     padding-top: 1%;
 }
 
 .highx {
-    margin-left: 46%;
+    margin-left: 42%;
+    margin-top: 1%;
+    border-radius: 2px;
+}
+
+.highx2 {
+    margin-left: 50%;
     margin-top: 1%;
     border-radius: 2px;
 }
@@ -424,9 +431,9 @@ body {
     float: left;
     background-color: whitesmoke;
     margin: 0%;
-    margin-top: -37.2%;
-    margin-left: 24%;
-    width: 20%;
+    margin-top: -9%;
+    margin-left: 18%;
+    width: 22%;
     padding: 1%;
     border-radius: 2px;
     border: 1px solid lightslategrey;
@@ -461,10 +468,11 @@ body {
     margin: 0%;
     background-color: whitesmoke;
     padding: 0.5%;
-    width: 20%;
-    margin-left: 24%;
+    padding-bottom: 0.8%;
+    width: 22%;
+    margin-left: 18%;
     border-radius: 2px;
-    margin-top: -18%;
+    margin-top: -16.8%;
     border: 1px solid lightslategrey;
 }
 
@@ -480,9 +488,9 @@ body {
     margin: 0%;
     background-color: whitesmoke;
     padding: 1%;
-    width: 20%;
-    margin-top: -19%;
-    margin-left: 24%;
+    width: 24%;
+    margin-top: -16.8%;
+    margin-left: 16%;
     border-radius: 2px;
     border: 1px solid lightslategrey;
 }
@@ -530,9 +538,9 @@ body {
     float: left;
     background-color: whitesmoke;
     margin: 0%;
-    margin-top: -40.3%;
-    margin-left: 24%;
-    width: 20%;
+    margin-top: -20%;
+    margin-left: 26%;
+    width: 22%;
     padding: 1%;
     border-radius: 2px;
     border: 1px solid lightslategrey;
@@ -567,10 +575,11 @@ body {
     margin: 0%;
     background-color: whitesmoke;
     padding: 0.5%;
+    padding-bottom: 0.8%;
     border-radius: 2px;
-    width: 20%;
-    margin-top: -22%;
-    margin-left: 24%;
+    width: 22%;
+    margin-top: 0%;
+    margin-left: 26%;
     border: 1px solid lightslategrey;
 }
 
@@ -591,8 +600,8 @@ body {
     background-color: whitesmoke;
     padding: 1%;
     border-radius: 2px;
-    width: 20%;
-    margin-top: -35.9%;
+    width: 22%;
+    margin-top: -36.2%;
     margin-left: 2%;
     border: 1px solid lightslategrey;
 }
@@ -627,8 +636,8 @@ body {
     padding: 1%;
     border-radius: 2px;
     width: 20%;
-    margin-top: -19%;
-    margin-left: 24%;
+    margin-top: -20%;
+    margin-left: 4%;
     border: 1px solid lightslategrey;
 }
 
@@ -673,7 +682,7 @@ body {
 }
 
 .notasx2 button {
-    margin-left: 2%;
+    margin-left: 4%;
     font-family: calibri;
     margin-top: 0.5%;
     padding-top: 0.02%;
@@ -698,7 +707,7 @@ body {
 }
 
 .exercx h1 {
-    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
+    background: linear-gradient(#6495ED, #6495ED, #6495ED, lightblue);
     text-align: center;
     font-size: 120%;
     font-family: calibri;
@@ -764,7 +773,7 @@ body {
 }
 
 .listaspastx h2 {
-    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
+    background: linear-gradient(#6495ED, #6495ED, #6495ED, lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
@@ -852,7 +861,7 @@ body {
 }
 
 .listatemax h2 {
-    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
+    background: linear-gradient(#6495ED, #6495ED, #6495ED, lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
@@ -919,7 +928,7 @@ body {
 }
 
 .creatx h2 {
-    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
+    background: linear-gradient(#6495ED, #6495ED, #6495ED, lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
@@ -997,7 +1006,7 @@ body {
 }
 
 .exectx h2 {
-    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
+    background: linear-gradient(#6495ED, #6495ED, #6495ED, lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: left;
@@ -1081,7 +1090,7 @@ body {
 }
 
 .resultx h2 {
-    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
+    background: linear-gradient(#6495ED, #6495ED, #6495ED, lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: left;
@@ -1134,7 +1143,7 @@ body {
 }
 
 .listasintx h2 {
-    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
+    background: linear-gradient(#6495ED, #6495ED, #6495ED, lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
@@ -1176,9 +1185,9 @@ body {
 .listasintx li button {
     background-color: lightsteelblue;
     border-radius: 2px;
+    padding: 2%;
     color: white;
     text-shadow: 1px 1px #000;
-    width: 50%;
     font-weight: bold;
 }
 
@@ -1196,7 +1205,7 @@ body {
 }
 
 .listasintx2 h2 {
-    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
+    background: linear-gradient(#6495ED, #6495ED, #6495ED, lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
@@ -1259,7 +1268,7 @@ body {
 }
 
 .codesalax h2 {
-    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
+    background: linear-gradient(#6495ED, #6495ED, #6495ED, lightblue);
     text-align: center;
     font-size: 100%;
     font-family: calibri;
@@ -1296,7 +1305,7 @@ body {
 }
 
 .listacreatex .createnom h2 {
-    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
+    background: linear-gradient(#6495ED, #6495ED, #6495ED, lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
@@ -1329,7 +1338,7 @@ body {
 }
 
 .professortemasx h2 {
-    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
+    background: linear-gradient(#6495ED, #6495ED, #6495ED, lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
@@ -1364,7 +1373,7 @@ body {
 }
 
 .usersalax h2 {
-    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
+    background: linear-gradient(#6495ED, #6495ED, #6495ED, lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
@@ -1404,7 +1413,7 @@ body {
 }
 
 .notafuncx h2 {
-    background: linear-gradient(#6495ED,#6495ED,#6495ED,lightblue);
+    background: linear-gradient(#6495ED, #6495ED, #6495ED, lightblue);
     color: white;
     text-shadow: 1px 1px #000;
     text-align: center;
@@ -1658,6 +1667,12 @@ body {
     border: 2px solid lightblue;
     background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi.huffpost.com%2Fgen%2F1728627%2Fimages%2Fo-TEACHER-IN-CLASSROOM-facebook.jpg&f=1&nofb=1');
     background-size: cover;
+}
+#opcoes_salas span{
+    background-color: #000;
+    color: white;
+    opacity: 200%;
+    padding: 2.5%;
 }
 
 .imgalunx {

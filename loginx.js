@@ -61,12 +61,16 @@ for (let i = 0; i <= tipo_userx.length - 1; i++) {
             $("#logx").css('background', 'linear-gradient(whitesmoke,lightblue)');
             $("#obx").hide("fast");
             $("#tipologinx").css('background', 'lightblue');
-            $("#wallx").css('padding-bottom', '7.4%');
+            $("#bbx").css('background-color','blue');
+            $("#ccx").css('background-color','lightslategray');
+            $("#wallx").css('padding-bottom', '7.5%');
         } else {
             $("#logx").css('background', 'linear-gradient(whitesmoke,lightgreen');
             $("#obx").hide("fast");
             $("#tipologinx").css('background', 'lightgreen');
-            $("#wallx").css('padding-bottom', '7.4%');
+            $("#ccx").css('background-color','green');
+            $("#bbx").css('background-color','lightslategray');
+            $("#wallx").css('padding-bottom', '7.5%');
         }
     }
 }

@@ -206,7 +206,7 @@ const email_user = localStorage.getItem('email');
 document.getElementById("nome_user").innerText = `Nome: ${nome_user}`;
 document.getElementById("email_user").innerText = `E-mail: ${email_user}`;
 const logout = document.getElementById("logout");
-logout.onclick = function(){
+logout.onclick = function () {
     localStorage.removeItem('id');
     localStorage.removeItem('nome');
     localStorage.removeItem('email');
@@ -259,30 +259,47 @@ document.getElementById("salas_criadas").onclick = function () {
         for (let i = 0; i <= resposta.length - 1; i++) {
             let button_acessar_sala = document.createElement("button");
             let button_apagar_sala = document.createElement("button");
+
             let li = document.createElement("li");
 
             li.setAttribute('id', resposta[i].id)
             button_acessar_sala.innerHTML = resposta[i].nome;
-            button_apagar_sala.innerHTML = "<img height='10%' width='10%' src='./fotis/error.png'>"
+            button_apagar_sala.innerHTML = "<img height='2.5%' width='5%' src='./fotis/error.png'>"
             button_apagar_sala.setAttribute("id", resposta[i].id);
-
             console.log(button_acessar_sala)
             button_acessar_sala.setAttribute("id", resposta[i].id);
             li.append(button_acessar_sala);
             li.append(button_apagar_sala);
+            button_apagar_sala.onmouseover = function(){
+                const span = document.createElement("span");
+                span.setAttribute('id',resposta[i].id)
+                span.innerHTML = "apagar sala";
+                $(`#${resposta[i].id} > span`).css({'backgound-color':'black','opacity':'106%','color':'white'})
+                li.append(span)
+
+            }
+            button_apagar_sala.onmouseout = function(){
+                $(`#${resposta[i].id} > span`).remove();
+
+            }
+
             ul.append(li);
+            
+
             button_apagar_sala.onclick = function () {
-                const id_sala = event.target.id;
+                const id_sala = resposta[i].id;
+                
+
                 const sala_service = new Salas_Service("http://localhost:3000/salas");
                 sala_service.apagar(id_sala).then(resposta => {
                     console.log(resposta);
                     $("#opcoes_salas > li").remove(`#${id_sala}`);
                     const lista_teorica_service = new Lista_Teoria_Service(`http://localhost:3000/lista_teoricas?id_sala=${id_sala}`)
-                    lista_teorica_service.lista().then(response =>{
+                    lista_teorica_service.lista().then(response => {
                         console.log(response);
-                        for(let i = 0; i <= response.length -1; i++){
+                        for (let i = 0; i <= response.length - 1; i++) {
                             const lista_teorica_service = new Lista_Teoria_Service("http://localhost:3000/lista_teoricas");
-                            lista_teorica_service.deletar(response[i].id).then(response =>{
+                            lista_teorica_service.deletar(response[i].id).then(response => {
                                 console.log(response);
                             })
                         }
@@ -432,16 +449,26 @@ document.getElementById("salas_criadas").onclick = function () {
                                 $("#ver_nota_aluno").show("fast");
                                 let nota_service = new Nota_Service(`http://localhost:3000/notas_professor?id_lista_teorica=${id_lista_teorica}`);
                                 nota_service.listar().then(resposta => {
+                                   
                                     console.log(resposta)
                                     let ul = document.getElementById("place_nota");
                                     for (let i = 0; i <= resposta.length - 1; i++) {
+                                        const lista_acerto = resposta[i].perguntas_certas;
+                                        const lista_errado = resposta[i].perguntas_erradas;
+
                                         let li = document.createElement("li");
                                         let span_nome = document.createElement("span");
                                         let span_nota = document.createElement("span");
+                                        let span_cont_acertos = document.createElement("span");
+                                        let span_cont_errados = document.createElement("span")
                                         span_nome.innerHTML = "Nome do aluno: " + resposta[i].nome_aluno + "</br>";
-                                        span_nota.innerHTML = "Nota do aluno: " + resposta[i].nota;
+                                        span_nota.innerHTML = "Nota do aluno: " + resposta[i].nota + "</br>";
+                                        span_cont_acertos.innerHTML = `acertos: ${lista_acerto.length} </br>`;
+                                        span_cont_errados.innerHTML = `erros: ${lista_errado.length}  </br> `
                                         li.append(span_nome);
                                         li.append(span_nota);
+                                        li.append(span_cont_acertos);
+                                        li.append(span_cont_errados);
                                         ul.append(li);
                                     }
                                 })
@@ -716,6 +743,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                     let lista_opcoes = [];
                                     let opcoes_certas = [];
                                     let cont_perguntas = 0;
+
                                     let contador_perguntas = document.getElementById("contador")
                                     $("#nome_lista").hide("fast");
                                     $("#proximo_passo2").show("fast");
@@ -731,68 +759,113 @@ document.getElementById("salas_criadas").onclick = function () {
                                             ul.append(li_nome);
                                             for (let i = 0; i <= resposta.length - 1; i++) {
                                                 let li = document.createElement("li");
-                                                li.setAttribute("id", resposta[i].id)
                                                 let button = document.createElement("button");
                                                 button.setAttribute("id", resposta[i].id)
                                                 button.innerHTML = resposta[i].pergunta;
                                                 li.append(button);
                                                 ul.append(li);
                                                 button.onclick = function () {
-                                                    let id_pergunta = resposta[i].id
+                                                    const id_pergunta = resposta[i].id;
                                                     console.log(id_pergunta);
-                                                    $("#perguntas_servidor > li").remove(`#${id_pergunta}`)
-                                                    lista_perguntas.push(resposta[i].pergunta);
-                                                    console.log(lista_perguntas);
-                                                    lista_opcoes.push(resposta[i].opcoes);
-                                                    console.log(lista_opcoes)
-                                                    opcoes_certas.push(resposta[i].opcao_certa);
-                                                    console.log(opcoes_certas);
+                                                    $(`#${id_pergunta}`).css('background-color', 'limegreen');
+
+                                                    const apagar_pergunta = resposta[i].pergunta;
+                                                    const opcoes_apagar = resposta[i].opcoes;
+                                                    const apagar_opcoes_certa = resposta[i].opcao_certa;
+
                                                     cont_perguntas++;
                                                     contador_perguntas.innerHTML = cont_perguntas + " pergunta(s) adicionadas";
+                                                    const indice_pergunta = lista_perguntas.findIndex(elemento => elemento === apagar_pergunta);
+                                                    if (indice_pergunta > -1) {
+                                                        $(`#${id_pergunta}`).css('background-color', 'red');
+                                                        const apagado = lista_perguntas.splice(indice_pergunta, 1);
+                                                        const index_opcoes = lista_opcoes.findIndex(elemento => elemento === opcoes_apagar);
+                                                        console.log(index_opcoes)
+                                                        lista_opcoes.splice(index_opcoes, 1);
+                                                        const index_opcoes_certas = opcoes_certas.findIndex(elemento => elemento === apagar_opcoes_certa);
+                                                        opcoes_certas.splice(index_opcoes_certas, 1);
+                                                        console.log(lista_perguntas, lista_opcoes, opcoes_certas);
 
+                                                    } else {
+                                                        lista_perguntas.push(resposta[i].pergunta);
+                                                        lista_opcoes.push(resposta[i].opcoes);
+                                                        opcoes_certas.push(resposta[i].opcao_certa);
+                                                        console.log(lista_perguntas);
+                                                        console.log(lista_opcoes)
+                                                        console.log(opcoes_certas);
+                                                    }
                                                 }
                                             }
                                         })
                                     }
                                     var opcoes_check = [];
                                     let click = 0;
+                                    let cont_opcoes = 0;
                                     let opcoes = [];
                                     const opcoes_letras = ['a', 'b', 'c', 'd', 'e'];
-
-
                                     document.getElementById("salvar_opcao").onclick = function () {
-                                        $("#lugar_opcoes").empty()
-
-
-                                        let opcoes_user = document.getElementById("opcoes_professor").value;
-                                        if (opcoes_user != "") {
-                                            $("#lugar_opcoes").empty();
-
-                                            opcoes.push(opcoes_user);
-                                            let div_opcoes = document.getElementById("lugar_opcoes");
-                                            for (let i = 0; i <= opcoes.length - 1; i++) {
-                                                let p = document.createElement("p").innerText = opcoes_letras[i] + ") " + opcoes[i];
-                                                let br = document.createElement("br");
-                                                div_opcoes.append(p);
-                                                div_opcoes.append(br);
-
-                                            }
-                                            document.getElementById("opcoes_professor").value = "";
-                                            click++;
-                                            if (click == 5) {
+                                        cont_opcoes ++;
+                                        if (cont_opcoes <= 5) {
+                                            $("#lugar_opcoes").empty()
+                                            let opcoes_user = document.getElementById("opcoes_professor").value;
+                                            if (opcoes_user != "") {
+                                                $("#lugar_opcoes").empty();
+                                                opcoes.push(opcoes_user);
+                                                let div_opcoes = document.getElementById("lugar_opcoes");
                                                 for (let i = 0; i <= opcoes.length - 1; i++) {
-                                                    opcoes_check.push(opcoes[i]);
-                                                    console.log(opcoes_check)
+                                                    let p = document.createElement("p");
+                                                    p.innerHTML = `${opcoes_letras[i]}) ${opcoes[i]}    `;
+                                                    p.setAttribute('id', `opcao${i}`);
+                                                    const buttom_modificador = document.createElement("button");
+                                                    buttom_modificador.setAttribute('id', `opcao${i}`);
+                                                    buttom_modificador.innerHTML = "modificar";
+                                                    p.append(buttom_modificador);
+                                                    div_opcoes.append(p);
+
+                                                    buttom_modificador.onclick = function () {
+                                                        const id_opcao = event.target.id;
+                                                        p.innerHTML = ""
+                                                        const opcao_existente = opcoes[i];
+                                                        const input_modificar_opcao = document.createElement("input");
+                                                        const button_modificar = document.createElement("button");
+                                                        button_modificar.innerHTML = "salvar"
+                                                        input_modificar_opcao.value = opcao_existente;
+
+                                                        p.append(input_modificar_opcao);
+                                                        p.append(button_modificar);
+                                                        button_modificar.onclick = function () {
+                                                            const valor_modificado = input_modificar_opcao.value;
+                                                            const indice = opcoes.findIndex(elemento => elemento === opcao_existente);
+                                                            opcoes[indice] = valor_modificado;
+                                                            $(`#${id_opcao} > p `).empty();
+                                                            for (let i = 0; i <= opcoes.length - 1; i++) {
+                                                                p.innerHTML = `${opcoes_letras[i]}) ${valor_modificado}  `;
+                                                                p.append(buttom_modificador);
+
+                                                            }
+
+                                                        }
+                                                    }
+                                                }
+                                                document.getElementById("opcoes_professor").value = "";
+                                                click++;
+                                                if (click == 5) {
+                                                    for (let i = 0; i <= opcoes.length - 1; i++) {
+                                                        opcoes_check.push(opcoes[i]);
+                                                        console.log(opcoes_check)
+
+                                                    }
+
+                                                    console.log(opcoes)
+                                                    click = 0;
 
                                                 }
 
-                                                console.log(opcoes)
-                                                click = 0;
-
+                                            } else {
+                                                swal("Resposta Inválida!", '- escolha sua opção -', 'error')
                                             }
-
-                                        } else {
-                                            swal("Resposta Inválida!", '- escolha sua opção -', 'error')
+                                        }else{
+                                            swal("não pode mais adicionar perguntas","",'error')
                                         }
 
                                     }
@@ -901,13 +974,13 @@ document.getElementById("salas_criadas").onclick = function () {
     }
 }
 document.getElementById("criar_sala").onclick = function () {
-    
+
 
     $("#menu_escolhas").hide("fast");
     $("#area_de_criar_sala").show("fast");
     $("#nome_sala").show("fast");
     $("#proximo_passo").hide("fast");
-    
+
     document.getElementById("salva_nome_sala").onclick = function () {
         let nome_sala = $("#sala_nome").val();
         if (nome_sala == "") {
@@ -929,7 +1002,7 @@ document.getElementById("criar_sala").onclick = function () {
                                 $("#situacao_codigo").text("criando código")
                             } else {
                                 $("#situacao_codigo").text(`Código: ${aleatorio}`)
-                                
+
                                 document.getElementById("criar_sala_especifica").onclick = function () {
                                     let participantes = [];
                                     let participantes_id = []
@@ -955,5 +1028,5 @@ document.getElementById("criar_sala").onclick = function () {
         $("#codigo_sala").empty()
 
     }
-    
+
 }

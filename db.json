@@ -11,6 +11,12 @@
       "nome": "Lucas",
       "senha": "456",
       "email": "lucasway@gmail.com"
+    },
+    {
+      "nome": "taw-ham",
+      "senha": "123456",
+      "email": "taw.ham@academico.ifpb.edu.br",
+      "id": 3
     }
   ],
   "salas": [
@@ -237,7 +243,33 @@
       "id": 3
     }
   ],
-  "notas_professor": [],
+  "notas_professor": [
+    {
+      "nome_aluno": "taw-ham",
+      "nota": 83,
+      "id_aluno": "0",
+      "id_lista_teorica": 1,
+      "nome_lista_teorica": "teste2",
+      "perguntas_certas": [
+        "Considere a matriz A = (a<sub>ij</sub>)<sub>2x2</sub>, em que a<sub>ij</sub> = 2<sup>i-j</sup>, e a matriz C dada por C = A<sup>2</sup> + 2A. Logo, o determinante da matriz C é:",
+        "teste 1 + 1?",
+        "quanto é 1 + 1?",
+        "(Cefet-PR) A função real f(x) = a + b . sen cx tem imagem igual a [-7, 9] e seu período é π/2 rad. Assim, a + b + c vale:",
+        "(Stoodi) A figura a seguir mostra parte do gráfico da função:</br><img src = 'https://static.stoodi.com.br/images/exercises/5593b2f7d85b4e52a076e61d1cc8411d/67ffdb1e36e6eed8725be542cf83cb55ea5f8eeca16de86176482bcc8533b233.png?versionId=VnxFyuXyZBNgHJM7rV5VaibYi836.YFw'>",
+        "quanto é 1 + 1",
+        "(G1 - CFTMG 2015)O esboço do gráfico da função f(x)=a+b cos(x) é mostrado na figura seguinte.</br><img src = 'https://static.stoodi.com.br/images/exercises/b1975b16cffd4fd18e9e7b11001abd03/7a07e7cbb7aa93bb30754a042eee2a96f15ba5b0465cb7e99b86c373e158571b.png?versionId=b7JivHAWvJAL5n8ZopMZBE__UUDAX7.B'></br>Nessa situação, o valor de ab é:",
+        "(MACKENZIE 2012) O maior valor que o número real 10/2 - senx/3 pode assumir é:",
+        "1+ 2",
+        "Se A e B são matrizes 2 x 3, é verdade que a matriz A + B é:"
+      ],
+      "perguntas_erradas": [
+        "quanto é 1 +1?",
+        "1"
+      ],
+      "id": 1
+    }
+
+  ],
   "notas_servidor": [
     {
       "nome_aluno": "taw-ham",

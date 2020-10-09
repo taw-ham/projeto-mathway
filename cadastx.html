@@ -23,11 +23,13 @@
     <div id="wallx2" class="wall2">
 
         <div id="escolhaxa" class="escolhax">
+            <small class="form-text text-muted"> - tipo de usuário - </small>
+
             <header class="escolhax-a">
-                <button id="bbx2" class="btn btn-primary"> Aluno </button>
+                <button id="bbx2" name = "tipo_login" class="btn btn-primary"> Aluno </button>
             </header>
             <header class="escolhax-b">
-                <button id="ccx2" class="btn btn-primary"> Professor </button>
+                <button id="ccx2" name = "tipo_login" class="btn btn-primary"> Professor </button>
             </header>
             <small id="obx02" class="obx0"> * Escolha seu tipo de usuário! </small>
         </div>
@@ -42,14 +44,15 @@
             <div id="logxalun">
 
                 <div>
-                    <label> Nome de Usuário: </label>
-                    <input type="user" class="form-control" id="nome_cadastro" placeholder="Insira seu nome de usuário">
+                    <label> Nome Completo: </label>
+                    <input maxlength="40" type="user" class="form-control" id="nome_cadastro"
+                        placeholder="Insira seu nome completo">
                 </div>
 
-                <div>
+                <div style="margin-top: 1%">
                     <label> Endereço de Email: </label>
-                    <input type="email" class="form-control" id="email_cadastro" aria-describedby="emailHelp"
-                        placeholder="Insira seu email">
+                    <input maxlength="40" type="email" class="form-control" id="email_cadastro"
+                        aria-describedby="emailHelp" placeholder="Insira seu email">
                     <small id="emailHelp" class="form-text text-muted"> Nunca compartilharemos seu email com mais
                         ninguém!
                     </small>
@@ -57,7 +60,8 @@
 
                 <div class="form-group">
                     <label for="exampleInputPassword1"> Senha: </label>
-                    <input type="password" class="form-control" id="senha_cadastro" placeholder="Insira sua senha">
+                    <input maxlength="20" type="password" class="form-control" id="senha_cadastro"
+                        placeholder="Insira sua senha">
                 </div>
 
                 <p id="situacao_usuario_cadastro"> </p>

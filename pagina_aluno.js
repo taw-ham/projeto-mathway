@@ -254,7 +254,7 @@ const id_login = localStorage.getItem('id');
 const email_login = localStorage.getItem('e-mail');
 const nome_login = localStorage.getItem('nome');
 const logout = document.getElementById("logout");
-logout.onclick = function(){
+logout.onclick = function () {
     localStorage.removeItem('id');
     localStorage.removeItem('nome');
     localStorage.removeItem('e-mail');
@@ -278,7 +278,7 @@ $("#codeprofx").hide("fast");
 $("#codeprofx2").hide("fast");
 
 document.getElementById("voltar_area_de_escolhas_inicial2").onclick = function () {
-    $("#wallalunx").css('padding-bottom', '32%');
+    $("#wallalunx").css('padding-bottom', '20%');
     $("#area_de_escolhas").show("fast");
     $("#lugar_entrada_sala").hide("fast");
     $("#comentario").show("fast");
@@ -332,7 +332,7 @@ document.getElementById("enviar_comentario").onclick = function () {
     }
 }
 document.getElementById("entrar_sala").onclick = function () {
-    $("#wallalunx").css('padding-bottom', '16%');
+    $("#wallalunx").css('padding-bottom', '32%');
     $("#comentario").hide("fast");
     $("#area_de_escolhas").hide("fast");
     $("#lugar_entrada_sala").show("fast");
@@ -381,10 +381,16 @@ document.getElementById("notas").onclick = function () {
             let tr = document.createElement("tr");
             let td_nome = document.createElement("td");
             let td_nota = document.createElement("td");
+            let td_acertos = document.createElement("td");
+            let td_erros = document.createElement("td")
             td_nome.innerHTML = resposta[i].nome_lista_teorica;
             td_nota.innerHTML = resposta[i].nota;
+            td_acertos.innerHTML = "acertos: " + resposta[i].perguntas_certas;
+            td_erros.innerHTML = "erros: " + resposta[i].perguntas_erradas;
             tr.append(td_nome);
             tr.append(td_nota);
+            tr.append(td_acertos);
+            tr.append(td_erros);
             boletim.append(tr);
         }
     })
@@ -394,10 +400,16 @@ document.getElementById("notas").onclick = function () {
             let tr = document.createElement("tr");
             let td_nome = document.createElement("td");
             let td_nota = document.createElement("td");
+            let td_acertos = document.createElement("td");
+            let td_erros = document.createElement("td")
             td_nome.innerHTML = resposta[i].nome_lista_teorica;
             td_nota.innerHTML = resposta[i].nota;
+            td_acertos.innerHTML = "acertos: " + resposta[i].perguntas_certas;
+            td_erros.innerHTML = "erros: " + resposta[i].perguntas_erradas;
             tr.append(td_nome);
             tr.append(td_nota);
+            tr.append(td_acertos);
+            tr.append(td_erros);
             boletim.append(tr);
         }
     })
@@ -409,14 +421,18 @@ document.getElementById("notas").onclick = function () {
             let td_nota = document.createElement("td");
             td_nome.innerHTML = resposta[i].nome_lista_teorica;
             td_nota.innerHTML = resposta[i].nota;
+            td_acertos.innerHTML = "acertos: " + resposta[i].perguntas_certas;
+            td_erros.innerHTML = "erros: " + resposta[i].perguntas_erradas;
             tr.append(td_nome);
             tr.append(td_nota);
+            tr.append(td_acertos);
+            tr.append(td_erros);
             boletim.append(tr);
         }
 
     })
     document.getElementById("voltar_area_de_escolhas_inicial").onclick = function () {
-        $("#wallalunx").css('padding-bottom', '32%');
+        $("#wallalunx").css('padding-bottom', '20%');
         $("#area_de_escolhas").show("fast");
         $("#lugar_de_notas").hide("fast");
         $("#boletim").empty();
@@ -566,7 +582,7 @@ document.getElementById("exercicios").onclick = function () {
                                         ul_resposta_errada.append(li);
 
                                     }
-                                    if(lista_perguntas_erradas_usuario.length > 0){
+                                    if (lista_perguntas_erradas_usuario.length > 0) {
                                         $("#fazer_perguntas_erradas").show("fast");
                                     }
                                     document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
@@ -599,7 +615,7 @@ document.getElementById("exercicios").onclick = function () {
                                         })
 
                                     }
-                                    
+
                                     document.getElementById("fazer_perguntas_erradas").onclick = function () {
                                         $("#reposta_certa").empty();
                                         $("#pergunta_errada").empty();
@@ -847,9 +863,9 @@ document.getElementById("exercicios").onclick = function () {
                                         li.innerHTML = `${posicao_erradas_perguntas[i]}) ${lista_perguntas_erradas_usuario[i]}`;
                                         li.append(button);
                                         ul_resposta_errada.append(li);
-                                        
+
                                     }
-                                    if(lista_perguntas_erradas_usuario.length > 0){
+                                    if (lista_perguntas_erradas_usuario.length > 0) {
                                         $("#fazer_perguntas_erradas").show("fast");
 
                                     }
@@ -1176,7 +1192,7 @@ document.getElementById("exercicios").onclick = function () {
                                             li.append(button);
                                             ul_resposta_errada.append(li);
                                         }
-                                        if(lista_perguntas_erradas_usuario.length > 0){
+                                        if (lista_perguntas_erradas_usuario.length > 0) {
                                             $("#fazer_perguntas_erradas").show("fast");
                                         }
                                         document.getElementById("fazer_perguntas_erradas").onclick = function () {
@@ -1452,7 +1468,7 @@ document.getElementById("exercicios").onclick = function () {
                                             input_radio[i].setAttribute('value', opcoes_server[posicao_opcoes][i]);
                                         }
                                         if (posicao_pergunta == lista_pergunta_server.length) {
-                                        
+
                                             $("#fazer_exercicio_lista_teorica").hide("fast");
                                             $("#termino_exercicio").show("fast");
                                             nota = parseInt((nota / lista_pergunta_server.length).toFixed(0));
@@ -1484,9 +1500,9 @@ document.getElementById("exercicios").onclick = function () {
                                                 li.append(button);
                                                 ul_resposta_errada.append(li);
                                             }
-                                            if(lista_perguntas_erradas_usuario.length > 0){
+                                            if (lista_perguntas_erradas_usuario.length > 0) {
                                                 $("#fazer_perguntas_erradas").show("fast");
-        
+
                                             }
                                             document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
                                                 $("#wallalunx").css('background-image', 'url("./fotis/wood.jpg")');
