@@ -373,11 +373,13 @@ document.getElementById("notas").onclick = function () {
     let boletim = document.getElementById("boletim");
     let titulo_table = document.createElement("th");
     titulo_table.innerHTML = "Listas teóricas - Notas"
-    titulo_table.setAttribute('colspan', 2);
+    titulo_table.setAttribute('colspan', 4);
     boletim.append(titulo_table);
     let nota_service = new Nota_Service(`http://localhost:3000/notas_professor?id_aluno=${id_login}`);
     nota_service.listar().then(resposta => {
         for (let i = 0; i <= resposta.length - 1; i++) {
+            const acertos = resposta[i].perguntas_certas;
+            const erros = resposta[i].perguntas_erradas
             let tr = document.createElement("tr");
             let td_nome = document.createElement("td");
             let td_nota = document.createElement("td");
@@ -385,8 +387,8 @@ document.getElementById("notas").onclick = function () {
             let td_erros = document.createElement("td")
             td_nome.innerHTML = resposta[i].nome_lista_teorica;
             td_nota.innerHTML = resposta[i].nota;
-            td_acertos.innerHTML = "acertos: " + resposta[i].perguntas_certas;
-            td_erros.innerHTML = "erros: " + resposta[i].perguntas_erradas;
+            td_acertos.innerHTML = "acertos: " + acertos.length;
+            td_erros.innerHTML = "erros: " + erros.length;
             tr.append(td_nome);
             tr.append(td_nota);
             tr.append(td_acertos);
@@ -396,7 +398,10 @@ document.getElementById("notas").onclick = function () {
     })
     let nota_service2 = new Nota_Service(`http://localhost:3000/notas_servidor?id_aluno=${id_login}`);
     nota_service2.listar().then(resposta => {
+        
         for (let i = 0; i <= resposta.length - 1; i++) {
+            const acertos = resposta[i].perguntas_certas;
+            const erros = resposta[i].perguntas_erradas
             let tr = document.createElement("tr");
             let td_nome = document.createElement("td");
             let td_nota = document.createElement("td");
@@ -404,8 +409,8 @@ document.getElementById("notas").onclick = function () {
             let td_erros = document.createElement("td")
             td_nome.innerHTML = resposta[i].nome_lista_teorica;
             td_nota.innerHTML = resposta[i].nota;
-            td_acertos.innerHTML = "acertos: " + resposta[i].perguntas_certas;
-            td_erros.innerHTML = "erros: " + resposta[i].perguntas_erradas;
+            td_acertos.innerHTML = "acertos: " + acertos.length;
+            td_erros.innerHTML = "erros: " + erros.length;
             tr.append(td_nome);
             tr.append(td_nota);
             tr.append(td_acertos);
@@ -416,13 +421,17 @@ document.getElementById("notas").onclick = function () {
     let nota_service3 = new Nota_Service(`http://localhost:3000/notas_aluno?=id_aluno=${id_login}`)
     nota_service3.listar().then(resposta => {
         for (let i = 0; i <= resposta.length - 1; i++) {
+            const acertos = resposta[i].perguntas_certas;
+            const erros = resposta[i].perguntas_erradas
             let tr = document.createElement("tr");
             let td_nome = document.createElement("td");
             let td_nota = document.createElement("td");
+            let td_acertos = document.createElement("td");
+            let td_erros = document.createElement("td");
             td_nome.innerHTML = resposta[i].nome_lista_teorica;
             td_nota.innerHTML = resposta[i].nota;
-            td_acertos.innerHTML = "acertos: " + resposta[i].perguntas_certas;
-            td_erros.innerHTML = "erros: " + resposta[i].perguntas_erradas;
+            td_acertos.innerHTML = "acertos: " + acertos.length;
+            td_erros.innerHTML = "erros: " + erros.length;
             tr.append(td_nome);
             tr.append(td_nota);
             tr.append(td_acertos);
