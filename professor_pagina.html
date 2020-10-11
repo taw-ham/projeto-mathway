@@ -61,7 +61,8 @@
                 <h2> Criação de Sala </h2>
                 <div id="nome_sala">
                     <h1> Nome da Sala </h2>
-                        <input maxlength="15" id="sala_nome" placeholder="Digite o nome da sala"></br>
+                        <input style="border-radius: 2px" maxlength="15" id="sala_nome"
+                            placeholder="Digite o nome da sala"></br>
                         <button class="btn btn-primary" id="salva_nome_sala"> Salvar </button>
                 </div>
                 <div id="proximo_passo">
@@ -72,8 +73,11 @@
                 </div>
 
                 <hr style="margin: 0%; margin-top: 3%; margin-bottom: 3%" />
-                <button style="margin-top: -2%" class="btn btn-primary" id="voltar_area_de_escolhas_inicial3"> Cancelar
-                </button>
+                <div style="background-color: lightgray; padding: 2%">
+                    <button style="margin-top: -0.5%" class="btn btn-primary" id="voltar_area_de_escolhas_inicial3">
+                        Cancelar
+                    </button>
+                </div>
             </div>
 
         </div>
@@ -109,7 +113,7 @@
             <ul id="opcoes_salas">
             </ul>
 
-            <button class="btn btn-primary" id="voltar_da_area_acessar_sala"> Voltar </button>
+            <button style="font-size: 95%" class="btn btn-primary" id="voltar_da_area_acessar_sala"> Voltar </button>
         </div>
 
         <div style="margin-top: 1%" class="listatemax" id="opcoes_da_sala">
@@ -124,7 +128,8 @@
                     </button></li>
                 <li><button class="btn btn-primary" id="ver_codigo_sala"> Ver código da sala </button></li>
                 <hr class="linhax2" />
-                <li><button class="btn btn-primary" id="voltar_escolha_de_sala"> Voltar </button></li>
+                <li><button style="margin-top: -2%" class="btn btn-primary" id="voltar_escolha_de_sala"> Voltar
+                    </button></li>
             </ul>
 
         </div>
@@ -158,26 +163,34 @@
                 <li><input type="checkbox" value="18" id="Função Inversa" name="opcoes_temas"> Funções Inversas </li>
             </ul>
 
-            <button class="btn btn-primary" id="salvar_temas"> Salvar temas </button>
+            <button style="font-size: 95%" class="btn btn-primary" id="salvar_temas"> Salvar temas </button>
         </div>
 
         <div class="codesalax" id="area_de_ver_codigo">
             <h2> Código da Sala </h2>
             <h1 id="look_codigo_sala"> </h1>
-            <button class="btn btn-primary" id="voltar_area_de_ver_codigo"> Voltar </button>
+            <button style="font-size: 95%" class="btn btn-primary" id="voltar_area_de_ver_codigo"> Voltar </button>
         </div>
 
         <div class="listacreatex" id="area_criar_lista_teorica">
             <div class="createnom" id="nome_lista">
                 <h2> Criação de Lista Teórica </h2>
-                <input id="nome_lista_teorica" placeholder="Digite o nome da lista">
-                <h1> Escolha o tempo de finalização da lista <strong>(opcional)</strong></h1>
-                <input id="tempo_fazer_lista" placeholder="Exemplo de entrada: 2:0:0">
-                <h1> Escolha o prazo de entrega da lista <strong>(opcional)</strong></h1>
+                <input style="border-radius: 2px" id="nome_lista_teorica" placeholder="Digite o nome da lista">
+                <h1> Tempo de finalização da lista - <strong>opcional</strong></h1>
+                <img style="margin-top: -1%" src="./fotis/clock.png"
+                    height="6%" width="6%">
+                <input style="border-radius: 2px" id="tempo_fazer_lista" placeholder="Digite seu tempo de finalização">
+                <br><small style="font-size: 100%; margin-top: 2%" class="obx0"> Ex. 0:1:30* </small>
+                <h1> Prazo de entrega da lista - <strong>opcional</strong></h1>
                 <small class="form-text text-muted"> Existe a possibilidade de alterar a nota de alunos atrasados!
                 </small>
-                <input id="data_entrega" placeholder="Exemplo de entrada: Janeiro 28,2020">
-                <button class="btn btn-primary" id="salva_nome_lista_teorica"> Salvar </button>
+                <img style="margin-top: -1%" src="./fotis/calendar.png"
+                    height="6%" width="6%">
+                <input style="border-radius: 2px; margin-top: 0.5%" id="data_entrega"
+                    placeholder="Digite sua data de entrega">
+                <br><small style="font-size: 100%; margin-top: 2%" class="obx0"> Ex. Janeiro 30,2021* </small>
+                <br><button style="font-size: 95%; margin-top: 2%" class="btn btn-primary" id="salva_nome_lista_teorica">
+                    Salvar </button>
             </div>
 
             <div class="professortemasx" id="proximo_passo2">
@@ -203,11 +216,13 @@
 
                 <h1> Visualização </h1>
                 <p id="pergunta_digitada"> </p>
-                <h1> Digite as opcões da sua questão <strong>(uma opção por vez)</strong></h1>
+                <h1> Digite as opcões da sua questão </h1>
+                <small class="obx0"> OBS: Uma opção por vez* </small>
                 <small class="form-text text-muted"> O máximo são 5 opcões que vão da letra "A-E" e no mínimo 5 opcões
                 </small>
-                <input id="opcoes_professor" oninput="opcoes()" placeholder="Digite as opções"><button
-                    style="margin-left: 1%" class="btn btn-primary" id="salvar_opcao"> Salvar </button>
+                <input style="border-radius: 2px; margin-top: 0.5%" id="opcoes_professor" oninput="opcoes()"
+                    placeholder="Digite as opções"><button style="margin-left: 1%" class="btn btn-primary"
+                    id="salvar_opcao"> Salvar </button>
 
                 <br>
 
@@ -218,7 +233,8 @@
                 </div>
 
                 <h1> Digite sua opção correta das opções </h1>
-                <input id="opcao_correta" oninput="opcoes_correta()" placeholder="Digite a opção correta">
+                <input style="border-radius: 2px" id="opcao_correta" oninput="opcoes_correta()"
+                    placeholder="Digite a opção correta">
 
                 <br>
 
@@ -245,7 +261,7 @@
             <ul id="participantes">
             </ul>
 
-            <button class="btn btn-primary" id="nao_ver_participantes"> Voltar </button>
+            <button style="font-size: 95%" class="btn btn-primary" id="nao_ver_participantes"> Voltar </button>
         </div>
 
         <div id="look_lista_teorica">
@@ -256,7 +272,7 @@
                 </ul>
 
                 <small class="form-text text-muted"> Acesse suas próprias listas para testá-las! </small>
-                <button class="btn btn-primary" id="nao_look_lista_teorica"> Voltar </button>
+                <button style="font-size: 95%" class="btn btn-primary" id="nao_look_lista_teorica"> Voltar </button>
             </div>
 
             <div class="exectx" id="proximo_passo3">
@@ -296,7 +312,7 @@
                 <ul id="lista_teorica_nota">
                 </ul>
 
-                <button class="btn btn-primary" id="voltar_lugar_ver_nota"> Voltar </button>
+                <button style="font-size: 95%" class="btn btn-primary" id="voltar_lugar_ver_nota"> Voltar </button>
             </div>
 
             <div id="ver_nota_aluno">
@@ -320,7 +336,7 @@
             <table id="modificar" border="1">
             </table>
 
-            <button class="btn btn-primary" id="fim_comeco"> Voltar </button>
+            <button style="font-size: 95%" class="btn btn-primary" id="fim_comeco"> Voltar </button>
         </div>
 
     </div>

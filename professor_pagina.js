@@ -264,35 +264,34 @@ document.getElementById("salas_criadas").onclick = function () {
 
             li.setAttribute('id', resposta[i].id)
             button_acessar_sala.innerHTML = resposta[i].nome;
-            button_apagar_sala.innerHTML = "<img height='6%' width='6%' src='./fotis/trash.png'>"
+            button_apagar_sala.innerHTML = "<img height='108%' width='108%' src='./fotis/trash.png'>"
             button_apagar_sala.setAttribute("id", resposta[i].id);
 
+            button_acessar_sala.setAttribute("class", "btn btn-primary");
             button_apagar_sala.setAttribute("class", "trashx");
-            $(".trashx").css('background-color','red');
 
             console.log(button_acessar_sala)
             button_acessar_sala.setAttribute("id", resposta[i].id);
             li.append(button_acessar_sala);
             li.append(button_apagar_sala);
-            button_apagar_sala.onmouseover = function(){
+            button_apagar_sala.onmouseover = function () {
                 const span = document.createElement("span");
-                span.setAttribute('id',resposta[i].id)
+                span.setAttribute('id', resposta[i].id)
+                span.setAttribute('class', 'spanx');
                 span.innerHTML = "apagar sala";
-                $(`#${resposta[i].id} > span`).css({'background-color':'black','opacity':'106%','color':'white'})
                 li.append(span)
 
             }
             button_apagar_sala.onmouseout = function(){
-                $(`#${resposta[i].id} > span`).remove();
-
+                $("span").remove(`#${resposta[i].id}`);
             }
 
             ul.append(li);
-            
+
 
             button_apagar_sala.onclick = function () {
                 const id_sala = resposta[i].id;
-                
+
 
                 const sala_service = new Salas_Service("http://localhost:3000/salas");
                 sala_service.apagar(id_sala).then(resposta => {
@@ -369,16 +368,19 @@ document.getElementById("salas_criadas").onclick = function () {
                                     td_nota.innerHTML = resposta[i].nota
                                     let td_modificar = document.createElement("td");
                                     let input_modificar = document.createElement("input");
+                                    input_modificar.setAttribute("class", "correctx");
                                     input_modificar.setAttribute('placeholder', 'Digite a nova nota');
                                     input_modificar.setAttribute('id', resposta[i].id);
                                     td_modificar.append(input_modificar);
                                     let td_opcoes = document.createElement("td");
                                     let button_modificar = document.createElement("button");
                                     let button_nao_modificar = document.createElement("button");
+                                    button_modificar.setAttribute("class", "btn btn-primary");
+                                    button_nao_modificar.setAttribute("class", "btn btn-primary");
                                     button_modificar.setAttribute('id', resposta[i].id);
-                                    button_modificar.innerHTML = "Modificar nota"
+                                    button_modificar.innerHTML = "Modificar Nota"
                                     button_nao_modificar.setAttribute('id', resposta[i].id);
-                                    button_nao_modificar.innerHTML = "Não modificar"
+                                    button_nao_modificar.innerHTML = "Não Modificar"
                                     td_opcoes.append(button_modificar);
                                     td_opcoes.append(button_nao_modificar);
                                     tr.append(td_nome, td_lista_teorica, td_data_entrega, td_nota, td_modificar, td_opcoes);
@@ -445,6 +447,7 @@ document.getElementById("salas_criadas").onclick = function () {
                             let button_ver_nota = document.createElement("button");
                             button_ver_nota.innerHTML = resposta[i].nome;
                             button_ver_nota.setAttribute("id", resposta[i].id);
+                            button_ver_nota.setAttribute("class", "btn btn-primary");
                             li.append(button_ver_nota);
                             ul.append(li);
                             button_ver_nota.onclick = function () {
@@ -453,7 +456,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                 $("#ver_nota_aluno").show("fast");
                                 let nota_service = new Nota_Service(`http://localhost:3000/notas_professor?id_lista_teorica=${id_lista_teorica}`);
                                 nota_service.listar().then(resposta => {
-                                   
+
                                     console.log(resposta)
                                     let ul = document.getElementById("place_nota");
                                     for (let i = 0; i <= resposta.length - 1; i++) {
@@ -464,11 +467,15 @@ document.getElementById("salas_criadas").onclick = function () {
                                         let span_nome = document.createElement("span");
                                         let span_nota = document.createElement("span");
                                         let span_cont_acertos = document.createElement("span");
-                                        let span_cont_errados = document.createElement("span")
+                                        let span_cont_errados = document.createElement("span");
+                                        span_nome.setAttribute("class", "listanotax");
+                                        span_nota.setAttribute("class", "listanotax");
+                                        span_cont_acertos.setAttribute("class", "listanotax");
+                                        span_cont_errados.setAttribute("class", "listanotax");
                                         span_nome.innerHTML = "Nome do aluno: " + resposta[i].nome_aluno + "</br>";
                                         span_nota.innerHTML = "Nota do aluno: " + resposta[i].nota + "</br>";
-                                        span_cont_acertos.innerHTML = `acertos: ${lista_acerto.length} </br>`;
-                                        span_cont_errados.innerHTML = `erros: ${lista_errado.length}  </br> `
+                                        span_cont_acertos.innerHTML = `Acertos: ${lista_acerto.length} </br>`;
+                                        span_cont_errados.innerHTML = `Erros: ${lista_errado.length}  </br> `
                                         li.append(span_nome);
                                         li.append(span_nota);
                                         li.append(span_cont_acertos);
@@ -514,11 +521,26 @@ document.getElementById("salas_criadas").onclick = function () {
                             button_acessar_lista_teorica.innerHTML = resposta[i].nome;
                             button_acessar_lista_teorica.setAttribute("id", resposta[i].id);
                             let button_apagar_lista_teorica = document.createElement("button");
-                            button_apagar_lista_teorica.innerHTML = "<img height='10%' width='10%' src='./fotis/error.png'>"
+                            button_acessar_lista_teorica.setAttribute("class", "btn btn-primary");
+                            button_apagar_lista_teorica.setAttribute("class", "trashx");
+                            button_apagar_lista_teorica.innerHTML = "<img height='108%' width='108%' src='./fotis/trash.png'>"
                             button_apagar_lista_teorica.setAttribute("id", resposta[i].id);
                             li.append(button_acessar_lista_teorica);
                             li.append(button_apagar_lista_teorica);
+
+                            button_apagar_lista_teorica.onmouseover = function(){
+                                let span = document.createElement("span");
+                                span.setAttribute('id',resposta[i].id)
+                                span.setAttribute('class', 'spanx');
+                                span.innerHTML = "apagar lista";
+                                li.append(span)
+                            }
+                            button_apagar_lista_teorica.onmouseout = function(){
+                              $("span").remove(`#${resposta[i].id}`);
+                            }
+                            
                             ul.append(li);
+
                             button_apagar_lista_teorica.onclick = function () {
                                 let id = event.target.id;
                                 $("#listas_teoricas > li").remove(`#${id}`)
@@ -591,7 +613,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                                 console.log("termino da lista teórica");
                                                 $("#proximo_passo3").hide("fast");
                                                 $("#termino_exercicio").show("fast");
-                                                $("#lugar_nota").text(`Sua nota foi ${(nota/posicao_pergunta).toFixed(0)}, acertos: ${lista_perguntas_certas_user.length}, erros: ${lista_perguntas_erradas_usuario.length}`)
+                                                $("#lugar_nota").text(`Sua nota foi ${(nota/posicao_pergunta).toFixed(0)} | acertos: ${lista_perguntas_certas_user.length}, erros: ${lista_perguntas_erradas_usuario.length}`)
                                                 posicao_pergunta = 0;
                                                 posicao_opcoes = 0;
                                                 posicao_opcoes_certas = 0;
@@ -704,101 +726,94 @@ document.getElementById("salas_criadas").onclick = function () {
                                 let data_entrega = $("#data_entrega").val();
                                 let tempo_de_termino_final;
                                 let tempo_de_termino = [];
-                                if(tempo_de_fazer_lista != ""){
+                                if (tempo_de_fazer_lista != "") {
                                     let lista = tempo_de_fazer_lista.split(':');
-                                    if(lista[0] == "01"){
+                                    if (lista[0] == "01") {
                                         lista[0] = 1;
 
-                                    }else if(lista[0] == "02"){
+                                    } else if (lista[0] == "02") {
                                         lista[0] = 2;
-                                    }else if(lista[0] == "03"){
+                                    } else if (lista[0] == "03") {
                                         lista[0] == 3
-                                    }
-                                    else if(lista[0] == "04"){
+                                    } else if (lista[0] == "04") {
                                         lista[0] = 4
-                                    }
-                                    else if(lista[0] == "05"){
+                                    } else if (lista[0] == "05") {
                                         lista[0] = 5;
-                                    }
-                                    else if(lista[0] == "06"){
+                                    } else if (lista[0] == "06") {
                                         lista[0] == 6
-                                    }
-                                    else if(lista[0] == "07"){
+                                    } else if (lista[0] == "07") {
                                         lista[0] == 7
-                                    }
-                                    else if(lista[0] == "08"){
+                                    } else if (lista[0] == "08") {
                                         lista[0] == 8
-                                    }
-                                    else if(lista[0] == "09"){
+                                    } else if (lista[0] == "09") {
                                         lista[0] == 9
-                                    }else if(lista[0] == "00"){
+                                    } else if (lista[0] == "00") {
                                         lista[0] = 0
-                                    }
-                                    else{
+                                    } else {
                                         console.log("nice");
                                     }
-                                    if(lista[1] == "01"){
+                                    if (lista[1] == "01") {
                                         lista[1] = 1;
-                                    }else if(lista[1] == "02"){
+                                    } else if (lista[1] == "02") {
                                         lista[1] = 2;
-                                    }else if(lista[1] == "03"){
+                                    } else if (lista[1] == "03") {
                                         lista[1] = 3;
-                                    }else if(lista[1] == "04"){
+                                    } else if (lista[1] == "04") {
                                         lista[1] = 4
-                                    }else if(lista[1] == "05"){
+                                    } else if (lista[1] == "05") {
                                         lista[1] = 5
-                                    }else if(lista[1] == "06"){
+                                    } else if (lista[1] == "06") {
                                         lista[1] = 6
-                                    }else if(lista[1] == "07"){
+                                    } else if (lista[1] == "07") {
                                         lista[1] = 7
-                                    }else if(lista[1] == "08"){
+                                    } else if (lista[1] == "08") {
                                         lista[1] = 8;
-                                    }else if(lista[1] == "09"){
+                                    } else if (lista[1] == "09") {
                                         lista[1] = 9;
 
-                                    }else if(lista[1] == "00"){
+                                    } else if (lista[1] == "00") {
                                         lista[1] = 0
-                                    }else{
+                                    } else {
                                         console.log("nice")
                                     }
-                                    if(lista[2] == "01"){
+                                    if (lista[2] == "01") {
                                         lista[2] = 1;
-                                    }else if(lista[2] == "02"){
+                                    } else if (lista[2] == "02") {
                                         lista[2] = 2;
-                                    }else if(lista[2] == "03"){
+                                    } else if (lista[2] == "03") {
                                         lista[2] = 3;
-                                    }else if(lista[2] == "04"){
+                                    } else if (lista[2] == "04") {
                                         lista[2] = 4
-                                    }else if(lista[2] == "05"){
+                                    } else if (lista[2] == "05") {
                                         lista[2] = 5
-                                    }else if(lista[2] == "06"){
+                                    } else if (lista[2] == "06") {
                                         lista[2] = 6
-                                    }else if(lista[2] == "07"){
+                                    } else if (lista[2] == "07") {
                                         lista[2] = 7
-                                    }else if(lista[2] == "08"){
+                                    } else if (lista[2] == "08") {
                                         lista[2] = 8;
-                                    }else if(lista[2] == "09"){
+                                    } else if (lista[2] == "09") {
                                         lista[2] = 9;
 
-                                    }else if(lista[2] == "00"){
+                                    } else if (lista[2] == "00") {
                                         lista[2] = 0
-                                    }else{
+                                    } else {
                                         console.log("nice")
                                     }
-                                    for(let i = 0; i <= lista.length -1; i++){
+                                    for (let i = 0; i <= lista.length - 1; i++) {
                                         tempo_de_termino.push(lista[i])
                                         tempo_de_termino.push(":")
-                                        
+
                                     }
-                                    tempo_de_termino.splice(5,1)
+                                    tempo_de_termino.splice(5, 1)
                                     console.log(tempo_de_termino)
                                     tempo_de_termino_final = tempo_de_termino[0];
                                     tempo_de_termino_final = tempo_de_termino_final + tempo_de_termino[1];
                                     tempo_de_termino_final = tempo_de_termino_final + tempo_de_termino[2];
                                     tempo_de_termino_final = tempo_de_termino_final + tempo_de_termino[3];
                                     tempo_de_termino_final = tempo_de_termino_final + tempo_de_termino[4];
-                                   console.log(tempo_de_termino_final);
-                                }else{
+                                    console.log(tempo_de_termino_final);
+                                } else {
                                     tempo_de_termino_final = "";
                                 }
                                 console.log(data_entrega);
@@ -907,7 +922,7 @@ document.getElementById("salas_criadas").onclick = function () {
                                     let opcoes = [];
                                     const opcoes_letras = ['a', 'b', 'c', 'd', 'e'];
                                     document.getElementById("salvar_opcao").onclick = function () {
-                                        cont_opcoes ++;
+                                        cont_opcoes++;
                                         if (cont_opcoes <= 5) {
                                             $("#lugar_opcoes").empty()
                                             let opcoes_user = document.getElementById("opcoes_professor").value;
@@ -967,8 +982,8 @@ document.getElementById("salas_criadas").onclick = function () {
                                             } else {
                                                 swal("Resposta Inválida!", '- escolha sua opção -', 'error')
                                             }
-                                        }else{
-                                            swal("não pode mais adicionar perguntas","",'error')
+                                        } else {
+                                            swal("não pode mais adicionar perguntas", "", 'error')
                                         }
 
                                     }
@@ -1066,7 +1081,7 @@ document.getElementById("salas_criadas").onclick = function () {
         }
     })
     document.getElementById("voltar_da_area_acessar_sala").onclick = function () {
-        $("#wallprofx").css('padding-bottom', '35%');
+        $("#wallprofx").css('padding-bottom', '17%');
         $("#muralxprof").show("fast");
         $("#infprofx").hide("fast");
         $("#codeprofx2").hide("fast");
@@ -1078,6 +1093,7 @@ document.getElementById("salas_criadas").onclick = function () {
 }
 document.getElementById("criar_sala").onclick = function () {
 
+    $("#wallprofx").css('padding-bottom', '25%');
     $("#dadosxx").hide("fast");
     $("#menu_escolhas").hide("fast");
     $("#area_de_criar_sala").show("fast");
@@ -1123,7 +1139,7 @@ document.getElementById("criar_sala").onclick = function () {
         }
     }
     document.getElementById("voltar_area_de_escolhas_inicial3").onclick = function () {
-        $("#wallprofx").css('padding-bottom', '35%');
+        $("#wallprofx").css('padding-bottom', '17%');
         $("#dadosxx").show("fast");
         $("#menu_escolhas").show("fast");
         $("#area_de_criar_sala").hide("fast");

@@ -89,7 +89,7 @@ document.getElementById("fazer_cadastro").onclick = function () {
             const aluno_service = new Aluno_Service(`http://localhost:3000/Alunos?email=${email}`)
             aluno_service.listar().then(resposta => {
                 if (resposta.length > 0) {
-                    swal('E-MAIL JÁ EXISTENTE', 'TENTE NOVAMENTE', 'error')
+                    swal('Cadastro Inválido!', '- e-mail existente em outra conta -', 'error')
                 } else {
                     const aluno = new Aluno(email, nome, senha);
                     const aluno_service2 = new Aluno_Service("http://localhost:3000/Alunos");
@@ -103,7 +103,7 @@ document.getElementById("fazer_cadastro").onclick = function () {
             const professor_service = new ProfessorService(`http://localhost:3000/professores?email=${email}`);
             professor_service.listar().then(resposta => {
                 if (resposta.length > 0) {
-                    swal('E-MAIL JÁ EXISTENTE', 'TENTE NOVAMENTE', 'error')
+                    swal('Cadastro Inválido!', '- e-mail existente em outra conta -', 'error')
 
                 } else {
                     const professor_service = new ProfessorService("http://localhost:3000/professores");

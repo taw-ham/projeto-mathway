@@ -371,7 +371,7 @@ document.getElementById("notas").onclick = function () {
     $("#lugar_de_notas").show("fast");
     let boletim = document.getElementById("boletim");
     let titulo_table = document.createElement("th");
-    titulo_table.innerHTML = "Listas teóricas - Notas"
+    titulo_table.innerHTML = "Listas teóricas | Notas"
     titulo_table.setAttribute('colspan', 4);
     boletim.append(titulo_table);
     let nota_service = new Nota_Service(`http://localhost:3000/notas_professor?id_aluno=${id_login}`);
@@ -440,7 +440,7 @@ document.getElementById("notas").onclick = function () {
 
     })
     document.getElementById("voltar_area_de_escolhas_inicial").onclick = function () {
-        $("#wallalunx").css('padding-bottom', '20%');
+        $("#wallalunx").css('padding-bottom', '32%');
         $("#area_de_escolhas").show("fast");
         $("#lugar_de_notas").hide("fast");
         $("#boletim").empty();
@@ -478,6 +478,7 @@ document.getElementById("exercicios").onclick = function () {
                 let button = document.createElement("button");
                 button.setAttribute('id', resposta[i].id_lista_teorica);
                 button.innerHTML = resposta[i].nome_lista_teorica;
+                button.setAttribute("class", "btn btn-primary");
                 li.append(button);
                 ul.append(li);
                 button.onclick = function () {
@@ -562,7 +563,7 @@ document.getElementById("exercicios").onclick = function () {
                                     $("#termino_exercicio").show("fast");
                                     nota = parseInt((nota / lista_pergunta_server.length).toFixed(0));
                                     nota_final = nota;
-                                    $("#lugar_nota").text(`Sua nota foi ${nota}, acertos: ${lista_perguntas_certas_user.length}, erros: ${lista_perguntas_erradas_usuario.length}`)
+                                    $("#lugar_nota").text(`Sua nota foi ${nota} | acertos: ${lista_perguntas_certas_user.length}, erros: ${lista_perguntas_erradas_usuario.length}`)
                                     posicao_pergunta = 0;
                                     nota = 0;
                                     posicao_opcoes = 0;
@@ -595,7 +596,7 @@ document.getElementById("exercicios").onclick = function () {
                                     }
                                     document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
                                         $("#wallalunx").css('background-image', 'url("./fotis/wood.png")');
-                                        $("#wallalunx").css('padding-bottom', '12%');
+                                        $("#wallalunx").css('padding-bottom', '26%');
                                         $("#infalunx").show("fast");
                                         $("#termino_exercicio").hide("fast");
                                         $("#place_lista_teoricas").show("fast");
@@ -680,7 +681,7 @@ document.getElementById("exercicios").onclick = function () {
                                                     lugar_perguntas.innerHTML = `${t_number}/${lista_pergunta_server.length})`
                                                     nota = parseInt((nota / lista_pergunta_server.length).toFixed(0));
                                                     nota_final += nota;
-                                                    $("#lugar_nota").text(`A sua nota foi: ${nota_final}, acertos: ${pergunta_certa_final.length}, erros: ${pergunta_final_errada.length}`)
+                                                    $("#lugar_nota").text(`A sua nota foi: ${nota_final} | acertos: ${pergunta_certa_final.length}, erros: ${pergunta_final_errada.length}`)
                                                     nota = 0;
                                                     posicao_pergunta = 0;
                                                     posicao_opcoes = 0;
@@ -718,7 +719,7 @@ document.getElementById("exercicios").onclick = function () {
                                                     }
                                                     document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
                                                         $("#wallalunx").css('background-image', 'url("./fotis/wood.jpg")');
-                                                        $("#wallalunx").css('padding-bottom', '12%');
+                                                        $("#wallalunx").css('padding-bottom', '26%');
                                                         $("#infalunx").show("fast");
                                                         $("#reposta_certa").empty();
                                                         $("#pergunta_errada").empty();
@@ -762,6 +763,7 @@ document.getElementById("exercicios").onclick = function () {
                 let button = document.createElement("button");
                 button.setAttribute('id', resposta[i].id_lista_teorica);
                 button.innerHTML = resposta[i].nome_lista_teorica;
+                button.setAttribute("class", "btn btn-primary");
                 li.append(button);
                 ul.append(li);
                 button.onclick = function () {
@@ -844,7 +846,7 @@ document.getElementById("exercicios").onclick = function () {
                                     $("#fazer_exercicio_lista_teorica").hide("fast");
                                     $("#termino_exercicio").show("fast");
                                     nota = parseInt((nota / lista_pergunta_server.length).toFixed(0));
-                                    $("#lugar_nota").text(`Sua nota foi ${nota}, acertos: ${lista_perguntas_certas_user.length}, erros: ${lista_perguntas_erradas_usuario.length}`);
+                                    $("#lugar_nota").text(`Sua nota foi ${nota} | acertos: ${lista_perguntas_certas_user.length}, erros: ${lista_perguntas_erradas_usuario.length}`);
                                     nota_final = nota
                                     posicao_pergunta = 0;
                                     posicao_opcoes = 0;
@@ -879,7 +881,7 @@ document.getElementById("exercicios").onclick = function () {
                                     }
                                     document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
                                         $("#wallalunx").css('background-image', 'url("./fotis/wood.jpg")');
-                                        $("#wallalunx").css('padding-bottom', '12%');
+                                        $("#wallalunx").css('padding-bottom', '26%');
                                         $("#infalunx").show("fast");
                                         $("#termino_exercicio").hide("fast");
                                         $("#place_lista_teoricas").show("fast");
@@ -958,7 +960,7 @@ document.getElementById("exercicios").onclick = function () {
                                                     console.log(encerrar + "lista teorica");
                                                     nota = parseInt((nota / lista_pergunta_server.length).toFixed(0));
                                                     nota_final += nota;
-                                                    $("#lugar_nota").text(`A sua nota foi: ${nota_final}, acertos: ${pergunta_certa_final.length}, erros: ${pergunta_final_errada.length}`);
+                                                    $("#lugar_nota").text(`A sua nota foi: ${nota_final} | acertos: ${pergunta_certa_final.length}, erros: ${pergunta_final_errada.length}`);
                                                     nota = 0;
                                                     posicao_pergunta = 0;
                                                     posicao_opcoes = 0;
@@ -997,7 +999,7 @@ document.getElementById("exercicios").onclick = function () {
                                                     }
                                                     document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
                                                         $("#wallalunx").css('background-image', 'url("./fotis/wood.jpg")');
-                                                        $("#wallalunx").css('padding-bottom', '12%');
+                                                        $("#wallalunx").css('padding-bottom', '26%');
                                                         $("#infalunx").show("fast");
                                                         $("#reposta_certa").empty();
                                                         $("#pergunta_errada").empty();
@@ -1157,7 +1159,7 @@ document.getElementById("exercicios").onclick = function () {
                                         $("#fazer_exercicio_lista_teorica").hide("fast");
                                         $("#termino_exercicio").show("fast");
                                         nota = parseInt((nota / lista_pergunta_server.length).toFixed(0));
-                                        $("#lugar_nota").text(`Sua nota foi ${nota}, acertos: ${lista_perguntas_certas_user.length}, erros: ${lista_perguntas_erradas_usuario.length}`);
+                                        $("#lugar_nota").text(`Sua nota foi ${nota} | acertos: ${lista_perguntas_certas_user.length}, erros: ${lista_perguntas_erradas_usuario.length}`);
                                         nota_final = nota
                                         posicao_pergunta = 0;
                                         posicao_opcoes = 0;
@@ -1168,7 +1170,7 @@ document.getElementById("exercicios").onclick = function () {
                                         let ul_resposta_errada = document.getElementById("pergunta_errada");
                                         document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
                                             $("#wallalunx").css('background-image', 'url("./fotis/wood.jpg")');
-                                            $("#wallalunx").css('padding-bottom', '12%');
+                                            $("#wallalunx").css('padding-bottom', '26%');
                                             $("#infalunx").show("fast");
                                             $("#termino_exercicio").hide("fast");
                                             $("#escolha_modo_exercicio").show("fast");
@@ -1261,7 +1263,7 @@ document.getElementById("exercicios").onclick = function () {
                                                         nota = parseInt((nota / lista_pergunta_server.length).toFixed(0));
                                                         console.log(encerrar + "lista teorica");
                                                         nota_final += nota;
-                                                        $("#lugar_nota").text(`A sua nota foi: ${nota_final}, certas: ${pergunta_certa_final.length}, erradas: ${pergunta_final_errada.length}`)
+                                                        $("#lugar_nota").text(`A sua nota foi: ${nota_final} | acertos: ${pergunta_certa_final.length}, erros: ${pergunta_final_errada.length}`)
                                                         nota = 0;
                                                         posicao_pergunta = 0;
                                                         posicao_opcoes = 0;
@@ -1293,7 +1295,7 @@ document.getElementById("exercicios").onclick = function () {
                                                         }
                                                         document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
                                                             $("#wallalunx").css('background-image', 'url("./fotis/wood.jpg")');
-                                                            $("#wallalunx").css('padding-bottom', '12%');
+                                                            $("#wallalunx").css('padding-bottom', '26%');
                                                             $("#infalunx").show("fast");
                                                             $("#reposta_certa").empty();
                                                             $("#pergunta_errada").empty();
@@ -1480,7 +1482,7 @@ document.getElementById("exercicios").onclick = function () {
                                             $("#fazer_exercicio_lista_teorica").hide("fast");
                                             $("#termino_exercicio").show("fast");
                                             nota = parseInt((nota / lista_pergunta_server.length).toFixed(0));
-                                            $("#lugar_nota").text(`Sua nota foi ${nota}, acertos: ${lista_certas_usuario.length}, erros: ${lista_perguntas_erradas_usuario.length}`);
+                                            $("#lugar_nota").text(`Sua nota foi ${nota} | acertos: ${lista_certas_usuario.length}, erros: ${lista_perguntas_erradas_usuario.length}`);
                                      
                                             nota_final = nota;
                                             nota = 0;
@@ -1515,7 +1517,7 @@ document.getElementById("exercicios").onclick = function () {
                                             }
                                             document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
                                                 $("#wallalunx").css('background-image', 'url("./fotis/wood.jpg")');
-                                                $("#wallalunx").css('padding-bottom', '12%');
+                                                $("#wallalunx").css('padding-bottom', '26%');
                                                 $("#infalunx").show("fast");
                                                 $("#termino_exercicio").hide("fast");
                                                 $("#escolha_modo_exercicio").show("fast");
@@ -1592,7 +1594,7 @@ document.getElementById("exercicios").onclick = function () {
                                                             console.log(encerrar + "lista teorica");
                                                             nota = parseInt((nota / lista_pergunta_server.length).toFixed(0));
                                                             nota_final += nota;
-                                                            $("#lugar_nota").text(`Sua nota foi: ${nota_final}, certas: ${pergunta_certa_final.length}, erradas: ${pergunta_final_errada.length}`)
+                                                            $("#lugar_nota").text(`Sua nota foi: ${nota_final} | certas: ${pergunta_certa_final.length}, erradas: ${pergunta_final_errada.length}`)
                                                             nota = 0;
                                                             posicao_pergunta = 0;
                                                             posicao_opcoes = 0;
@@ -1626,7 +1628,7 @@ document.getElementById("exercicios").onclick = function () {
                                                             }
                                                             document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
                                                                 $("#wallalunx").css('background-image', 'url("./fotis/wood.jpg")');
-                                                                $("#wallalunx").css('padding-bottom', '12%');
+                                                                $("#wallalunx").css('padding-bottom', '26%');
                                                                 $("#infalunx").show("fast");
                                                                 $("#reposta_certa").empty();
                                                                 $("#pergunta_errada").empty();
@@ -1672,6 +1674,7 @@ document.getElementById("salas_presentes").onclick = function () {
             let button_acessar_sala = document.createElement("button");
             button_acessar_sala.innerHTML = resposta[i].nome;
             button_acessar_sala.setAttribute('id', resposta[i].id);
+            button_acessar_sala.setAttribute("class", "btn btn-primary");
             li.append(button_acessar_sala);
             ul.append(li);
             button_acessar_sala.onclick = function () {
@@ -1688,6 +1691,7 @@ document.getElementById("salas_presentes").onclick = function () {
                         let button_acessar_lista = document.createElement("button");
                         button_acessar_lista.innerHTML = resposta[i].nome
                         button_acessar_lista.setAttribute('id', resposta[i].id);
+                        button_acessar_lista.setAttribute("class", "btn btn-primary");
                         let target_date;
                         if (data_de_entrega != "") {
                             console.log(data_de_entrega);
@@ -1717,7 +1721,7 @@ document.getElementById("salas_presentes").onclick = function () {
                                     let prazo = Math.abs((target_date - current_date) / 1000);
                                     let data = [];
 
-                                    days = `Faltam: ${parseInt(prazo / 86400)} dias`;
+                                    days = `| Prazo: ${parseInt(prazo / 86400)} dias`;
                                     prazo = prazo % 86400;
                                     hours = `${parseInt(prazo / 3600)} horas:`;
                                     prazo = prazo % 3600;
@@ -1786,7 +1790,7 @@ document.getElementById("salas_presentes").onclick = function () {
                                     }
                                     document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
                                         $("#wallalunx").css('background-image', 'url("./fotis/wood.jpg")');
-                                        $("#wallalunx").css('padding-bottom', '12%');
+                                        $("#wallalunx").css('padding-bottom', '26%');
                                         $("#infalunx").show("fast");
                                         $("#termino_exercicio").hide("fast");
                                         $("#area_escolha_lista_teorica").show("fast");
@@ -1873,7 +1877,7 @@ document.getElementById("salas_presentes").onclick = function () {
                                                     $("#fazer_exercicio_lista_teorica").hide("fast");
                                                     $("#termino_exercicio").show("fast");
                                                     nota = parseInt((nota / lista_pergunta.length).toFixed(0));
-                                                    $("#lugar_nota").text(`Sua nota foi ${nota}, acertos: ${lista_certas_usuario.length}, erros: ${lista_erradas_usuario.length}`);
+                                                    $("#lugar_nota").text(`Sua nota foi ${nota} | acertos: ${lista_certas_usuario.length}, erros: ${lista_erradas_usuario.length}`);
                                                     let ul_resposta_certa = document.getElementById("reposta_certa");
                                                     let ul_resposta_errada = document.getElementById("pergunta_errada");
                                                     let current_date = new Date().getTime();
@@ -1931,7 +1935,7 @@ document.getElementById("salas_presentes").onclick = function () {
                                                     }
                                                     document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
                                                         $("#wallalunx").css('background-image', 'url("./fotis/wood.jpg")');
-                                                        $("#wallalunx").css('padding-bottom', '12%');
+                                                        $("#wallalunx").css('padding-bottom', '26%');
                                                         $("#infalunx").show("fast");
                                                         $("#termino_exercicio").hide("fast");
                                                         $("#area_escolha_lista_teorica").show("fast");
@@ -1990,7 +1994,7 @@ document.getElementById("salas_presentes").onclick = function () {
                                                         $("#fazer_exercicio_lista_teorica").hide("fast");
                                                         $("#termino_exercicio").show("fast");
                                                         nota = parseInt((nota / lista_pergunta.length).toFixed(0));
-                                                        $("#lugar_nota").text(`Sua nota foi ${nota}, acertos: ${lista_certas_usuario.length}, erros: ${lista_erradas_usuario.length}, não realizadas: ${lista_pergunta.length - posicao_pergunta}`);
+                                                        $("#lugar_nota").text(`Sua nota foi ${nota} | acertos: ${lista_certas_usuario.length}, erros: ${lista_erradas_usuario.length}, não realizadas: ${lista_pergunta.length - posicao_pergunta}`);
                                                         let ul_resposta_certa = document.getElementById("reposta_certa");
                                                         let ul_resposta_errada = document.getElementById("pergunta_errada");
                                                         let ul_perguntas_nao_feitas = document.getElementById("perguntas_nao_feitas");
@@ -2060,7 +2064,7 @@ document.getElementById("salas_presentes").onclick = function () {
 
                                                         document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
                                                             $("#wallalunx").css('background-image', 'url("./fotis/wood.jpg")');
-                                                            $("#wallalunx").css('padding-bottom', '12%');
+                                                            $("#wallalunx").css('padding-bottom', '26%');
                                                             $("#infalunx").show("fast");
                                                             $("#termino_exercicio").hide("fast");
                                                             $("#area_escolha_lista_teorica").show("fast");
@@ -2120,7 +2124,7 @@ document.getElementById("salas_presentes").onclick = function () {
                                                         $("#fazer_exercicio_lista_teorica").hide("fast");
                                                         $("#termino_exercicio").show("fast");
                                                         nota = parseInt((nota / lista_pergunta.length).toFixed(0));
-                                                        $("#lugar_nota").text(`Sua nota foi ${nota}, acertos: ${lista_certas_usuario.length}, erros: ${lista_erradas_usuario.length}, não realizadas: ${lista_pergunta.length - posicao_pergunta}`);
+                                                        $("#lugar_nota").text(`Sua nota foi ${nota} | acertos: ${lista_certas_usuario.length}, erros: ${lista_erradas_usuario.length}, não realizadas: ${lista_pergunta.length - posicao_pergunta}`);
                                                         let ul_resposta_certa = document.getElementById("reposta_certa");
                                                         let ul_resposta_errada = document.getElementById("pergunta_errada");
                                                         let ul_perguntas_nao_feitas = document.getElementById("perguntas_nao_feitas");
@@ -2187,7 +2191,7 @@ document.getElementById("salas_presentes").onclick = function () {
                                                         }
                                                         document.getElementById("voltar_escolha_lista_teorica").onclick = function () {
                                                             $("#wallalunx").css('background-image', 'url("./fotis/wood.jpg")');
-                                                            $("#wallalunx").css('padding-bottom', '12%');
+                                                            $("#wallalunx").css('padding-bottom', '26%');
                                                             $("#infalunx").show("fast");
                                                             $("#termino_exercicio").hide("fast");
                                                             $("#area_escolha_lista_teorica").show("fast");
